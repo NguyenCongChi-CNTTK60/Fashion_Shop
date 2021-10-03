@@ -318,7 +318,7 @@ namespace WindowsFormsApp
             // 
             // bunifuElipse2
             // 
-            this.bunifuElipse2.ElipseRadius = 18;
+            this.bunifuElipse2.ElipseRadius = 5;
             this.bunifuElipse2.TargetControl = this.pictureBox2;
             // 
             // bunifuElipse3
