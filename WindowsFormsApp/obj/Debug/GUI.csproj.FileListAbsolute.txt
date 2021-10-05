@@ -159,3 +159,4 @@ D:\C#\framework\project\WindowsFormsApp\WindowsFormsApp\obj\Debug\GUI.csproj.Cor
 D:\C#\framework\project\WindowsFormsApp\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete
 D:\C#\framework\project\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 D:\C#\framework\project\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\C#\framework\project\WindowsFormsApp\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormLogin.resources
