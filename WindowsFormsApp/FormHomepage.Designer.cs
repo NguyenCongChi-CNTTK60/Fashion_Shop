@@ -308,7 +308,6 @@ namespace WindowsFormsApp
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::WindowsFormsApp.Properties.Resources.Circle_K_logo_tm;
             this.pictureBox2.Location = new System.Drawing.Point(-1, -10);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(256, 92);
