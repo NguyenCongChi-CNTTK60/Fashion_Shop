@@ -46,9 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillBUS.cs" />
+    <Compile Include="BillInfoBUS.cs" />
+    <Compile Include="CommodityBUS.cs" />
+    <Compile Include="CouponBUS.cs" />
+    <Compile Include="CouponInfoBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="EmployeeBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupplierBUS.cs" />
+    <Compile Include="UnitBUS.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

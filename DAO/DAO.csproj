@@ -46,9 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BillDAO.cs" />
+    <Compile Include="BillInfoDAO.cs" />
+    <Compile Include="CommodityDAO.cs" />
+    <Compile Include="CouponDTO.cs" />
+    <Compile Include="CouponInfoDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="EmployeeDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SupplierDAO.cs" />
+    <Compile Include="UnitDAO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -67,6 +74,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{5bf3a51e-51f9-42f4-b163-0dea03ebd01a}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
