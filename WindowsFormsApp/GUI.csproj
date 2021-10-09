@@ -214,23 +214,59 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
+    <Compile Include="FormAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddCustomer.Designer.cs">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAddProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddProducts.Designer.cs">
+      <DependentUpon>FormAddProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBillInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBillInfo.Designer.cs">
+      <DependentUpon>FormBillInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePassword.Designer.cs">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCoupon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCoupon.Designer.cs">
+      <DependentUpon>FormCoupon.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCustomer.Designer.cs">
+    <Compile Include="FormCustomer.designer.cs">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHomepage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHomepage.Designer.cs">
+    <Compile Include="FormHomepage.designer.cs">
       <DependentUpon>FormHomepage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include="FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUnit.Designer.cs">
+      <DependentUpon>FormUnit.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -240,6 +276,66 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UC_Coupon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Coupon.Designer.cs">
+      <DependentUpon>UC_Coupon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Customer.Designer.cs">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Depot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Depot.Designer.cs">
+      <DependentUpon>UC_Depot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Employee.Designer.cs">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Homepage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Homepage.Designer.cs">
+      <DependentUpon>UC_Homepage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Sell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Sell.Designer.cs">
+      <DependentUpon>UC_Sell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Statistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Statistic.Designer.cs">
+      <DependentUpon>UC_Statistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_StatisticCommodity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_StatisticCommodity.Designer.cs">
+      <DependentUpon>UC_StatisticCommodity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_Supplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_Supplier.Designer.cs">
+      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAddProducts.resx">
+      <DependentUpon>FormAddProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -253,6 +349,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Customer.resx">
+      <DependentUpon>UC_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
