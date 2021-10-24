@@ -265,17 +265,17 @@ namespace WindowsFormsApp
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(844, 65);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(831, 65);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(202, 174);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(173, 151);
             this.guna2CirclePictureBox1.TabIndex = 180;
             this.guna2CirclePictureBox1.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(508, 233);
+            this.button1.Location = new System.Drawing.Point(532, 233);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(94, 37);
             this.button1.TabIndex = 181;
@@ -284,7 +284,7 @@ namespace WindowsFormsApp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(849, 233);
+            this.button2.Location = new System.Drawing.Point(867, 245);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 37);
             this.button2.TabIndex = 182;
@@ -296,7 +296,7 @@ namespace WindowsFormsApp
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(84, 12);
+            this.label2.Location = new System.Drawing.Point(138, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 28);
             this.label2.TabIndex = 183;
@@ -317,7 +317,7 @@ namespace WindowsFormsApp
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(435, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(554, 56);
+            this.panel3.Size = new System.Drawing.Size(569, 56);
             this.panel3.TabIndex = 185;
             // 
             // label8
@@ -344,7 +344,7 @@ namespace WindowsFormsApp
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(507, 310);
+            this.button3.Location = new System.Drawing.Point(478, 315);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(124, 58);
             this.button3.TabIndex = 187;
@@ -354,7 +354,7 @@ namespace WindowsFormsApp
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(637, 310);
+            this.button4.Location = new System.Drawing.Point(623, 315);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(124, 58);
             this.button4.TabIndex = 188;
@@ -364,7 +364,7 @@ namespace WindowsFormsApp
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(767, 310);
+            this.button5.Location = new System.Drawing.Point(767, 315);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 58);
             this.button5.TabIndex = 189;
@@ -374,7 +374,7 @@ namespace WindowsFormsApp
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(897, 310);
+            this.button6.Location = new System.Drawing.Point(911, 315);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(124, 58);
             this.button6.TabIndex = 190;
@@ -404,7 +404,7 @@ namespace WindowsFormsApp
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.SelectedText = "";
             this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
-            this.guna2TextBox4.Size = new System.Drawing.Size(358, 31);
+            this.guna2TextBox4.Size = new System.Drawing.Size(301, 31);
             this.guna2TextBox4.TabIndex = 191;
             // 
             // label9

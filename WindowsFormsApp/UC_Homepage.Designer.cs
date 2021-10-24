@@ -38,13 +38,14 @@ namespace WindowsFormsApp
             this.BoUCTrangChu.BorderRadius = 30;
             this.BoUCTrangChu.TargetControl = this;
             // 
-            // UC_TrangChu
+            // UC_Homepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Name = "UC_TrangChu";
-            this.Size = new System.Drawing.Size(1607, 989);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "UC_Homepage";
+            this.Size = new System.Drawing.Size(1147, 753);
             this.ResumeLayout(false);
 
         }
