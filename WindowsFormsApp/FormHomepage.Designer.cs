@@ -34,84 +34,70 @@ namespace WindowsFormsApp
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.BobtnTrangChu = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BoFormHomePage = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BopanelLeft = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BopanelTop = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelTop = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.BopanelDown = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BopanelControls = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BobtnBanHang = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BobtnKhachHang = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BobtnNhanVien = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BobtnNCC = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BobtnThongKe = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BobtnNhapHang = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BobtnDangXuat = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BoPanelTk = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BoKhachHanThôngKê = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.BoPhieuNhap = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnBanHang = new System.Windows.Forms.Button();
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnKhachHang = new System.Windows.Forms.Button();
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnNhanVien = new System.Windows.Forms.Button();
-            this.guna2Elipse5 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnNCC = new System.Windows.Forms.Button();
-            this.guna2Elipse6 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnThongKe = new System.Windows.Forms.Button();
-            this.BobtnKhoHang = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnKhoHang = new System.Windows.Forms.Button();
-            this.guna2Elipse7 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse8 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnSell = new System.Windows.Forms.Button();
+            this.btnCustomer = new System.Windows.Forms.Button();
+            this.btnEmployee = new System.Windows.Forms.Button();
+            this.btnSupplier = new System.Windows.Forms.Button();
+            this.btnStatistic = new System.Windows.Forms.Button();
+            this.btnDepot = new System.Windows.Forms.Button();
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.guna2Elipse9 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.btnImportGoods = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnTrangChu = new System.Windows.Forms.Button();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.btnNhapHang = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.btnHomePage = new System.Windows.Forms.Button();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.bunifuElipse12 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panelDown.SuspendLayout();
             this.panelTop.SuspendLayout();
             this.panelLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             this.SuspendLayout();
             // 
             // panelDown
@@ -162,27 +148,9 @@ namespace WindowsFormsApp
             this.label3.TabIndex = 0;
             this.label3.Text = " 449 Lê Văn Việt, Phường Tăng Nhơn Phú A, Quận 9, TP. HCM";
             // 
-            // BobtnTrangChu
-            // 
-            this.BobtnTrangChu.BorderRadius = 20;
-            // 
-            // BoFormHomePage
-            // 
-            this.BoFormHomePage.BorderRadius = 40;
-            this.BoFormHomePage.TargetControl = this;
-            // 
-            // BopanelLeft
-            // 
-            this.BopanelLeft.BorderRadius = 30;
-            // 
-            // BopanelTop
-            // 
-            this.BopanelTop.BorderRadius = 30;
-            this.BopanelTop.TargetControl = this.panelTop;
-            // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
+            this.panelTop.BackColor = System.Drawing.Color.White;
             this.panelTop.Controls.Add(this.label11);
             this.panelTop.Controls.Add(this.label10);
             this.panelTop.Controls.Add(this.pictureBox6);
@@ -192,13 +160,14 @@ namespace WindowsFormsApp
             this.panelTop.Location = new System.Drawing.Point(272, -1);
             this.panelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1059, 61);
+            this.panelTop.Size = new System.Drawing.Size(1014, 61);
             this.panelTop.TabIndex = 12;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.SteelBlue;
             this.label11.Location = new System.Drawing.Point(339, 32);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(155, 25);
@@ -209,6 +178,7 @@ namespace WindowsFormsApp
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.SteelBlue;
             this.label10.Location = new System.Drawing.Point(358, -1);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(98, 25);
@@ -219,6 +189,7 @@ namespace WindowsFormsApp
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.SteelBlue;
             this.label7.Location = new System.Drawing.Point(117, 32);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 26);
@@ -229,252 +200,159 @@ namespace WindowsFormsApp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
             this.label6.Location = new System.Drawing.Point(113, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 25);
             this.label6.TabIndex = 3;
             this.label6.Text = "Giao hàng";
             // 
-            // BopanelDown
+            // btnSell
             // 
-            this.BopanelDown.BorderRadius = 30;
-            this.BopanelDown.TargetControl = this.panelDown;
+            this.btnSell.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSell.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSell.FlatAppearance.BorderSize = 0;
+            this.btnSell.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSell.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.ForeColor = System.Drawing.Color.White;
+            this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSell.Location = new System.Drawing.Point(27, 152);
+            this.btnSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSell.Name = "btnSell";
+            this.btnSell.Padding = new System.Windows.Forms.Padding(1);
+            this.btnSell.Size = new System.Drawing.Size(210, 52);
+            this.btnSell.TabIndex = 3;
+            this.btnSell.Text = "   Bán hàng";
+            this.btnSell.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSell.UseVisualStyleBackColor = false;
             // 
-            // BopanelControls
+            // btnCustomer
             // 
-            this.BopanelControls.BorderRadius = 30;
+            this.btnCustomer.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCustomer.Location = new System.Drawing.Point(27, 217);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Padding = new System.Windows.Forms.Padding(1);
+            this.btnCustomer.Size = new System.Drawing.Size(210, 52);
+            this.btnCustomer.TabIndex = 4;
+            this.btnCustomer.Text = "   Khách hàng";
+            this.btnCustomer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCustomer.UseVisualStyleBackColor = false;
             // 
-            // BobtnBanHang
+            // btnEmployee
             // 
-            this.BobtnBanHang.BorderRadius = 20;
+            this.btnEmployee.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.White;
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(26, 288);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Padding = new System.Windows.Forms.Padding(1);
+            this.btnEmployee.Size = new System.Drawing.Size(210, 52);
+            this.btnEmployee.TabIndex = 5;
+            this.btnEmployee.Text = "   Nhân viên";
+            this.btnEmployee.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmployee.UseVisualStyleBackColor = false;
             // 
-            // BobtnKhachHang
+            // btnSupplier
             // 
-            this.BobtnKhachHang.BorderRadius = 20;
+            this.btnSupplier.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSupplier.FlatAppearance.BorderSize = 0;
+            this.btnSupplier.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupplier.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplier.ForeColor = System.Drawing.Color.White;
+            this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupplier.Location = new System.Drawing.Point(26, 359);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSupplier.Name = "btnSupplier";
+            this.btnSupplier.Padding = new System.Windows.Forms.Padding(1);
+            this.btnSupplier.Size = new System.Drawing.Size(210, 52);
+            this.btnSupplier.TabIndex = 7;
+            this.btnSupplier.Text = "   Nhà C.Cấp";
+            this.btnSupplier.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSupplier.UseVisualStyleBackColor = false;
             // 
-            // BobtnNhanVien
+            // btnStatistic
             // 
-            this.BobtnNhanVien.BorderRadius = 20;
+            this.btnStatistic.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatistic.FlatAppearance.BorderSize = 0;
+            this.btnStatistic.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatistic.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistic.ForeColor = System.Drawing.Color.White;
+            this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStatistic.Location = new System.Drawing.Point(27, 430);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Padding = new System.Windows.Forms.Padding(1);
+            this.btnStatistic.Size = new System.Drawing.Size(210, 52);
+            this.btnStatistic.TabIndex = 6;
+            this.btnStatistic.Text = "   Thống kê";
+            this.btnStatistic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnStatistic.UseVisualStyleBackColor = false;
             // 
-            // BobtnNCC
+            // btnDepot
             // 
-            this.BobtnNCC.BorderRadius = 20;
-            // 
-            // BobtnThongKe
-            // 
-            this.BobtnThongKe.BorderRadius = 20;
-            // 
-            // BobtnNhapHang
-            // 
-            this.BobtnNhapHang.BorderRadius = 20;
-            // 
-            // BobtnDangXuat
-            // 
-            this.BobtnDangXuat.BorderRadius = 20;
-            // 
-            // BoPanelTk
-            // 
-            this.BoPanelTk.BorderRadius = 20;
-            // 
-            // BoKhachHanThôngKê
-            // 
-            this.BoKhachHanThôngKê.BorderRadius = 20;
-            // 
-            // BoPhieuNhap
-            // 
-            this.BoPhieuNhap.BorderRadius = 20;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 20;
-            this.guna2Elipse1.TargetControl = this.btnTrangChu;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 20;
-            this.guna2Elipse2.TargetControl = this.btnBanHang;
-            // 
-            // btnBanHang
-            // 
-            this.btnBanHang.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnBanHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBanHang.FlatAppearance.BorderSize = 0;
-            this.btnBanHang.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnBanHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBanHang.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBanHang.ForeColor = System.Drawing.Color.White;
-            this.btnBanHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBanHang.Location = new System.Drawing.Point(24, 165);
-            this.btnBanHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBanHang.Name = "btnBanHang";
-            this.btnBanHang.Padding = new System.Windows.Forms.Padding(1);
-            this.btnBanHang.Size = new System.Drawing.Size(224, 54);
-            this.btnBanHang.TabIndex = 3;
-            this.btnBanHang.Text = "   Bán hàng";
-            this.btnBanHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnBanHang.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse3
-            // 
-            this.guna2Elipse3.BorderRadius = 20;
-            this.guna2Elipse3.TargetControl = this.btnKhachHang;
-            // 
-            // btnKhachHang
-            // 
-            this.btnKhachHang.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnKhachHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnKhachHang.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhachHang.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.White;
-            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(24, 231);
-            this.btnKhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(1);
-            this.btnKhachHang.Size = new System.Drawing.Size(224, 52);
-            this.btnKhachHang.TabIndex = 4;
-            this.btnKhachHang.Text = "   Khách hàng";
-            this.btnKhachHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKhachHang.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 20;
-            this.guna2Elipse4.TargetControl = this.btnNhanVien;
-            // 
-            // btnNhanVien
-            // 
-            this.btnNhanVien.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnNhanVien.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhanVien.FlatAppearance.BorderSize = 0;
-            this.btnNhanVien.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnNhanVien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhanVien.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhanVien.ForeColor = System.Drawing.Color.White;
-            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(27, 290);
-            this.btnNhanVien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNhanVien.Name = "btnNhanVien";
-            this.btnNhanVien.Padding = new System.Windows.Forms.Padding(1);
-            this.btnNhanVien.Size = new System.Drawing.Size(221, 47);
-            this.btnNhanVien.TabIndex = 5;
-            this.btnNhanVien.Text = "   Nhân viên";
-            this.btnNhanVien.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhanVien.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse5
-            // 
-            this.guna2Elipse5.BorderRadius = 20;
-            this.guna2Elipse5.TargetControl = this.btnNCC;
-            // 
-            // btnNCC
-            // 
-            this.btnNCC.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnNCC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNCC.FlatAppearance.BorderSize = 0;
-            this.btnNCC.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCC.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNCC.ForeColor = System.Drawing.Color.White;
-            this.btnNCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNCC.Location = new System.Drawing.Point(30, 350);
-            this.btnNCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNCC.Name = "btnNCC";
-            this.btnNCC.Padding = new System.Windows.Forms.Padding(1);
-            this.btnNCC.Size = new System.Drawing.Size(218, 50);
-            this.btnNCC.TabIndex = 7;
-            this.btnNCC.Text = "   Nhà C.Cấp";
-            this.btnNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNCC.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse6
-            // 
-            this.guna2Elipse6.BorderRadius = 20;
-            this.guna2Elipse6.TargetControl = this.btnThongKe;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnThongKe.FlatAppearance.BorderSize = 0;
-            this.btnThongKe.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(30, 414);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Padding = new System.Windows.Forms.Padding(1);
-            this.btnThongKe.Size = new System.Drawing.Size(218, 51);
-            this.btnThongKe.TabIndex = 6;
-            this.btnThongKe.Text = "   Thống kê";
-            this.btnThongKe.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThongKe.UseVisualStyleBackColor = false;
-            // 
-            // BobtnKhoHang
-            // 
-            this.BobtnKhoHang.BorderRadius = 20;
-            this.BobtnKhoHang.TargetControl = this.btnKhoHang;
-            // 
-            // btnKhoHang
-            // 
-            this.btnKhoHang.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnKhoHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnKhoHang.FlatAppearance.BorderSize = 0;
-            this.btnKhoHang.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnKhoHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhoHang.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhoHang.ForeColor = System.Drawing.Color.White;
-            this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.Location = new System.Drawing.Point(30, 479);
-            this.btnKhoHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnKhoHang.Name = "btnKhoHang";
-            this.btnKhoHang.Padding = new System.Windows.Forms.Padding(1);
-            this.btnKhoHang.Size = new System.Drawing.Size(218, 54);
-            this.btnKhoHang.TabIndex = 8;
-            this.btnKhoHang.Text = "   Kho hàng";
-            this.btnKhoHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnKhoHang.UseVisualStyleBackColor = false;
-            // 
-            // guna2Elipse7
-            // 
-            this.guna2Elipse7.BorderRadius = 20;
-            this.guna2Elipse7.TargetControl = this.btnNhapHang;
-            // 
-            // guna2Elipse8
-            // 
-            this.guna2Elipse8.BorderRadius = 30;
-            this.guna2Elipse8.TargetControl = this.panelLeft;
+            this.btnDepot.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDepot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDepot.FlatAppearance.BorderSize = 0;
+            this.btnDepot.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnDepot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepot.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepot.ForeColor = System.Drawing.Color.White;
+            this.btnDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDepot.Location = new System.Drawing.Point(27, 499);
+            this.btnDepot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDepot.Name = "btnDepot";
+            this.btnDepot.Padding = new System.Windows.Forms.Padding(1);
+            this.btnDepot.Size = new System.Drawing.Size(210, 52);
+            this.btnDepot.TabIndex = 8;
+            this.btnDepot.Text = "   Kho hàng";
+            this.btnDepot.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDepot.UseVisualStyleBackColor = false;
             // 
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
+            this.panelLeft.Controls.Add(this.pictureBox16);
             this.panelLeft.Controls.Add(this.label8);
             this.panelLeft.Controls.Add(this.label1);
             this.panelLeft.Controls.Add(this.pictureBox14);
             this.panelLeft.Controls.Add(this.pictureBox13);
-            this.panelLeft.Controls.Add(this.pictureBox12);
             this.panelLeft.Controls.Add(this.pictureBox11);
             this.panelLeft.Controls.Add(this.pictureBox10);
             this.panelLeft.Controls.Add(this.pictureBox9);
             this.panelLeft.Controls.Add(this.pictureBox8);
             this.panelLeft.Controls.Add(this.pictureBox7);
             this.panelLeft.Controls.Add(this.pictureBox1);
-            this.panelLeft.Controls.Add(this.button1);
+            this.panelLeft.Controls.Add(this.btnLogOut);
             this.panelLeft.Controls.Add(this.label2);
             this.panelLeft.Controls.Add(this.panelMain);
             this.panelLeft.Controls.Add(this.btnDangXuat);
-            this.panelLeft.Controls.Add(this.btnNhapHang);
-            this.panelLeft.Controls.Add(this.btnKhoHang);
-            this.panelLeft.Controls.Add(this.btnNCC);
-            this.panelLeft.Controls.Add(this.btnThongKe);
-            this.panelLeft.Controls.Add(this.btnNhanVien);
-            this.panelLeft.Controls.Add(this.btnKhachHang);
-            this.panelLeft.Controls.Add(this.btnBanHang);
-            this.panelLeft.Controls.Add(this.btnTrangChu);
+            this.panelLeft.Controls.Add(this.btnImportGoods);
+            this.panelLeft.Controls.Add(this.btnDepot);
+            this.panelLeft.Controls.Add(this.btnSupplier);
+            this.panelLeft.Controls.Add(this.btnStatistic);
+            this.panelLeft.Controls.Add(this.btnEmployee);
+            this.panelLeft.Controls.Add(this.btnCustomer);
+            this.panelLeft.Controls.Add(this.btnSell);
+            this.panelLeft.Controls.Add(this.btnHomePage);
             this.panelLeft.Location = new System.Drawing.Point(0, -1);
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(266, 751);
@@ -483,10 +361,10 @@ namespace WindowsFormsApp
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.Peru;
-            this.panelMain.Location = new System.Drawing.Point(12, 95);
+            this.panelMain.Location = new System.Drawing.Point(12, 85);
             this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(9, 56);
+            this.panelMain.Size = new System.Drawing.Size(9, 52);
             this.panelMain.TabIndex = 0;
             // 
             // btnDangXuat
@@ -508,48 +386,86 @@ namespace WindowsFormsApp
             this.btnDangXuat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDangXuat.UseVisualStyleBackColor = false;
             // 
-            // guna2Elipse9
-            // 
-            this.guna2Elipse9.BorderRadius = 20;
-            this.guna2Elipse9.TargetControl = this.btnDangXuat;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Peru;
-            this.label2.Location = new System.Drawing.Point(35, 39);
+            this.label2.Location = new System.Drawing.Point(35, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 35);
             this.label2.TabIndex = 13;
             this.label2.Text = "SUPERMARKET";
             // 
-            // button1
+            // btnLogOut
             // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(27, 615);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(1);
-            this.button1.Size = new System.Drawing.Size(221, 53);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Đăng xuất";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLogOut.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.White;
+            this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogOut.Location = new System.Drawing.Point(27, 637);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Padding = new System.Windows.Forms.Padding(1);
+            this.btnLogOut.Size = new System.Drawing.Size(210, 52);
+            this.btnLogOut.TabIndex = 14;
+            this.btnLogOut.Text = "Đăng xuất";
+            this.btnLogOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             // 
-            // panel1
+            // panelControl
             // 
-            this.panel1.Location = new System.Drawing.Point(272, 65);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(996, 667);
-            this.panel1.TabIndex = 15;
+            this.panelControl.BackColor = System.Drawing.Color.Snow;
+            this.panelControl.Location = new System.Drawing.Point(272, 65);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(1003, 685);
+            this.panelControl.TabIndex = 15;
+            // 
+            // btnImportGoods
+            // 
+            this.btnImportGoods.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnImportGoods.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnImportGoods.FlatAppearance.BorderSize = 0;
+            this.btnImportGoods.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnImportGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportGoods.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportGoods.ForeColor = System.Drawing.Color.White;
+            this.btnImportGoods.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnImportGoods.Location = new System.Drawing.Point(27, 567);
+            this.btnImportGoods.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnImportGoods.Name = "btnImportGoods";
+            this.btnImportGoods.Padding = new System.Windows.Forms.Padding(1);
+            this.btnImportGoods.Size = new System.Drawing.Size(210, 52);
+            this.btnImportGoods.TabIndex = 9;
+            this.btnImportGoods.Text = "   Nhập hàng";
+            this.btnImportGoods.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnImportGoods.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Peru;
+            this.label1.Location = new System.Drawing.Point(12, 699);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(246, 21);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Địa chỉ: 449 Lê Văn Việt, Quận 9 , HCM";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Peru;
+            this.label8.Location = new System.Drawing.Point(66, 720);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(121, 21);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Liên hệ: 19001508";
             // 
             // pictureBox6
             // 
@@ -563,6 +479,7 @@ namespace WindowsFormsApp
             // 
             // pictureBox5
             // 
+            this.pictureBox5.Image = global::WindowsFormsApp.Properties.Resources.oto_giaohang;
             this.pictureBox5.Location = new System.Drawing.Point(22, -1);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
@@ -571,29 +488,79 @@ namespace WindowsFormsApp
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
             // 
-            // btnTrangChu
+            // pictureBox14
             // 
-            this.btnTrangChu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnTrangChu.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTrangChu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTrangChu.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
-            this.btnTrangChu.FlatAppearance.BorderSize = 0;
-            this.btnTrangChu.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnTrangChu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrangChu.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrangChu.ForeColor = System.Drawing.Color.White;
-            this.btnTrangChu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnTrangChu.Location = new System.Drawing.Point(27, 95);
-            this.btnTrangChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTrangChu.Name = "btnTrangChu";
-            this.btnTrangChu.Padding = new System.Windows.Forms.Padding(1);
-            this.btnTrangChu.Size = new System.Drawing.Size(221, 56);
-            this.btnTrangChu.TabIndex = 2;
-            this.btnTrangChu.Text = "  Trang chủ";
-            this.btnTrangChu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnTrangChu.UseVisualStyleBackColor = true;
+            this.pictureBox14.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox14.Location = new System.Drawing.Point(41, 648);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox14.TabIndex = 23;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox13.Location = new System.Drawing.Point(41, 577);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox13.TabIndex = 22;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox11.Location = new System.Drawing.Point(41, 439);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox11.TabIndex = 20;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox10.Location = new System.Drawing.Point(41, 369);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox10.TabIndex = 19;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox9.Location = new System.Drawing.Point(41, 298);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox9.TabIndex = 18;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox8.Location = new System.Drawing.Point(41, 227);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox8.TabIndex = 17;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox7.Location = new System.Drawing.Point(41, 164);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox7.TabIndex = 16;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox1.Image = global::WindowsFormsApp.Properties.Resources.home_page;
+            this.pictureBox1.Location = new System.Drawing.Point(41, 95);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -625,136 +592,107 @@ namespace WindowsFormsApp
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
+            // btnHomePage
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox1.Image = global::WindowsFormsApp.Properties.Resources.home_page;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 119);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
+            this.btnHomePage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHomePage.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnHomePage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHomePage.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.btnHomePage.FlatAppearance.BorderSize = 0;
+            this.btnHomePage.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
+            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePage.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomePage.ForeColor = System.Drawing.Color.White;
+            this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.btnHomePage.Location = new System.Drawing.Point(27, 85);
+            this.btnHomePage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHomePage.Name = "btnHomePage";
+            this.btnHomePage.Padding = new System.Windows.Forms.Padding(1);
+            this.btnHomePage.Size = new System.Drawing.Size(210, 52);
+            this.btnHomePage.TabIndex = 2;
+            this.btnHomePage.Text = "  Trang chủ";
+            this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHomePage.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // pictureBox16
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox7.Location = new System.Drawing.Point(41, 187);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox7.TabIndex = 16;
-            this.pictureBox7.TabStop = false;
+            this.pictureBox16.BackColor = System.Drawing.Color.SteelBlue;
+            this.pictureBox16.Location = new System.Drawing.Point(41, 509);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(44, 32);
+            this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox16.TabIndex = 26;
+            this.pictureBox16.TabStop = false;
             // 
-            // pictureBox8
+            // bunifuElipse1
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox8.Location = new System.Drawing.Point(41, 240);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox8.TabIndex = 17;
-            this.pictureBox8.TabStop = false;
+            this.bunifuElipse1.ElipseRadius = 140;
+            this.bunifuElipse1.TargetControl = this.panelLeft;
             // 
-            // pictureBox9
+            // bunifuElipse2
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox9.Location = new System.Drawing.Point(41, 305);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox9.TabIndex = 18;
-            this.pictureBox9.TabStop = false;
+            this.bunifuElipse2.ElipseRadius = 25;
+            this.bunifuElipse2.TargetControl = this.panelTop;
             // 
-            // pictureBox10
+            // bunifuElipse3
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox10.Location = new System.Drawing.Point(41, 368);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox10.TabIndex = 19;
-            this.pictureBox10.TabStop = false;
+            this.bunifuElipse3.ElipseRadius = 35;
+            this.bunifuElipse3.TargetControl = this.panelControl;
             // 
-            // pictureBox11
+            // bunifuElipse4
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox11.Location = new System.Drawing.Point(41, 433);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox11.TabIndex = 20;
-            this.pictureBox11.TabStop = false;
+            this.bunifuElipse4.ElipseRadius = 30;
+            this.bunifuElipse4.TargetControl = this.btnHomePage;
             // 
-            // pictureBox12
+            // bunifuElipse5
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox12.Location = new System.Drawing.Point(41, 490);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox12.TabIndex = 21;
-            this.pictureBox12.TabStop = false;
+            this.bunifuElipse5.ElipseRadius = 30;
+            this.bunifuElipse5.TargetControl = this.btnSell;
             // 
-            // pictureBox14
+            // bunifuElipse6
             // 
-            this.pictureBox14.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox14.Location = new System.Drawing.Point(47, 624);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox14.TabIndex = 23;
-            this.pictureBox14.TabStop = false;
+            this.bunifuElipse6.ElipseRadius = 30;
+            this.bunifuElipse6.TargetControl = this.btnCustomer;
             // 
-            // pictureBox13
+            // bunifuElipse7
             // 
-            this.pictureBox13.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox13.Location = new System.Drawing.Point(41, 555);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(44, 32);
-            this.pictureBox13.TabIndex = 22;
-            this.pictureBox13.TabStop = false;
+            this.bunifuElipse7.ElipseRadius = 30;
+            this.bunifuElipse7.TargetControl = this.btnEmployee;
             // 
-            // btnNhapHang
+            // bunifuElipse8
             // 
-            this.btnNhapHang.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnNhapHang.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNhapHang.FlatAppearance.BorderSize = 0;
-            this.btnNhapHang.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
-            this.btnNhapHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNhapHang.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhapHang.ForeColor = System.Drawing.Color.White;
-            this.btnNhapHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhapHang.Location = new System.Drawing.Point(27, 546);
-            this.btnNhapHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNhapHang.Name = "btnNhapHang";
-            this.btnNhapHang.Padding = new System.Windows.Forms.Padding(1);
-            this.btnNhapHang.Size = new System.Drawing.Size(221, 54);
-            this.btnNhapHang.TabIndex = 9;
-            this.btnNhapHang.Text = "   Nhập hàng";
-            this.btnNhapHang.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnNhapHang.UseVisualStyleBackColor = false;
+            this.bunifuElipse8.ElipseRadius = 30;
+            this.bunifuElipse8.TargetControl = this.btnSupplier;
             // 
-            // label1
+            // bunifuElipse9
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 682);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 21);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Địa chỉ: 449 Lê Văn Việt, Quận 9 , HCM";
+            this.bunifuElipse9.ElipseRadius = 30;
+            this.bunifuElipse9.TargetControl = this.btnStatistic;
             // 
-            // label8
+            // bunifuElipse10
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(62, 716);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(121, 21);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Liên hệ: 19001508";
+            this.bunifuElipse10.ElipseRadius = 30;
+            this.bunifuElipse10.TargetControl = this.btnDepot;
+            // 
+            // bunifuElipse11
+            // 
+            this.bunifuElipse11.ElipseRadius = 30;
+            this.bunifuElipse11.TargetControl = this.btnImportGoods;
+            // 
+            // bunifuElipse12
+            // 
+            this.bunifuElipse12.ElipseRadius = 30;
+            this.bunifuElipse12.TargetControl = this.btnLogOut;
             // 
             // FormHomepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1274, 745);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1287, 749);
+            this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelDown);
@@ -772,18 +710,18 @@ namespace WindowsFormsApp
             this.panelLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -796,42 +734,15 @@ namespace WindowsFormsApp
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnTrangChu;
-        private Guna.UI2.WinForms.Guna2Elipse BoFormHomePage;
-        private Guna.UI2.WinForms.Guna2Elipse BopanelLeft;
-        private Guna.UI2.WinForms.Guna2Elipse BopanelTop;
-        private Guna.UI2.WinForms.Guna2Elipse BopanelDown;
-        private Guna.UI2.WinForms.Guna2Elipse BopanelControls;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnBanHang;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnKhachHang;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnNhanVien;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnNCC;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnThongKe;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnNhapHang;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnDangXuat;
-        private Guna.UI2.WinForms.Guna2Elipse BoPanelTk;
-        private Guna.UI2.WinForms.Guna2Elipse BoKhachHanThôngKê;
-        private Guna.UI2.WinForms.Guna2Elipse BoPhieuNhap;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse5;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse6;
-        private Guna.UI2.WinForms.Guna2Elipse BobtnKhoHang;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse7;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse8;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse9;
         private System.Windows.Forms.Panel panelLeft;
         private System.Windows.Forms.Panel panelMain;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.Button btnKhoHang;
-        private System.Windows.Forms.Button btnNCC;
-        private System.Windows.Forms.Button btnThongKe;
-        private System.Windows.Forms.Button btnNhanVien;
-        private System.Windows.Forms.Button btnKhachHang;
-        private System.Windows.Forms.Button btnBanHang;
-        private System.Windows.Forms.Button btnTrangChu;
+        private System.Windows.Forms.Button btnDepot;
+        private System.Windows.Forms.Button btnSupplier;
+        private System.Windows.Forms.Button btnStatistic;
+        private System.Windows.Forms.Button btnEmployee;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnSell;
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
@@ -840,10 +751,9 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
@@ -851,8 +761,22 @@ namespace WindowsFormsApp
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.Button btnNhapHang;
+        private System.Windows.Forms.Button btnImportGoods;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Button btnHomePage;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse5;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse6;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse7;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse8;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse9;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse11;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse12;
     }
 }
