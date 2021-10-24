@@ -284,7 +284,7 @@ namespace WindowsFormsApp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(867, 245);
+            this.button2.Location = new System.Drawing.Point(842, 233);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 37);
             this.button2.TabIndex = 182;
