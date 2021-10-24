@@ -45,7 +45,6 @@
             this.btnDangnhap = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-         
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChinh.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,19 +57,18 @@
             this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1649, 0);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1227, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(51, 36);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 3;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(-64, -112);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 26);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1819, 1113);
+            this.pictureBox1.Size = new System.Drawing.Size(1248, 790);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -92,15 +90,15 @@
             this.guna2TextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(86)))));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(51, 150);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox1.Location = new System.Drawing.Point(45, 120);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.ShadowDecoration.BorderRadius = 10;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(495, 62);
+            this.guna2TextBox1.Size = new System.Drawing.Size(371, 46);
             this.guna2TextBox1.TabIndex = 9;
             this.guna2TextBox1.TextOffset = new System.Drawing.Point(15, 0);
             // 
@@ -108,9 +106,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(56, 122);
+            this.label2.Location = new System.Drawing.Point(50, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(121, 40);
+            this.label2.Size = new System.Drawing.Size(104, 35);
             this.label2.TabIndex = 10;
             this.label2.Text = "Tài khoản";
             // 
@@ -128,9 +126,10 @@
             this.panelChinh.Controls.Add(this.guna2TextBox2);
             this.panelChinh.Controls.Add(this.label2);
             this.panelChinh.Controls.Add(this.guna2TextBox1);
-            this.panelChinh.Location = new System.Drawing.Point(568, 228);
+            this.panelChinh.Location = new System.Drawing.Point(430, 122);
+            this.panelChinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChinh.Name = "panelChinh";
-            this.panelChinh.Size = new System.Drawing.Size(584, 741);
+            this.panelChinh.Size = new System.Drawing.Size(456, 554);
             this.panelChinh.TabIndex = 5;
             // 
             // labelThoat
@@ -138,21 +137,20 @@
             this.labelThoat.AutoSize = true;
             this.labelThoat.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelThoat.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.labelThoat.Location = new System.Drawing.Point(368, 664);
+            this.labelThoat.Location = new System.Drawing.Point(292, 499);
             this.labelThoat.Name = "labelThoat";
-            this.labelThoat.Size = new System.Drawing.Size(79, 40);
+            this.labelThoat.Size = new System.Drawing.Size(68, 35);
             this.labelThoat.TabIndex = 21;
             this.labelThoat.Text = "Thoát";
-          
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(114, 664);
+            this.label6.Location = new System.Drawing.Point(68, 499);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(236, 40);
+            this.label6.Size = new System.Drawing.Size(201, 35);
             this.label6.TabIndex = 20;
             this.label6.Text = "Bạn quên mật khẩu?";
             // 
@@ -161,9 +159,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label5.Location = new System.Drawing.Point(354, 613);
+            this.label5.Location = new System.Drawing.Point(275, 464);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(104, 40);
+            this.label5.Size = new System.Drawing.Size(89, 35);
             this.label5.TabIndex = 19;
             this.label5.Text = "Đăng ký\r\n";
             // 
@@ -171,9 +169,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(114, 613);
+            this.label4.Location = new System.Drawing.Point(68, 464);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(234, 40);
+            this.label4.Size = new System.Drawing.Size(199, 35);
             this.label4.TabIndex = 18;
             this.label4.Text = "Không có tài khoản?\r\n";
             // 
@@ -183,8 +181,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(584, 100);
+            this.panel1.Size = new System.Drawing.Size(456, 80);
             this.panel1.TabIndex = 17;
             // 
             // label1
@@ -192,9 +191,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(147, 32);
+            this.label1.Location = new System.Drawing.Point(102, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 40);
+            this.label1.Size = new System.Drawing.Size(258, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP HỆ THỐNG";
             // 
@@ -202,9 +201,10 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(51, 357);
+            this.checkBox1.Location = new System.Drawing.Point(56, 258);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(206, 39);
+            this.checkBox1.Size = new System.Drawing.Size(175, 33);
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "Hiển thị mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -212,9 +212,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(154, 538);
+            this.pictureBox2.Location = new System.Drawing.Point(107, 403);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(285, 50);
+            this.pictureBox2.Size = new System.Drawing.Size(253, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 14;
             this.pictureBox2.TabStop = false;
@@ -230,22 +231,20 @@
             this.btnDangnhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnDangnhap.ForeColor = System.Drawing.Color.Black;
             this.btnDangnhap.HoverState.Parent = this.btnDangnhap;
-            this.btnDangnhap.Location = new System.Drawing.Point(67, 429);
-            this.btnDangnhap.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDangnhap.Location = new System.Drawing.Point(88, 310);
             this.btnDangnhap.Name = "btnDangnhap";
             this.btnDangnhap.ShadowDecoration.Parent = this.btnDangnhap;
-            this.btnDangnhap.Size = new System.Drawing.Size(461, 73);
+            this.btnDangnhap.Size = new System.Drawing.Size(288, 66);
             this.btnDangnhap.TabIndex = 13;
             this.btnDangnhap.Text = "ĐĂNG NHẬP";
-
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 244);
+            this.label3.Location = new System.Drawing.Point(50, 183);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 40);
+            this.label3.Size = new System.Drawing.Size(100, 35);
             this.label3.TabIndex = 12;
             this.label3.Text = "Mật khẩu";
             // 
@@ -266,34 +265,29 @@
             this.guna2TextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(92)))), ((int)(((byte)(86)))));
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Location = new System.Drawing.Point(51, 277);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox2.Location = new System.Drawing.Point(45, 206);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
             this.guna2TextBox2.ShadowDecoration.BorderRadius = 10;
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Size = new System.Drawing.Size(495, 62);
+            this.guna2TextBox2.Size = new System.Drawing.Size(371, 46);
             this.guna2TextBox2.TabIndex = 11;
             this.guna2TextBox2.TextOffset = new System.Drawing.Point(15, 0);
             // 
-            // boGoc2
+            // FormLogin
             // 
-     
-            // 
-            // FormDangNhap
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1700, 1000);
+            this.ClientSize = new System.Drawing.Size(1272, 818);
             this.Controls.Add(this.panelChinh);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FormDangNhap";
+            this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

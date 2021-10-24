@@ -1,4 +1,4 @@
-CREATE DATABASE QuanLyCuaHangTienLoi
+﻿CREATE DATABASE QuanLyCuaHangTienLoi
 GO
 
 USE QuanLyCuaHangTienLoi 
