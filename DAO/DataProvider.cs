@@ -20,7 +20,7 @@ namespace DAO
         }
 
         private DataProvider() { }
-        private string connectionSTR = "Data Source=DESKTOP-RNOPI29\\SQLEXPRESS;Initial Catalog=QuanLyCuaHangTienLoi;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-RNOPI29;Initial Catalog=QuanLyCuaHangTienLoi;User ID=sa;Password=123";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
