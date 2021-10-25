@@ -1,0 +1,4 @@
+D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.Properties.Resources.resources
+D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache

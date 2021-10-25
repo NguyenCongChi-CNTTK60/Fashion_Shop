@@ -49,7 +49,7 @@
     <Compile Include="BillDAO.cs" />
     <Compile Include="BillInfoDAO.cs" />
     <Compile Include="CommodityDAO.cs" />
-    <Compile Include="CouponDTO.cs" />
+    <Compile Include="CouponDAO.cs" />
     <Compile Include="CouponInfoDAO.cs" />
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="EmployeeDAO.cs" />
