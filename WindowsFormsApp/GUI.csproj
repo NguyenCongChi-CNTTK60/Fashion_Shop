@@ -353,6 +353,12 @@
     <EmbeddedResource Include="UC_Customer.resx">
       <DependentUpon>UC_Customer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Employee.resx">
+      <DependentUpon>UC_Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Homepage.resx">
+      <DependentUpon>UC_Homepage.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -373,6 +379,8 @@
     <None Include="Resources\unnamed.png" />
     <None Include="Resources\z26684059V,Stacja-paliw-Circle-K.jpg" />
     <None Include="Resources\dzcqynvgag7q.jpg" />
+    <None Include="Image\home-page.png" />
+    <None Include="Image\oto-giaohang.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -397,6 +405,7 @@
       <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
