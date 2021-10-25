@@ -20,5 +20,19 @@ namespace DAO
             get { if (instance == null) instance = new UnitDAO(); return instance; }
             set => instance = value;
         }
+
+        public UnitDTO getDataById(string id)
+        {
+            UnitDTO item = new UnitDTO();
+            string query = "select * from DONVITINH where MaDVT='" + id + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            if (data.Rows.Count > 0)
+            {
+                item = new UnitDTO(data.Rows[0]);
+            }
+
+            return item;
+        }
     }
 }
