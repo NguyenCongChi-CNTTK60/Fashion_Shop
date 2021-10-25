@@ -10,7 +10,7 @@ namespace DTO
 {
     public class EmployeeDTO
     {
-        private string userName, passWord, employeeName, authorization;
+        private string tenDangNhap, matKhau, tenNguoiDung, Quyen;
         public EmployeeDTO(DataRow row)
         {
             this.TenDangNhap = row["TenDangNhap"].ToString();
@@ -19,9 +19,9 @@ namespace DTO
             this.Quyen1 = row["Quyen"].ToString();
         }
 
-        public string TenDangNhap { get => userName; set => userName = value; }
-        public string MatKhau { get => passWord; set => passWord = value; }
-        public string TenNguoiDung { get => employeeName; set => employeeName = value; }
-        public string Quyen1 { get => authorization; set => authorization = value; }
+        public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
+        public string MatKhau { get => matKhau; set => matKhau = value; }
+        public string TenNguoiDung { get => tenNguoiDung; set => tenNguoiDung = value; }
+        public string Quyen1 { get => Quyen; set => Quyen = value; }
     }
 }

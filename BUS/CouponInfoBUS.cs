@@ -23,5 +23,15 @@ namespace BUS
             get { if (instance == null) instance = new CouponInfoBUS(); return instance; }
             set => instance = value;
         }
+
+        public bool LuuPhieuNhap(string maPN, string maHang, int sl, int gia)
+        {
+            return CouponInfoBUS.Intance.LuuPhieuNhap(maPN, maHang, sl, gia);
+        }
+
+        public DataTable getCTPN(string maPN)
+        {
+            return CouponInfoBUS.Intance.getCTPN(maPN);
+        }
     }
 }
