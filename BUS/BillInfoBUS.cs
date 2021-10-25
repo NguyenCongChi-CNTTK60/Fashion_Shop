@@ -23,5 +23,16 @@ namespace BUS
             get { if (instance == null) instance = new BillInfoBUS(); return instance; }
             set => instance = value;
         }
+
+        public bool LuuDonHang(string madh, string masp, int sl, int gia)
+        {
+            return BillInfoDAO.Intance.LuuDonHang(madh, masp, sl, gia);
+        }
+
+        public DataTable getCTDN(string maHD)
+        {
+
+            return BillInfoDAO.Intance.getCTDN(maHD);
+        }
     }
 }

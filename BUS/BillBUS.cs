@@ -22,5 +22,20 @@ namespace BUS
             get { if (instance == null) instance = new BillBUS(); return instance; }
             set => instance = value;
         }
+
+        public string LoadMaDHMoi()
+        {
+            return BillDAO.Intance.LoadMaDHMoi();
+        }
+
+        public bool LuuDonHang(BillDTO dh)
+        {
+            return BillDAO.Intance.LuuDonHang(dh);
+        }
+
+        public DataTable LoadDanhSachDonHangTheoKH(string MaKH)
+        {
+            return BillDAO.Intance.LoadDanhSachDonHangTheoKH(MaKH);
+        }
     }
 }
