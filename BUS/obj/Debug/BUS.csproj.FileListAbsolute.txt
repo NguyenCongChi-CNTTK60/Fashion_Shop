@@ -1,0 +1,4 @@
+D:\C#\project\circleK-app-project\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\C#\project\circleK-app-project\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\C#\project\circleK-app-project\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\C#\project\circleK-app-project\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache

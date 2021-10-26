@@ -250,17 +250,23 @@
     <Compile Include="FormCustomer.designer.cs">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHomepage.cs">
+    <Compile Include="FormHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHomepage.designer.cs">
-      <DependentUpon>FormHomepage.cs</DependentUpon>
+    <Compile Include="FormHomePage.designer.cs">
+      <DependentUpon>FormHomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReport.Designer.cs">
+      <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FormUnit.cs">
       <SubType>Form</SubType>
@@ -300,11 +306,11 @@
     <Compile Include="UC_Employee.Designer.cs">
       <DependentUpon>UC_Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Homepage.cs">
+    <Compile Include="UC_HomePage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Homepage.Designer.cs">
-      <DependentUpon>UC_Homepage.cs</DependentUpon>
+    <Compile Include="UC_HomePage.Designer.cs">
+      <DependentUpon>UC_HomePage.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Sell.cs">
       <SubType>UserControl</SubType>
@@ -336,14 +342,23 @@
     <EmbeddedResource Include="FormAddProducts.resx">
       <DependentUpon>FormAddProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBillInfo.resx">
+      <DependentUpon>FormBillInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePassword.resx">
+      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCustomer.resx">
       <DependentUpon>FormCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHomepage.resx">
-      <DependentUpon>FormHomepage.cs</DependentUpon>
+    <EmbeddedResource Include="FormHomePage.resx">
+      <DependentUpon>FormHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUnit.resx">
+      <DependentUpon>FormUnit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -356,8 +371,8 @@
     <EmbeddedResource Include="UC_Employee.resx">
       <DependentUpon>UC_Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Homepage.resx">
-      <DependentUpon>UC_Homepage.cs</DependentUpon>
+    <EmbeddedResource Include="UC_HomePage.resx">
+      <DependentUpon>UC_HomePage.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

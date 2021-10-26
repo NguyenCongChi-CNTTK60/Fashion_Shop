@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp
 {
-    partial class UC_Homepage
+    partial class UC_HomePage
     {
         /// <summary> 
         /// Required designer variable.

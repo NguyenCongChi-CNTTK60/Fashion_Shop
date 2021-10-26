@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class UC_Homepage : UserControl
+    public partial class UC_HomePage : UserControl
     {
-        public UC_Homepage()
+        public UC_HomePage()
         {
             InitializeComponent();
         }
