@@ -26,7 +26,7 @@ namespace WindowsFormsApp
         public void loadData()
         {
             dgvHangHoa.DataSource = GoodsBUS.Intance.getListSanPham();
-            dgvHangHoa.Columns[0].HeaderText = "Mã Hàng";
+            dgvHangHoa.Columns[0].HeaderText = "Mã Mặt Hàng";
             dgvHangHoa.Columns["DonVi"].HeaderText = "Đơn Vị Tính";
             dgvHangHoa.Columns["SoLuong"].HeaderText = "Số Lượng";
             dgvHangHoa.Columns["GiaGoc"].HeaderText = "Giá Gốc";
@@ -52,19 +52,6 @@ namespace WindowsFormsApp
 
 
         string imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dlgOpen = new OpenFileDialog();
-            dlgOpen.Filter = "PNG files(*.png)|*.png|JPEG(*.jpg)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
-            dlgOpen.FilterIndex = 2;
-            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
-            if (dlgOpen.ShowDialog() == DialogResult.OK)
-            {
-                imgLocation = dlgOpen.FileName.ToString();
-                pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
-            }
-        }
 
         public void resetData()
         {
@@ -111,7 +98,58 @@ namespace WindowsFormsApp
             }
             return true;
         }
-        private void guna2Button1_Click(object sender, EventArgs e)
+
+        void Binding()
+        {
+            txtMaMH.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "MaMH", true, DataSourceUpdateMode.Never));
+            txtTenMH.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "TenMH", true, DataSourceUpdateMode.Never));
+            txtSoLuong.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
+            txtGiaGoc.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaGoc", true, DataSourceUpdateMode.Never));
+            txtGiaBan.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaBan", true, DataSourceUpdateMode.Never));
+        }
+
+        void ClearBinding()
+        {
+            txtMaMH.DataBindings.Clear();
+            txtTenMH.DataBindings.Clear();
+            txtSoLuong.DataBindings.Clear();
+            txtGiaGoc.DataBindings.Clear();
+            txtGiaBan.DataBindings.Clear();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvHangHoa.DataSource = GoodsBUS.Intance.TimKiemHH(txtTimKiem.Text);
+            dgvHangHoa.Columns["Anh"].Visible = false;
+        }
+
+        private void dgvHangHoa_SelectionChanged_1(object sender, EventArgs e)
+        {
+            if (dgvHangHoa.SelectedCells.Count > 0)
+            {
+                ClearBinding();
+                Binding();
+                DataGridViewRow row = dgvHangHoa.SelectedCells[0].OwningRow;
+                try
+                {
+                    string MaMH = row.Cells["MaMH"].Value.ToString();
+                    if (GoodsBUS.Intance.getAnhByID(MaMH) == null)
+                    {
+                        pcbHangHoa.Image = null;
+                    }
+                    else
+                    {
+                        MemoryStream ms = new MemoryStream(GoodsBUS.Intance.getAnhByID(MaMH));
+                        pcbHangHoa.Image = Image.FromStream(ms);
+                    }
+                }
+                catch (Exception) { }
+
+                cbbDVT.SelectedValue = row.Cells["DonVi"].Value;
+            }
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             txtMaMH.Text = GoodsBUS.Intance.loadMaHH();
             if (check == true)
@@ -154,28 +192,9 @@ namespace WindowsFormsApp
                 }
 
             }
-
         }
 
-        void Binding()
-        {
-            txtMaMH.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "MaMH", true, DataSourceUpdateMode.Never));
-            txtTenMH.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "TenMH", true, DataSourceUpdateMode.Never));
-            txtSoLuong.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
-            txtGiaGoc.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaGoc", true, DataSourceUpdateMode.Never));
-            txtGiaBan.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaBan", true, DataSourceUpdateMode.Never));
-        }
-
-        void ClearBinding()
-        {
-            txtMaMH.DataBindings.Clear();
-            txtTenMH.DataBindings.Clear();
-            txtSoLuong.DataBindings.Clear();
-            txtGiaGoc.DataBindings.Clear();
-            txtGiaBan.DataBindings.Clear();
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
             if (dgvHangHoa.SelectedCells.Count > 0)
             {
@@ -193,7 +212,7 @@ namespace WindowsFormsApp
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
             DialogResult dlr = MessageBox.Show("Bạn có muốn xóa không?",
             "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -213,51 +232,34 @@ namespace WindowsFormsApp
             }
         }
 
-        private void guna2Button5_Click(object sender, EventArgs e)
-        {
-            FormUnit FormUnit = new FormUnit(this);
-            FormUnit.ShowDialog();
-        }
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            dgvHangHoa.DataSource = GoodsBUS.Intance.TimKiemHH(txtTimKiem.Text);
-            dgvHangHoa.Columns["Anh"].Visible = false;
-        }
-
-        private void dgvHangHoa_SelectionChanged_1(object sender, EventArgs e)
-        {
-            if (dgvHangHoa.SelectedCells.Count > 0)
-            {
-                ClearBinding();
-                Binding();
-                DataGridViewRow row = dgvHangHoa.SelectedCells[0].OwningRow;
-                try
-                {
-                    string MaMH = row.Cells["MaMH"].Value.ToString();
-                    if (GoodsBUS.Intance.getAnhByID(MaMH) == null)
-                    {
-                        pcbHangHoa.Image = null;
-                    }
-                    else
-                    {
-                        MemoryStream ms = new MemoryStream(GoodsBUS.Intance.getAnhByID(MaMH));
-                        pcbHangHoa.Image = Image.FromStream(ms);
-                    }
-                }
-                catch (Exception) { }
-
-                cbbDVT.SelectedValue = row.Cells["DonVi"].Value;
-            }
-        }
-
-        private void guna2Button1_Click_1(object sender, EventArgs e)
+        // xoa
+        private void guna2Button1_Click_2(object sender, EventArgs e)
         {
             check = !check;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnThem.Text = "Thêm";
             loadData();
+        }
+
+        private void guna2Button6_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog dlgOpen = new OpenFileDialog();
+            dlgOpen.Filter = "PNG files(*.png)|*.png|JPEG(*.jpg)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
+            dlgOpen.FilterIndex = 2;
+            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
+            if (dlgOpen.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dlgOpen.FileName.ToString();
+                pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
+            }
+        }
+
+        private void guna2Button5_Click_1(object sender, EventArgs e)
+        {
+            FormUnit FormUnit = new FormUnit(this);
+            FormUnit.ShowDialog();
         }
     }
 }

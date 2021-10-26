@@ -132,6 +132,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(139, 45);
             this.guna2Button1.TabIndex = 21;
             this.guna2Button1.Text = "Hủy";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_2);
             // 
             // dgvHangHoa
             // 
@@ -212,6 +213,7 @@
             this.guna2Button6.Size = new System.Drawing.Size(89, 25);
             this.guna2Button6.TabIndex = 19;
             this.guna2Button6.Text = "Upload";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click_1);
             // 
             // guna2Button5
             // 
@@ -228,6 +230,7 @@
             this.guna2Button5.Size = new System.Drawing.Size(28, 32);
             this.guna2Button5.TabIndex = 6;
             this.guna2Button5.Text = "+";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click_1);
             // 
             // btnXoa
             // 
@@ -244,6 +247,7 @@
             this.btnXoa.Size = new System.Drawing.Size(139, 45);
             this.btnXoa.TabIndex = 17;
             this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnSua
             // 
@@ -260,6 +264,7 @@
             this.btnSua.Size = new System.Drawing.Size(139, 45);
             this.btnSua.TabIndex = 16;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -276,6 +281,7 @@
             this.btnThem.Size = new System.Drawing.Size(126, 45);
             this.btnThem.TabIndex = 15;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // cbbDVT
             // 
