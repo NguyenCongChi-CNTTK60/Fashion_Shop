@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DTO
 {
-    class CustomerDTO
+    public class CustomerDTO
     {
         private string maKH, tenKH, diaChi, SDT, email, matKhau, maHang;
 
