@@ -138,6 +138,7 @@ namespace WindowsFormsApp
             // 
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.DisabledState.Parent = this.guna2Button1;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
@@ -147,8 +148,9 @@ namespace WindowsFormsApp
             this.guna2Button1.Size = new System.Drawing.Size(138, 45);
             this.guna2Button1.TabIndex = 6;
             this.guna2Button1.Text = "Xác Nhận";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
             // 
-            // Form_DoiMatKhau
+            // FormChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,7 +163,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form_DoiMatKhau";
+            this.Name = "FormChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đổi Mật Khẩu";
             this.ResumeLayout(false);
