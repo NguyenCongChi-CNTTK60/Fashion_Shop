@@ -76,7 +76,6 @@ namespace WindowsFormsApp
             this.dgvCTHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCTHD.Size = new System.Drawing.Size(729, 323);
             this.dgvCTHD.TabIndex = 0;
-            this.dgvCTHD.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvCTHD.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvCTHD.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvCTHD.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -99,16 +98,16 @@ namespace WindowsFormsApp
             this.dgvCTHD.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvCTHD.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Form_CTHD
+            // FormBillInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(736, 325);
             this.Controls.Add(this.dgvCTHD);
-            this.Name = "Form_CTHD";
+            this.Name = "FormBillInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chi Tiết Hóa Đơn";
-  
+            this.Load += new System.EventHandler(this.FormBillInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).EndInit();
             this.ResumeLayout(false);
 

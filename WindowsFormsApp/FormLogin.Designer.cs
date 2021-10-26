@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panelChinh = new System.Windows.Forms.Panel();
@@ -41,11 +40,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnDangnhap = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelChinh.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -62,16 +60,6 @@
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 3;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 26);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1248, 790);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
             // 
             // guna2TextBox1
             // 
@@ -114,6 +102,7 @@
             // 
             // panelChinh
             // 
+            this.panelChinh.Controls.Add(this.guna2GradientButton1);
             this.panelChinh.Controls.Add(this.labelThoat);
             this.panelChinh.Controls.Add(this.label6);
             this.panelChinh.Controls.Add(this.label5);
@@ -121,12 +110,11 @@
             this.panelChinh.Controls.Add(this.panel1);
             this.panelChinh.Controls.Add(this.checkBox1);
             this.panelChinh.Controls.Add(this.pictureBox2);
-            this.panelChinh.Controls.Add(this.btnDangnhap);
             this.panelChinh.Controls.Add(this.label3);
             this.panelChinh.Controls.Add(this.guna2TextBox2);
             this.panelChinh.Controls.Add(this.label2);
             this.panelChinh.Controls.Add(this.guna2TextBox1);
-            this.panelChinh.Location = new System.Drawing.Point(430, 122);
+            this.panelChinh.Location = new System.Drawing.Point(708, 115);
             this.panelChinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChinh.Name = "panelChinh";
             this.panelChinh.Size = new System.Drawing.Size(456, 554);
@@ -191,7 +179,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(102, 23);
+            this.label1.Location = new System.Drawing.Point(106, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 35);
             this.label1.TabIndex = 0;
@@ -208,35 +196,6 @@
             this.checkBox1.TabIndex = 15;
             this.checkBox1.Text = "Hiển thị mật khẩu";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(107, 403);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(253, 40);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // btnDangnhap
-            // 
-            this.btnDangnhap.BorderRadius = 15;
-            this.btnDangnhap.CheckedState.Parent = this.btnDangnhap;
-            this.btnDangnhap.CustomImages.Parent = this.btnDangnhap;
-            this.btnDangnhap.DisabledState.Parent = this.btnDangnhap;
-            this.btnDangnhap.FillColor = System.Drawing.Color.PaleGreen;
-            this.btnDangnhap.FillColor2 = System.Drawing.Color.Fuchsia;
-            this.btnDangnhap.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDangnhap.ForeColor = System.Drawing.Color.Black;
-            this.btnDangnhap.HoverState.Parent = this.btnDangnhap;
-            this.btnDangnhap.Location = new System.Drawing.Point(88, 310);
-            this.btnDangnhap.Name = "btnDangnhap";
-            this.btnDangnhap.ShadowDecoration.Parent = this.btnDangnhap;
-            this.btnDangnhap.Size = new System.Drawing.Size(288, 66);
-            this.btnDangnhap.TabIndex = 13;
-            this.btnDangnhap.Text = "ĐĂNG NHẬP";
             // 
             // label3
             // 
@@ -277,6 +236,36 @@
             this.guna2TextBox2.TabIndex = 11;
             this.guna2TextBox2.TextOffset = new System.Drawing.Point(15, 0);
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(107, 403);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(253, 40);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.BorderRadius = 15;
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.DisabledState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.PaleGreen;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Fuchsia;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(76, 296);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(288, 66);
+            this.guna2GradientButton1.TabIndex = 22;
+            this.guna2GradientButton1.Text = "ĐĂNG NHẬP";
+            this.guna2GradientButton1.Click += new System.EventHandler(this.guna2GradientButton1_Click_1);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -284,13 +273,11 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1272, 818);
             this.Controls.Add(this.panelChinh);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelChinh.ResumeLayout(false);
             this.panelChinh.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -302,13 +289,11 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelChinh;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDangnhap;
    
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
@@ -319,6 +304,7 @@
         private System.Windows.Forms.Label label4;
      
         private System.Windows.Forms.Label labelThoat;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
     }
 }
 

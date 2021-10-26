@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace WindowsFormsApp
 {
     public partial class FormBillInfo : Form
     {
-        public FormBillInfo()
+        string maHD;
+        public FormBillInfo(string maHD)
         {
             InitializeComponent();
+            this.maHD = maHD;
+        }
+
+        private void FormBillInfo_Load(object sender, EventArgs e)
+        {
+            dgvCTHD.DataSource = BillInfoBUS.Intance.getCTDN(maHD);
         }
     }
 }
