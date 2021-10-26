@@ -117,7 +117,7 @@ namespace WindowsFormsApp
 
         private void panel1_Click(object sender, EventArgs e)
         {
-            Form_DoiMatKhau frm = new Form_DoiMatKhau(FormLogin.matkhau, false, FormLogin.tk);
+            FormChangePassword frm = new FormChangePassword(FormLogin.matkhau, false, FormLogin.tk);
             frm.ShowDialog();
         }
 
