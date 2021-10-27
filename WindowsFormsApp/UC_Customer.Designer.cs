@@ -81,7 +81,7 @@ namespace WindowsFormsApp
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(571, 125);
+            this.label18.Location = new System.Drawing.Point(569, 135);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(67, 29);
             this.label18.TabIndex = 64;
@@ -337,7 +337,7 @@ namespace WindowsFormsApp
             this.guna2txtGmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtGmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtGmail.HoverState.Parent = this.guna2txtGmail;
-            this.guna2txtGmail.Location = new System.Drawing.Point(653, 125);
+            this.guna2txtGmail.Location = new System.Drawing.Point(653, 133);
             this.guna2txtGmail.Name = "guna2txtGmail";
             this.guna2txtGmail.PasswordChar = '\0';
             this.guna2txtGmail.PlaceholderText = "";
@@ -462,7 +462,7 @@ namespace WindowsFormsApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(558, 90);
+            this.label1.Location = new System.Drawing.Point(547, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 29);
             this.label1.TabIndex = 207;
@@ -472,7 +472,7 @@ namespace WindowsFormsApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(538, 170);
+            this.label3.Location = new System.Drawing.Point(547, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 29);
             this.label3.TabIndex = 208;
@@ -494,7 +494,7 @@ namespace WindowsFormsApp
             this.guna2cmbChucVu.HoverState.Parent = this.guna2cmbChucVu;
             this.guna2cmbChucVu.ItemHeight = 30;
             this.guna2cmbChucVu.ItemsAppearance.Parent = this.guna2cmbChucVu;
-            this.guna2cmbChucVu.Location = new System.Drawing.Point(653, 76);
+            this.guna2cmbChucVu.Location = new System.Drawing.Point(653, 95);
             this.guna2cmbChucVu.Name = "guna2cmbChucVu";
             this.guna2cmbChucVu.ShadowDecoration.Parent = this.guna2cmbChucVu;
             this.guna2cmbChucVu.Size = new System.Drawing.Size(301, 36);
@@ -517,7 +517,7 @@ namespace WindowsFormsApp
             this.guna2txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtMatKhau.HoverState.Parent = this.guna2txtMatKhau;
-            this.guna2txtMatKhau.Location = new System.Drawing.Point(653, 168);
+            this.guna2txtMatKhau.Location = new System.Drawing.Point(653, 170);
             this.guna2txtMatKhau.Name = "guna2txtMatKhau";
             this.guna2txtMatKhau.PasswordChar = '\0';
             this.guna2txtMatKhau.PlaceholderText = "";
