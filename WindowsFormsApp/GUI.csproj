@@ -365,8 +365,14 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Coupon.resx">
+      <DependentUpon>UC_Coupon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Customer.resx">
       <DependentUpon>UC_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Depot.resx">
+      <DependentUpon>UC_Depot.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_Employee.resx">
       <DependentUpon>UC_Employee.cs</DependentUpon>
