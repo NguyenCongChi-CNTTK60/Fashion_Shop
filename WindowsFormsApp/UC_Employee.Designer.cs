@@ -288,55 +288,63 @@ namespace WindowsFormsApp
             // dgvThongTinNhanVien
             // 
             this.dgvThongTinNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvThongTinNhanVien.Location = new System.Drawing.Point(28, 364);
+            this.dgvThongTinNhanVien.Location = new System.Drawing.Point(28, 373);
             this.dgvThongTinNhanVien.Name = "dgvThongTinNhanVien";
             this.dgvThongTinNhanVien.RowHeadersWidth = 51;
             this.dgvThongTinNhanVien.RowTemplate.Height = 24;
-            this.dgvThongTinNhanVien.Size = new System.Drawing.Size(1018, 422);
+            this.dgvThongTinNhanVien.Size = new System.Drawing.Size(1018, 314);
             this.dgvThongTinNhanVien.TabIndex = 186;
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.SteelBlue;
             this.btnThem.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(499, 293);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(124, 58);
             this.btnThem.TabIndex = 187;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSua.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.Location = new System.Drawing.Point(640, 293);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(124, 58);
             this.btnSua.TabIndex = 188;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.SteelBlue;
             this.btnXoa.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Location = new System.Drawing.Point(782, 293);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(124, 58);
             this.btnXoa.TabIndex = 189;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // btnCapNhap
             // 
+            this.btnCapNhap.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCapNhap.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhap.ForeColor = System.Drawing.Color.White;
             this.btnCapNhap.Location = new System.Drawing.Point(922, 293);
             this.btnCapNhap.Name = "btnCapNhap";
             this.btnCapNhap.Size = new System.Drawing.Size(124, 58);
             this.btnCapNhap.TabIndex = 190;
             this.btnCapNhap.Text = "Cập nhập";
-            this.btnCapNhap.UseVisualStyleBackColor = true;
+            this.btnCapNhap.UseVisualStyleBackColor = false;
             this.btnCapNhap.Click += new System.EventHandler(this.btnCapNhap_Click);
             // 
             // guna2txtTimKiem
@@ -444,11 +452,11 @@ namespace WindowsFormsApp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 242);
+            this.label5.Location = new System.Drawing.Point(28, 238);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 24);
+            this.label5.Size = new System.Drawing.Size(83, 24);
             this.label5.TabIndex = 197;
-            this.label5.Text = "Số điện thoại";
+            this.label5.Text = "Điện thoại";
             // 
             // UC_Employee
             // 
@@ -482,7 +490,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.guna2txtMatKhau);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UC_Employee";
-            this.Size = new System.Drawing.Size(1084, 789);
+            this.Size = new System.Drawing.Size(1084, 723);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
