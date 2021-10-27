@@ -91,7 +91,7 @@ namespace WindowsFormsApp
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(52, 170);
+            this.label17.Location = new System.Drawing.Point(68, 170);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(104, 29);
             this.label17.TabIndex = 63;
@@ -101,7 +101,7 @@ namespace WindowsFormsApp
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(71, 226);
+            this.label16.Location = new System.Drawing.Point(68, 212);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 29);
             this.label16.TabIndex = 61;
@@ -111,7 +111,7 @@ namespace WindowsFormsApp
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(31, 127);
+            this.label14.Location = new System.Drawing.Point(32, 129);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(150, 29);
             this.label14.TabIndex = 55;
@@ -121,7 +121,7 @@ namespace WindowsFormsApp
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(32, 81);
+            this.label13.Location = new System.Drawing.Point(33, 95);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(149, 29);
             this.label13.TabIndex = 53;
@@ -229,13 +229,14 @@ namespace WindowsFormsApp
             this.guna2txtMaKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtMaKhachHang.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtMaKhachHang.HoverState.Parent = this.guna2txtMaKhachHang;
-            this.guna2txtMaKhachHang.Location = new System.Drawing.Point(187, 81);
+            this.guna2txtMaKhachHang.Location = new System.Drawing.Point(188, 90);
             this.guna2txtMaKhachHang.Name = "guna2txtMaKhachHang";
             this.guna2txtMaKhachHang.PasswordChar = '\0';
             this.guna2txtMaKhachHang.PlaceholderText = "";
             this.guna2txtMaKhachHang.SelectedText = "";
             this.guna2txtMaKhachHang.ShadowDecoration.Parent = this.guna2txtMaKhachHang;
             this.guna2txtMaKhachHang.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtMaKhachHang.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtMaKhachHang.TabIndex = 195;
             // 
             // guna2txtTenKhachHang
@@ -262,6 +263,7 @@ namespace WindowsFormsApp
             this.guna2txtTenKhachHang.SelectedText = "";
             this.guna2txtTenKhachHang.ShadowDecoration.Parent = this.guna2txtTenKhachHang;
             this.guna2txtTenKhachHang.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtTenKhachHang.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtTenKhachHang.TabIndex = 196;
             // 
             // guna2txtTimKiem
@@ -281,13 +283,14 @@ namespace WindowsFormsApp
             this.guna2txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtTimKiem.HoverState.Parent = this.guna2txtTimKiem;
-            this.guna2txtTimKiem.Location = new System.Drawing.Point(143, 286);
+            this.guna2txtTimKiem.Location = new System.Drawing.Point(145, 286);
             this.guna2txtTimKiem.Name = "guna2txtTimKiem";
             this.guna2txtTimKiem.PasswordChar = '\0';
             this.guna2txtTimKiem.PlaceholderText = "";
             this.guna2txtTimKiem.SelectedText = "";
             this.guna2txtTimKiem.ShadowDecoration.Parent = this.guna2txtTimKiem;
             this.guna2txtTimKiem.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtTimKiem.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtTimKiem.TabIndex = 197;
             // 
             // guna2txtSDT
@@ -307,13 +310,14 @@ namespace WindowsFormsApp
             this.guna2txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtSDT.HoverState.Parent = this.guna2txtSDT;
-            this.guna2txtSDT.Location = new System.Drawing.Point(187, 168);
+            this.guna2txtSDT.Location = new System.Drawing.Point(186, 168);
             this.guna2txtSDT.Name = "guna2txtSDT";
             this.guna2txtSDT.PasswordChar = '\0';
             this.guna2txtSDT.PlaceholderText = "";
             this.guna2txtSDT.SelectedText = "";
             this.guna2txtSDT.ShadowDecoration.Parent = this.guna2txtSDT;
             this.guna2txtSDT.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtSDT.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtSDT.TabIndex = 199;
             // 
             // guna2txtGmail
@@ -340,6 +344,7 @@ namespace WindowsFormsApp
             this.guna2txtGmail.SelectedText = "";
             this.guna2txtGmail.ShadowDecoration.Parent = this.guna2txtGmail;
             this.guna2txtGmail.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtGmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtGmail.TabIndex = 200;
             // 
             // guna2txtDiaChi
@@ -359,13 +364,14 @@ namespace WindowsFormsApp
             this.guna2txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtDiaChi.HoverState.Parent = this.guna2txtDiaChi;
-            this.guna2txtDiaChi.Location = new System.Drawing.Point(186, 216);
+            this.guna2txtDiaChi.Location = new System.Drawing.Point(186, 205);
             this.guna2txtDiaChi.Name = "guna2txtDiaChi";
             this.guna2txtDiaChi.PasswordChar = '\0';
             this.guna2txtDiaChi.PlaceholderText = "";
             this.guna2txtDiaChi.SelectedText = "";
             this.guna2txtDiaChi.ShadowDecoration.Parent = this.guna2txtDiaChi;
-            this.guna2txtDiaChi.Size = new System.Drawing.Size(301, 50);
+            this.guna2txtDiaChi.Size = new System.Drawing.Size(301, 36);
+            this.guna2txtDiaChi.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtDiaChi.TabIndex = 198;
             // 
             // btnThem
@@ -456,7 +462,7 @@ namespace WindowsFormsApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(558, 83);
+            this.label1.Location = new System.Drawing.Point(558, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 29);
             this.label1.TabIndex = 207;
@@ -518,6 +524,7 @@ namespace WindowsFormsApp
             this.guna2txtMatKhau.SelectedText = "";
             this.guna2txtMatKhau.ShadowDecoration.Parent = this.guna2txtMatKhau;
             this.guna2txtMatKhau.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtMatKhau.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtMatKhau.TabIndex = 210;
             // 
             // UC_Customer
