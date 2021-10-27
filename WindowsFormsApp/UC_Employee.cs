@@ -25,39 +25,43 @@ namespace WindowsFormsApp
 
         void loadBinding()
         {
-            txtTaiKhoanNV.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenDangNhap", true, DataSourceUpdateMode.Never));
-            txtTenNV.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenNguoiDung", true, DataSourceUpdateMode.Never));
-            txtMatKhauNV.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "MatKhau", true, DataSourceUpdateMode.Never));
+            guna2txtMaNhanVien.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
+            guna2txtHoTen.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenNV", true, DataSourceUpdateMode.Never));
+            guna2txtSDT.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "SDT", true, DataSourceUpdateMode.Never));
+            guna2txtTenDangNhap.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenDangNhap", true, DataSourceUpdateMode.Never));
+            guna2txtMatKhau.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "MatKhau", true, DataSourceUpdateMode.Never));
         }
         void LoadData()
         {
             //    ClearBinding();
             dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.getListNV();
+            dgvThongTinNhanVien.Columns["MaNV"].HeaderText = "Mã nhân viên";
+            dgvThongTinNhanVien.Columns["TenNV"].HeaderText = "Họ và tên";
+            dgvThongTinNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
             dgvThongTinNhanVien.Columns["TenDangNhap"].HeaderText = "Tên Đăng Nhập";
             dgvThongTinNhanVien.Columns["MatKhau"].HeaderText = "Mật Khẩu";
             dgvThongTinNhanVien.Columns["Quyen"].HeaderText = "Chức Vụ";
-            dgvThongTinNhanVien.Columns["TenNguoiDung"].HeaderText = "Tên Hiển Thị";
             //   loadBinding();
         }
 
         bool KiemTraNhap()
         {
-            if (txtTaiKhoanNV.Text == "")
+            if (guna2txtTenDangNhap.Text == "")
             {
                 MessageBox.Show("Tên đăng nhập không được bỏ trống", "Thông báo");
-                txtTaiKhoanNV.Focus();
+                guna2txtTenDangNhap.Focus();
                 return false;
             }
-            else if (txtMatKhauNV.Text == "")
+            else if (guna2txtMatKhau.Text == "")
             {
                 MessageBox.Show("Mật khẩu không được bỏ trống", "Thông báo");
-                txtMatKhauNV.Focus();
+                guna2txtMatKhau.Focus();
                 return false;
             }
-            else if (txtTenNV.Text == "")
+            else if ( guna2txtHoTen.Text == "")
             {
                 MessageBox.Show("Tên người dùng không được bỏ trống", "Thông báo");
-                txtTenNV.Focus();
+                 guna2txtHoTen.Focus();
                 return false;
             }
             return true;
@@ -65,18 +69,18 @@ namespace WindowsFormsApp
 
         void ClearBinding()
         {
-            txtTaiKhoanNV.DataBindings.Clear();
-            txtTenNV.DataBindings.Clear();
-            txtMatKhauNV.DataBindings.Clear();
+            guna2txtTenDangNhap.DataBindings.Clear();
+             guna2txtHoTen.DataBindings.Clear();
+            guna2txtMatKhau.DataBindings.Clear();
 
         }
         public bool check = true;
 
         public void resetData()
         {
-            txtTaiKhoanNV.Text = "";
-            txtMatKhauNV.Text = "";
-            txtTenNV.Text = "";
+            guna2txtTenDangNhap.Text = "";
+            guna2txtMatKhau.Text = "";
+             guna2txtHoTen.Text = "";
         }
 
 
@@ -84,15 +88,15 @@ namespace WindowsFormsApp
         {
             if (dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
-                cbbChucVu.SelectedItem = dgvThongTinNhanVien.SelectedCells[3].Value;
+                guna2cmbChucVu.SelectedItem = dgvThongTinNhanVien.SelectedCells[3].Value;
                 ClearBinding();
                 loadBinding();
             }
         }
 
-        private void txtTimKiemNhanVien_TextChanged(object sender, EventArgs e)
+        private void guna2txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.TimKiemNV(txtTimKiemNhanVien.Text);
+            dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.TimKiemNV(guna2txtTimKiem.Text);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -102,9 +106,9 @@ namespace WindowsFormsApp
                 check = !check; 
                 btnSua.Enabled = false;
                 btnXoa.Enabled = false;
-                btnLuu.Text = "Lưu";
+                btnThem.Text = "Lưu";
                 resetData();
-                txtTaiKhoanNV.Focus();
+                guna2txtTenDangNhap.Focus();
             }
             else
             {
@@ -113,8 +117,8 @@ namespace WindowsFormsApp
                     check = !check;
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
-                    btnLuu.Text = "Thêm";
-                    if (EmployeeBUS.Intance.themNV(txtTaiKhoanNV.Text, txtMatKhauNV.Text, txtTenNV.Text, cbbChucVu.SelectedItem.ToString()))
+                    btnThem.Text = "Thêm";
+                    if (EmployeeBUS.Intance.themNV(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
                     {
                         MessageBox.Show("Thêm thành công!", "Thông báo");
                         LoadData();
@@ -128,7 +132,7 @@ namespace WindowsFormsApp
         {
             if (dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
-                if (EmployeeBUS.Intance.suaNV(txtTaiKhoanNV.Text, txtMatKhauNV.Text, txtTenNV.Text, cbbChucVu.SelectedItem.ToString()))
+                if (EmployeeBUS.Intance.suaNV(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo");
                     LoadData();
@@ -142,7 +146,7 @@ namespace WindowsFormsApp
             "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.Yes)
             {
-                EmployeeBUS.Intance.xoaNV(txtTaiKhoanNV.Text);
+                EmployeeBUS.Intance.xoaNV(guna2txtTenDangNhap.Text);
                 MessageBox.Show("Xóa thành công!", "Thông báo");
                 LoadData();
             }
@@ -153,7 +157,7 @@ namespace WindowsFormsApp
             check = !check;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
-            btnLuu.Text = "Thêm";
+            btnThem.Text = "Thêm";
             LoadData();
         }
     }
