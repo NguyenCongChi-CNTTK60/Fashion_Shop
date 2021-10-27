@@ -23,7 +23,7 @@ namespace BUS
             set => instance = value;
         }
 
-        public DataTable GetListCoupon()
+        public DataTable GetListPN()
         {
             return CouponDAO.Intance.GetListCoupon();
         }
