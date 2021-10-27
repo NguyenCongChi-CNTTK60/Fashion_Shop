@@ -23,33 +23,33 @@ namespace WindowsFormsApp
         public void LoadListKH()
         {
             DataTable dt = CustomerBUS.Intance.getListKH();
-            dgvThongTinKhachHang.DataSource = dt;
-            dgvThongTinKhachHang.Columns["MaHang"].Visible = false;
+            guna2dgvThongTinKhachHang.DataSource = dt;
+            guna2dgvThongTinKhachHang.Columns["MaHang"].Visible = false;
 
             CustomerDTO khachHang = new CustomerDTO();
             khachHang = CustomerBUS.Intance.getDataByID(guna2txtSDT.Text);
             string query = String.Format("select * from HANGTHANHVIEN");
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            guna2cmbChucVu.DataSource = data;
-            guna2cmbChucVu.ValueMember = "MaHang";
-            guna2cmbChucVu.DisplayMember = "TenHang";
+            guna2cmbHang.DataSource = data;
+            guna2cmbHang.ValueMember = "MaHang";
+            guna2cmbHang.DisplayMember = "TenHang";
             loadBinding();
 
             // Designe table KhachHang
-            dgvThongTinKhachHang.Columns["MaKH"].HeaderText = "Mã KH";
-            dgvThongTinKhachHang.Columns["TenKH"].HeaderText = "Tên Khách Hàng";
-            dgvThongTinKhachHang.Columns["SDT"].HeaderText = "Số Điện Thoại";
-            dgvThongTinKhachHang.Columns["DiaChi"].HeaderText = "Địa Chỉ";
-            dgvThongTinKhachHang.Columns["MatKhau"].Visible = false;
+            guna2dgvThongTinKhachHang.Columns["MaKH"].HeaderText = "Mã KH";
+            guna2dgvThongTinKhachHang.Columns["TenKH"].HeaderText = "Tên Khách Hàng";
+            guna2dgvThongTinKhachHang.Columns["SDT"].HeaderText = "Số Điện Thoại";
+            guna2dgvThongTinKhachHang.Columns["DiaChi"].HeaderText = "Địa Chỉ";
+            guna2dgvThongTinKhachHang.Columns["MatKhau"].Visible = false;
         }
 
         void loadBinding()
         {
-            guna2txtMaKhachHang.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "MaKH", true, DataSourceUpdateMode.Never));
-            guna2txtTenKhachHang.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "TenKH", true, DataSourceUpdateMode.Never));
-            guna2txtSDT.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-            guna2txtGmail.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "Email", true, DataSourceUpdateMode.Never));
-            guna2txtDiaChi.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
+            guna2txtMaKhachHang.DataBindings.Add(new Binding("Text", guna2dgvThongTinKhachHang.DataSource, "MaKH", true, DataSourceUpdateMode.Never));
+            guna2txtTenKhachHang.DataBindings.Add(new Binding("Text", guna2dgvThongTinKhachHang.DataSource, "TenKH", true, DataSourceUpdateMode.Never));
+            guna2txtSDT.DataBindings.Add(new Binding("Text", guna2dgvThongTinKhachHang.DataSource, "SDT", true, DataSourceUpdateMode.Never));
+            guna2txtEmail.DataBindings.Add(new Binding("Text", guna2dgvThongTinKhachHang.DataSource, "Email", true, DataSourceUpdateMode.Never));
+            guna2txtDiaChi.DataBindings.Add(new Binding("Text", guna2dgvThongTinKhachHang.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
         }
 
         void ClearBinding()
@@ -57,7 +57,7 @@ namespace WindowsFormsApp
             guna2txtMaKhachHang.DataBindings.Clear();
             guna2txtTenKhachHang.DataBindings.Clear();
             guna2txtSDT.DataBindings.Clear();
-            guna2txtGmail.DataBindings.Clear();
+            guna2txtEmail.DataBindings.Clear();
             guna2txtDiaChi.DataBindings.Clear();
         }
 
@@ -85,15 +85,15 @@ namespace WindowsFormsApp
                 guna2txtTenKhachHang.Text = "";
                 guna2txtTenKhachHang.Focus();
                 guna2txtSDT.Text = "";
-                guna2txtGmail.Text = "";
+                guna2txtEmail.Text = "";
                 guna2txtDiaChi.Text = "";
                 guna2txtTenKhachHang.Enabled = true;
                 guna2txtMatKhau.Enabled = true;
                 guna2txtSDT.Enabled = true;
-                guna2txtGmail.Enabled = true;
+                guna2txtEmail.Enabled = true;
                 guna2txtDiaChi.Enabled = true;
-                dgvThongTinKhachHang.Enabled = false;
-                guna2cmbChucVu.Enabled = true;
+                guna2dgvThongTinKhachHang.Enabled = false;
+                guna2cmbHang.Enabled = true;
                 btnThem.Text = "Xác nhận";
             }
             else
@@ -101,18 +101,18 @@ namespace WindowsFormsApp
                 btnThem.Text = "Thêm Mới";
                 guna2txtTenKhachHang.Enabled = false;
                 guna2txtSDT.Enabled = false;
-                guna2txtGmail.Enabled = false;
+                guna2txtEmail.Enabled = false;
                 guna2txtMatKhau.Enabled = false;
                 guna2txtDiaChi.Enabled = false;
-                dgvThongTinKhachHang.Enabled = true;
-                guna2cmbChucVu.Enabled = false;
-                if (guna2txtTenKhachHang.Text == "" || guna2txtMatKhau.Text == "" || guna2txtDiaChi.Text == "" || guna2txtGmail.Text == "" || guna2txtSDT.Text == "")
+                guna2dgvThongTinKhachHang.Enabled = true;
+                guna2cmbHang.Enabled = false;
+                if (guna2txtTenKhachHang.Text == "" || guna2txtMatKhau.Text == "" || guna2txtDiaChi.Text == "" || guna2txtEmail.Text == "" || guna2txtSDT.Text == "")
                 {
                     MessageBox.Show("Nhập thiếu thông tin! Vui lòng thử lại");
                 }
                 else
                 {
-                    if (CustomerBUS.Intance.themKH(guna2txtMaKhachHang.Text, guna2txtTenKhachHang.Text, guna2txtDiaChi.Text, guna2txtSDT.Text, guna2txtGmail.Text, guna2cmbChucVu.SelectedValue.ToString(), guna2txtMatKhau.Text))
+                    if (CustomerBUS.Intance.themKH(guna2txtMaKhachHang.Text, guna2txtTenKhachHang.Text, guna2txtDiaChi.Text, guna2txtSDT.Text, guna2txtEmail.Text, guna2cmbHang.SelectedValue.ToString(), guna2txtMatKhau.Text))
                     {
                         MessageBox.Show("Thêm khách hàng thành công!", "Thông báo");
                         ClearBinding();
@@ -130,20 +130,20 @@ namespace WindowsFormsApp
             {
                 guna2txtTenKhachHang.Enabled = true;
                 guna2txtSDT.Enabled = true;
-                guna2txtGmail.Enabled = true;
+                guna2txtEmail.Enabled = true;
                 guna2txtDiaChi.Enabled = true;
                 btnThem.Enabled = false;
-                guna2cmbChucVu.Enabled = true;
+                guna2cmbHang.Enabled = true;
             }
             else
             {
-                guna2cmbChucVu.Enabled = false;
+                guna2cmbHang.Enabled = false;
                 guna2txtMaKhachHang.Enabled = false;
                 guna2txtTenKhachHang.Enabled = false;
                 guna2txtSDT.Enabled = false;
-                guna2txtGmail.Enabled = false;
+                guna2txtEmail.Enabled = false;
                 guna2txtDiaChi.Enabled = false;
-                if (CustomerBUS.Intance.suaKH(guna2txtMaKhachHang.Text, guna2txtTenKhachHang.Text, guna2txtDiaChi.Text, guna2txtSDT.Text, guna2txtGmail.Text, guna2cmbChucVu.SelectedValue.ToString()))
+                if (CustomerBUS.Intance.suaKH(guna2txtMaKhachHang.Text, guna2txtTenKhachHang.Text, guna2txtDiaChi.Text, guna2txtSDT.Text, guna2txtEmail.Text, guna2cmbHang.SelectedValue.ToString()))
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo");
                     btnThem.Enabled = true;
@@ -165,17 +165,17 @@ namespace WindowsFormsApp
 
         private void guna2txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvThongTinKhachHang.DataSource = CustomerBUS.Intance.TimKiemKH(guna2txtTimKiem.Text);
+            guna2dgvThongTinKhachHang.DataSource = CustomerBUS.Intance.TimKiemKH(guna2txtTimKiem.Text);
             ClearBinding();
             loadBinding();
         }
 
-        private void dgvThongTinKhachHang_SelectionChanged(object sender, EventArgs e)
+        private void guna2dgvThongTinKhachHang_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvThongTinKhachHang.SelectedCells.Count > 0)
+            if (guna2dgvThongTinKhachHang.SelectedCells.Count > 0)
             {
-                guna2cmbChucVu.SelectedValue = dgvThongTinKhachHang.SelectedCells[5].Value;
-                string s = dgvThongTinKhachHang.SelectedCells[6].Value.ToString();
+                guna2cmbHang.SelectedValue = guna2dgvThongTinKhachHang.SelectedCells[5].Value;
+                string s = guna2dgvThongTinKhachHang.SelectedCells[6].Value.ToString();
                 guna2txtMatKhau.Text = s;
             }
         }

@@ -25,22 +25,22 @@ namespace WindowsFormsApp
 
         void loadBinding()
         {
-            guna2txtMaNhanVien.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
-            guna2txtHoTen.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenNV", true, DataSourceUpdateMode.Never));
-            guna2txtSDT.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-            guna2txtTenDangNhap.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenDangNhap", true, DataSourceUpdateMode.Never));
-            guna2txtMatKhau.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "MatKhau", true, DataSourceUpdateMode.Never));
+            guna2txtMaNhanVien.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
+            guna2txtHoTen.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "TenNV", true, DataSourceUpdateMode.Never));
+            guna2txtSDT.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "SDT", true, DataSourceUpdateMode.Never));
+            guna2txtTenDangNhap.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "TenDangNhap", true, DataSourceUpdateMode.Never));
+            guna2txtMatKhau.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "MatKhau", true, DataSourceUpdateMode.Never));
         }
         void LoadData()
         {
             //    ClearBinding();
-            dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.getListNV();
-            dgvThongTinNhanVien.Columns["MaNV"].HeaderText = "Mã nhân viên";
-            dgvThongTinNhanVien.Columns["TenNV"].HeaderText = "Họ và tên";
-            dgvThongTinNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
-            dgvThongTinNhanVien.Columns["TenDangNhap"].HeaderText = "Tên Đăng Nhập";
-            dgvThongTinNhanVien.Columns["MatKhau"].HeaderText = "Mật Khẩu";
-            dgvThongTinNhanVien.Columns["Quyen"].HeaderText = "Chức Vụ";
+            guna2dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.getListNV();
+            guna2dgvThongTinNhanVien.Columns["MaNV"].HeaderText = "Mã nhân viên";
+            guna2dgvThongTinNhanVien.Columns["TenNV"].HeaderText = "Họ và tên";
+            guna2dgvThongTinNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
+            guna2dgvThongTinNhanVien.Columns["TenDangNhap"].HeaderText = "Tên Đăng Nhập";
+            guna2dgvThongTinNhanVien.Columns["MatKhau"].HeaderText = "Mật Khẩu";
+            guna2dgvThongTinNhanVien.Columns["Quyen"].HeaderText = "Chức Vụ";
             //   loadBinding();
         }
 
@@ -84,11 +84,11 @@ namespace WindowsFormsApp
         }
 
 
-        private void dgvThongTinNhanVien_SelectionChanged(object sender, EventArgs e)
+        private void guna2dgvThongTinNhanVien_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvThongTinNhanVien.SelectedCells.Count > 0)
+            if (guna2dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
-                guna2cmbChucVu.SelectedItem = dgvThongTinNhanVien.SelectedCells[3].Value;
+                guna2cmbChucVu.SelectedItem = guna2dgvThongTinNhanVien.SelectedCells[3].Value;
                 ClearBinding();
                 loadBinding();
             }
@@ -96,7 +96,7 @@ namespace WindowsFormsApp
 
         private void guna2txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.TimKiemNV(guna2txtTimKiem.Text);
+            guna2dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.TimKiemNV(guna2txtTimKiem.Text);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace WindowsFormsApp
 
         private void btnSua_Click_1(object sender, EventArgs e)
         {
-            if (dgvThongTinNhanVien.SelectedCells.Count > 0)
+            if (guna2dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
                 if (EmployeeBUS.Intance.suaNV(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
                 {
