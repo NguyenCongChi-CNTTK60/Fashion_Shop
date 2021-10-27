@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp
 {
-    partial class UC_StatisticCommodity
+    partial class UC_StatisticGoods
     {
         /// <summary> 
         /// Required designer variable.

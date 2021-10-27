@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class UC_StatisticCommodity : UserControl
+    public partial class UC_StatisticGoods : UserControl
     {
-        public UC_StatisticCommodity()
+        public UC_StatisticGoods()
         {
             InitializeComponent();
         }
