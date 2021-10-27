@@ -17,15 +17,15 @@ namespace WindowsFormsApp
         public UC_Supplier()
         {
             InitializeComponent();
-            LoadData();
+            /*LoadData();*/
         }
-        void loadBinding()
+        /*void loadBinding()
         {
-            txtMaNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "MaNCC", true, DataSourceUpdateMode.Never));
-            txtTenNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "TenNCC", true, DataSourceUpdateMode.Never));
-            txtEmailNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "Email", true, DataSourceUpdateMode.Never));
-            txtDienThoaiNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-            rtbDiaChiKhachNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
+            guna2txtMaNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "MaNCC", true, DataSourceUpdateMode.Never));
+            guna2txtTenNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "TenNCC", true, DataSourceUpdateMode.Never));
+            guna2txtEmail.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "Email", true, DataSourceUpdateMode.Never));
+            guna2txtSDT.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "SDT", true, DataSourceUpdateMode.Never));
+            guna2txtDiaChi.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
         }
         void LoadData()
         {
@@ -39,76 +39,77 @@ namespace WindowsFormsApp
 
         void ClearBinding()
         {
-            txtMaNCC.DataBindings.Clear();
-            txtTenNCC.DataBindings.Clear();
-            txtEmailNCC.DataBindings.Clear();
-            txtDienThoaiNCC.DataBindings.Clear();
-            rtbDiaChiKhachNCC.DataBindings.Clear();
+            guna2txtMaNCC.DataBindings.Clear();
+            guna2txtTenNCC.DataBindings.Clear();
+            guna2txtEmail.DataBindings.Clear();
+            guna2txtSDT.DataBindings.Clear();
+            guna2txtDiaChi.DataBindings.Clear();
         }
 
         public void resetData()
         {
-            txtTenNCC.Text = "";
-            txtEmailNCC.Text = "";
-            txtDienThoaiNCC.Text = "";
-            rtbDiaChiKhachNCC.Text = "";
+            guna2txtTenNCC.Text = "";
+            guna2txtEmail.Text = "";
+            guna2txtSDT.Text = "";
+            guna2txtDiaChi.Text = "";
         }
 
         public bool KiemTraNhap()
         {
-            if (txtTenNCC.Text == "")
+            if (guna2txtTenNCC.Text == "")
             {
                 MessageBox.Show("Tên nhà cung cấp không được để trống", "Thông báo");
-                txtTenNCC.Focus();
+                guna2txtTenNCC.Focus();
                 return false;
             }
-            else if (txtDienThoaiNCC.Text == "")
+            else if (guna2txtSDT.Text == "")
             {
                 MessageBox.Show("Số điện thoại không được để trống", "Thông báo");
-                txtDienThoaiNCC.Focus();
+                guna2txtSDT.Focus();
                 return false;
             }
-            else if (rtbDiaChiKhachNCC.Text == "")
+            else if (guna2txtDiaChi.Text == "")
             {
                 MessageBox.Show("Địa chỉ không được để trống", "Thông báo");
-                rtbDiaChiKhachNCC.Focus();
+                guna2txtDiaChi.Focus();
                 return false;
             }
-            else if (txtEmailNCC.Text == "")
+            else if (guna2txtEmail.Text == "")
             {
                 MessageBox.Show("Địa chỉ không được để trống", "Thông báo");
-                txtEmailNCC.Focus();
+                guna2txtEmail.Focus();
                 return false;
             }
             return true;
         }
         public bool check = true;
-        private void btnLuuNCC_Click(object sender, EventArgs e)
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            txtMaNCC.Text = SupplierBUS.Intance.loadMaNCC();
+            guna2txtMaNCC.Text = SupplierBUS.Intance.loadMaNCC();
             if (check == true)
             {
                 check = !check;
-                btnSuaNCC.Enabled = false;
-                btnXoaNCC.Enabled = false;
-                btnLuuNCC.Text = "Lưu";
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+                btnThem.Text = "Lưu";
                 resetData();
-                txtTenNCC.Focus();
+                guna2txtTenNCC.Focus();
             }
             else
             {
                 if (KiemTraNhap())
                 {
                     check = !check;
-                    btnSuaNCC.Enabled = true;
-                    btnXoaNCC.Enabled = true;
-                    btnLuuNCC.Text = "Thêm";
-                    DTO_NhaCungCap ncc = new DTO_NhaCungCap();
-                    ncc.MaNCC = txtMaNCC.Text;
-                    ncc.TenNCC = txtTenNCC.Text;
-                    ncc.DiaChi = rtbDiaChiKhachNCC.Text;
-                    ncc.Email = txtEmailNCC.Text;
-                    ncc.SDT = int.Parse(txtDienThoaiNCC.Text);
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                    btnThem.Text = "Thêm";
+                    SupplierDTO ncc = new SupplierDTO();
+                    ncc.MaNCC = guna2txtMaNCC.Text;
+                    ncc.TenNCC = guna2txtTenNCC.Text;
+                    ncc.DiaChi = guna2txtDiaChi.Text;
+                    ncc.Email = guna2txtEmail.Text;
+                    ncc.SDT = int.Parse(guna2txtSDT.Text);
                     if (SupplierBUS.Intance.themNCC(ncc))
                     {
                         MessageBox.Show("Thêm thành công!", "Thông báo");
@@ -119,32 +120,31 @@ namespace WindowsFormsApp
             }
         }
 
-        private void btnSuaNCC_Click(object sender, EventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
             if (guna2dgvThongTinNCC.SelectedCells.Count > 0)
             {
-                DTO_NhaCungCap ncc = new DTO_NhaCungCap();
-                ncc.MaNCC = txtMaNCC.Text;
-                ncc.TenNCC = txtTenNCC.Text;
-                ncc.DiaChi = rtbDiaChiKhachNCC.Text;
-                ncc.Email = txtEmailNCC.Text;
-                ncc.SDT = int.Parse(txtDienThoaiNCC.Text);
+                SupplierDTO ncc = new SupplierDTO();
+                ncc.MaNCC = guna2txtMaNCC.Text;
+                ncc.TenNCC = guna2txtTenNCC.Text;
+                ncc.DiaChi = guna2txtDiaChi.Text;
+                ncc.Email = guna2txtEmail.Text;
+                ncc.SDT = int.Parse(guna2txtSDT.Text);
                 if (SupplierBUS.Intance.suaNCC(ncc))
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo");
                     LoadData();
                 }
             }
-
         }
 
-        private void btnXoaNCC_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult dlr = MessageBox.Show("Bạn có muốn xóa không?",
             "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.Yes)
             {
-                SupplierBUS.Intance.xoaNCC(txtMaNCC.Text);
+                SupplierBUS.Intance.xoaNCC(guna2txtMaNCC.Text);
                 MessageBox.Show("Xóa thành công!", "Thông báo");
                 LoadData();
             }
@@ -153,18 +153,21 @@ namespace WindowsFormsApp
         private void btnHuy_Click(object sender, EventArgs e)
         {
             check = !check;
-            btnSuaNCC.Enabled = true;
-            btnXoaNCC.Enabled = true;
-            btnLuuNCC.Text = "Thêm";
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            btnThem.Text = "Thêm";
             LoadData();
         }
 
-        private void txtTimKiemNCC_TextChanged(object sender, EventArgs e)
+
+
+        private void guna2txtTimKiem_TextChanged_1(object sender, EventArgs e)
         {
-            guna2dgvThongTinNCC.DataSource = SupplierBUS.Intance.TimKiemNCC(txtTimKiemNCC.Text);
+            guna2dgvThongTinNCC.DataSource = SupplierBUS.Intance.TimKiemNCC(guna2txtTimKiem.Text);
         }
 
-        private void dgvNCC_SelectionChanged(object sender, EventArgs e)
+
+        private void guna2dgvThongTinNCC_SelectionChanged(object sender, EventArgs e)
         {
             if (guna2dgvThongTinNCC.SelectedCells.Count > 0)
             {
@@ -172,5 +175,10 @@ namespace WindowsFormsApp
                 loadBinding();
             }
         }
+
+        private void guna2dgvThongTinNCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }*/
     }
 }

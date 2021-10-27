@@ -48,7 +48,7 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.btnCapNhap = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.guna2dgvThongTinNCC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,6 +125,8 @@
             this.guna2dgvThongTinNCC.ThemeStyle.RowsStyle.Height = 30;
             this.guna2dgvThongTinNCC.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.guna2dgvThongTinNCC.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2dgvThongTinNCC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2dgvThongTinNCC_CellContentClick);
+            this.guna2dgvThongTinNCC.SelectionChanged += new System.EventHandler(this.guna2dgvThongTinNCC_SelectionChanged);
             // 
             // guna2txtMaNCC
             // 
@@ -233,6 +235,7 @@
             this.guna2txtTimKiem.Size = new System.Drawing.Size(301, 31);
             this.guna2txtTimKiem.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtTimKiem.TabIndex = 198;
+            this.guna2txtTimKiem.TextChanged += new System.EventHandler(this.guna2txtTimKiem_TextChanged_1);
             // 
             // guna2txtTenNCC
             // 
@@ -359,6 +362,7 @@
             this.btnThem.TabIndex = 207;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -371,6 +375,7 @@
             this.btnSua.TabIndex = 208;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -383,24 +388,26 @@
             this.btnXoa.TabIndex = 209;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // btnCapNhap
+            // btnHuy
             // 
-            this.btnCapNhap.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCapNhap.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhap.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhap.Location = new System.Drawing.Point(842, 260);
-            this.btnCapNhap.Name = "btnCapNhap";
-            this.btnCapNhap.Size = new System.Drawing.Size(124, 58);
-            this.btnCapNhap.TabIndex = 210;
-            this.btnCapNhap.Text = "Cập nhập";
-            this.btnCapNhap.UseVisualStyleBackColor = false;
+            this.btnHuy.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnHuy.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(842, 260);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(124, 58);
+            this.btnHuy.TabIndex = 210;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // UC_Supplier
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.btnCapNhap);
+            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
@@ -446,6 +453,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnCapNhap;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

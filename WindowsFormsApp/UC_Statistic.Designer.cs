@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panelControls1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,11 +66,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("FS Harabara", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.label2.Location = new System.Drawing.Point(290, 32);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 44);
+            this.label2.Size = new System.Drawing.Size(474, 46);
             this.label2.TabIndex = 6;
             this.label2.Text = "THỐNG KÊ LỢI NHUẬN";
             // 
@@ -96,26 +96,26 @@
             // 
             // chartThongKeHD
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartThongKeHD.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartThongKeHD.Legends.Add(legend4);
+            chartArea6.Name = "ChartArea1";
+            this.chartThongKeHD.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartThongKeHD.Legends.Add(legend6);
             this.chartThongKeHD.Location = new System.Drawing.Point(3, 76);
             this.chartThongKeHD.Name = "chartThongKeHD";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Doanh Thu";
-            this.chartThongKeHD.Series.Add(series4);
-            this.chartThongKeHD.Size = new System.Drawing.Size(968, 440);
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Doanh Thu";
+            this.chartThongKeHD.Series.Add(series6);
+            this.chartThongKeHD.Size = new System.Drawing.Size(978, 447);
             this.chartThongKeHD.TabIndex = 0;
             this.chartThongKeHD.Text = "chart1";
-            title4.Name = "Thống Kê Theo Tuần";
-            this.chartThongKeHD.Titles.Add(title4);
+            title6.Name = "Thống Kê Theo Tuần";
+            this.chartThongKeHD.Titles.Add(title6);
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnTKPhieuNhap);
@@ -140,6 +140,7 @@
             this.button2.Text = "Phiếu Nhập";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -156,7 +157,7 @@
             this.button1.Text = "Hóa Đơn";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
- 
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnTKPhieuNhap
             // 
@@ -173,6 +174,7 @@
             this.btnTKPhieuNhap.Text = "Khách Hàng";
             this.btnTKPhieuNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTKPhieuNhap.UseVisualStyleBackColor = true;
+            this.btnTKPhieuNhap.Click += new System.EventHandler(this.btnTKPhieuNhap_Click_1);
             // 
             // btnTKHangHoa
             // 
@@ -189,6 +191,7 @@
             this.btnTKHangHoa.Text = "Hàng Hóa";
             this.btnTKHangHoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnTKHangHoa.UseVisualStyleBackColor = true;
+            this.btnTKHangHoa.Click += new System.EventHandler(this.btnTKHangHoa_Click_1);
             // 
             // flowLayoutPanel3
             // 
@@ -227,7 +230,7 @@
             this.panel1.Size = new System.Drawing.Size(10, 694);
             this.panel1.TabIndex = 16;
             // 
-            // UC_ThongKe
+            // UC_Statistic
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -239,7 +242,7 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Name = "UC_ThongKe";
+            this.Name = "UC_Statistic";
             this.Size = new System.Drawing.Size(994, 694);
             this.panelControls1.ResumeLayout(false);
             this.panelControls1.PerformLayout();
