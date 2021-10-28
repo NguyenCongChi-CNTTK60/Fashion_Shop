@@ -325,11 +325,11 @@
     <Compile Include="UC_Statistic.Designer.cs">
       <DependentUpon>UC_Statistic.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_StatisticCommodity.cs">
+    <Compile Include="UC_StatisticGoods.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_StatisticCommodity.Designer.cs">
-      <DependentUpon>UC_StatisticCommodity.cs</DependentUpon>
+    <Compile Include="UC_StatisticGoods.Designer.cs">
+      <DependentUpon>UC_StatisticGoods.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_Supplier.cs">
       <SubType>UserControl</SubType>
@@ -381,6 +381,15 @@
     <EmbeddedResource Include="UC_HomePage.resx">
       <DependentUpon>UC_HomePage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_Sell.resx">
+      <DependentUpon>UC_Sell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Statistic.resx">
+      <DependentUpon>UC_Statistic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_Supplier.resx">
+      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -403,6 +412,7 @@
     <None Include="Resources\dzcqynvgag7q.jpg" />
     <None Include="Image\home-page.png" />
     <None Include="Image\oto-giaohang.jpg" />
+    <None Include="Image\icon-user.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

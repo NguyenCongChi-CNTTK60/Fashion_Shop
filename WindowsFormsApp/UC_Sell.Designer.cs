@@ -59,17 +59,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.cbbMaHang = new System.Windows.Forms.ComboBox();
-            this.hangHoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtDonViTinh = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.hangHoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelRight.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hangHoaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hangHoaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -166,7 +166,6 @@
             this.btnThemMatHang.TabIndex = 7;
             this.btnThemMatHang.Text = "Thêm";
             this.btnThemMatHang.UseVisualStyleBackColor = false;
-      
             // 
             // panelRight
             // 
@@ -198,7 +197,6 @@
             this.btnThemMoiKH.TabIndex = 10;
             this.btnThemMoiKH.Text = "+";
             this.btnThemMoiKH.UseVisualStyleBackColor = false;
-      
             // 
             // txtInPutNumberPhone
             // 
@@ -209,7 +207,6 @@
             this.txtInPutNumberPhone.Name = "txtInPutNumberPhone";
             this.txtInPutNumberPhone.Size = new System.Drawing.Size(225, 32);
             this.txtInPutNumberPhone.TabIndex = 9;
- 
             // 
             // label4
             // 
@@ -247,7 +244,6 @@
             this.btnXoaMatHang.TabIndex = 2;
             this.btnXoaMatHang.Text = "Xóa";
             this.btnXoaMatHang.UseVisualStyleBackColor = false;
-
             // 
             // lvSanPhamBan
             // 
@@ -259,7 +255,7 @@
             this.columnHeader8});
             this.lvSanPhamBan.GridLines = true;
             this.lvSanPhamBan.HideSelection = false;
-            this.lvSanPhamBan.Location = new System.Drawing.Point(10, 118);
+            this.lvSanPhamBan.Location = new System.Drawing.Point(16, 118);
             this.lvSanPhamBan.Name = "lvSanPhamBan";
             this.lvSanPhamBan.Size = new System.Drawing.Size(407, 290);
             this.lvSanPhamBan.TabIndex = 5;
@@ -328,7 +324,6 @@
             this.btnThanhToan.TabIndex = 2;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseVisualStyleBackColor = false;
-
             // 
             // lbTienBangSo
             // 
@@ -397,11 +392,11 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("FS Harabara", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
             this.label9.Location = new System.Drawing.Point(136, 40);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(299, 66);
+            this.label9.Size = new System.Drawing.Size(350, 69);
             this.label9.TabIndex = 90;
             this.label9.Text = "BÁN HÀNG";
             // 
@@ -415,11 +410,6 @@
             this.cbbMaHang.Name = "cbbMaHang";
             this.cbbMaHang.Size = new System.Drawing.Size(336, 31);
             this.cbbMaHang.TabIndex = 1;
-
-            // 
-            // hangHoaBindingSource
-            // 
-            this.hangHoaBindingSource.DataMember = "HangHoa";
             // 
             // txtDonViTinh
             // 
@@ -468,7 +458,6 @@
             this.button2.TabIndex = 97;
             this.button2.Text = "QR";
             this.button2.UseVisualStyleBackColor = true;
-           
             // 
             // pictureBox1
             // 
@@ -478,11 +467,11 @@
             this.pictureBox1.TabIndex = 98;
             this.pictureBox1.TabStop = false;
             // 
-            // timer1
+            // hangHoaBindingSource
             // 
-
+            this.hangHoaBindingSource.DataMember = "HangHoa";
             // 
-            // UC_BanHang
+            // UC_Sell
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -503,16 +492,15 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UC_BanHang";
+            this.Name = "UC_Sell";
             this.Size = new System.Drawing.Size(994, 694);
-    
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.hangHoaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hangHoaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

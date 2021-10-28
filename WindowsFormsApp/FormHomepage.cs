@@ -112,14 +112,8 @@ namespace WindowsFormsApp
         private void addControlsToPanel(Control c)
         {
             c.Dock = DockStyle.Fill;
-            panelControls.Controls.Clear();
-            panelControls.Controls.Add(c);
-        }
-
-        private void panel1_Click(object sender, EventArgs e)
-        {
-            FormChangePassword frm = new FormChangePassword(FormLogin.matkhau, false, FormLogin.tk);
-            frm.ShowDialog();
+            panelControl.Controls.Clear();
+            panelControl.Controls.Add(c);
         }
 
         private void btnHomePage_Click(object sender, EventArgs e)
@@ -181,6 +175,12 @@ namespace WindowsFormsApp
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void picUser_Click(object sender, EventArgs e)
+        {
+            FormChangePassword frm = new FormChangePassword(FormLogin.matkhau, false, FormLogin.tk);
+            frm.ShowDialog();
         }
     }
 }

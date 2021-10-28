@@ -17,9 +17,9 @@ namespace WindowsFormsApp
         public UC_Supplier()
         {
             InitializeComponent();
-            /*LoadData();*/
+            LoadData();
         }
-        /*void loadBinding()
+        void loadBinding()
         {
             guna2txtMaNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "MaNCC", true, DataSourceUpdateMode.Never));
             guna2txtTenNCC.DataBindings.Add(new Binding("Text", guna2dgvThongTinNCC.DataSource, "TenNCC", true, DataSourceUpdateMode.Never));
@@ -175,10 +175,5 @@ namespace WindowsFormsApp
                 loadBinding();
             }
         }
-
-        private void guna2dgvThongTinNCC_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }*/
     }
 }

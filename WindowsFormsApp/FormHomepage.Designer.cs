@@ -38,6 +38,10 @@ namespace WindowsFormsApp
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.lbUser = new System.Windows.Forms.Label();
+            this.picUser = new System.Windows.Forms.PictureBox();
+            this.lblTime = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -64,7 +68,7 @@ namespace WindowsFormsApp
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.panelMain = new System.Windows.Forms.Panel();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnImportGoods = new System.Windows.Forms.Button();
             this.btnHomePage = new System.Windows.Forms.Button();
@@ -81,11 +85,14 @@ namespace WindowsFormsApp
             this.bunifuElipse10 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse11 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse12 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerTime = new System.Windows.Forms.Timer(this.components);
             this.panelDown.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelLeft.SuspendLayout();
@@ -181,6 +188,10 @@ namespace WindowsFormsApp
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.White;
+            this.panelTop.Controls.Add(this.guna2ControlBox1);
+            this.panelTop.Controls.Add(this.lbUser);
+            this.panelTop.Controls.Add(this.picUser);
+            this.panelTop.Controls.Add(this.lblTime);
             this.panelTop.Controls.Add(this.label11);
             this.panelTop.Controls.Add(this.label10);
             this.panelTop.Controls.Add(this.pictureBox6);
@@ -192,6 +203,59 @@ namespace WindowsFormsApp
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1014, 61);
             this.panelTop.TabIndex = 12;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Peru;
+            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Teal;
+            this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(945, -6);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
+            this.guna2ControlBox1.Size = new System.Drawing.Size(58, 54);
+            this.guna2ControlBox1.TabIndex = 11;
+            // 
+            // lbUser
+            // 
+            this.lbUser.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUser.AutoSize = true;
+            this.lbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbUser.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUser.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lbUser.Location = new System.Drawing.Point(771, 18);
+            this.lbUser.Name = "lbUser";
+            this.lbUser.Size = new System.Drawing.Size(102, 30);
+            this.lbUser.TabIndex = 10;
+            this.lbUser.Text = "ADMIN";
+            this.lbUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // picUser
+            // 
+            this.picUser.Image = global::WindowsFormsApp.Properties.Resources.icon_user;
+            this.picUser.Location = new System.Drawing.Point(883, 10);
+            this.picUser.Name = "picUser";
+            this.picUser.Size = new System.Drawing.Size(45, 38);
+            this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picUser.TabIndex = 9;
+            this.picUser.TabStop = false;
+            this.picUser.Click += new System.EventHandler(this.picUser_Click);
+            // 
+            // lblTime
+            // 
+            this.lblTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblTime.Location = new System.Drawing.Point(513, 0);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(252, 56);
+            this.lblTime.TabIndex = 8;
+            this.lblTime.Text = "HH:MM:SS";
             // 
             // label11
             // 
@@ -400,7 +464,7 @@ namespace WindowsFormsApp
             this.panelLeft.Controls.Add(this.pictureBox1);
             this.panelLeft.Controls.Add(this.btnLogOut);
             this.panelLeft.Controls.Add(this.label2);
-            this.panelLeft.Controls.Add(this.panelMain);
+            this.panelLeft.Controls.Add(this.panelSide);
             this.panelLeft.Controls.Add(this.btnDangXuat);
             this.panelLeft.Controls.Add(this.btnImportGoods);
             this.panelLeft.Controls.Add(this.btnDepot);
@@ -553,14 +617,14 @@ namespace WindowsFormsApp
             this.label2.TabIndex = 13;
             this.label2.Text = "SUPERMARKET";
             // 
-            // panelMain
+            // panelSide
             // 
-            this.panelMain.BackColor = System.Drawing.Color.Peru;
-            this.panelMain.Location = new System.Drawing.Point(12, 85);
-            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(9, 52);
-            this.panelMain.TabIndex = 0;
+            this.panelSide.BackColor = System.Drawing.Color.Peru;
+            this.panelSide.Location = new System.Drawing.Point(12, 85);
+            this.panelSide.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(9, 52);
+            this.panelSide.TabIndex = 0;
             // 
             // btnDangXuat
             // 
@@ -695,7 +759,7 @@ namespace WindowsFormsApp
             this.bunifuElipse12.ElipseRadius = 30;
             this.bunifuElipse12.TargetControl = this.btnLogOut;
             // 
-            // FormHomepage
+            // FormHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -707,7 +771,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.panelDown);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FormHomepage";
+            this.Name = "FormHomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTrangChu2";
             this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
@@ -718,6 +782,7 @@ namespace WindowsFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelLeft.ResumeLayout(false);
@@ -744,7 +809,7 @@ namespace WindowsFormsApp
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnDepot;
         private System.Windows.Forms.Button btnSupplier;
@@ -787,5 +852,11 @@ namespace WindowsFormsApp
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse10;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse11;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse12;
+        private System.Windows.Forms.PictureBox picUser;
+        private System.Windows.Forms.Label lblTime;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerTime;
     }
 }
