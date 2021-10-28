@@ -34,7 +34,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtTenHang = new System.Windows.Forms.TextBox();
+            this.txtTenMH = new System.Windows.Forms.TextBox();
             this.txtGia = new System.Windows.Forms.TextBox();
             this.btnThemMatHang = new System.Windows.Forms.Button();
             this.panelRight = new System.Windows.Forms.Panel();
@@ -58,7 +58,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbbMaHang = new System.Windows.Forms.ComboBox();
+            this.cmbMaMH = new System.Windows.Forms.ComboBox();
             this.txtDonViTinh = new System.Windows.Forms.TextBox();
             this.txtSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.button2 = new System.Windows.Forms.Button();
@@ -78,11 +78,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(16, 126);
+            this.label1.Location = new System.Drawing.Point(44, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 23);
+            this.label1.Size = new System.Drawing.Size(89, 23);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Mã Hàng :";
+            this.label1.Text = "Mã MH :";
             // 
             // label2
             // 
@@ -90,11 +90,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(16, 184);
+            this.label2.Location = new System.Drawing.Point(44, 184);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 23);
+            this.label2.Size = new System.Drawing.Size(85, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tên Hàng :";
+            this.label2.Text = "Tên MH:";
             // 
             // label3
             // 
@@ -132,14 +132,14 @@
             this.label6.TabIndex = 2;
             this.label6.Text = "Giá :";
             // 
-            // txtTenHang
+            // txtTenMH
             // 
-            this.txtTenHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenHang.ForeColor = System.Drawing.Color.Black;
-            this.txtTenHang.Location = new System.Drawing.Point(147, 181);
-            this.txtTenHang.Name = "txtTenHang";
-            this.txtTenHang.Size = new System.Drawing.Size(336, 32);
-            this.txtTenHang.TabIndex = 3;
+            this.txtTenMH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTenMH.ForeColor = System.Drawing.Color.Black;
+            this.txtTenMH.Location = new System.Drawing.Point(147, 181);
+            this.txtTenMH.Name = "txtTenMH";
+            this.txtTenMH.Size = new System.Drawing.Size(336, 32);
+            this.txtTenMH.TabIndex = 3;
             // 
             // txtGia
             // 
@@ -166,6 +166,7 @@
             this.btnThemMatHang.TabIndex = 7;
             this.btnThemMatHang.Text = "Thêm";
             this.btnThemMatHang.UseVisualStyleBackColor = false;
+            this.btnThemMatHang.Click += new System.EventHandler(this.btnThemMatHang_Click_1);
             // 
             // panelRight
             // 
@@ -197,6 +198,7 @@
             this.btnThemMoiKH.TabIndex = 10;
             this.btnThemMoiKH.Text = "+";
             this.btnThemMoiKH.UseVisualStyleBackColor = false;
+            this.btnThemMoiKH.Click += new System.EventHandler(this.btnThemMoiKH_Click_1);
             // 
             // txtInPutNumberPhone
             // 
@@ -207,6 +209,7 @@
             this.txtInPutNumberPhone.Name = "txtInPutNumberPhone";
             this.txtInPutNumberPhone.Size = new System.Drawing.Size(225, 32);
             this.txtInPutNumberPhone.TabIndex = 9;
+            this.txtInPutNumberPhone.TextChanged += new System.EventHandler(this.txtInPutNumberPhone_TextChanged);
             // 
             // label4
             // 
@@ -244,6 +247,7 @@
             this.btnXoaMatHang.TabIndex = 2;
             this.btnXoaMatHang.Text = "Xóa";
             this.btnXoaMatHang.UseVisualStyleBackColor = false;
+            this.btnXoaMatHang.Click += new System.EventHandler(this.btnXoaMatHang_Click_1);
             // 
             // lvSanPhamBan
             // 
@@ -324,6 +328,7 @@
             this.btnThanhToan.TabIndex = 2;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click_1);
             // 
             // lbTienBangSo
             // 
@@ -400,16 +405,17 @@
             this.label9.TabIndex = 90;
             this.label9.Text = "BÁN HÀNG";
             // 
-            // cbbMaHang
+            // cmbMaMH
             // 
-            this.cbbMaHang.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbbMaHang.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbbMaHang.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbbMaHang.FormattingEnabled = true;
-            this.cbbMaHang.Location = new System.Drawing.Point(147, 118);
-            this.cbbMaHang.Name = "cbbMaHang";
-            this.cbbMaHang.Size = new System.Drawing.Size(336, 31);
-            this.cbbMaHang.TabIndex = 1;
+            this.cmbMaMH.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cmbMaMH.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMaMH.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cmbMaMH.FormattingEnabled = true;
+            this.cmbMaMH.Location = new System.Drawing.Point(147, 118);
+            this.cmbMaMH.Name = "cmbMaMH";
+            this.cmbMaMH.Size = new System.Drawing.Size(336, 31);
+            this.cmbMaMH.TabIndex = 1;
+            this.cmbMaMH.SelectedIndexChanged += new System.EventHandler(this.cmbMaMH_SelectedIndexChanged);
             // 
             // txtDonViTinh
             // 
@@ -459,6 +465,10 @@
             this.button2.Text = "QR";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(48, 543);
@@ -479,12 +489,12 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.txtDonViTinh);
-            this.Controls.Add(this.cbbMaHang);
+            this.Controls.Add(this.cmbMaMH);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.btnThemMatHang);
             this.Controls.Add(this.txtGia);
-            this.Controls.Add(this.txtTenHang);
+            this.Controls.Add(this.txtTenMH);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -494,6 +504,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_Sell";
             this.Size = new System.Drawing.Size(994, 694);
+            this.Load += new System.EventHandler(this.UC_Sell_Load);
             this.panelRight.ResumeLayout(false);
             this.panelRight.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -512,7 +523,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtTenHang;
+        private System.Windows.Forms.TextBox txtTenMH;
         private System.Windows.Forms.TextBox txtGia;
         private System.Windows.Forms.Button btnThemMatHang;
         private System.Windows.Forms.Panel panelRight;
@@ -526,7 +537,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbbMaHang;
+        private System.Windows.Forms.ComboBox cmbMaMH;
         private System.Windows.Forms.BindingSource hangHoaBindingSource;
 
         private System.Windows.Forms.TextBox txtDonViTinh;
