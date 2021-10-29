@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="BillDAO.cs" />
     <Compile Include="BillInfoDAO.cs" />
+    <Compile Include="ConvertMoneyDAO.cs" />
     <Compile Include="GoodsDAO.cs" />
     <Compile Include="CouponDAO.cs" />
     <Compile Include="CouponInfoDAO.cs" />
