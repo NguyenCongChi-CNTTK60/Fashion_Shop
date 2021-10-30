@@ -1,4 +1,5 @@
 ﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace WindowsFormsApp
 
         public static string tenNgDung, quyen, tk, matkhau;
 
-        private void guna2GradientButton1_Click_1(object sender, EventArgs e)
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             string tenDangNhap = guna2TextBox1.Text;
             string passWord = guna2TextBox2.Text;
