@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿
+
+using System.Data;
 
 namespace DTO
 {
@@ -29,3 +31,4 @@ namespace DTO
         public int GiaGoc { get => giaGoc; set => giaGoc = value; }
     }
 }
+

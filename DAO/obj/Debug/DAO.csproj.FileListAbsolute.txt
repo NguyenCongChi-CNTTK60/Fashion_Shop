@@ -1,4 +1,11 @@
+D:\C#\project\circleK-app-project\DAO\bin\Debug\DAO.dll
+D:\C#\project\circleK-app-project\DAO\bin\Debug\DAO.pdb
+D:\C#\project\circleK-app-project\DAO\bin\Debug\DTO.dll
+D:\C#\project\circleK-app-project\DAO\bin\Debug\DTO.pdb
 D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
 D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.Properties.Resources.resources
 D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
 D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.dll
+D:\C#\project\circleK-app-project\DAO\obj\Debug\DAO.pdb

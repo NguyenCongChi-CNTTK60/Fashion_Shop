@@ -1,4 +1,9 @@
-﻿using System;
+﻿
+
+
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Data;
@@ -32,3 +37,8 @@ namespace DTO
         public int SDT { get => sDT; set => sDT = value; }
     }
 }
+
+
+
+
+
