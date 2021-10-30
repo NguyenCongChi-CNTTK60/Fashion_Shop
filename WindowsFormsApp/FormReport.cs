@@ -28,7 +28,7 @@ namespace WindowsFormsApp
         private void Form_Report_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'QuanLyCuaHangThoiTrangDataSet.USP_GetHoaDon' table. You can move, or remove it, as needed.
-            this.USP_GetHoaDonTableAdapter.Fill(this.QuanLySieuThiDataSet.USP_GetHoaDon, this.maHD);
+            /*this.USP_GetHoaDonTableAdapter.Fill(this.QuanLySieuThiDataSet.USP_GetHoaDon, this.maHD);*/
             ReportParameter[] rptParams = new ReportParameter[]
             {
                 new ReportParameter("TienBangChu", Tien),

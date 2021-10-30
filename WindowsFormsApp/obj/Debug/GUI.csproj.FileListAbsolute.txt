@@ -177,3 +177,9 @@ D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\GUI.csproj.GenerateR
 D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\GUI.csproj.ResolveComReference.cache
+D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_Coupon.resources
+D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_Depot.resources
+D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_Sell.resources
+D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_Statistic.resources
+D:\C#\project\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_Supplier.resources

@@ -125,7 +125,6 @@
             this.guna2dgvThongTinNCC.ThemeStyle.RowsStyle.Height = 30;
             this.guna2dgvThongTinNCC.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.guna2dgvThongTinNCC.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2dgvThongTinNCC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2dgvThongTinNCC_CellContentClick);
             this.guna2dgvThongTinNCC.SelectionChanged += new System.EventHandler(this.guna2dgvThongTinNCC_SelectionChanged);
             // 
             // guna2txtMaNCC

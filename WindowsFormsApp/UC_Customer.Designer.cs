@@ -29,9 +29,9 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -110,7 +110,7 @@ namespace WindowsFormsApp
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(21, 131);
+            this.label14.Location = new System.Drawing.Point(30, 129);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(150, 29);
             this.label14.TabIndex = 55;
@@ -313,7 +313,7 @@ namespace WindowsFormsApp
             this.btnThem.BackColor = System.Drawing.Color.SteelBlue;
             this.btnThem.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(410, 730);
+            this.btnThem.Location = new System.Drawing.Point(467, 719);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(124, 58);
             this.btnThem.TabIndex = 201;
@@ -325,7 +325,7 @@ namespace WindowsFormsApp
             this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSua.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(571, 730);
+            this.btnSua.Location = new System.Drawing.Point(618, 719);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(124, 58);
             this.btnSua.TabIndex = 202;
@@ -337,7 +337,7 @@ namespace WindowsFormsApp
             this.btnXoa.BackColor = System.Drawing.Color.SteelBlue;
             this.btnXoa.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(718, 730);
+            this.btnXoa.Location = new System.Drawing.Point(769, 719);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(124, 58);
             this.btnXoa.TabIndex = 203;
@@ -349,7 +349,7 @@ namespace WindowsFormsApp
             this.btnCapNhap.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCapNhap.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhap.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhap.Location = new System.Drawing.Point(873, 730);
+            this.btnCapNhap.Location = new System.Drawing.Point(916, 719);
             this.btnCapNhap.Name = "btnCapNhap";
             this.btnCapNhap.Size = new System.Drawing.Size(124, 58);
             this.btnCapNhap.TabIndex = 204;
@@ -431,33 +431,33 @@ namespace WindowsFormsApp
             // 
             // guna2dgvThongTinKhachHang
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2dgvThongTinKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2dgvThongTinKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2dgvThongTinKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2dgvThongTinKhachHang.BackgroundColor = System.Drawing.Color.White;
             this.guna2dgvThongTinKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2dgvThongTinKhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2dgvThongTinKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2dgvThongTinKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2dgvThongTinKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2dgvThongTinKhachHang.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2dgvThongTinKhachHang.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2dgvThongTinKhachHang.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2dgvThongTinKhachHang.EnableHeadersVisualStyles = false;
             this.guna2dgvThongTinKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2dgvThongTinKhachHang.Location = new System.Drawing.Point(15, 310);
+            this.guna2dgvThongTinKhachHang.Location = new System.Drawing.Point(38, 309);
             this.guna2dgvThongTinKhachHang.Name = "guna2dgvThongTinKhachHang";
             this.guna2dgvThongTinKhachHang.RowHeadersVisible = false;
             this.guna2dgvThongTinKhachHang.RowHeadersWidth = 51;
@@ -503,7 +503,7 @@ namespace WindowsFormsApp
             this.guna2cmbHang.HoverState.Parent = this.guna2cmbHang;
             this.guna2cmbHang.ItemHeight = 30;
             this.guna2cmbHang.ItemsAppearance.Parent = this.guna2cmbHang;
-            this.guna2cmbHang.Location = new System.Drawing.Point(653, 131);
+            this.guna2cmbHang.Location = new System.Drawing.Point(653, 138);
             this.guna2cmbHang.Name = "guna2cmbHang";
             this.guna2cmbHang.ShadowDecoration.Parent = this.guna2cmbHang;
             this.guna2cmbHang.Size = new System.Drawing.Size(301, 36);
@@ -513,7 +513,7 @@ namespace WindowsFormsApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(566, 138);
+            this.label1.Location = new System.Drawing.Point(568, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 29);
             this.label1.TabIndex = 213;
