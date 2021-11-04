@@ -42,14 +42,14 @@ namespace BUS
             return EmployeeDAO.Intance.getListNV();
         }
 
-        public bool themNV(string tenDangnhap, string MatKhau, string TenNgDung, string Quyen)
+        public bool themNV(string maNV, string tenNV, string sdt, string tenDangnhap, string MatKhau, string maQuyen)
         {
-            return EmployeeDAO.Intance.themNV(tenDangnhap, MatKhau, TenNgDung, Quyen);
+            return EmployeeDAO.Intance.themNV(maNV, tenNV, sdt, tenDangnhap, MatKhau, maQuyen);
         }
 
-        public bool suaNV(string tenDangnhap, string MatKhau, string TenNgDung, string Quyen)
+        public bool suaNV(string maNV, string tenNV, string sdt, string tenDangnhap, string MatKhau, string maQuyen)
         {
-            return EmployeeDAO.Intance.suaNV(tenDangnhap, MatKhau, TenNgDung, Quyen);
+            return EmployeeDAO.Intance.suaNV(maNV, tenNV, sdt, tenDangnhap, MatKhau, maQuyen);
         }
 
         public bool xoaNV(string maKH)
