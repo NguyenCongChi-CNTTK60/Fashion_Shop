@@ -10,25 +10,24 @@ namespace DTO
 {
     public class EmployeeDTO
     {
-        private string maNV, tenNV, chucVu, tenDangNhap, matKhau;
-        private int sdt, maQuyen;
+        private string maNV, tenNV, chucVu, sdt, tenDangNhap, matKhau, maQuyen;
         public EmployeeDTO(DataRow row)
         {
             this.MaNV = row["MaNV"].ToString();
             this.TenNV = row["TenNV"].ToString();
             this.ChucVu = row["ChucVu"].ToString();
-            this.Sdt = (int)row["Sdt"];
+            this.Sdt = row["Sdt"].ToString();
             this.TenDangNhap = row["TenDangNhap"].ToString();
-            this.MaQuyen = (int)row["MaQuyen"];
+            this.MaQuyen = row["MaQuyen"].ToString();
         }
 
         public string MaNV { get => maNV; set => maNV = value; }
         public string TenNV { get => tenNV; set => tenNV = value; }
         public string ChucVu { get => chucVu; set => chucVu = value; }
+        public string Sdt { get => sdt; set => sdt = value; }
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
-        public int Sdt { get => sdt; set => sdt = value; }
-        public int MaQuyen { get => maQuyen; set => maQuyen = value; }
+        public string MaQuyen { get => maQuyen; set => maQuyen = value; }
     }
 }
 
