@@ -38,13 +38,13 @@ namespace WindowsFormsApp
 
         void loadDashboard()
         {
-            string qrKH = "select count(*) AS [SoLuong] from KhachHang";
+            string qrKH = "select count(*) AS [SoLuong] from KHACHHANG";
             DataTable kh = DataProvider.Instance.ExecuteQuery(qrKH);
             lbSoKH.Text = kh.Rows[0]["SoLuong"].ToString();
-            qrKH = "select count(*) AS [SoLuong] from HoaDon";
+            qrKH = "select count(*) AS [SoLuong] from HOADON";
             kh = DataProvider.Instance.ExecuteQuery(qrKH);
             lbSoHoaDon.Text = kh.Rows[0]["SoLuong"].ToString();
-            qrKH = "select count(*) AS [SoLuong] from HangHoa";
+            qrKH = "select count(*) AS [SoLuong] from HANGHOA";
             kh = DataProvider.Instance.ExecuteQuery(qrKH);
             lbHangHoa.Text = kh.Rows[0]["SoLuong"].ToString();
         }

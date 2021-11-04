@@ -1,7 +1,4 @@
-﻿
-
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,19 +10,25 @@ namespace DTO
 {
     public class EmployeeDTO
     {
-        private string tenDangNhap, matKhau, tenNguoiDung, Quyen;
+        private string maNV, tenNV, chucVu, tenDangNhap, matKhau;
+        private int sdt, maQuyen;
         public EmployeeDTO(DataRow row)
         {
+            this.MaNV = row["MaNV"].ToString();
+            this.TenNV = row["TenNV"].ToString();
+            this.ChucVu = row["ChucVu"].ToString();
+            this.Sdt = (int)row["Sdt"];
             this.TenDangNhap = row["TenDangNhap"].ToString();
-            this.MatKhau = row["MatKhau"].ToString();
-            this.TenNguoiDung = row["TenNguoiDung"].ToString();
-            this.Quyen1 = row["Quyen"].ToString();
+            this.MaQuyen = (int)row["MaQuyen"];
         }
 
+        public string MaNV { get => maNV; set => maNV = value; }
+        public string TenNV { get => tenNV; set => tenNV = value; }
+        public string ChucVu { get => chucVu; set => chucVu = value; }
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
-        public string TenNguoiDung { get => tenNguoiDung; set => tenNguoiDung = value; }
-        public string Quyen1 { get => Quyen; set => Quyen = value; }
+        public int Sdt { get => sdt; set => sdt = value; }
+        public int MaQuyen { get => maQuyen; set => maQuyen = value; }
     }
 }
 
