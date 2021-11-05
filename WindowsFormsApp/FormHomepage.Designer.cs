@@ -774,7 +774,6 @@ namespace WindowsFormsApp
             this.Name = "FormHomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTrangChu2";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.panelDown.ResumeLayout(false);
             this.panelDown.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
