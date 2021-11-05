@@ -72,9 +72,9 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public bool themNV(string maNV, string tenNV, string sdt, string tenDangnhap, string MatKhau, string maQuyen)
+        public bool themNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
-            string query = String.Format("insert into NHANVIEN values (N'{0}', N'{1}', N'{2}', N'{3}')", maNV, tenNV, sdt, tenDangnhap, MatKhau, maQuyen);
+            string query = String.Format("insert into NHANVIEN values (N'{0}', N'{1}', N'{2}', N'{3}')", maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -94,9 +94,9 @@ namespace DAO
             return result > 0;
         }
 
-        public bool suaNV(string maNV, string tenNV, string sdt, string tenDangnhap, string MatKhau, string maQuyen)
+        public bool suaNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
-            string query = String.Format("update NHANVIEN set TenNguoiDung = N'{0}', MatKhau = N'{1}', Quyen = N'{2}' where TenDangnhap = N'{3}'", tenNV, sdt, tenDangnhap, MatKhau, maQuyen, maNV);
+            string query = String.Format("update NHANVIEN set TenNguoiDung = N'{0}', MatKhau = N'{1}', Quyen = N'{2}' where TenDangNhap = N'{3}'", tenNV, sdt, tenDangNhap, matKhau, quyen, maNV);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

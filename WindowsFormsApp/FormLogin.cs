@@ -46,7 +46,7 @@ namespace WindowsFormsApp
                 {
                     tenNgDung = EmployeeBUS.Intance.getNVByID(tenDangNhap).TenNV;
                     tk = tenDangNhap;
-                    quyen = EmployeeBUS.Intance.getNVByID(tenDangNhap).MaQuyen;
+                    quyen = EmployeeBUS.Intance.getNVByID(tenDangNhap).Quyen;
                     matkhau = EmployeeBUS.Intance.getNVByID(tenDangNhap).MatKhau;
                     FormHomePage f = new FormHomePage();
                     this.Hide();

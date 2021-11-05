@@ -10,7 +10,7 @@ namespace DTO
 {
     public class EmployeeDTO
     {
-        private string maNV, tenNV, chucVu, sdt, tenDangNhap, matKhau, maQuyen;
+        private string maNV, tenNV, chucVu, sdt, tenDangNhap, matKhau, quyen;
         public EmployeeDTO(DataRow row)
         {
             this.MaNV = row["MaNV"].ToString();
@@ -18,7 +18,7 @@ namespace DTO
             this.ChucVu = row["ChucVu"].ToString();
             this.Sdt = row["Sdt"].ToString();
             this.TenDangNhap = row["TenDangNhap"].ToString();
-            this.MaQuyen = row["MaQuyen"].ToString();
+            this.Quyen = row["Quyen"].ToString();
         }
 
         public string MaNV { get => maNV; set => maNV = value; }
@@ -27,7 +27,7 @@ namespace DTO
         public string Sdt { get => sdt; set => sdt = value; }
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
-        public string MaQuyen { get => maQuyen; set => maQuyen = value; }
+        public string Quyen { get => quyen; set => quyen = value; }
     }
 }
 

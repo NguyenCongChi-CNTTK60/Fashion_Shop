@@ -42,14 +42,14 @@ namespace BUS
             return EmployeeDAO.Intance.getListNV();
         }
 
-        public bool themNV(string maNV, string tenNV, string sdt, string tenDangnhap, string MatKhau, string maQuyen)
+        public bool themNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
-            return EmployeeDAO.Intance.themNV(maNV, tenNV, sdt, tenDangnhap, MatKhau, maQuyen);
+            return EmployeeDAO.Intance.themNV(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
         }
 
-        public bool suaNV(string maNV, string tenNV, string sdt, string tenDangnhap, string MatKhau, string maQuyen)
+        public bool suaNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
-            return EmployeeDAO.Intance.suaNV(maNV, tenNV, sdt, tenDangnhap, MatKhau, maQuyen);
+            return EmployeeDAO.Intance.suaNV(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
         }
 
         public bool xoaNV(string maKH)
@@ -62,6 +62,15 @@ namespace BUS
             return EmployeeDAO.Intance.TimKiemNV(name);
         }
 
+        public bool themNV(string text1, string text2, string text3, string v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool suaNV(string text1, string text2, string text3, string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
