@@ -198,10 +198,11 @@ namespace WindowsFormsApp
             this.panelTop.Controls.Add(this.label7);
             this.panelTop.Controls.Add(this.label6);
             this.panelTop.Controls.Add(this.pictureBox5);
-            this.panelTop.Location = new System.Drawing.Point(272, -1);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(266, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1026, 61);
+            this.panelTop.Size = new System.Drawing.Size(1034, 61);
             this.panelTop.TabIndex = 12;
             // 
             // guna2ControlBox1
@@ -212,7 +213,7 @@ namespace WindowsFormsApp
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Teal;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(957, -6);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(965, -6);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(58, 54);
@@ -226,7 +227,7 @@ namespace WindowsFormsApp
             this.lbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbUser.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbUser.Location = new System.Drawing.Point(783, 18);
+            this.lbUser.Location = new System.Drawing.Point(775, 10);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(102, 30);
             this.lbUser.TabIndex = 10;
@@ -251,7 +252,7 @@ namespace WindowsFormsApp
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblTime.Location = new System.Drawing.Point(525, 0);
+            this.lblTime.Location = new System.Drawing.Point(500, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(252, 56);
             this.lblTime.TabIndex = 8;
@@ -332,7 +333,7 @@ namespace WindowsFormsApp
             this.btnSell.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.ForeColor = System.Drawing.Color.White;
             this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSell.Location = new System.Drawing.Point(27, 152);
+            this.btnSell.Location = new System.Drawing.Point(26, 164);
             this.btnSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSell.Name = "btnSell";
             this.btnSell.Padding = new System.Windows.Forms.Padding(1);
@@ -353,7 +354,7 @@ namespace WindowsFormsApp
             this.btnCustomer.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCustomer.Location = new System.Drawing.Point(27, 217);
+            this.btnCustomer.Location = new System.Drawing.Point(27, 227);
             this.btnCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Padding = new System.Windows.Forms.Padding(1);
@@ -474,9 +475,10 @@ namespace WindowsFormsApp
             this.panelLeft.Controls.Add(this.btnCustomer);
             this.panelLeft.Controls.Add(this.btnSell);
             this.panelLeft.Controls.Add(this.btnHomePage);
-            this.panelLeft.Location = new System.Drawing.Point(0, -1);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(266, 751);
+            this.panelLeft.Size = new System.Drawing.Size(266, 760);
             this.panelLeft.TabIndex = 14;
             // 
             // pictureBox16
@@ -684,7 +686,7 @@ namespace WindowsFormsApp
             this.btnHomePage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Padding = new System.Windows.Forms.Padding(1);
-            this.btnHomePage.Size = new System.Drawing.Size(210, 52);
+            this.btnHomePage.Size = new System.Drawing.Size(210, 61);
             this.btnHomePage.TabIndex = 2;
             this.btnHomePage.Text = "  Trang chủ";
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -694,10 +696,11 @@ namespace WindowsFormsApp
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.Snow;
-            this.panelControl.Location = new System.Drawing.Point(272, 65);
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl.Location = new System.Drawing.Point(266, 61);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1026, 685);
-            this.panelControl.TabIndex = 15;
+            this.panelControl.Size = new System.Drawing.Size(1034, 699);
+            this.panelControl.TabIndex = 5;
             // 
             // bunifuElipse1
             // 
@@ -761,8 +764,7 @@ namespace WindowsFormsApp
             // 
             // FormHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1300, 760);
             this.Controls.Add(this.panelControl);
