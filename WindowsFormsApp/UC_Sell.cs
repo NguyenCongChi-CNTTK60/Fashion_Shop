@@ -153,7 +153,7 @@ namespace WindowsFormsApp
                     foreach (ListViewItem item in lvSanPhamBan.Items)
                     {
                         BillInfoBUS.Intance.LuuDonHang(hoaDon.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text) / Int32.Parse(item.SubItems[2].Text));
-                        string query = "update hanghoa set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaHang ='" + item.SubItems[0].Text + "'";
+                        string query = "update MATHANG set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaMH ='" + item.SubItems[0].Text + "'";
                         DataProvider.Instance.ExecuteNonQuery(query);
                     }
                     lvSanPhamBan.Items.Clear();
