@@ -80,7 +80,7 @@ namespace WindowsFormsApp
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(566, 173);
+            this.label18.Location = new System.Drawing.Point(568, 175);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(65, 29);
             this.label18.TabIndex = 64;
@@ -271,7 +271,7 @@ namespace WindowsFormsApp
             this.guna2txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtEmail.HoverState.Parent = this.guna2txtEmail;
-            this.guna2txtEmail.Location = new System.Drawing.Point(653, 169);
+            this.guna2txtEmail.Location = new System.Drawing.Point(653, 173);
             this.guna2txtEmail.Name = "guna2txtEmail";
             this.guna2txtEmail.PasswordChar = '\0';
             this.guna2txtEmail.PlaceholderText = "";
@@ -419,7 +419,7 @@ namespace WindowsFormsApp
             this.guna2txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtMatKhau.HoverState.Parent = this.guna2txtMatKhau;
-            this.guna2txtMatKhau.Location = new System.Drawing.Point(653, 210);
+            this.guna2txtMatKhau.Location = new System.Drawing.Point(649, 219);
             this.guna2txtMatKhau.Name = "guna2txtMatKhau";
             this.guna2txtMatKhau.PasswordChar = '\0';
             this.guna2txtMatKhau.PlaceholderText = "";
@@ -503,10 +503,11 @@ namespace WindowsFormsApp
             this.guna2cmbHang.HoverState.Parent = this.guna2cmbHang;
             this.guna2cmbHang.ItemHeight = 30;
             this.guna2cmbHang.ItemsAppearance.Parent = this.guna2cmbHang;
-            this.guna2cmbHang.Location = new System.Drawing.Point(653, 138);
+            this.guna2cmbHang.Location = new System.Drawing.Point(653, 122);
             this.guna2cmbHang.Name = "guna2cmbHang";
             this.guna2cmbHang.ShadowDecoration.Parent = this.guna2cmbHang;
             this.guna2cmbHang.Size = new System.Drawing.Size(301, 36);
+            this.guna2cmbHang.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2cmbHang.TabIndex = 212;
             // 
             // label1
