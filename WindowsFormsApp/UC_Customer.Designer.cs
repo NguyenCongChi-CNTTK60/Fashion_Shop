@@ -29,9 +29,9 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -69,62 +69,62 @@ namespace WindowsFormsApp
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(42, 263);
+            this.label19.Font = new System.Drawing.Font("Nunito", 12F);
+            this.label19.Location = new System.Drawing.Point(33, 283);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(97, 29);
+            this.label19.Size = new System.Drawing.Size(103, 27);
             this.label19.TabIndex = 66;
             this.label19.Text = "Tìm kiếm:";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Nunito", 12F);
             this.label18.Location = new System.Drawing.Point(526, 175);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 29);
+            this.label18.Size = new System.Drawing.Size(69, 27);
             this.label18.TabIndex = 64;
             this.label18.Text = "Email:";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Font = new System.Drawing.Font("Nunito", 12F);
             this.label17.Location = new System.Drawing.Point(499, 92);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(104, 29);
+            this.label17.Size = new System.Drawing.Size(113, 27);
             this.label17.TabIndex = 63;
             this.label17.Text = "Điện thoại:";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(64, 212);
+            this.label16.Font = new System.Drawing.Font("Nunito", 12F);
+            this.label16.Location = new System.Drawing.Point(42, 215);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(75, 29);
+            this.label16.Size = new System.Drawing.Size(79, 27);
             this.label16.TabIndex = 61;
             this.label16.Text = "Địa chỉ:";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 129);
+            this.label14.Font = new System.Drawing.Font("Nunito", 12F);
+            this.label14.Location = new System.Drawing.Point(41, 134);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(150, 29);
+            this.label14.Size = new System.Drawing.Size(88, 27);
             this.label14.TabIndex = 55;
-            this.label14.Text = "Tên khách hàng:";
+            this.label14.Text = "Tên KH:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 90);
+            this.label13.Font = new System.Drawing.Font("Nunito", 12F);
+            this.label13.Location = new System.Drawing.Point(33, 95);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(149, 29);
+            this.label13.Size = new System.Drawing.Size(89, 27);
             this.label13.TabIndex = 53;
-            this.label13.Text = "Mã khách hàng: ";
+            this.label13.Text = "Mã KH: ";
             // 
             // panel3
             // 
@@ -138,11 +138,11 @@ namespace WindowsFormsApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Nunito", 13.8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(400, 13);
+            this.label2.Location = new System.Drawing.Point(341, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(178, 28);
+            this.label2.Size = new System.Drawing.Size(271, 32);
             this.label2.TabIndex = 183;
             this.label2.Text = "Thông tin khách hàng";
             // 
@@ -395,10 +395,10 @@ namespace WindowsFormsApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(503, 221);
+            this.label3.Font = new System.Drawing.Font("Nunito", 12F);
+            this.label3.Location = new System.Drawing.Point(518, 232);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 29);
+            this.label3.Size = new System.Drawing.Size(110, 27);
             this.label3.TabIndex = 208;
             this.label3.Text = "Mật Khẩu:";
             // 
@@ -419,7 +419,7 @@ namespace WindowsFormsApp
             this.guna2txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtMatKhau.HoverState.Parent = this.guna2txtMatKhau;
-            this.guna2txtMatKhau.Location = new System.Drawing.Point(617, 219);
+            this.guna2txtMatKhau.Location = new System.Drawing.Point(634, 232);
             this.guna2txtMatKhau.Name = "guna2txtMatKhau";
             this.guna2txtMatKhau.PasswordChar = '\0';
             this.guna2txtMatKhau.PlaceholderText = "";
@@ -431,30 +431,30 @@ namespace WindowsFormsApp
             // 
             // guna2dgvThongTinKhachHang
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.guna2dgvThongTinKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.guna2dgvThongTinKhachHang.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.guna2dgvThongTinKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2dgvThongTinKhachHang.BackgroundColor = System.Drawing.Color.White;
             this.guna2dgvThongTinKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2dgvThongTinKhachHang.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2dgvThongTinKhachHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2dgvThongTinKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2dgvThongTinKhachHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.guna2dgvThongTinKhachHang.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2dgvThongTinKhachHang.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2dgvThongTinKhachHang.DefaultCellStyle = dataGridViewCellStyle12;
             this.guna2dgvThongTinKhachHang.EnableHeadersVisualStyles = false;
             this.guna2dgvThongTinKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2dgvThongTinKhachHang.Location = new System.Drawing.Point(17, 313);
@@ -513,20 +513,20 @@ namespace WindowsFormsApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Nunito", 12F);
             this.label1.Location = new System.Drawing.Point(526, 131);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 29);
+            this.label1.Size = new System.Drawing.Size(68, 27);
             this.label1.TabIndex = 213;
             this.label1.Text = "Hạng:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(50, 175);
+            this.label4.Font = new System.Drawing.Font("Nunito", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(33, 175);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(93, 29);
+            this.label4.Size = new System.Drawing.Size(96, 27);
             this.label4.TabIndex = 214;
             this.label4.Text = "Giới tính:";
             // 

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panelControls1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -66,20 +66,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Nunito", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label2.Location = new System.Drawing.Point(290, 32);
+            this.label2.Location = new System.Drawing.Point(278, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(474, 46);
+            this.label2.Size = new System.Drawing.Size(489, 54);
             this.label2.TabIndex = 6;
             this.label2.Text = "THỐNG KÊ LỢI NHUẬN";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nunito", 10.8F);
             this.label1.Location = new System.Drawing.Point(87, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 23);
+            this.label1.Size = new System.Drawing.Size(59, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Năm:";
             // 
@@ -96,21 +97,21 @@
             // 
             // chartThongKeHD
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartThongKeHD.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartThongKeHD.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chartThongKeHD.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartThongKeHD.Legends.Add(legend3);
             this.chartThongKeHD.Location = new System.Drawing.Point(3, 76);
             this.chartThongKeHD.Name = "chartThongKeHD";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Doanh Thu";
-            this.chartThongKeHD.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Doanh Thu";
+            this.chartThongKeHD.Series.Add(series3);
             this.chartThongKeHD.Size = new System.Drawing.Size(978, 447);
             this.chartThongKeHD.TabIndex = 0;
             this.chartThongKeHD.Text = "chart1";
-            title2.Name = "Thống Kê Theo Tuần";
-            this.chartThongKeHD.Titles.Add(title2);
+            title3.Name = "Thống Kê Theo Tuần";
+            this.chartThongKeHD.Titles.Add(title3);
             // 
             // panel2
             // 
@@ -186,7 +187,7 @@
             this.btnTKHangHoa.ForeColor = System.Drawing.Color.White;
             this.btnTKHangHoa.Location = new System.Drawing.Point(15, 36);
             this.btnTKHangHoa.Name = "btnTKHangHoa";
-            this.btnTKHangHoa.Size = new System.Drawing.Size(147, 27);
+            this.btnTKHangHoa.Size = new System.Drawing.Size(147, 32);
             this.btnTKHangHoa.TabIndex = 0;
             this.btnTKHangHoa.Text = "Hàng Hóa";
             this.btnTKHangHoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
