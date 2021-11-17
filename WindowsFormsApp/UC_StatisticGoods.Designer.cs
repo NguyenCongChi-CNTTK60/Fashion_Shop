@@ -127,11 +127,11 @@ namespace WindowsFormsApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Nunito", 24F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label3.Location = new System.Drawing.Point(262, 10);
+            this.label3.Location = new System.Drawing.Point(206, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(528, 51);
+            this.label3.Size = new System.Drawing.Size(501, 54);
             this.label3.TabIndex = 9;
             this.label3.Text = "THỐNG KÊ DOANH THU";
             // 

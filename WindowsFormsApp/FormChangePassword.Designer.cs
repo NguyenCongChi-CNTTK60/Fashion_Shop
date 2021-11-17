@@ -41,27 +41,30 @@ namespace WindowsFormsApp
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 67);
+            this.label1.Font = new System.Drawing.Font("Nunito", 10.8F);
+            this.label1.Location = new System.Drawing.Point(44, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(135, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mật Khẩu Cũ:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 124);
+            this.label2.Font = new System.Drawing.Font("Nunito", 10.8F);
+            this.label2.Location = new System.Drawing.Point(44, 114);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 17);
+            this.label2.Size = new System.Drawing.Size(146, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật Khẩu Mới:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 184);
+            this.label3.Font = new System.Drawing.Font("Nunito", 10.8F);
+            this.label3.Location = new System.Drawing.Point(27, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(138, 17);
+            this.label3.Size = new System.Drawing.Size(194, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Xác Nhận Mật Khẩu:";
             // 
@@ -79,13 +82,14 @@ namespace WindowsFormsApp
             this.txtCu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCu.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCu.HoverState.Parent = this.txtCu;
-            this.txtCu.Location = new System.Drawing.Point(165, 58);
+            this.txtCu.Location = new System.Drawing.Point(227, 47);
             this.txtCu.Name = "txtCu";
             this.txtCu.PasswordChar = '\0';
             this.txtCu.PlaceholderText = "";
             this.txtCu.SelectedText = "";
             this.txtCu.ShadowDecoration.Parent = this.txtCu;
-            this.txtCu.Size = new System.Drawing.Size(200, 36);
+            this.txtCu.Size = new System.Drawing.Size(213, 36);
+            this.txtCu.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtCu.TabIndex = 3;
             // 
             // txtMoi
@@ -102,13 +106,14 @@ namespace WindowsFormsApp
             this.txtMoi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMoi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMoi.HoverState.Parent = this.txtMoi;
-            this.txtMoi.Location = new System.Drawing.Point(165, 114);
+            this.txtMoi.Location = new System.Drawing.Point(227, 103);
             this.txtMoi.Name = "txtMoi";
             this.txtMoi.PasswordChar = '\0';
             this.txtMoi.PlaceholderText = "";
             this.txtMoi.SelectedText = "";
             this.txtMoi.ShadowDecoration.Parent = this.txtMoi;
-            this.txtMoi.Size = new System.Drawing.Size(200, 36);
+            this.txtMoi.Size = new System.Drawing.Size(213, 36);
+            this.txtMoi.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtMoi.TabIndex = 4;
             // 
             // txtMoi2
@@ -125,13 +130,14 @@ namespace WindowsFormsApp
             this.txtMoi2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMoi2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMoi2.HoverState.Parent = this.txtMoi2;
-            this.txtMoi2.Location = new System.Drawing.Point(165, 174);
+            this.txtMoi2.Location = new System.Drawing.Point(227, 163);
             this.txtMoi2.Name = "txtMoi2";
             this.txtMoi2.PasswordChar = '\0';
             this.txtMoi2.PlaceholderText = "";
             this.txtMoi2.SelectedText = "";
             this.txtMoi2.ShadowDecoration.Parent = this.txtMoi2;
-            this.txtMoi2.Size = new System.Drawing.Size(200, 36);
+            this.txtMoi2.Size = new System.Drawing.Size(213, 36);
+            this.txtMoi2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtMoi2.TabIndex = 5;
             // 
             // guna2Button1
@@ -139,10 +145,11 @@ namespace WindowsFormsApp
             this.guna2Button1.CheckedState.Parent = this.guna2Button1;
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.DisabledState.Parent = this.guna2Button1;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.FillColor = System.Drawing.Color.SteelBlue;
+            this.guna2Button1.Font = new System.Drawing.Font("Nunito", 10.8F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(227, 233);
+            this.guna2Button1.Location = new System.Drawing.Point(302, 264);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(138, 45);
@@ -154,8 +161,8 @@ namespace WindowsFormsApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(420, 360);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(470, 352);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.txtMoi2);
             this.Controls.Add(this.txtMoi);
