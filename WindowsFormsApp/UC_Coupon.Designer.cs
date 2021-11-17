@@ -54,7 +54,7 @@ namespace WindowsFormsApp
             this.btnTaoPhieuNhap.Location = new System.Drawing.Point(54, 113);
             this.btnTaoPhieuNhap.Name = "btnTaoPhieuNhap";
             this.btnTaoPhieuNhap.ShadowDecoration.Parent = this.btnTaoPhieuNhap;
-            this.btnTaoPhieuNhap.Size = new System.Drawing.Size(169, 45);
+            this.btnTaoPhieuNhap.Size = new System.Drawing.Size(146, 45);
             this.btnTaoPhieuNhap.TabIndex = 3;
             this.btnTaoPhieuNhap.Text = "Tạo Phiếu Nhập";
             // 
@@ -67,10 +67,10 @@ namespace WindowsFormsApp
             this.btnXoaPhieu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnXoaPhieu.ForeColor = System.Drawing.Color.White;
             this.btnXoaPhieu.HoverState.Parent = this.btnXoaPhieu;
-            this.btnXoaPhieu.Location = new System.Drawing.Point(461, 113);
+            this.btnXoaPhieu.Location = new System.Drawing.Point(334, 113);
             this.btnXoaPhieu.Name = "btnXoaPhieu";
             this.btnXoaPhieu.ShadowDecoration.Parent = this.btnXoaPhieu;
-            this.btnXoaPhieu.Size = new System.Drawing.Size(153, 45);
+            this.btnXoaPhieu.Size = new System.Drawing.Size(118, 45);
             this.btnXoaPhieu.TabIndex = 4;
             this.btnXoaPhieu.Text = "Xóa Phiếu";
             // 
@@ -83,10 +83,10 @@ namespace WindowsFormsApp
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnSua.ForeColor = System.Drawing.Color.White;
             this.btnSua.HoverState.Parent = this.btnSua;
-            this.btnSua.Location = new System.Drawing.Point(267, 113);
+            this.btnSua.Location = new System.Drawing.Point(206, 113);
             this.btnSua.Name = "btnSua";
             this.btnSua.ShadowDecoration.Parent = this.btnSua;
-            this.btnSua.Size = new System.Drawing.Size(154, 45);
+            this.btnSua.Size = new System.Drawing.Size(122, 45);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa Phiếu";
             // 
@@ -99,10 +99,10 @@ namespace WindowsFormsApp
             this.btnXuatExcel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnXuatExcel.ForeColor = System.Drawing.Color.White;
             this.btnXuatExcel.HoverState.Parent = this.btnXuatExcel;
-            this.btnXuatExcel.Location = new System.Drawing.Point(649, 113);
+            this.btnXuatExcel.Location = new System.Drawing.Point(458, 113);
             this.btnXuatExcel.Name = "btnXuatExcel";
             this.btnXuatExcel.ShadowDecoration.Parent = this.btnXuatExcel;
-            this.btnXuatExcel.Size = new System.Drawing.Size(149, 45);
+            this.btnXuatExcel.Size = new System.Drawing.Size(124, 45);
             this.btnXuatExcel.TabIndex = 6;
             this.btnXuatExcel.Text = "Xuất Excel";
             // 
@@ -110,11 +110,11 @@ namespace WindowsFormsApp
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.label9.Location = new System.Drawing.Point(393, 23);
+            this.label9.Location = new System.Drawing.Point(230, 37);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(568, 58);
+            this.label9.Size = new System.Drawing.Size(462, 46);
             this.label9.TabIndex = 72;
             this.label9.Text = "QUẢN LÝ NHẬP HÀNG";
             // 
@@ -134,13 +134,13 @@ namespace WindowsFormsApp
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimKiem.HoverState.Parent = this.txtTimKiem;
-            this.txtTimKiem.Location = new System.Drawing.Point(1020, 113);
+            this.txtTimKiem.Location = new System.Drawing.Point(260, 306);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.PlaceholderText = "";
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.ShadowDecoration.Parent = this.txtTimKiem;
-            this.txtTimKiem.Size = new System.Drawing.Size(233, 45);
+            this.txtTimKiem.Size = new System.Drawing.Size(40, 45);
             this.txtTimKiem.TabIndex = 73;
             // 
             // dgvPhieuNhap
@@ -177,14 +177,14 @@ namespace WindowsFormsApp
             this.dgvPhieuNhap.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPhieuNhap.EnableHeadersVisualStyles = false;
             this.dgvPhieuNhap.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPhieuNhap.Location = new System.Drawing.Point(54, 184);
+            this.dgvPhieuNhap.Location = new System.Drawing.Point(40, 184);
             this.dgvPhieuNhap.Name = "dgvPhieuNhap";
             this.dgvPhieuNhap.ReadOnly = true;
             this.dgvPhieuNhap.RowHeadersVisible = false;
             this.dgvPhieuNhap.RowHeadersWidth = 51;
             this.dgvPhieuNhap.RowTemplate.Height = 30;
             this.dgvPhieuNhap.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhieuNhap.Size = new System.Drawing.Size(1199, 492);
+            this.dgvPhieuNhap.Size = new System.Drawing.Size(912, 406);
             this.dgvPhieuNhap.TabIndex = 74;
             this.dgvPhieuNhap.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPhieuNhap.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -217,10 +217,10 @@ namespace WindowsFormsApp
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(833, 113);
+            this.guna2Button1.Location = new System.Drawing.Point(588, 113);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(149, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(138, 45);
             this.guna2Button1.TabIndex = 75;
             this.guna2Button1.Text = "Làm Mới";
             // 
@@ -239,7 +239,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.btnTaoPhieuNhap);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "UC_Coupon";
-            this.Size = new System.Drawing.Size(1299, 694);
+            this.Size = new System.Drawing.Size(977, 608);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhieuNhap)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

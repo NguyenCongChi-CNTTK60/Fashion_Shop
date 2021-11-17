@@ -29,9 +29,9 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,7 +41,6 @@ namespace WindowsFormsApp
             this.guna2txtTenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnQR = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,11 +59,12 @@ namespace WindowsFormsApp
             this.label5 = new System.Windows.Forms.Label();
             this.guna2dgvThongTinNhanVien = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2dgvThongTinNhanVien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2txtMatKhau
@@ -90,7 +90,7 @@ namespace WindowsFormsApp
             this.guna2txtMatKhau.PlaceholderText = "";
             this.guna2txtMatKhau.SelectedText = "";
             this.guna2txtMatKhau.ShadowDecoration.Parent = this.guna2txtMatKhau;
-            this.guna2txtMatKhau.Size = new System.Drawing.Size(233, 31);
+            this.guna2txtMatKhau.Size = new System.Drawing.Size(264, 31);
             this.guna2txtMatKhau.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtMatKhau.TabIndex = 166;
             // 
@@ -201,7 +201,7 @@ namespace WindowsFormsApp
             this.guna2txtTenDangNhap.PlaceholderText = "";
             this.guna2txtTenDangNhap.SelectedText = "";
             this.guna2txtTenDangNhap.ShadowDecoration.Parent = this.guna2txtTenDangNhap;
-            this.guna2txtTenDangNhap.Size = new System.Drawing.Size(236, 31);
+            this.guna2txtTenDangNhap.Size = new System.Drawing.Size(264, 31);
             this.guna2txtTenDangNhap.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtTenDangNhap.TabIndex = 176;
             // 
@@ -218,25 +218,14 @@ namespace WindowsFormsApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel1.Location = new System.Drawing.Point(451, 0);
+            this.panel1.Location = new System.Drawing.Point(460, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(3, 292);
+            this.panel1.Size = new System.Drawing.Size(3, 270);
             this.panel1.TabIndex = 179;
-            // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(514, 301);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(144, 135);
-            this.guna2CirclePictureBox1.TabIndex = 180;
-            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(600, 214);
+            this.btnEdit.Location = new System.Drawing.Point(626, 210);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(94, 37);
             this.btnEdit.TabIndex = 181;
@@ -245,7 +234,7 @@ namespace WindowsFormsApp
             // 
             // btnQR
             // 
-            this.btnQR.Location = new System.Drawing.Point(832, 209);
+            this.btnQR.Location = new System.Drawing.Point(869, 206);
             this.btnQR.Name = "btnQR";
             this.btnQR.Size = new System.Drawing.Size(96, 45);
             this.btnQR.TabIndex = 182;
@@ -269,16 +258,16 @@ namespace WindowsFormsApp
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(451, 56);
+            this.panel2.Size = new System.Drawing.Size(457, 56);
             this.panel2.TabIndex = 184;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
             this.panel3.Controls.Add(this.label8);
-            this.panel3.Location = new System.Drawing.Point(454, 3);
+            this.panel3.Location = new System.Drawing.Point(460, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(480, 56);
+            this.panel3.Size = new System.Drawing.Size(517, 56);
             this.panel3.TabIndex = 185;
             // 
             // label8
@@ -297,7 +286,7 @@ namespace WindowsFormsApp
             this.btnThem.BackColor = System.Drawing.Color.SteelBlue;
             this.btnThem.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(394, 543);
+            this.btnThem.Location = new System.Drawing.Point(559, 539);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(114, 46);
             this.btnThem.TabIndex = 187;
@@ -310,7 +299,7 @@ namespace WindowsFormsApp
             this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSua.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(526, 543);
+            this.btnSua.Location = new System.Drawing.Point(689, 539);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(114, 46);
             this.btnSua.TabIndex = 188;
@@ -323,7 +312,7 @@ namespace WindowsFormsApp
             this.btnXoa.BackColor = System.Drawing.Color.SteelBlue;
             this.btnXoa.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(667, 542);
+            this.btnXoa.Location = new System.Drawing.Point(820, 539);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(114, 46);
             this.btnXoa.TabIndex = 189;
@@ -336,7 +325,7 @@ namespace WindowsFormsApp
             this.btnCapNhap.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCapNhap.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhap.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhap.Location = new System.Drawing.Point(801, 543);
+            this.btnCapNhap.Location = new System.Drawing.Point(425, 539);
             this.btnCapNhap.Name = "btnCapNhap";
             this.btnCapNhap.Size = new System.Drawing.Size(114, 46);
             this.btnCapNhap.TabIndex = 190;
@@ -453,39 +442,39 @@ namespace WindowsFormsApp
             // 
             // guna2dgvThongTinNhanVien
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.guna2dgvThongTinNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.guna2dgvThongTinNhanVien.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.guna2dgvThongTinNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2dgvThongTinNhanVien.BackgroundColor = System.Drawing.Color.White;
             this.guna2dgvThongTinNhanVien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2dgvThongTinNhanVien.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2dgvThongTinNhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2dgvThongTinNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2dgvThongTinNhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.guna2dgvThongTinNhanVien.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2dgvThongTinNhanVien.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2dgvThongTinNhanVien.DefaultCellStyle = dataGridViewCellStyle18;
             this.guna2dgvThongTinNhanVien.EnableHeadersVisualStyles = false;
             this.guna2dgvThongTinNhanVien.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2dgvThongTinNhanVien.Location = new System.Drawing.Point(3, 306);
+            this.guna2dgvThongTinNhanVien.Location = new System.Drawing.Point(18, 298);
             this.guna2dgvThongTinNhanVien.Name = "guna2dgvThongTinNhanVien";
             this.guna2dgvThongTinNhanVien.RowHeadersVisible = false;
             this.guna2dgvThongTinNhanVien.RowHeadersWidth = 51;
             this.guna2dgvThongTinNhanVien.RowTemplate.Height = 24;
             this.guna2dgvThongTinNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2dgvThongTinNhanVien.Size = new System.Drawing.Size(883, 235);
+            this.guna2dgvThongTinNhanVien.Size = new System.Drawing.Size(947, 235);
             this.guna2dgvThongTinNhanVien.TabIndex = 199;
             this.guna2dgvThongTinNhanVien.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2dgvThongTinNhanVien.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -511,11 +500,22 @@ namespace WindowsFormsApp
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(832, 91);
+            this.pictureBox1.Location = new System.Drawing.Point(860, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 87);
             this.pictureBox1.TabIndex = 200;
             this.pictureBox1.TabStop = false;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(514, 301);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(144, 135);
+            this.guna2CirclePictureBox1.TabIndex = 180;
+            this.guna2CirclePictureBox1.TabStop = false;
             // 
             // UC_Employee
             // 
@@ -548,14 +548,15 @@ namespace WindowsFormsApp
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guna2txtMatKhau);
             this.Name = "UC_Employee";
-            this.Size = new System.Drawing.Size(937, 608);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(977, 608);
+            this.Load += new System.EventHandler(this.UC_Employee_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2dgvThongTinNhanVien)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -184,7 +184,7 @@ namespace WindowsFormsApp
             this.panelTop.Location = new System.Drawing.Point(246, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(937, 61);
+            this.panelTop.Size = new System.Drawing.Size(977, 61);
             this.panelTop.TabIndex = 12;
             // 
             // guna2ControlBox1
@@ -195,7 +195,7 @@ namespace WindowsFormsApp
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Teal;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(867, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(907, 3);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.Size = new System.Drawing.Size(58, 54);
@@ -209,7 +209,7 @@ namespace WindowsFormsApp
             this.lbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbUser.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbUser.Location = new System.Drawing.Point(671, 14);
+            this.lbUser.Location = new System.Drawing.Point(748, 18);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(102, 30);
             this.lbUser.TabIndex = 10;
@@ -220,7 +220,7 @@ namespace WindowsFormsApp
             // 
             this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUser.Image = global::WindowsFormsApp.Properties.Resources.icon_user;
-            this.picUser.Location = new System.Drawing.Point(790, 12);
+            this.picUser.Location = new System.Drawing.Point(856, 12);
             this.picUser.Name = "picUser";
             this.picUser.Size = new System.Drawing.Size(45, 38);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -235,7 +235,7 @@ namespace WindowsFormsApp
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTime.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblTime.Location = new System.Drawing.Point(429, -4);
+            this.lblTime.Location = new System.Drawing.Point(469, -4);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(252, 56);
             this.lblTime.TabIndex = 8;
@@ -589,7 +589,7 @@ namespace WindowsFormsApp
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl.Location = new System.Drawing.Point(246, 61);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(937, 608);
+            this.panelControl.Size = new System.Drawing.Size(977, 608);
             this.panelControl.TabIndex = 5;
             // 
             // bunifuElipse1
@@ -656,7 +656,7 @@ namespace WindowsFormsApp
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1183, 669);
+            this.ClientSize = new System.Drawing.Size(1223, 669);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelLeft);

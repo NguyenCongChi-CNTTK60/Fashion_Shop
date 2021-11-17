@@ -526,3 +526,4 @@ D:\C#\pj\circleK-app-project\WindowsFormsApp\obj\Debug\GUI.csproj.CoreCompileInp
 D:\C#\pj\circleK-app-project\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete
 D:\C#\pj\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 D:\C#\pj\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\C#\pj\circleK-app-project\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_StatisticGoods.resources

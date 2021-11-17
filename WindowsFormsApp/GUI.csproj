@@ -388,6 +388,9 @@
     <EmbeddedResource Include="UC_Statistic.resx">
       <DependentUpon>UC_Statistic.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_StatisticGoods.resx">
+      <DependentUpon>UC_StatisticGoods.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_Supplier.resx">
       <DependentUpon>UC_Supplier.cs</DependentUpon>
     </EmbeddedResource>

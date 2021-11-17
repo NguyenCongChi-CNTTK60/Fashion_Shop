@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panelControls1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,9 +58,9 @@
             this.panelControls1.Controls.Add(this.label1);
             this.panelControls1.Controls.Add(this.comboBox1);
             this.panelControls1.Controls.Add(this.chartThongKeHD);
-            this.panelControls1.Location = new System.Drawing.Point(10, 88);
+            this.panelControls1.Location = new System.Drawing.Point(3, 51);
             this.panelControls1.Name = "panelControls1";
-            this.panelControls1.Size = new System.Drawing.Size(974, 596);
+            this.panelControls1.Size = new System.Drawing.Size(966, 554);
             this.panelControls1.TabIndex = 18;
             // 
             // label2
@@ -96,21 +96,21 @@
             // 
             // chartThongKeHD
             // 
-            chartArea6.Name = "ChartArea1";
-            this.chartThongKeHD.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartThongKeHD.Legends.Add(legend6);
+            chartArea2.Name = "ChartArea1";
+            this.chartThongKeHD.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartThongKeHD.Legends.Add(legend2);
             this.chartThongKeHD.Location = new System.Drawing.Point(3, 76);
             this.chartThongKeHD.Name = "chartThongKeHD";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Doanh Thu";
-            this.chartThongKeHD.Series.Add(series6);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh Thu";
+            this.chartThongKeHD.Series.Add(series2);
             this.chartThongKeHD.Size = new System.Drawing.Size(978, 447);
             this.chartThongKeHD.TabIndex = 0;
             this.chartThongKeHD.Text = "chart1";
-            title6.Name = "Thống Kê Theo Tuần";
-            this.chartThongKeHD.Titles.Add(title6);
+            title2.Name = "Thống Kê Theo Tuần";
+            this.chartThongKeHD.Titles.Add(title2);
             // 
             // panel2
             // 
@@ -120,7 +120,7 @@
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.btnTKPhieuNhap);
             this.panel2.Controls.Add(this.btnTKHangHoa);
-            this.panel2.Location = new System.Drawing.Point(10, 10);
+            this.panel2.Location = new System.Drawing.Point(1, -33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(974, 78);
             this.panel2.TabIndex = 17;
@@ -133,9 +133,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(494, 0);
+            this.button2.Location = new System.Drawing.Point(504, 38);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 78);
+            this.button2.Size = new System.Drawing.Size(141, 32);
             this.button2.TabIndex = 7;
             this.button2.Text = "Phiếu Nhập";
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -150,9 +150,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(336, -1);
+            this.button1.Location = new System.Drawing.Point(345, 35);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 78);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 6;
             this.button1.Text = "Hóa Đơn";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -167,9 +167,9 @@
             this.btnTKPhieuNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTKPhieuNhap.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKPhieuNhap.ForeColor = System.Drawing.Color.White;
-            this.btnTKPhieuNhap.Location = new System.Drawing.Point(149, 0);
+            this.btnTKPhieuNhap.Location = new System.Drawing.Point(168, 37);
             this.btnTKPhieuNhap.Name = "btnTKPhieuNhap";
-            this.btnTKPhieuNhap.Size = new System.Drawing.Size(181, 78);
+            this.btnTKPhieuNhap.Size = new System.Drawing.Size(167, 31);
             this.btnTKPhieuNhap.TabIndex = 1;
             this.btnTKPhieuNhap.Text = "Khách Hàng";
             this.btnTKPhieuNhap.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -184,9 +184,9 @@
             this.btnTKHangHoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTKHangHoa.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTKHangHoa.ForeColor = System.Drawing.Color.White;
-            this.btnTKHangHoa.Location = new System.Drawing.Point(0, 0);
+            this.btnTKHangHoa.Location = new System.Drawing.Point(15, 36);
             this.btnTKHangHoa.Name = "btnTKHangHoa";
-            this.btnTKHangHoa.Size = new System.Drawing.Size(149, 78);
+            this.btnTKHangHoa.Size = new System.Drawing.Size(147, 27);
             this.btnTKHangHoa.TabIndex = 0;
             this.btnTKHangHoa.Text = "Hàng Hóa";
             this.btnTKHangHoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -197,7 +197,7 @@
             // 
             this.flowLayoutPanel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel3.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(984, 10);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(975, -33);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(10, 674);
             this.flowLayoutPanel3.TabIndex = 13;
@@ -206,7 +206,7 @@
             // 
             this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel2.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(10, 684);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(1, 641);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(984, 10);
             this.flowLayoutPanel2.TabIndex = 14;
@@ -216,7 +216,7 @@
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(10, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1, -43);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(984, 10);
             this.flowLayoutPanel1.TabIndex = 15;
@@ -225,7 +225,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-9, -43);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 694);
             this.panel1.TabIndex = 16;
@@ -243,7 +243,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "UC_Statistic";
-            this.Size = new System.Drawing.Size(994, 694);
+            this.Size = new System.Drawing.Size(977, 608);
             this.panelControls1.ResumeLayout(false);
             this.panelControls1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartThongKeHD)).EndInit();

@@ -54,7 +54,6 @@ namespace WindowsFormsApp
             this.dtThongKe.RowTemplate.Height = 24;
             this.dtThongKe.Size = new System.Drawing.Size(929, 416);
             this.dtThongKe.TabIndex = 0;
-        
             // 
             // txtThongKe
             // 
@@ -90,7 +89,6 @@ namespace WindowsFormsApp
             this.Th.TabIndex = 4;
             this.Th.Text = "Thống Kê";
             this.Th.UseVisualStyleBackColor = true;
-
             // 
             // button1
             // 
@@ -100,7 +98,6 @@ namespace WindowsFormsApp
             this.button1.TabIndex = 5;
             this.button1.Text = "Xuất Excel";
             this.button1.UseVisualStyleBackColor = true;
-    
             // 
             // textBox1
             // 
@@ -108,7 +105,6 @@ namespace WindowsFormsApp
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(292, 32);
             this.textBox1.TabIndex = 6;
-      
             // 
             // label1
             // 
@@ -131,15 +127,15 @@ namespace WindowsFormsApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("FS Harabara", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.label3.Location = new System.Drawing.Point(262, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(449, 48);
+            this.label3.Size = new System.Drawing.Size(528, 51);
             this.label3.TabIndex = 9;
             this.label3.Text = "THỐNG KÊ DOANH THU";
             // 
-            // UC_ThongKeHangHoa
+            // UC_StatisticGoods
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -154,8 +150,8 @@ namespace WindowsFormsApp
             this.Controls.Add(this.txtThongKe);
             this.Controls.Add(this.dtThongKe);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "UC_ThongKeHangHoa";
-            this.Size = new System.Drawing.Size(974, 596);
+            this.Name = "UC_StatisticGoods";
+            this.Size = new System.Drawing.Size(977, 608);
             ((System.ComponentModel.ISupportInitialize)(this.dtThongKe)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

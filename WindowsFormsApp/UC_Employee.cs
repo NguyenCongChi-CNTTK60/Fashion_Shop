@@ -160,5 +160,10 @@ namespace WindowsFormsApp
             btnThem.Text = "Thêm";
             LoadData();
         }
+
+        private void UC_Employee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

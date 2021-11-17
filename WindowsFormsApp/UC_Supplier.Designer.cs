@@ -58,7 +58,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(237)))), ((int)(((byte)(28)))), ((int)(((byte)(36)))));
-            this.label9.Location = new System.Drawing.Point(152, 10);
+            this.label9.Location = new System.Drawing.Point(112, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(656, 58);
             this.label9.TabIndex = 89;
@@ -95,14 +95,14 @@
             this.guna2dgvThongTinNCC.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2dgvThongTinNCC.EnableHeadersVisualStyles = false;
             this.guna2dgvThongTinNCC.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2dgvThongTinNCC.Location = new System.Drawing.Point(30, 343);
+            this.guna2dgvThongTinNCC.Location = new System.Drawing.Point(13, 271);
             this.guna2dgvThongTinNCC.Name = "guna2dgvThongTinNCC";
             this.guna2dgvThongTinNCC.ReadOnly = true;
             this.guna2dgvThongTinNCC.RowHeadersVisible = false;
             this.guna2dgvThongTinNCC.RowHeadersWidth = 51;
             this.guna2dgvThongTinNCC.RowTemplate.Height = 30;
             this.guna2dgvThongTinNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2dgvThongTinNCC.Size = new System.Drawing.Size(936, 323);
+            this.guna2dgvThongTinNCC.Size = new System.Drawing.Size(950, 235);
             this.guna2dgvThongTinNCC.TabIndex = 94;
             this.guna2dgvThongTinNCC.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2dgvThongTinNCC.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -144,13 +144,13 @@
             this.guna2txtMaNCC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtMaNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtMaNCC.HoverState.Parent = this.guna2txtMaNCC;
-            this.guna2txtMaNCC.Location = new System.Drawing.Point(131, 96);
+            this.guna2txtMaNCC.Location = new System.Drawing.Point(122, 78);
             this.guna2txtMaNCC.Name = "guna2txtMaNCC";
             this.guna2txtMaNCC.PasswordChar = '\0';
             this.guna2txtMaNCC.PlaceholderText = "";
             this.guna2txtMaNCC.SelectedText = "";
             this.guna2txtMaNCC.ShadowDecoration.Parent = this.guna2txtMaNCC;
-            this.guna2txtMaNCC.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtMaNCC.Size = new System.Drawing.Size(283, 31);
             this.guna2txtMaNCC.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtMaNCC.TabIndex = 195;
             // 
@@ -171,13 +171,13 @@
             this.guna2txtSDT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtSDT.HoverState.Parent = this.guna2txtSDT;
-            this.guna2txtSDT.Location = new System.Drawing.Point(131, 150);
+            this.guna2txtSDT.Location = new System.Drawing.Point(122, 124);
             this.guna2txtSDT.Name = "guna2txtSDT";
             this.guna2txtSDT.PasswordChar = '\0';
             this.guna2txtSDT.PlaceholderText = "";
             this.guna2txtSDT.SelectedText = "";
             this.guna2txtSDT.ShadowDecoration.Parent = this.guna2txtSDT;
-            this.guna2txtSDT.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtSDT.Size = new System.Drawing.Size(283, 31);
             this.guna2txtSDT.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtSDT.TabIndex = 196;
             // 
@@ -198,13 +198,13 @@
             this.guna2txtDiaChi.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtDiaChi.HoverState.Parent = this.guna2txtDiaChi;
-            this.guna2txtDiaChi.Location = new System.Drawing.Point(131, 199);
+            this.guna2txtDiaChi.Location = new System.Drawing.Point(122, 174);
             this.guna2txtDiaChi.Name = "guna2txtDiaChi";
             this.guna2txtDiaChi.PasswordChar = '\0';
             this.guna2txtDiaChi.PlaceholderText = "";
             this.guna2txtDiaChi.SelectedText = "";
             this.guna2txtDiaChi.ShadowDecoration.Parent = this.guna2txtDiaChi;
-            this.guna2txtDiaChi.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtDiaChi.Size = new System.Drawing.Size(283, 31);
             this.guna2txtDiaChi.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtDiaChi.TabIndex = 197;
             // 
@@ -225,13 +225,13 @@
             this.guna2txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtTimKiem.HoverState.Parent = this.guna2txtTimKiem;
-            this.guna2txtTimKiem.Location = new System.Drawing.Point(131, 278);
+            this.guna2txtTimKiem.Location = new System.Drawing.Point(122, 225);
             this.guna2txtTimKiem.Name = "guna2txtTimKiem";
             this.guna2txtTimKiem.PasswordChar = '\0';
             this.guna2txtTimKiem.PlaceholderText = "";
             this.guna2txtTimKiem.SelectedText = "";
             this.guna2txtTimKiem.ShadowDecoration.Parent = this.guna2txtTimKiem;
-            this.guna2txtTimKiem.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtTimKiem.Size = new System.Drawing.Size(283, 31);
             this.guna2txtTimKiem.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtTimKiem.TabIndex = 198;
             this.guna2txtTimKiem.TextChanged += new System.EventHandler(this.guna2txtTimKiem_TextChanged_1);
@@ -253,13 +253,13 @@
             this.guna2txtTenNCC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtTenNCC.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtTenNCC.HoverState.Parent = this.guna2txtTenNCC;
-            this.guna2txtTenNCC.Location = new System.Drawing.Point(582, 96);
+            this.guna2txtTenNCC.Location = new System.Drawing.Point(559, 78);
             this.guna2txtTenNCC.Name = "guna2txtTenNCC";
             this.guna2txtTenNCC.PasswordChar = '\0';
             this.guna2txtTenNCC.PlaceholderText = "";
             this.guna2txtTenNCC.SelectedText = "";
             this.guna2txtTenNCC.ShadowDecoration.Parent = this.guna2txtTenNCC;
-            this.guna2txtTenNCC.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtTenNCC.Size = new System.Drawing.Size(269, 31);
             this.guna2txtTenNCC.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtTenNCC.TabIndex = 199;
             // 
@@ -280,13 +280,13 @@
             this.guna2txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2txtEmail.HoverState.Parent = this.guna2txtEmail;
-            this.guna2txtEmail.Location = new System.Drawing.Point(582, 158);
+            this.guna2txtEmail.Location = new System.Drawing.Point(559, 124);
             this.guna2txtEmail.Name = "guna2txtEmail";
             this.guna2txtEmail.PasswordChar = '\0';
             this.guna2txtEmail.PlaceholderText = "";
             this.guna2txtEmail.SelectedText = "";
             this.guna2txtEmail.ShadowDecoration.Parent = this.guna2txtEmail;
-            this.guna2txtEmail.Size = new System.Drawing.Size(301, 31);
+            this.guna2txtEmail.Size = new System.Drawing.Size(269, 31);
             this.guna2txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.guna2txtEmail.TabIndex = 200;
             // 
@@ -294,7 +294,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 96);
+            this.label4.Location = new System.Drawing.Point(38, 84);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 24);
             this.label4.TabIndex = 201;
@@ -304,7 +304,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(26, 150);
+            this.label5.Location = new System.Drawing.Point(26, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(88, 24);
             this.label5.TabIndex = 202;
@@ -314,7 +314,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(44, 206);
+            this.label6.Location = new System.Drawing.Point(38, 181);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(64, 24);
             this.label6.TabIndex = 203;
@@ -324,7 +324,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 285);
+            this.label3.Location = new System.Drawing.Point(25, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 24);
             this.label3.TabIndex = 204;
@@ -334,7 +334,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(502, 103);
+            this.label1.Location = new System.Drawing.Point(479, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 24);
             this.label1.TabIndex = 205;
@@ -344,7 +344,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(519, 165);
+            this.label2.Location = new System.Drawing.Point(479, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 24);
             this.label2.TabIndex = 206;
@@ -355,7 +355,7 @@
             this.btnThem.BackColor = System.Drawing.Color.SteelBlue;
             this.btnThem.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(452, 260);
+            this.btnThem.Location = new System.Drawing.Point(412, 525);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(124, 58);
             this.btnThem.TabIndex = 207;
@@ -368,7 +368,7 @@
             this.btnSua.BackColor = System.Drawing.Color.SteelBlue;
             this.btnSua.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(582, 260);
+            this.btnSua.Location = new System.Drawing.Point(559, 525);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(124, 58);
             this.btnSua.TabIndex = 208;
@@ -381,7 +381,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.SteelBlue;
             this.btnXoa.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(712, 260);
+            this.btnXoa.Location = new System.Drawing.Point(704, 525);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(124, 58);
             this.btnXoa.TabIndex = 209;
@@ -394,7 +394,7 @@
             this.btnHuy.BackColor = System.Drawing.Color.SteelBlue;
             this.btnHuy.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(842, 260);
+            this.btnHuy.Location = new System.Drawing.Point(853, 525);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(124, 58);
             this.btnHuy.TabIndex = 210;
@@ -427,7 +427,7 @@
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "UC_Supplier";
-            this.Size = new System.Drawing.Size(994, 694);
+            this.Size = new System.Drawing.Size(977, 608);
             ((System.ComponentModel.ISupportInitialize)(this.guna2dgvThongTinNCC)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
