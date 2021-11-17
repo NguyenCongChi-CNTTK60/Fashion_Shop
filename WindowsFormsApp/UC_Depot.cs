@@ -25,21 +25,21 @@ namespace WindowsFormsApp
 
         public void loadData()
         {
-            dgvHangHoa.DataSource = GoodsBUS.Intance.getListSanPham();
-            dgvHangHoa.Columns[0].HeaderText = "Mã Mặt Hàng";
-            dgvHangHoa.Columns["DonVi"].HeaderText = "Đơn Vị Tính";
-            dgvHangHoa.Columns["SoLuong"].HeaderText = "Số Lượng";
-            dgvHangHoa.Columns["GiaGoc"].HeaderText = "Giá Gốc";
-            dgvHangHoa.Columns["GiaBan"].HeaderText = "Giá Bán";
-            dgvHangHoa.Columns[1].HeaderText = "Tên Hàng";
+            dgv.DataSource = GoodsBUS.Intance.getListSanPham();
+            dgv.Columns[0].HeaderText = "Mã Mặt Hàng";
+            dgv.Columns["DonVi"].HeaderText = "Đơn Vị Tính";
+            dgv.Columns["SoLuong"].HeaderText = "Số Lượng";
+            dgv.Columns["GiaGoc"].HeaderText = "Giá Gốc";
+            dgv.Columns["GiaBan"].HeaderText = "Giá Bán";
+            dgv.Columns[1].HeaderText = "Tên Hàng";
 
             DataTable dataDVTinh = DataProvider.Instance.ExecuteQuery("select * from DonViTinh");
             cbbDVT.DataSource = dataDVTinh;
             cbbDVT.ValueMember = "MaDVT";
             cbbDVT.DisplayMember = "TenDVT";
 
-            dgvHangHoa.AllowUserToAddRows = false;
-            dgvHangHoa.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgv.AllowUserToAddRows = false;
+            dgv.EditMode = DataGridViewEditMode.EditProgrammatically;
 
             pcbHangHoa.SizeMode = PictureBoxSizeMode.StretchImage;
         }
@@ -101,11 +101,11 @@ namespace WindowsFormsApp
 
         void Binding()
         {
-            txtMaMH.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "MaMH", true, DataSourceUpdateMode.Never));
-            txtTenMH.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "TenMH", true, DataSourceUpdateMode.Never));
-            txtSoLuong.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
-            txtGiaGoc.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaGoc", true, DataSourceUpdateMode.Never));
-            txtGiaBan.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaBan", true, DataSourceUpdateMode.Never));
+            txtMaMH.DataBindings.Add(new Binding("Text", dgv.DataSource, "MaMH", true, DataSourceUpdateMode.Never));
+            txtTenMH.DataBindings.Add(new Binding("Text", dgv.DataSource, "TenMH", true, DataSourceUpdateMode.Never));
+            txtSoLuong.DataBindings.Add(new Binding("Text", dgv.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
+            txtGiaGoc.DataBindings.Add(new Binding("Text", dgv.DataSource, "GiaGoc", true, DataSourceUpdateMode.Never));
+            txtGiaBan.DataBindings.Add(new Binding("Text", dgv.DataSource, "GiaBan", true, DataSourceUpdateMode.Never));
         }
 
         void ClearBinding()
@@ -119,17 +119,17 @@ namespace WindowsFormsApp
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvHangHoa.DataSource = GoodsBUS.Intance.TimKiemHH(txtTimKiem.Text);
-            dgvHangHoa.Columns["Anh"].Visible = false;
+            dgv.DataSource = GoodsBUS.Intance.TimKiemHH(txtTimKiem.Text);
+            dgv.Columns["Anh"].Visible = false;
         }
 
         private void dgvHangHoa_SelectionChanged_1(object sender, EventArgs e)
         {
-            if (dgvHangHoa.SelectedCells.Count > 0)
+            if (dgv.SelectedCells.Count > 0)
             {
                 ClearBinding();
                 Binding();
-                DataGridViewRow row = dgvHangHoa.SelectedCells[0].OwningRow;
+                DataGridViewRow row = dgv.SelectedCells[0].OwningRow;
                 try
                 {
                     string MaMH = row.Cells["MaMH"].Value.ToString();
@@ -186,7 +186,7 @@ namespace WindowsFormsApp
                         MessageBox.Show("Thêm Thành Công");
                         imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
                         resetData();
-                        cbbDVT.SelectedValue = dgvHangHoa.Rows[0].Cells["DonVi"].Value;
+                        cbbDVT.SelectedValue = dgv.Rows[0].Cells["DonVi"].Value;
                         loadData();
                     }
                 }
@@ -196,7 +196,7 @@ namespace WindowsFormsApp
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if (dgvHangHoa.SelectedCells.Count > 0)
+            if (dgv.SelectedCells.Count > 0)
             {
                 if (GoodsBUS.Intance.suaHH(txtMaMH.Text, txtTenMH.Text, (string)cbbDVT.SelectedValue, int.Parse(txtSoLuong.Text), int.Parse(txtGiaGoc.Text), int.Parse(txtGiaBan.Text)))
                 {
@@ -205,7 +205,7 @@ namespace WindowsFormsApp
                         GoodsBUS.Intance.capNhatHinh(imgLocation, txtMaMH.Text);
                     }
                     loadData();
-                    cbbDVT.SelectedValue = dgvHangHoa.Rows[0].Cells["DonVi"].Value;
+                    cbbDVT.SelectedValue = dgv.Rows[0].Cells["DonVi"].Value;
                     imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
                     MessageBox.Show("Sửa Thành Công");
                 }

@@ -29,7 +29,7 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public bool themPN(string maPN, string maNCC, DateTime NgayNhap, string TenDangNhap)
+        public bool insertCoupon(string maPN, string maNCC, DateTime NgayNhap, string TenDangNhap)
         {
 
             string query = String.Format("insert into PHIEUNHAP values ('{0}', '{1}', '{2}', N'{3}')", maPN, maNCC, NgayNhap, TenDangNhap);
@@ -37,7 +37,7 @@ namespace DAO
             return result > 0;
         }
 
-        public string loadMaPN()
+        public string loadID()
         {
             string maKHnext = "PN001";
             string query = "select top 1 MaPN from PHIEUNHAP order by MaPN desc";
@@ -63,7 +63,7 @@ namespace DAO
             return maKHnext;
         }
 
-        public bool xoaPN(string maPN)
+        public bool deleteCoupon(string maPN)
         {
             string query = String.Format("delete from PHIEUNHAP where maPN = '{0}'", maPN);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
@@ -71,7 +71,7 @@ namespace DAO
         }
 
 
-        public DataTable TimKiemPN(string maPN)
+        public DataTable searchCoupon(string maPN)
         {
             string query = "exec usp_timPN @maPN";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });

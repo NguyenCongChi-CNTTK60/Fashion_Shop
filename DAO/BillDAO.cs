@@ -22,7 +22,7 @@ namespace DAO
             set => instance = value;
         }
 
-        public string LoadMaDHMoi()
+        public string loadID()
         {
             string madh = "";
 
@@ -39,7 +39,7 @@ namespace DAO
             return madh_next.ToString();
         }
 
-        public bool LuuDonHang(BillDTO dh)
+        public bool saveBill(BillDTO dh)
         {
             // Convert datetime to date SQL Server 
             string query = String.Format("insert into HOADON values('{0}','{1}','{2}','{3}','{4}')", dh.MaHD, dh.MaKH, dh.NgayTao, dh.TenDangNhap, dh.TongTien);

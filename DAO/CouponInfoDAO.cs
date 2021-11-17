@@ -22,14 +22,14 @@ namespace DAO
             set => instance = value;
         }
 
-        public bool LuuPhieuNhap(string maPN, string maHang, int sl, int gia)
+        public bool saveCoupon(string maPN, string maHang, int sl, int gia)
         {
             string query = String.Format("insert into CTPN values('{0}','{1}',{2},{3})", maPN, maHang, sl, gia);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public DataTable getCTPN(string maPN)
+        public DataTable getCouponInfo(string maPN)
         {
             string query = "exec getCTPN @maPN";
             return DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });

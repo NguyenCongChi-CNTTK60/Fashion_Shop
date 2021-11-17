@@ -25,12 +25,12 @@ namespace BUS
 
         public string LoadMaDHMoi()
         {
-            return BillDAO.Intance.LoadMaDHMoi();
+            return BillDAO.Intance.loadID();
         }
 
         public bool LuuDonHang(BillDTO dh)
         {
-            return BillDAO.Intance.LuuDonHang(dh);
+            return BillDAO.Intance.saveBill(dh);
         }
 
         public DataTable LoadDanhSachDonHangTheoKH(string MaKH)

@@ -26,13 +26,13 @@ namespace BUS
 
         public bool LuuDonHang(string madh, string masp, int sl, int gia)
         {
-            return BillInfoDAO.Intance.LuuDonHang(madh, masp, sl, gia);
+            return BillInfoDAO.Intance.saveBill(madh, masp, sl, gia);
         }
 
-        public DataTable getCTDN(string maHD)
+        public DataTable getBillInfo(string maHD)
         {
 
-            return BillInfoDAO.Intance.getCTDN(maHD);
+            return BillInfoDAO.Intance.getBillInfo(maHD);
         }
     }
 }

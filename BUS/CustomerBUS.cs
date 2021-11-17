@@ -24,22 +24,22 @@ namespace BUS
 
         public DataTable getListKH()
         {
-            return CustomerDAO.Intance.getListKH();
+            return CustomerDAO.Intance.getListCustomer();
         }
 
         public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang, string matKhau)
         {
-            return CustomerDAO.Intance.themKH(maKH, tenKH, DiaChi, SDT, email, maHang, matKhau);
+            return CustomerDAO.Intance.insertCustomer(maKH, tenKH, DiaChi, SDT, email, maHang, matKhau);
         }
 
         public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang)
         {
-            return CustomerDAO.Intance.suaKH(maKH, tenKH, DiaChi, SDT, email, maHang);
+            return CustomerDAO.Intance.updateCustomer(maKH, tenKH, DiaChi, SDT, email, maHang);
         }
 
         public bool xoaKH(string maKH)
         {
-            return CustomerDAO.Intance.xoaKH(maKH);
+            return CustomerDAO.Intance.deleteCustomer(maKH);
         }
 
         public DataTable TimKiemKH(string name)
@@ -49,12 +49,12 @@ namespace BUS
 
         public string loadMaKH()
         {
-            return CustomerDAO.Intance.loadMaKH();
+            return CustomerDAO.Intance.loadID();
         }
 
         public CustomerDTO GetTenBySDT(string id)
         {
-            return CustomerDAO.Intance.GetTenBySDT(id);
+            return CustomerDAO.Intance.GetNameByNumberPhone(id);
         }
 
         public bool Login(string username, string pass)
@@ -69,7 +69,7 @@ namespace BUS
 
         public bool doiMatKhau(string maKH, string matKhauMoi)
         {
-            return CustomerDAO.Intance.doiMatKhau(maKH, matKhauMoi);
+            return CustomerDAO.Intance.changePassword(maKH, matKhauMoi);
         }
     }
 }

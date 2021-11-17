@@ -22,7 +22,7 @@ namespace WindowsFormsApp
 
         private void FormBillInfo_Load(object sender, EventArgs e)
         {
-            dgvCTHD.DataSource = BillInfoBUS.Intance.getCTDN(maHD);
+            dgvCTHD.DataSource = BillInfoBUS.Intance.getBillInfo(maHD);
         }
     }
 }

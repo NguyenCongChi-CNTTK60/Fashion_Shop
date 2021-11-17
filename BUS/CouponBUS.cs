@@ -28,26 +28,26 @@ namespace BUS
             return CouponDAO.Intance.GetListCoupon();
         }
 
-        public bool themPN(string maPN, string maNCC, DateTime NgayNhap, string TenDangNhap)
+        public bool insertCoupon(string maPN, string maNCC, DateTime NgayNhap, string TenDangNhap)
         {
 
-            return CouponDAO.Intance.themPN(maPN, maNCC, NgayNhap, TenDangNhap);
+            return CouponDAO.Intance.insertCoupon(maPN, maNCC, NgayNhap, TenDangNhap);
         }
 
-        public string loadMaPN()
+        public string loadID()
         {
-            return CouponDAO.Intance.loadMaPN();
+            return CouponDAO.Intance.loadID();
         }
 
-        public bool xoaPN(string maPN)
+        public bool deleteCoupon(string maPN)
         {
-            return CouponDAO.Intance.xoaPN(maPN);
+            return CouponDAO.Intance.deleteCoupon(maPN);
         }
 
 
-        public DataTable TimKiemPN(string maPN)
+        public DataTable searchCoupon(string maPN)
         {
-            return CouponDAO.Intance.TimKiemPN(maPN);
+            return CouponDAO.Intance.searchCoupon(maPN);
         }
     }
 }

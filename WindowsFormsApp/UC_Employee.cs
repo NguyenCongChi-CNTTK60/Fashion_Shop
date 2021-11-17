@@ -34,7 +34,7 @@ namespace WindowsFormsApp
         void LoadData()
         {
             //    ClearBinding();
-            guna2dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.getListNV();
+            guna2dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.getListEmployee();
             guna2dgvThongTinNhanVien.Columns["MaNV"].HeaderText = "Mã nhân viên";
             guna2dgvThongTinNhanVien.Columns["TenNV"].HeaderText = "Họ và tên";
             guna2dgvThongTinNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
@@ -96,7 +96,7 @@ namespace WindowsFormsApp
 
         private void guna2txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            guna2dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.TimKiemNV(guna2txtTimKiem.Text);
+            guna2dgvThongTinNhanVien.DataSource = EmployeeBUS.Intance.searchEmployee(guna2txtTimKiem.Text);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -118,7 +118,7 @@ namespace WindowsFormsApp
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
                     btnThem.Text = "Thêm";
-                    if (EmployeeBUS.Intance.themNV(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
+                    if (EmployeeBUS.Intance.insertEmployee(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
                     {
                         MessageBox.Show("Thêm thành công!", "Thông báo");
                         LoadData();
@@ -132,7 +132,7 @@ namespace WindowsFormsApp
         {
             if (guna2dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
-                if (EmployeeBUS.Intance.suaNV(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
+                if (EmployeeBUS.Intance.editEmployee(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo");
                     LoadData();
@@ -146,7 +146,7 @@ namespace WindowsFormsApp
             "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dlr == DialogResult.Yes)
             {
-                EmployeeBUS.Intance.xoaNV(guna2txtTenDangNhap.Text);
+                EmployeeBUS.Intance.deleteEmployee(guna2txtTenDangNhap.Text);
                 MessageBox.Show("Xóa thành công!", "Thông báo");
                 LoadData();
             }

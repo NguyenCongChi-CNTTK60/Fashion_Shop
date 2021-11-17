@@ -25,7 +25,7 @@ namespace DAO
             set => instance = value;
         }
 
-        public List<GoodsDTO> getListSanPham()
+        public List<GoodsDTO> getListProduct()
         {
             List<GoodsDTO> list = new List<GoodsDTO>();
             DataTable data = DataProvider.Instance.ExecuteQuery("select * from MATHANG");
@@ -37,14 +37,14 @@ namespace DAO
             return list;
         }
 
-        public bool suaHH(string MaMH, string TenHH, string DVT, int SoLuong, int GiaGoc, int GiaBan)
+        public bool editGoods(string MaMH, string TenHH, string DVT, int SoLuong, int GiaGoc, int GiaBan)
         {
             string query = String.Format("update MATHANG set SoLuong = {0}, GiaGoc = {1}, GiaBan = {2}, TenMH = N'{3}', DonVi = '{4}'  where MaMH = '{5}'", SoLuong, GiaGoc, GiaBan, TenHH, DVT, MaMH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool kiemtraXoa(string MaMH)
+        public bool checkDelete(string MaMH)
         {
             string query = String.Format("select * from CTHD where MaMH = '{0}'", MaMH);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
@@ -61,21 +61,21 @@ namespace DAO
             return true;
         }
 
-        public bool capNhatHH(string MaMH, int SL, int DonGia)
+        public bool updateGoods(string MaMH, int SL, int DonGia)
         {
             string query = String.Format("update MATHANG set SoLuong = {0} + SoLuong, GiaGoc = (GiaGoc + {1})/2 where MaMH = '{2}'", SL, DonGia, MaMH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool xoaHang(string maKH)
+        public bool deleteGoods(string maKH)
         {
             string query = String.Format("delete from MATHANG where MaMH = '{0}'", maKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public string loadMaHH()
+        public string loadID()
         {
             string maKHnext = "SP001";
             string query = "select top 1 MaMH from MATHANG order by MaMH desc";
@@ -101,14 +101,14 @@ namespace DAO
             return maKHnext;
         }
 
-        public DataTable TimKiemHH(string maPN)
+        public DataTable searchGoods(string maPN)
         {
             string query = "exec usp_timMATHANG @maPN";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });
             return data;
         }
 
-        public GoodsDTO getSP(string maSP)
+        public GoodsDTO getProduct(string maSP)
         {
             GoodsDTO a = new GoodsDTO();
             string query = String.Format("select * from MATHANG where MaMH = N'{0}'", maSP);
@@ -123,7 +123,7 @@ namespace DAO
             return a;
         }
 
-        public bool temHH(GoodsDTO data, string imgLocation)
+        public bool imageGoods(GoodsDTO data, string imgLocation)
         {
             byte[] images = null;
             FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
@@ -147,7 +147,7 @@ namespace DAO
             return false;
         }
 
-        public void capNhatHinh(string imgLocation, string MaMH)
+        public void updateImages(string imgLocation, string MaMH)
         {
             byte[] images = null;
             FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
@@ -165,7 +165,7 @@ namespace DAO
             }
         }
 
-        public byte[] getAnhByID(string ID)
+        public byte[] getImageByID(string ID)
         {
             string query = String.Format("select Anh from MATHANG where MaMH = '{0}'", ID);
             DataRow data = DataProvider.Instance.ExecuteQuery(query).Rows[0];

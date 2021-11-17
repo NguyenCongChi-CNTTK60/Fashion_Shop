@@ -21,14 +21,14 @@ namespace WindowsFormsApp
 
         public static string tenNgDung, quyen, tk, matkhau;
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             string tenDangNhap = guna2TextBox1.Text;
             string passWord = guna2TextBox2.Text;
             int a;
             if (int.TryParse(tenDangNhap, out a))
             {
-                if (LoginKH(tenDangNhap, passWord))
+                if (LoginCustomer(tenDangNhap, passWord))
                 {
                     FormCustomer kh = new FormCustomer(CustomerBUS.Intance.getDataByID(tenDangNhap));
                     this.Hide();
@@ -44,10 +44,10 @@ namespace WindowsFormsApp
             {
                 if (Login(tenDangNhap, passWord))
                 {
-                    tenNgDung = EmployeeBUS.Intance.getNVByID(tenDangNhap).TenNV;
+                    tenNgDung = EmployeeBUS.Intance.getEmployeeByID(tenDangNhap).TenNV;
                     tk = tenDangNhap;
-                    quyen = EmployeeBUS.Intance.getNVByID(tenDangNhap).Quyen;
-                    matkhau = EmployeeBUS.Intance.getNVByID(tenDangNhap).MatKhau;
+                    quyen = EmployeeBUS.Intance.getEmployeeByID(tenDangNhap).Quyen;
+                    matkhau = EmployeeBUS.Intance.getEmployeeByID(tenDangNhap).MatKhau;
                     FormHomePage f = new FormHomePage();
                     this.Hide();
                     f.ShowDialog();
@@ -65,7 +65,7 @@ namespace WindowsFormsApp
             return EmployeeBUS.Intance.Login(userName, passWord);
         }
 
-        bool LoginKH(string userName, string passWord)
+        bool LoginCustomer(string userName, string passWord)
         {
             return CustomerBUS.Intance.Login(userName, passWord);
         }

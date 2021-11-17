@@ -29,45 +29,45 @@ namespace BUS
 
         public bool doiMatKhau(string tenDangNhap, string matKhauMoi)
         {
-            return EmployeeDAO.Intance.doiMatKhau(tenDangNhap, matKhauMoi);
+            return EmployeeDAO.Intance.changePassword(tenDangNhap, matKhauMoi);
         }
 
-        public EmployeeDTO getNVByID(string id)
+        public EmployeeDTO getEmployeeByID(string id)
         {
-            return EmployeeDAO.Intance.getNVByID(id);
+            return EmployeeDAO.Intance.getEmployeeByID(id);
         }
 
-        public DataTable getListNV()
+        public DataTable getListEmployee()
         {
-            return EmployeeDAO.Intance.getListNV();
+            return EmployeeDAO.Intance.getListEmployee();
         }
 
         public bool themNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
-            return EmployeeDAO.Intance.themNV(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
+            return EmployeeDAO.Intance.insertEmployee(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
         }
 
         public bool suaNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
-            return EmployeeDAO.Intance.suaNV(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
+            return EmployeeDAO.Intance.updateEmployee(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
         }
 
-        public bool xoaNV(string maKH)
+        public bool deleteEmployee(string maKH)
         {
-            return EmployeeDAO.Intance.xoaNV(maKH);
+            return EmployeeDAO.Intance.deletedEmployee(maKH);
         }
 
-        public DataTable TimKiemNV(string name)
+        public DataTable searchEmployee(string name)
         {
             return EmployeeDAO.Intance.TimKiemNV(name);
         }
 
-        public bool themNV(string text1, string text2, string text3, string v)
+        public bool insertEmployee(string text1, string text2, string text3, string v)
         {
             throw new NotImplementedException();
         }
 
-        public bool suaNV(string text1, string text2, string text3, string v)
+        public bool editEmployee(string text1, string text2, string text3, string v)
         {
             throw new NotImplementedException();
         }

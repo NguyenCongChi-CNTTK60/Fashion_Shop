@@ -23,13 +23,13 @@ namespace DAO
             set => instance = value;
         }
 
-        public DataTable getListKH()
+        public DataTable getListCustomer()
         {
             string query = "select KHACHHANG.MaKH,TenKH, DiaChi, SDT, Email, MaHang, MatKhau from KHACHHANG";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang, string matKhau)
+        public bool insertCustomer(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang, string matKhau)
         {
             MD5 mh = MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(matKhau);
@@ -44,7 +44,7 @@ namespace DAO
             return result > 0;
         }
 
-        public bool doiMatKhau(string maKH, string matKhauMoi)
+        public bool changePassword(string maKH, string matKhauMoi)
         {
             MD5 mh = MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(matKhauMoi);
@@ -59,14 +59,14 @@ namespace DAO
             return result > 0;
         }
 
-        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang)
+        public bool updateCustomer(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang)
         {
             string query = String.Format("update KHACHHANG set TenKH = N'{0}', DiaChi = N'{1}', SDT = N'{2}', Email = '{3}', MaHang = '{4}' where MaKH = '{5}'", tenKH, DiaChi, SDT, email, maHang, maKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool xoaKH(string maKH)
+        public bool deleteCustomer(string maKH)
         {
             string query = String.Format("delete from KHACHHANG where MaKH = '{0}'", maKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
@@ -80,7 +80,7 @@ namespace DAO
             return data;
         }
 
-        public string loadMaKH()
+        public string loadID()
         {
             string maKHnext = "";
             string query = "select top 1 MaKH from KHACHHANG order by MaKH desc";
@@ -89,7 +89,7 @@ namespace DAO
             return maKHnext;
         }
 
-        public CustomerDTO GetTenBySDT(string id)
+        public CustomerDTO GetNameByNumberPhone(string id)
         {
             CustomerDTO item = new CustomerDTO();
 

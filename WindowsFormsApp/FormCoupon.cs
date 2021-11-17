@@ -15,7 +15,7 @@ namespace WindowsFormsApp
 {
     public partial class FormCoupon : Form
     {
-        string maPN = CouponBUS.Intance.loadMaPN();
+        string maPN = CouponBUS.Intance.loadID();
         DateTime DatePNSua = DateTime.Now;
         public FormCoupon()
         {
@@ -89,14 +89,14 @@ namespace WindowsFormsApp
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            CouponBUS.Intance.xoaPN(maPN);
+            CouponBUS.Intance.deleteCoupon(maPN);
             if (cbbNCC.SelectedIndex == -1)
             {
                 MessageBox.Show("Hãy chọn nhà cung cấp!");
             }
             else
             {
-                if (CouponBUS.Intance.themPN(maPN, cbbNCC.SelectedValue.ToString(), DatePNSua, FormLogin.tk))
+                if (CouponBUS.Intance.insertCoupon(maPN, cbbNCC.SelectedValue.ToString(), DatePNSua, FormLogin.tk))
                 {
                     for (int i = 0; i < dgvCTPN.Rows.Count - 1; i++)
                     {

@@ -59,27 +59,27 @@ namespace DAO
 
         }
 
-        public EmployeeDTO getNVByID(string id)
+        public EmployeeDTO getEmployeeByID(string id)
         {
             string query = "SELECT * FROM NHANVIEN WHERE TenDangNhap = N'" + id + "'";
             DataRow a = DataProvider.Instance.ExecuteQuery(query).Rows[0];
             return new EmployeeDTO(a);
         }
 
-        public DataTable getListNV()
+        public DataTable getListEmployee()
         {
             string query = "select * from NHANVIEN";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
-        public bool themNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
+        public bool insertEmployee(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
             string query = String.Format("insert into NHANVIEN values (N'{0}', N'{1}', N'{2}', N'{3}')", maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool doiMatKhau(string tenDangNhap, string matKhauMoi)
+        public bool changePassword(string tenDangNhap, string matKhauMoi)
         {
             MD5 mh = MD5.Create();
             byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(matKhauMoi);
@@ -94,14 +94,14 @@ namespace DAO
             return result > 0;
         }
 
-        public bool suaNV(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
+        public bool updateEmployee(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
         {
             string query = String.Format("update NHANVIEN set TenNguoiDung = N'{0}', MatKhau = N'{1}', Quyen = N'{2}' where TenDangNhap = N'{3}'", tenNV, sdt, tenDangNhap, matKhau, quyen, maNV);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool xoaNV(string maKH)
+        public bool deletedEmployee(string maKH)
         {
             string query = String.Format("delete from NHANVIEN where tenDangnhap = '{0}'", maKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);

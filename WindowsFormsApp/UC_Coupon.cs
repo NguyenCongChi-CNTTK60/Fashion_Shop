@@ -44,7 +44,7 @@ namespace WindowsFormsApp
             if (dlr == DialogResult.Yes)
             {
                 int VT = dgvPhieuNhap.CurrentCell.RowIndex;
-                if (CouponBUS.Intance.xoaPN(dgvPhieuNhap.Rows[VT].Cells[0].Value.ToString().Trim()))
+                if (CouponBUS.Intance.deleteCoupon(dgvPhieuNhap.Rows[VT].Cells[0].Value.ToString().Trim()))
                 {
                     MessageBox.Show("Xóa Thành Công");
                     loadData();
@@ -263,7 +263,7 @@ namespace WindowsFormsApp
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvPhieuNhap.DataSource = CouponBUS.Intance.TimKiemPN(txtTimKiem.Text);
+            dgvPhieuNhap.DataSource = CouponBUS.Intance.searchCoupon(txtTimKiem.Text);
         }
 
         private void dgvPhieuNhap_SelectionChanged_1(object sender, EventArgs e)
