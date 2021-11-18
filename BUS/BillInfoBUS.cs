@@ -24,7 +24,7 @@ namespace BUS
             set => instance = value;
         }
 
-        public bool LuuDonHang(string madh, string masp, int sl, int gia)
+        public bool saveBill(string madh, string masp, int sl, int gia)
         {
             return BillInfoDAO.Intance.saveBill(madh, masp, sl, gia);
         }

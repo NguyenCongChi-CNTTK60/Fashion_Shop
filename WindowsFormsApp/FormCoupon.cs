@@ -62,7 +62,7 @@ namespace WindowsFormsApp
             cbbSanPham.ValueMember = "MaHang";
             cbbSanPham.SelectedIndex = -1;
 
-            List<SupplierDTO> list2 = SupplierBUS.Intance.getListNCC();
+            List<SupplierDTO> list2 = SupplierBUS.Intance.getListSupplier();
             AutoCompleteStringCollection arrName2 = new AutoCompleteStringCollection();
             foreach (SupplierDTO item in list2)
             {
@@ -103,7 +103,7 @@ namespace WindowsFormsApp
                         string maHang = dgvCTPN.Rows[i].Cells[0].Value.ToString();
                         int soluong = int.Parse(dgvCTPN.Rows[i].Cells[2].Value.ToString());
                         int dongia = int.Parse(dgvCTPN.Rows[i].Cells[3].Value.ToString());
-                        if (CouponInfoBUS.Intance.LuuPhieuNhap(maPN, maHang, soluong, dongia))
+                        if (CouponInfoBUS.Intance.saveCoupon(maPN, maHang, soluong, dongia))
                         {
                             GoodsBUS.Intance.capNhatHH(maHang, soluong, dongia);
                         }

@@ -42,12 +42,6 @@ namespace WindowsFormsApp
             this.lbUser = new System.Windows.Forms.Label();
             this.picUser = new System.Windows.Forms.PictureBox();
             this.lblTime = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnSell = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnEmployee = new System.Windows.Forms.Button();
@@ -64,7 +58,6 @@ namespace WindowsFormsApp
             this.btnImportGoods = new System.Windows.Forms.Button();
             this.btnHomePage = new System.Windows.Forms.Button();
             this.panelControl = new System.Windows.Forms.Panel();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -84,8 +77,6 @@ namespace WindowsFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -169,17 +160,11 @@ namespace WindowsFormsApp
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.panelTop.Controls.Add(this.guna2ControlBox1);
             this.panelTop.Controls.Add(this.lbUser);
             this.panelTop.Controls.Add(this.picUser);
             this.panelTop.Controls.Add(this.lblTime);
-            this.panelTop.Controls.Add(this.label11);
-            this.panelTop.Controls.Add(this.label10);
-            this.panelTop.Controls.Add(this.pictureBox6);
-            this.panelTop.Controls.Add(this.label7);
-            this.panelTop.Controls.Add(this.label6);
-            this.panelTop.Controls.Add(this.pictureBox5);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(246, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -195,10 +180,10 @@ namespace WindowsFormsApp
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Teal;
             this.guna2ControlBox1.HoverState.Parent = this.guna2ControlBox1;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(907, 3);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(916, 11);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.ShadowDecoration.Parent = this.guna2ControlBox1;
-            this.guna2ControlBox1.Size = new System.Drawing.Size(58, 54);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(58, 45);
             this.guna2ControlBox1.TabIndex = 11;
             // 
             // lbUser
@@ -209,7 +194,7 @@ namespace WindowsFormsApp
             this.lbUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbUser.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lbUser.Location = new System.Drawing.Point(748, 18);
+            this.lbUser.Location = new System.Drawing.Point(746, 19);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(102, 30);
             this.lbUser.TabIndex = 10;
@@ -220,7 +205,7 @@ namespace WindowsFormsApp
             // 
             this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUser.Image = global::WindowsFormsApp.Properties.Resources.icon_user;
-            this.picUser.Location = new System.Drawing.Point(856, 12);
+            this.picUser.Location = new System.Drawing.Point(854, 11);
             this.picUser.Name = "picUser";
             this.picUser.Size = new System.Drawing.Size(45, 38);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -234,86 +219,21 @@ namespace WindowsFormsApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.ForeColor = System.Drawing.Color.SteelBlue;
-            this.lblTime.Location = new System.Drawing.Point(469, -4);
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(16, 0);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(252, 56);
             this.lblTime.TabIndex = 8;
             this.lblTime.Text = "HH:MM:SS";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label11.Location = new System.Drawing.Point(339, 31);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 25);
-            this.label11.TabIndex = 6;
-            this.label11.Text = "KHÁCH HÀNG";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label10.Location = new System.Drawing.Point(358, 2);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 25);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Trân quý";
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(243, 2);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(90, 56);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label7.Location = new System.Drawing.Point(126, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 26);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "TẬN NƠI";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.SteelBlue;
-            this.label6.Location = new System.Drawing.Point(126, 2);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 25);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Giao hàng";
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::WindowsFormsApp.Properties.Resources.oto_giaohang;
-            this.pictureBox5.Location = new System.Drawing.Point(44, -4);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(89, 61);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
             // btnSell
             // 
-            this.btnSell.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSell.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnSell.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSell.FlatAppearance.BorderSize = 0;
             this.btnSell.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSell.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSell.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnSell.ForeColor = System.Drawing.Color.White;
             this.btnSell.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSell.Location = new System.Drawing.Point(27, 138);
@@ -329,12 +249,12 @@ namespace WindowsFormsApp
             // 
             // btnCustomer
             // 
-            this.btnCustomer.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCustomer.FlatAppearance.BorderSize = 0;
             this.btnCustomer.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomer.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
             this.btnCustomer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCustomer.Location = new System.Drawing.Point(26, 194);
@@ -350,12 +270,12 @@ namespace WindowsFormsApp
             // 
             // btnEmployee
             // 
-            this.btnEmployee.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEmployee.FlatAppearance.BorderSize = 0;
             this.btnEmployee.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmployee.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnEmployee.ForeColor = System.Drawing.Color.White;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEmployee.Location = new System.Drawing.Point(26, 250);
@@ -371,12 +291,12 @@ namespace WindowsFormsApp
             // 
             // btnSupplier
             // 
-            this.btnSupplier.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnSupplier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnSupplier.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSupplier.FlatAppearance.BorderSize = 0;
             this.btnSupplier.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupplier.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSupplier.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnSupplier.ForeColor = System.Drawing.Color.White;
             this.btnSupplier.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSupplier.Location = new System.Drawing.Point(26, 306);
@@ -392,12 +312,12 @@ namespace WindowsFormsApp
             // 
             // btnStatistic
             // 
-            this.btnStatistic.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnStatistic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnStatistic.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStatistic.FlatAppearance.BorderSize = 0;
             this.btnStatistic.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnStatistic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStatistic.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatistic.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnStatistic.ForeColor = System.Drawing.Color.White;
             this.btnStatistic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStatistic.Location = new System.Drawing.Point(26, 362);
@@ -413,12 +333,12 @@ namespace WindowsFormsApp
             // 
             // btnDepot
             // 
-            this.btnDepot.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnDepot.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnDepot.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDepot.FlatAppearance.BorderSize = 0;
             this.btnDepot.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnDepot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDepot.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDepot.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnDepot.ForeColor = System.Drawing.Color.White;
             this.btnDepot.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDepot.Location = new System.Drawing.Point(27, 418);
@@ -434,7 +354,7 @@ namespace WindowsFormsApp
             // 
             // panelLeft
             // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(214)))), ((int)(((byte)(243)))));
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.panelLeft.Controls.Add(this.label8);
             this.panelLeft.Controls.Add(this.label1);
             this.panelLeft.Controls.Add(this.btnLogOut);
@@ -460,7 +380,7 @@ namespace WindowsFormsApp
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Peru;
-            this.label8.Location = new System.Drawing.Point(62, 631);
+            this.label8.Location = new System.Drawing.Point(75, 628);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 21);
             this.label8.TabIndex = 24;
@@ -471,7 +391,7 @@ namespace WindowsFormsApp
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Peru;
-            this.label1.Location = new System.Drawing.Point(3, 610);
+            this.label1.Location = new System.Drawing.Point(3, 598);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(246, 21);
             this.label1.TabIndex = 8;
@@ -479,15 +399,15 @@ namespace WindowsFormsApp
             // 
             // btnLogOut
             // 
-            this.btnLogOut.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnLogOut.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogOut.FlatAppearance.BorderSize = 0;
             this.btnLogOut.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogOut.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnLogOut.ForeColor = System.Drawing.Color.White;
             this.btnLogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogOut.Location = new System.Drawing.Point(27, 556);
+            this.btnLogOut.Location = new System.Drawing.Point(38, 530);
             this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Padding = new System.Windows.Forms.Padding(1);
@@ -501,13 +421,13 @@ namespace WindowsFormsApp
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.label2.ForeColor = System.Drawing.Color.Peru;
-            this.label2.Location = new System.Drawing.Point(34, 22);
+            this.label2.Location = new System.Drawing.Point(107, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(173, 35);
+            this.label2.Size = new System.Drawing.Size(108, 29);
             this.label2.TabIndex = 13;
-            this.label2.Text = "SUPERMARKET";
+            this.label2.Text = "MARKET";
             // 
             // panelSide
             // 
@@ -539,15 +459,15 @@ namespace WindowsFormsApp
             // 
             // btnImportGoods
             // 
-            this.btnImportGoods.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnImportGoods.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnImportGoods.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnImportGoods.FlatAppearance.BorderSize = 0;
             this.btnImportGoods.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnImportGoods.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnImportGoods.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportGoods.Font = new System.Drawing.Font("Nunito", 13.2F);
             this.btnImportGoods.ForeColor = System.Drawing.Color.White;
             this.btnImportGoods.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnImportGoods.Location = new System.Drawing.Point(27, 474);
+            this.btnImportGoods.Location = new System.Drawing.Point(26, 474);
             this.btnImportGoods.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImportGoods.Name = "btnImportGoods";
             this.btnImportGoods.Padding = new System.Windows.Forms.Padding(1);
@@ -563,13 +483,13 @@ namespace WindowsFormsApp
             this.btnHomePage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHomePage.BackColor = System.Drawing.Color.SteelBlue;
+            this.btnHomePage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnHomePage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHomePage.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
             this.btnHomePage.FlatAppearance.BorderSize = 0;
             this.btnHomePage.FlatAppearance.CheckedBackColor = System.Drawing.Color.White;
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomePage.Font = new System.Drawing.Font("Nunito", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHomePage.ForeColor = System.Drawing.Color.White;
             this.btnHomePage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnHomePage.Location = new System.Drawing.Point(27, 82);
@@ -580,7 +500,7 @@ namespace WindowsFormsApp
             this.btnHomePage.TabIndex = 2;
             this.btnHomePage.Text = "  Trang chủ";
             this.btnHomePage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.UseVisualStyleBackColor = false;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // panelControl
@@ -591,11 +511,6 @@ namespace WindowsFormsApp
             this.panelControl.Name = "panelControl";
             this.panelControl.Size = new System.Drawing.Size(977, 608);
             this.panelControl.TabIndex = 5;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 140;
-            this.bunifuElipse1.TargetControl = this.panelLeft;
             // 
             // bunifuElipse2
             // 
@@ -674,8 +589,6 @@ namespace WindowsFormsApp
             this.panelTop.ResumeLayout(false);
             this.panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picUser)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.panelLeft.ResumeLayout(false);
             this.panelLeft.PerformLayout();
             this.ResumeLayout(false);
@@ -700,12 +613,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnSell;
         private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Button btnLogOut;
@@ -713,7 +620,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnHomePage;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;

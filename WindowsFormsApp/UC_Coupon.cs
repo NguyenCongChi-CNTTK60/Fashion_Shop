@@ -23,7 +23,7 @@ namespace WindowsFormsApp
         }
         void loadData()
         {
-            dgvPhieuNhap.DataSource = CouponBUS.Intance.GetListPN();
+            dgvPhieuNhap.DataSource = CouponBUS.Intance.GetListCoupon();
             dgvPhieuNhap.Columns["MaPN"].HeaderText = "Mã Phiếu Nhập";
             dgvPhieuNhap.Columns["TenNCC"].HeaderText = "Nhà Cung Cấp";
             dgvPhieuNhap.Columns["NgayNhap"].HeaderText = "Ngày Nhập";
@@ -190,7 +190,7 @@ namespace WindowsFormsApp
                 int stt = 0;
                 row = 4;//dữ liệu xuất bắt đầu từ dòng số 4 trong file Excel (khai báo 3 để vào vòng lặp nó ++ thành 4)
                 List<CouponInfoDTO> list = new List<CouponInfoDTO>();
-                System.Data.DataTable data = CouponInfoBUS.Intance.getCTPN(maPNChon);
+                System.Data.DataTable data = CouponInfoBUS.Intance.getCouponInfo(maPNChon);
                 foreach (DataRow item in data.Rows)
                 {
                     stt++;

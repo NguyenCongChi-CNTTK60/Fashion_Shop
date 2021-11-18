@@ -29,7 +29,6 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCustomer));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -42,7 +41,6 @@ namespace WindowsFormsApp
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelHoTen = new System.Windows.Forms.Label();
             this.labelHang = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
@@ -52,14 +50,15 @@ namespace WindowsFormsApp
             this.lbDiaChi = new System.Windows.Forms.Label();
             this.tabPageDonHang = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabControlMain.SuspendLayout();
             this.tabPageThongTin.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPageDonHang.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +84,7 @@ namespace WindowsFormsApp
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.label5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -97,12 +96,12 @@ namespace WindowsFormsApp
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.BackColor = System.Drawing.Color.SteelBlue;
+            this.label5.Font = new System.Drawing.Font("Nunito", 27F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(153, 9);
+            this.label5.Location = new System.Drawing.Point(136, 6);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(573, 51);
+            this.label5.Size = new System.Drawing.Size(595, 60);
             this.label5.TabIndex = 24;
             this.label5.Text = "THÔNG TIN KHÁCH HÀNG";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -145,7 +144,7 @@ namespace WindowsFormsApp
             this.guna2Button1.CustomImages.Parent = this.guna2Button1;
             this.guna2Button1.DisabledState.Parent = this.guna2Button1;
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.Font = new System.Drawing.Font("Nunito", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Location = new System.Drawing.Point(62, 353);
@@ -158,9 +157,10 @@ namespace WindowsFormsApp
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(423, 65);
+            this.label4.Font = new System.Drawing.Font("Nunito", 10.8F);
+            this.label4.Location = new System.Drawing.Point(401, 63);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 23);
+            this.label4.Size = new System.Drawing.Size(82, 25);
             this.label4.TabIndex = 26;
             this.label4.Text = "Họ Tên:";
             // 
@@ -214,22 +214,13 @@ namespace WindowsFormsApp
             // 
             this.labelHang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHang.AutoSize = true;
+            this.labelHang.Font = new System.Drawing.Font("Nunito", 10.8F);
             this.labelHang.Location = new System.Drawing.Point(35, 265);
             this.labelHang.Name = "labelHang";
-            this.labelHang.Size = new System.Drawing.Size(183, 23);
+            this.labelHang.Size = new System.Drawing.Size(209, 25);
             this.labelHang.TabIndex = 10;
             this.labelHang.Text = "Hạng Thành Viên: N/A";
             this.labelHang.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(22, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 196);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
             // 
             // txtDiaChi
             // 
@@ -305,10 +296,11 @@ namespace WindowsFormsApp
             this.btnXacNhan.CheckedState.Parent = this.btnXacNhan;
             this.btnXacNhan.CustomImages.Parent = this.btnXacNhan;
             this.btnXacNhan.DisabledState.Parent = this.btnXacNhan;
-            this.btnXacNhan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnXacNhan.FillColor = System.Drawing.Color.SteelBlue;
+            this.btnXacNhan.Font = new System.Drawing.Font("Nunito", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
             this.btnXacNhan.HoverState.Parent = this.btnXacNhan;
-            this.btnXacNhan.Location = new System.Drawing.Point(622, 294);
+            this.btnXacNhan.Location = new System.Drawing.Point(622, 302);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.ShadowDecoration.Parent = this.btnXacNhan;
             this.btnXacNhan.Size = new System.Drawing.Size(115, 45);
@@ -318,27 +310,30 @@ namespace WindowsFormsApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(437, 245);
+            this.label3.Font = new System.Drawing.Font("Nunito", 10.8F);
+            this.label3.Location = new System.Drawing.Point(423, 250);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 23);
+            this.label3.Size = new System.Drawing.Size(67, 25);
             this.label3.TabIndex = 17;
             this.label3.Text = "Email:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nunito", 10.8F);
             this.label2.Location = new System.Drawing.Point(423, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 23);
+            this.label2.Size = new System.Drawing.Size(79, 25);
             this.label2.TabIndex = 16;
             this.label2.Text = "Địa Chỉ:";
             // 
             // lbDiaChi
             // 
             this.lbDiaChi.AutoSize = true;
-            this.lbDiaChi.Location = new System.Drawing.Point(372, 126);
+            this.lbDiaChi.Font = new System.Drawing.Font("Nunito", 10.8F);
+            this.lbDiaChi.Location = new System.Drawing.Point(362, 119);
             this.lbDiaChi.Name = "lbDiaChi";
-            this.lbDiaChi.Size = new System.Drawing.Size(120, 23);
+            this.lbDiaChi.Size = new System.Drawing.Size(141, 25);
             this.lbDiaChi.TabIndex = 15;
             this.lbDiaChi.Text = "Số Điện Thoại:";
             // 
@@ -368,6 +363,16 @@ namespace WindowsFormsApp
             this.dataGridView1.Size = new System.Drawing.Size(865, 403);
             this.dataGridView1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp.Properties.Resources.icon_user;
+            this.pictureBox1.Location = new System.Drawing.Point(22, 41);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 196);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -393,9 +398,9 @@ namespace WindowsFormsApp
             this.tabPageThongTin.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPageDonHang.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

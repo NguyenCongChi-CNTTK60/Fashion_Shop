@@ -22,7 +22,7 @@ namespace DAO
             set => instance = value;
         }
 
-        public List<SupplierDTO> getListNCC()
+        public List<SupplierDTO> getListSupplier()
         {
             List<SupplierDTO> list = new List<SupplierDTO>();
             string query = "select * from NHACUNGCAP";
@@ -35,28 +35,28 @@ namespace DAO
             return list;
         }
 
-        public bool themNCC(SupplierDTO data)
+        public bool insertSupplier(SupplierDTO data)
         {
             string query = String.Format("insert into NHACUNGCAP(MaNCC, TenNCC, DiaChi, SDT, Email) values ('{0}', N'{1}', N'{2}', N'{3}', N'{4}')", data.MaNCC, data.TenNCC, data.DiaChi, data.SDT, data.Email);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool suaNCC(SupplierDTO data)
+        public bool updateSupplier(SupplierDTO data)
         {
             string query = String.Format("update NHACUNGCAP set TenNCC = N'{0}', DiaChi = N'{1}', SDT = {2}, Email = '{3}' where MaNCC = '{4}'", data.TenNCC, data.DiaChi, data.SDT, data.Email, data.MaNCC);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool xoaNCC(string maKH)
+        public bool deleteSupplier(string maKH)
         {
             string query = String.Format("delete from NHACUNGCAP where MaNCC = '{0}'", maKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public string loadMaNCC()
+        public string loadID()
         {
             string maKHnext = "NCC001";
             string query = "select top 1 MaNCC from NHACUNGCAP order by MaNCC desc";
@@ -82,7 +82,7 @@ namespace DAO
             return maKHnext;
         }
 
-        public DataTable TimKiemNCC(string maPN)
+        public DataTable searchSupplier(string maPN)
         {
             string query = "exec usp_timNCC @maPN";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });

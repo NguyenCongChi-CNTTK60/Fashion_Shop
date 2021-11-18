@@ -22,37 +22,37 @@ namespace BUS
             set => instance = value;
         }
 
-        public DataTable getListKH()
+        public DataTable getListCustomer()
         {
             return CustomerDAO.Intance.getListCustomer();
         }
 
-        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang, string matKhau)
+        public bool insertCustomer(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang, string matKhau)
         {
             return CustomerDAO.Intance.insertCustomer(maKH, tenKH, DiaChi, SDT, email, maHang, matKhau);
         }
 
-        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang)
+        public bool updateCustomer(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang)
         {
             return CustomerDAO.Intance.updateCustomer(maKH, tenKH, DiaChi, SDT, email, maHang);
         }
 
-        public bool xoaKH(string maKH)
+        public bool deleteCustomer(string maKH)
         {
             return CustomerDAO.Intance.deleteCustomer(maKH);
         }
 
-        public DataTable TimKiemKH(string name)
+        public DataTable searchCustomer(string name)
         {
-            return CustomerDAO.Intance.TimKiemKH(name);
+            return CustomerDAO.Intance.searchCustomer(name);
         }
 
-        public string loadMaKH()
+        public string loadID()
         {
             return CustomerDAO.Intance.loadID();
         }
 
-        public CustomerDTO GetTenBySDT(string id)
+        public CustomerDTO GetNameByNumberPhone(string id)
         {
             return CustomerDAO.Intance.GetNameByNumberPhone(id);
         }
@@ -67,7 +67,7 @@ namespace BUS
             return CustomerDAO.Intance.getDataByID(id);
         }
 
-        public bool doiMatKhau(string maKH, string matKhauMoi)
+        public bool changePassword(string maKH, string matKhauMoi)
         {
             return CustomerDAO.Intance.changePassword(maKH, matKhauMoi);
         }

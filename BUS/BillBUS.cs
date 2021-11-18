@@ -23,19 +23,19 @@ namespace BUS
             set => instance = value;
         }
 
-        public string LoadMaDHMoi()
+        public string LoadID()
         {
             return BillDAO.Intance.loadID();
         }
 
-        public bool LuuDonHang(BillDTO dh)
+        public bool saveBill(BillDTO dh)
         {
             return BillDAO.Intance.saveBill(dh);
         }
 
-        public DataTable LoadDanhSachDonHangTheoKH(string MaKH)
+        public DataTable loadListBillByCustomer(string MaKH)
         {
-            return BillDAO.Intance.LoadDanhSachDonHangTheoKH(MaKH);
+            return BillDAO.Intance.loadListBillByCustomer(MaKH);
         }
     }
 }

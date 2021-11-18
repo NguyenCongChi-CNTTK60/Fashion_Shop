@@ -22,34 +22,34 @@ namespace BUS
             set => instance = value;
         }
 
-        public List<SupplierDTO> getListNCC()
+        public List<SupplierDTO> getListSupplier()
         {
-            return SupplierDAO.Intance.getListNCC();
+            return SupplierDAO.Intance.getListSupplier();
         }
 
-        public bool themNCC(SupplierDTO data)
+        public bool insertSupplier(SupplierDTO data)
         {
-            return SupplierDAO.Intance.themNCC(data);
+            return SupplierDAO.Intance.insertSupplier(data);
         }
 
-        public bool suaNCC(SupplierDTO data)
+        public bool updateSupplier(SupplierDTO data)
         {
-            return SupplierDAO.Intance.suaNCC(data);
+            return SupplierDAO.Intance.updateSupplier(data);
         }
 
-        public bool xoaNCC(string maKH)
+        public bool deleteSupplier(string maKH)
         {
-            return SupplierDAO.Intance.xoaNCC(maKH);
+            return SupplierDAO.Intance.deleteSupplier(maKH);
         }
 
-        public string loadMaNCC()
+        public string loadID()
         {
-            return SupplierDAO.Intance.loadMaNCC();
+            return SupplierDAO.Intance.loadID();
         }
 
-        public DataTable TimKiemNCC(string maPN)
+        public DataTable searchSupplier(string maPN)
         {
-            return SupplierDAO.Intance.TimKiemNCC(maPN);
+            return SupplierDAO.Intance.searchSupplier(maPN);
         }
     }
 }

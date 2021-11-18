@@ -17,17 +17,14 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             timerTime.Start();
-            //   panelLeft.Width = panelLeft.Width - 145;
-            //    w = panelLeft.Width;
-            //   check = false;
             /*hiển thị trang chủ*/
             UC_HomePage tc = new UC_HomePage();
             addControlsToPanel(tc);
-            PhanQuyen();
+            splitAccess();
             lbUser.Text = FormLogin.tenNgDung;
         }
 
-        void PhanQuyen()
+        void splitAccess()
         {
             if (FormLogin.quyen == "Thủ Kho")
             {
@@ -72,30 +69,7 @@ namespace WindowsFormsApp
 
         private void button8_Click_1(object sender, EventArgs e)
         {
-            /*if (check)
-            {
-                panelLeft.Width = panelLeft.Width - 150;
-                if (panelLeft.Width <= w)
-                {
-                    timer1.Stop();
-                    check = false;
-                    label16.Visible = false;
-                    label17.Visible = false;
-                    this.Refresh();
-                }
-            }
-            else
-            {
-                panelLeft.Width = panelLeft.Width + 150;
-                if (panelLeft.Width >= 65)
-                {
-                    timer1.Stop();
-                    check = true;
-                    label16.Visible = true;
-                    label17.Visible = true;
-                    this.Refresh();
-                }
-            }*/
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)

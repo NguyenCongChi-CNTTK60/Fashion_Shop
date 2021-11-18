@@ -59,26 +59,26 @@ namespace DAO
             return result;
         }
 
-        private string Donvi(string so)
+        private string Unit(string so)
         {
-            string Kdonvi = "";
+            string unit = "";
 
             if (so.Equals("1"))
-                Kdonvi = "";
+                unit = "";
             if (so.Equals("2"))
-                Kdonvi = "nghìn";
+                unit = "nghìn";
             if (so.Equals("3"))
-                Kdonvi = "triệu";
+                unit = "triệu";
             if (so.Equals("4"))
-                Kdonvi = "tỷ";
+                unit = "tỷ";
             if (so.Equals("5"))
-                Kdonvi = "nghìn tỷ";
+                unit = "nghìn tỷ";
             if (so.Equals("6"))
-                Kdonvi = "triệu tỷ";
+                unit = "triệu tỷ";
             if (so.Equals("7"))
-                Kdonvi = "tỷ tỷ";
+                unit = "tỷ tỷ";
 
-            return Kdonvi;
+            return unit;
         }
 
         private string Tach(string tach3)
@@ -163,7 +163,7 @@ namespace DAO
             ///don vi hang mod
             int im = m + 1;
             if (mod > 0)
-                lso_chu = Tach(tach_mod).ToString().Trim() + " " + Donvi(im.ToString().Trim());
+                lso_chu = Tach(tach_mod).ToString().Trim() + " " + Unit(im.ToString().Trim());
             /// Tach 3 trong tach_conlai
 
             int i = m;
@@ -179,7 +179,7 @@ namespace DAO
                 lso_chu = lso_chu.Trim() + " " + Tach(tach3.Trim()).Trim();
                 m = _m + 1 - j;
                 if (!tach3_.Equals("000"))
-                    lso_chu = lso_chu.Trim() + " " + Donvi(m.ToString().Trim()).Trim();
+                    lso_chu = lso_chu.Trim() + " " + Unit(m.ToString().Trim()).Trim();
                 tach_conlai = tach_conlai.Trim().Substring(3, tach_conlai.Trim().Length - 3);
 
                 i = i - 1;
