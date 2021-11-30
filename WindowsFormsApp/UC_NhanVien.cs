@@ -13,6 +13,7 @@ using System.Diagnostics;
 using System.IO;
 using BUS;
 
+
 namespace WindowsFormsApp
 {
     public partial class UC_NhanVien : UserControl
@@ -23,45 +24,41 @@ namespace WindowsFormsApp
             LoadData();
         }
 
+
         void loadBinding()
         {
-            guna2txtMaNhanVien.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
-            guna2txtHoTen.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "TenNV", true, DataSourceUpdateMode.Never));
-            guna2txtSDT.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-            guna2txtTenDangNhap.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "TenDangNhap", true, DataSourceUpdateMode.Never));
-            guna2txtMatKhau.DataBindings.Add(new Binding("Text", guna2dgvThongTinNhanVien.DataSource, "MatKhau", true, DataSourceUpdateMode.Never));
+            txtMaNV.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
+            txtHoTen.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenHienThi", true, DataSourceUpdateMode.Never));
+            txtSDT.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "SDT", true, DataSourceUpdateMode.Never));
+            txtDiaChi.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
+            cmbChucVu.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "Quyen", true, DataSourceUpdateMode.Never));
         }
+
         void LoadData()
         {
-            //    ClearBinding();
-            guna2dgvThongTinNhanVien.DataSource = NhanVienBUS.Intance.getListEmployee();
-            guna2dgvThongTinNhanVien.Columns["MaNV"].HeaderText = "Mã nhân viên";
-            guna2dgvThongTinNhanVien.Columns["TenNV"].HeaderText = "Họ và tên";
-            guna2dgvThongTinNhanVien.Columns["SDT"].HeaderText = "Số điện thoại";
-            guna2dgvThongTinNhanVien.Columns["TenDangNhap"].HeaderText = "Tên Đăng Nhập";
-            guna2dgvThongTinNhanVien.Columns["MatKhau"].HeaderText = "Mật Khẩu";
-            guna2dgvThongTinNhanVien.Columns["Quyen"].HeaderText = "Chức Vụ";
-            //   loadBinding();
+            ClearBinding();
+            dgvThongTinNhanVien.DataSource = QuanLyNhanVien.Intance.getListNV();
+            loadBinding();
         }
 
         bool KiemTraNhap()
         {
-            if (guna2txtTenDangNhap.Text == "")
+            if (txtMaNV.Text == "")
             {
                 MessageBox.Show("Tên đăng nhập không được bỏ trống", "Thông báo");
-                guna2txtTenDangNhap.Focus();
+                txtMaNV.Focus();
                 return false;
             }
-            else if (guna2txtMatKhau.Text == "")
+            else if (txtSDT.Text == "")
             {
                 MessageBox.Show("Mật khẩu không được bỏ trống", "Thông báo");
-                guna2txtMatKhau.Focus();
+                txtSDT.Focus();
                 return false;
             }
-            else if ( guna2txtHoTen.Text == "")
+            else if (txtHoTen.Text == "")
             {
                 MessageBox.Show("Tên người dùng không được bỏ trống", "Thông báo");
-                 guna2txtHoTen.Focus();
+                txtHoTen.Focus();
                 return false;
             }
             return true;
@@ -69,70 +66,59 @@ namespace WindowsFormsApp
 
         void ClearBinding()
         {
-            guna2txtTenDangNhap.DataBindings.Clear();
-             guna2txtHoTen.DataBindings.Clear();
-            guna2txtMatKhau.DataBindings.Clear();
+            txtMaNV.DataBindings.Clear();
+            txtHoTen.DataBindings.Clear();
+            txtSDT.DataBindings.Clear();
+            txtDiaChi.DataBindings.Clear();
+            cmbChucVu.DataBindings.Clear();
+        }
 
+        public void lamMoi()
+        {
+            txtMaNV.Text = "";
+            txtHoTen.Text = "";
+            txtSDT.Text = "";
+            txtDiaChi.Text = "";
         }
         public bool check = true;
-
-        public void resetData()
-        {
-            guna2txtTenDangNhap.Text = "";
-            guna2txtMatKhau.Text = "";
-             guna2txtHoTen.Text = "";
-        }
 
 
         private void guna2dgvThongTinNhanVien_SelectionChanged(object sender, EventArgs e)
         {
-            if (guna2dgvThongTinNhanVien.SelectedCells.Count > 0)
+            if (dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
-                guna2cmbChucVu.SelectedItem = guna2dgvThongTinNhanVien.SelectedCells[3].Value;
+                cmbChucVu.SelectedItem = dgvThongTinNhanVien.SelectedCells[3].Value;
                 ClearBinding();
                 loadBinding();
             }
         }
 
-        private void guna2txtTimKiem_TextChanged(object sender, EventArgs e)
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            guna2dgvThongTinNhanVien.DataSource = NhanVienBUS.Intance.searchEmployee(guna2txtTimKiem.Text);
+            dgvThongTinNhanVien.DataSource = QuanLyNhanVien.Intance.TimKiemNV(txtTimKiem.Text);
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            if (check == true)
-            {
-                check = !check; 
-                btnSua.Enabled = false;
-                btnXoa.Enabled = false;
-                btnThem.Text = "Lưu";
-                resetData();
-                guna2txtTenDangNhap.Focus();
-            }
-            else
-            {
-                if (KiemTraNhap())
-                {
-                    check = !check;
-                    btnSua.Enabled = true;
-                    btnXoa.Enabled = true;
-                    btnThem.Text = "Thêm";
-                    if (NhanVienBUS.Intance.insertEmployee(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
-                    {
-                        MessageBox.Show("Thêm thành công!", "Thông báo");
-                        LoadData();
-                    }
-                }
 
-            }
+        private void btnCapNhap_Click(object sender, EventArgs e)
+        {
+            check = !check;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            LoadData();
         }
 
-        private void btnSua_Click_1(object sender, EventArgs e)
+        private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            if (guna2dgvThongTinNhanVien.SelectedCells.Count > 0)
+            txtMaNV.Text = "";
+            txtSDT.Text = "";
+            txtHoTen.Text = "";
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            if (dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
-                if (NhanVienBUS.Intance.editEmployee(guna2txtTenDangNhap.Text, guna2txtMatKhau.Text,  guna2txtHoTen.Text, guna2cmbChucVu.SelectedItem.ToString()))
+                if (QuanLyNhanVien.Intance.suaNV(txtMaNV.Text, txtHoTen.Text, txtDiaChi.Text, txtSDT.Text))
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo");
                     LoadData();
@@ -140,30 +126,14 @@ namespace WindowsFormsApp
             }
         }
 
-        private void btnXoa_Click_1(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn có muốn xóa không?",
-            "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
+            if (QuanLyNhanVien.Intance.xoaNV(txtMaNV.Text))
             {
-                NhanVienBUS.Intance.deleteEmployee(guna2txtTenDangNhap.Text);
                 MessageBox.Show("Xóa thành công!", "Thông báo");
+                ClearBinding();
                 LoadData();
             }
-        }
-
-        private void btnCapNhap_Click(object sender, EventArgs e)
-        {
-            check = !check;
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-            btnThem.Text = "Thêm";
-            LoadData();
-        }
-
-        private void UC_Employee_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
