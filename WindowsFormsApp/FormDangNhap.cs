@@ -1,14 +1,14 @@
-﻿using BUS;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace WindowsFormsApp
 {
@@ -19,55 +19,113 @@ namespace WindowsFormsApp
             InitializeComponent();
         }
 
-        public static string tenNgDung, quyen, tk, matkhau;
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        public static string tenHienThi, quyen;
+
+        private bool check_data()
         {
-            string tenDangNhap = guna2TextBox1.Text;
-            string passWord = guna2TextBox2.Text;
-            int a;
-            if (int.TryParse(tenDangNhap, out a))
+            if (string.IsNullOrEmpty(txtTenDangNhap.Text))
             {
-                if (LoginCustomer(tenDangNhap, passWord))
-                {
-                    FormKhachHang kh = new FormKhachHang(KhachHangBUS.Intance.getDataByID(tenDangNhap));
-                    this.Hide();
-                    kh.ShowDialog();
-                    this.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
-                }
+                errtxtTaikhoan.SetError(txtTenDangNhap, " ");
+                lblCanhbao.Text = "Vui lòng nhập tài khoản";
+                lblCanhbao.ForeColor = Color.Brown;
+                return false;
             }
             else
+                errtxtTaikhoan.SetError(txtTenDangNhap, null);
+
+            if (string.IsNullOrEmpty(txtMatKhau.Text))
             {
-                if (Login(tenDangNhap, passWord))
-                {
-                    tenNgDung = NhanVienBUS.Intance.getEmployeeByID(tenDangNhap).TenNV;
-                    tk = tenDangNhap;
-                    quyen = NhanVienBUS.Intance.getEmployeeByID(tenDangNhap).Quyen;
-                    matkhau = NhanVienBUS.Intance.getEmployeeByID(tenDangNhap).MatKhau;
-                    FormTrangChu f = new FormTrangChu();
-                    this.Hide();
-                    f.ShowDialog();
-                    this.Show();
-                }
-                else
-                {
-                    MessageBox.Show("Sai tên tài khoản hoặc mật khẩu!");
-                }
+                errMatkhau.SetError(txtMatKhau, " ");
+                lblCanhbao.Text = "";
+                lblCanhbao.Text = "Vui lòng nhập mật khẩu";
+                lblCanhbao.ForeColor = Color.Brown;
+                return false;
             }
+            else
+                errtxtTaikhoan.SetError(txtMatKhau, null);
+
+            return true;
         }
+
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            lblCanhbao.Text = "";
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            lblCanhbao.Text = "";
+        }
+
+        private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkHienThiMK.Checked == true)
+            {
+                txtMatKhau.PasswordChar = '\0';
+            }
+            else
+                txtMatKhau.PasswordChar = '*';
+        }
+
+
+
 
         bool Login(string userName, string passWord)
         {
-            return NhanVienBUS.Intance.Login(userName, passWord);
+            return QuanLyNhanVien.Intance.Login(userName, passWord);
         }
 
-        bool LoginCustomer(string userName, string passWord)
+
+
+        private void btnDangKy_Click(object sender, EventArgs e)
         {
-            return KhachHangBUS.Intance.Login(userName, passWord);
+            FormDangKy FormDangKy = new FormDangKy();
+            FormDangKy.Show();
+            this.Hide();
+        }
+
+
+        private void lbQuenMK_Click(object sender, EventArgs e)
+        {
+            FormSDT FormSDT = new FormSDT();
+            FormSDT.Show();
+            this.Hide();
+        }
+
+        private void lblThoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+            if (check_data() == true)
+            {
+                string tenDangNhap = txtTenDangNhap.Text;
+                string passWord = txtMatKhau.Text;
+                if (Login(tenDangNhap, passWord))
+                {
+                    tenHienThi = QuanLyNhanVien.Intance.getNVByID(tenDangNhap).TenHienThi;
+                    quyen = QuanLyNhanVien.Intance.getNVByID(tenDangNhap).Quyen;
+                    FormTrangChu f = new FormTrangChu(txtTenDangNhap.Text); // txtTenDangNhap.Text
+                    f.Show();
+                    this.Hide();
+                }
+                else
+                    lblCanhbao.Text = "Sai tài khoản hoặc mật khẩu!";
+                lblCanhbao.ForeColor = Color.Brown;
+            }
+        }
+
+        private void lblCanhbao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp
 {
-    partial class FormBillInfo
+    partial class FormChiTietHD
     {
         /// <summary>
         /// Required designer variable.

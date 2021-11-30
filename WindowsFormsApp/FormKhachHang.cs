@@ -65,7 +65,7 @@ namespace WindowsFormsApp
         {
             if (e.RowIndex >= 0 && e.ColumnIndex > -0)
             {
-                FormBillInfo form = new FormBillInfo(dataGridView1.SelectedCells[0].Value.ToString());
+                FormChiTietHD form = new FormChiTietHD(dataGridView1.SelectedCells[0].Value.ToString());
                 form.ShowDialog();
             }
         }
