@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class CouponInfoDAO
+    public class ChiTietPNDAO
     {
-        private static CouponInfoDAO instance;
+        private static ChiTietPNDAO instance;
 
-        public CouponInfoDAO()
+        public ChiTietPNDAO()
         {
         }
 
-        public static CouponInfoDAO Intance
+        public static ChiTietPNDAO Intance
         {
-            get { if (instance == null) instance = new CouponInfoDAO(); return instance; }
+            get { if (instance == null) instance = new ChiTietPNDAO(); return instance; }
             set => instance = value;
         }
 

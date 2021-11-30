@@ -215,7 +215,6 @@ namespace WindowsFormsApp
             this.btnDoimatkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnDoimatkhau.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDoimatkhau.ForeColor = System.Drawing.Color.White;
-            this.btnDoimatkhau.Image = global::WindowsFormsApp.Properties.Resources.LamMoi;
             this.btnDoimatkhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDoimatkhau.Location = new System.Drawing.Point(509, 341);
             this.btnDoimatkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

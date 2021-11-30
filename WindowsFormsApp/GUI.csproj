@@ -215,7 +215,49 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chuoiketnoi.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKy.Designer.cs">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInHoaDon.Designer.cs">
+      <DependentUpon>FormInHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapHang.Designer.cs">
+      <DependentUpon>FormNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportThongKe.Designer.cs">
+      <DependentUpon>FormReportThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSDT.Designer.cs">
+      <DependentUpon>FormSDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,29 +270,23 @@
     <Compile Include="FormThemSanPham.Designer.cs">
       <DependentUpon>FormThemSanPham.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBillInfo.cs">
+    <Compile Include="FormDoiMatKhauMoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBillInfo.Designer.cs">
-      <DependentUpon>FormBillInfo.cs</DependentUpon>
+    <Compile Include="FormDoiMatKhauMoi.Designer.cs">
+      <DependentUpon>FormDoiMatKhauMoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDoiMatKhau.cs">
+    <Compile Include="FormThongTinHangMoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDoiMatKhau.Designer.cs">
-      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
+    <Compile Include="FormThongTinHangMoi.Designer.cs">
+      <DependentUpon>FormThongTinHangMoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCoupon.cs">
+    <Compile Include="FormThongTinNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCoupon.Designer.cs">
-      <DependentUpon>FormCoupon.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormKhachHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKhachHang.designer.cs">
-      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    <Compile Include="FormThongTinNhanVien.Designer.cs">
+      <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTrangChu.cs">
       <SubType>Form</SubType>
@@ -258,23 +294,11 @@
     <Compile Include="FormTrangChu.designer.cs">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDangNhap.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDangNhap.designer.cs">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDonViTinh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDonViTinh.Designer.cs">
-      <DependentUpon>FormDonViTinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -284,11 +308,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="UC_PhieuNhap.cs">
+    <Compile Include="UC_DoiMatKhau.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_PhieuNhap.Designer.cs">
-      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
+    <Compile Include="UC_DoiMatKhau.Designer.cs">
+      <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_KhachHang.cs">
       <SubType>UserControl</SubType>
@@ -307,6 +331,24 @@
     </Compile>
     <Compile Include="UC_NhanVien.Designer.cs">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ThongKeHoaDon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThongKeHoaDon.Designer.cs">
+      <DependentUpon>UC_ThongKeHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ThongKeKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThongKeKhachHang.Designer.cs">
+      <DependentUpon>UC_ThongKeKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ThongKePhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThongKePhieuNhap.Designer.cs">
+      <DependentUpon>UC_ThongKePhieuNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_TrangChu.cs">
       <SubType>UserControl</SubType>
@@ -332,11 +374,17 @@
     <Compile Include="UC_ThongKeHangHoa.Designer.cs">
       <DependentUpon>UC_ThongKeHangHoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_NhaCC.cs">
+    <Compile Include="UC_NhaCungCap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_NhaCC.Designer.cs">
-      <DependentUpon>UC_NhaCC.cs</DependentUpon>
+    <Compile Include="UC_NhaCungCap.Designer.cs">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_XacNhanSDT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_XacNhanSDT.Designer.cs">
+      <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormThemKhachHang.resx">
       <DependentUpon>FormThemKhachHang.cs</DependentUpon>
@@ -344,31 +392,16 @@
     <EmbeddedResource Include="FormThemSanPham.resx">
       <DependentUpon>FormThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBillInfo.resx">
-      <DependentUpon>FormBillInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDoiMatKhau.resx">
-      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKhachHang.resx">
-      <DependentUpon>FormKhachHang.cs</DependentUpon>
+    <EmbeddedResource Include="FormDoiMatKhauMoi.resx">
+      <DependentUpon>FormDoiMatKhauMoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDangNhap.resx">
-      <DependentUpon>FormDangNhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDonViTinh.resx">
-      <DependentUpon>FormDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UC_PhieuNhap.resx">
-      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
@@ -391,9 +424,20 @@
     <EmbeddedResource Include="UC_ThongKeHangHoa.resx">
       <DependentUpon>UC_ThongKeHangHoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_NhaCC.resx">
-      <DependentUpon>UC_NhaCC.cs</DependentUpon>
+    <EmbeddedResource Include="UC_NhaCungCap.resx">
+      <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

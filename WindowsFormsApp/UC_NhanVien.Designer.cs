@@ -383,7 +383,6 @@ namespace WindowsFormsApp
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnXoa.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Image = global::WindowsFormsApp.Properties.Resources.Xoa;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.Location = new System.Drawing.Point(846, 604);
             this.btnXoa.Name = "btnXoa";
@@ -398,7 +397,6 @@ namespace WindowsFormsApp
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnSua.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Image = global::WindowsFormsApp.Properties.Resources.Sua;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSua.Location = new System.Drawing.Point(711, 604);
             this.btnSua.Name = "btnSua";
@@ -413,7 +411,6 @@ namespace WindowsFormsApp
             this.btnLamMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
             this.btnLamMoi.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Image = global::WindowsFormsApp.Properties.Resources.LamMoi;
             this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLamMoi.Location = new System.Drawing.Point(579, 604);
             this.btnLamMoi.Name = "btnLamMoi";

@@ -27,50 +27,52 @@ namespace BUS
             return NhanVienDAO.Intance.Login(userName, passWord);
         }
 
-        public bool doiMatKhau(string tenDangNhap, string matKhauMoi)
+        public NhanVienDTO getNVByID(string id)
         {
-            return NhanVienDAO.Intance.changePassword(tenDangNhap, matKhauMoi);
+            return NhanVienDAO.Intance.getNVByID(id);
         }
 
-        public NhanVienDTO getEmployeeByID(string id)
+        public DataTable getListNV()
         {
-            return NhanVienDAO.Intance.getEmployeeByID(id);
+            return NhanVienDAO.Intance.getListNV();
         }
 
-        public DataTable getListEmployee()
+        public bool suaNV(string maNV, string tenNV, string DiaChi, string SDT)
         {
-            return NhanVienDAO.Intance.getListEmployee();
+            return NhanVienDAO.Intance.suaNV(maNV, tenNV, DiaChi, SDT);
         }
 
-        public bool insertEmployee(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
+        public bool xoaNV(string maNV)
         {
-            return NhanVienDAO.Intance.insertEmployee(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
+            return NhanVienDAO.Intance.xoaNV(maNV);
         }
 
-        public bool updateEmployee(string maNV, string tenNV, string sdt, string tenDangNhap, string matKhau, string quyen)
-        {
-            return NhanVienDAO.Intance.updateEmployee(maNV, tenNV, sdt, tenDangNhap, matKhau, quyen);
-        }
-
-        public bool deleteEmployee(string maKH)
-        {
-            return NhanVienDAO.Intance.deletedEmployee(maKH);
-        }
-
-        public DataTable searchEmployee(string name)
+        public DataTable TimKiemNV(string name)
         {
             return NhanVienDAO.Intance.TimKiemNV(name);
         }
 
-        public bool insertEmployee(string text1, string text2, string text3, string v)
+        public string loadMaNV()
         {
-            throw new NotImplementedException();
+            return NhanVienDAO.Intance.loadMaNV();
+        }
+ 
+        public bool themNV(string maNV, string tenNV, string Gioitinh, string DiaChi, string SDT, string Tendangnhap, string Matkhau)
+        {
+            return NhanVienDAO.Intance.themNV(maNV, tenNV, Gioitinh, DiaChi, SDT, Tendangnhap, Matkhau);
         }
 
-        public bool editEmployee(string text1, string text2, string text3, string v)
+        public bool capnhatmk(string mk, string sdt)
         {
-            throw new NotImplementedException();
+            return NhanVienDAO.Intance.capnhatmk(mk, sdt);
         }
+
+        public bool capnhatmk1(string mk, string tk)
+        {
+            return NhanVienDAO.Intance.capnhatmk1(mk, tk);
+        }
+
+
     }
 }
 

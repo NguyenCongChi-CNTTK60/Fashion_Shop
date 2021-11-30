@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class KhachHangDAO
+    public class KhachHangDAO
     {
         private static KhachHangDAO instance;
 

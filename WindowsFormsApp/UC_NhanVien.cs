@@ -37,7 +37,7 @@ namespace WindowsFormsApp
         void LoadData()
         {
             ClearBinding();
-            dgvThongTinNhanVien.DataSource = QuanLyNhanVien.Intance.getListNV();
+            dgvThongTinNhanVien.DataSource = NhanVienBUS.Intance.getListNV();
             loadBinding();
         }
 
@@ -95,7 +95,7 @@ namespace WindowsFormsApp
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvThongTinNhanVien.DataSource = QuanLyNhanVien.Intance.TimKiemNV(txtTimKiem.Text);
+            dgvThongTinNhanVien.DataSource = NhanVienBUS.Intance.TimKiemNV(txtTimKiem.Text);
         }
 
 
@@ -118,7 +118,7 @@ namespace WindowsFormsApp
         {
             if (dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
-                if (QuanLyNhanVien.Intance.suaNV(txtMaNV.Text, txtHoTen.Text, txtDiaChi.Text, txtSDT.Text))
+                if (NhanVienBUS.Intance.suaNV(txtMaNV.Text, txtHoTen.Text, txtDiaChi.Text, txtSDT.Text))
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo");
                     LoadData();
@@ -128,7 +128,7 @@ namespace WindowsFormsApp
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (QuanLyNhanVien.Intance.xoaNV(txtMaNV.Text))
+            if (NhanVienBUS.Intance.xoaNV(txtMaNV.Text))
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo");
                 ClearBinding();

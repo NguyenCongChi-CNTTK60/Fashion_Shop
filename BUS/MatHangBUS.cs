@@ -9,75 +9,73 @@ using System.Data;
 
 namespace BUS
 {
-    public class HangHoaBUS
+    public class MatHangBUS
     {
-        private static HangHoaBUS instance;
+        private static MatHangBUS instance;
 
-        public HangHoaBUS()
+        public MatHangBUS()
         {
         }
 
-        public static HangHoaBUS Intance
+        public static MatHangBUS Intance
         {
-            get { if (instance == null) instance = new HangHoaBUS(); return instance; }
+            get { if (instance == null) instance = new MatHangBUS(); return instance; }
             set => instance = value;
         }
 
-        public bool temHH(HangHoaDTO data, string imgLocation)
+        public bool temHH(MatHangDTO data, string imgLocation)
         {
-            return HangHoaDAO.Intance.imageGoods(data, imgLocation);
+            return MatHangDAO.Intance.temHH(data, imgLocation);
         }
 
         public void capNhatHinh(string imgLocation, string maHang)
         {
-            HangHoaDAO.Intance.updateImages(imgLocation, maHang);
+            MatHangDAO.Intance.capNhatHinh(imgLocation, maHang);
         }
 
         public byte[] getAnhByID(string ID)
         {
-            return HangHoaDAO.Intance.getImageByID(ID);
+            return MatHangDAO.Intance.getAnhByID(ID);
         }
 
-        public List<HangHoaDTO> getListSanPham()
+        public List<MatHangDTO> getListSanPham()
         {
-            return HangHoaDAO.Intance.getListProduct();
+            return MatHangDAO.Intance.getListSanPham();
         }
 
-        public HangHoaDTO getSP(string maSP)
+        public MatHangDTO getSP(string maSP)
         {
-            return HangHoaDAO.Intance.getProduct(maSP);
+            return MatHangDAO.Intance.getSP(maSP);
         }
 
-        public bool suaHH(string MaHang, string TenHH, string DVT, int SoLuong, int GiaGoc, int GiaBan)
+        public bool suaHH(string MaHang, string TenHH, string DVT, int SoLuong, int GiaBan)
         {
-            return HangHoaDAO.Intance.editGoods(MaHang, TenHH, DVT, SoLuong, GiaGoc, GiaBan);
+            return MatHangDAO.Intance.suaHH(MaHang, TenHH, DVT, SoLuong, GiaBan);
         }
 
-        public bool checkDelete(string maHang)
+        public bool kiemtraXoa(string maHang)
         {
-            return HangHoaDAO.Intance.checkDelete(maHang);
+            return MatHangDAO.Intance.kiemtraXoa(maHang);
         }
 
-        public bool updateGoods(string maHang, int SL, int DonGia)
+        public bool capNhatHH(string maHang, int SL, int DonGia)
         {
-            return HangHoaDAO.Intance.updateGoods(maHang, SL, DonGia);
+            return MatHangDAO.Intance.capNhatHH(maHang, SL, DonGia);
         }
 
-        public bool deleteGoods(string maKH)
+        public bool xoaHang(string maKH)
         {
-            return HangHoaDAO.Intance.deleteGoods(maKH);
+            return MatHangDAO.Intance.xoaHang(maKH);
         }
 
-        public string loadIDGoods()
+        public string loadMaHH()
         {
-            return HangHoaDAO.Intance.loadIDGoods();
+            return MatHangDAO.Intance.loadMaHH();
         }
 
-        public DataTable searchGoods(string maPN)
+        public DataTable TimKiemHH(string maPN)
         {
-            return HangHoaDAO.Intance.searchGoods(maPN);
+            return MatHangDAO.Intance.TimKiemHH(maPN);
         }
     }
 }
-
-

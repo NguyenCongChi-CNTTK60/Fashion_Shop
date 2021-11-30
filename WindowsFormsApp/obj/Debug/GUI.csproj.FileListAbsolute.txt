@@ -690,14 +690,8 @@ D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\GUI.csproj.AssemblyReferenc
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\GUI.csproj.ResolveComReference.cache
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormThemKhachHang.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormThemSanPham.resources
-D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormBillInfo.resources
-D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDoiMatKhau.resources
-D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormKhachHang.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormTrangChu.resources
-D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDangNhap.resources
-D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDonViTinh.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
-D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_PhieuNhap.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhachHang.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhoHang.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhanVien.resources
@@ -705,9 +699,10 @@ D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_TrangChu
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_BanHang.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKe.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKeHangHoa.resources
-D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhaCC.resources
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\GUI.csproj.GenerateResource.cache
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDoiMatKhauMoi.resources
+D:\C#\pj\store-manager-app\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhaCungCap.resources

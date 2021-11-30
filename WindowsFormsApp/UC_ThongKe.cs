@@ -12,87 +12,49 @@ namespace WindowsFormsApp
 {
     public partial class UC_ThongKe : UserControl
     {
-        DateTime today = DateTime.Now;
         public UC_ThongKe()
         {
             InitializeComponent();
-            loadDatePicker();
-            fillChart();
         }
 
-        private void loadDatePicker()
+        private void addUC(UserControl userControl)
         {
-            // ngayBD.Value = new DateTime(today.Year, today.Month, 1);
-            //toDate.Value = ngayBD.Value.AddMonths(1).AddDays(-1);
+            userControl.Dock = DockStyle.Fill;
+            pnlTK.Controls.Clear();
+            pnlTK.Controls.Add(userControl);
+            userControl.BringToFront();
         }
 
-        private void fillChart()
+        private void btnHoadon_Click_1(object sender, EventArgs e)
         {
-            chartThongKeHD.Titles.Clear();
-            string query = string.Format("EXEC USP_ThongKe7Ngay {0}", 2020);
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            chartThongKeHD.DataSource = data;
-            chartThongKeHD.Series["Doanh Thu"].XValueMember = "THANG";
-            chartThongKeHD.Series["Doanh Thu"].YValueMembers = "TONGTIEN";
-            chartThongKeHD.Titles.Add("THỐNG KÊ LỢI NHUẬN");
+
+            UC_ThongKeHoaDon uC_Thongkehoadon = new UC_ThongKeHoaDon();
+            addUC(uC_Thongkehoadon);
         }
 
-        private void UC_ThongKe_Load(object sender, EventArgs e)
+        private void btnHanghoa_Click_1(object sender, EventArgs e)
         {
-            //   fillChart();
-        }
-        private void addControlsToPanel1(Control c)
-        {
-            c.Dock = DockStyle.Fill;
-            panelControls1.Controls.Clear();
-            panelControls1.Controls.Add(c);
+
+            UC_ThongKeHangHoa uC_ThongKehanghoa = new UC_ThongKeHangHoa();
+            addUC(uC_ThongKehanghoa);
         }
 
-        private void btnTKHangHoa_Click_1(object sender, EventArgs e)
+        private void btnKhachhang_Click_1(object sender, EventArgs e)
         {
-            UC_ThongKeHangHoa.check = 1;
-            UC_ThongKeHangHoa nv = new UC_ThongKeHangHoa();
-            addControlsToPanel1(nv);
+
+            UC_ThongKeKhachHang uC_Thongkekhachhang = new UC_ThongKeKhachHang();
+            addUC(uC_Thongkekhachhang);
         }
 
-        private void btnTKPhieuNhap_Click_1(object sender, EventArgs e)
+        private void btnphieunhap_Click_1(object sender, EventArgs e)
         {
-            UC_ThongKeHangHoa.check = 2;
-            UC_ThongKeHangHoa nv = new UC_ThongKeHangHoa();
-            addControlsToPanel1(nv);
+            UC_ThongKePhieuNhap uC_Thongkephieunhap = new UC_ThongKePhieuNhap();
+            addUC(uC_Thongkephieunhap);
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void pnlButton_Paint(object sender, PaintEventArgs e)
         {
-            //fillChart();
-        }
 
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            // Thong Ke Hoa Don
-            UC_ThongKeHangHoa.check = 3;
-            UC_ThongKeHangHoa nv = new UC_ThongKeHangHoa();
-            addControlsToPanel1(nv);
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            UC_ThongKeHangHoa.check = 4;
-            UC_ThongKeHangHoa nv = new UC_ThongKeHangHoa();
-            addControlsToPanel1(nv);
-        }
-       
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            chartThongKeHD.Titles.Clear();
-            string query = string.Format("EXEC USP_ThongKe7Ngay '{0}' ", comboBox1.SelectedItem.ToString());
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            chartThongKeHD.DataSource = data;
-            chartThongKeHD.Series["Doanh Thu"].XValueMember = "THANG";
-            chartThongKeHD.Series["Doanh Thu"].YValueMembers = "TONGTIEN";
-            chartThongKeHD.Titles.Add("THỐNG KÊ LỢI NHUẬN");
         }
     }
 }

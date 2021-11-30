@@ -21,7 +21,7 @@ namespace WindowsFormsApp
 
         public void LoadListKH()
         {
-            DataTable dt = QuanLyKhachHang.Intance.getListKH();
+            DataTable dt = KhachHangBUS.Intance.getListKH();
             dgvThongTinKhachHang.DataSource = dt;
             loadBinding();
         }
@@ -85,7 +85,7 @@ namespace WindowsFormsApp
                 }
                 else
                 {
-                    if (QuanLyKhachHang.Intance.themKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, txtSDT.Text, txtEmail.Text))
+                    if (KhachHangBUS.Intance.themKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, txtSDT.Text, txtEmail.Text))
                     {
                         MessageBox.Show("Thêm khách hàng thành công!", "Thông báo");
                         ClearBinding();
@@ -114,7 +114,7 @@ namespace WindowsFormsApp
                 txtSDT.Enabled = false;
                 txtEmail.Enabled = false;
                 txtDiaChi.Enabled = false;
-                if (QuanLyKhachHang.Intance.suaKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, Convert.ToInt32(txtSDT.Text), txtEmail.Text))
+                if (KhachHangBUS.Intance.suaKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, Convert.ToInt32(txtSDT.Text), txtEmail.Text))
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo");
                     btnThem.Enabled = true;
@@ -126,7 +126,7 @@ namespace WindowsFormsApp
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (QuanLyKhachHang.Intance.xoaKH(txtMaKH.Text))
+            if (KhachHangBUS.Intance.xoaKH(txtMaKH.Text))
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo");
                 ClearBinding();
@@ -136,7 +136,7 @@ namespace WindowsFormsApp
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
-            dgvThongTinKhachHang.DataSource = QuanLyKhachHang.Intance.TimKiemKH(txtTimKiem.Text);
+            dgvThongTinKhachHang.DataSource = KhachHangBUS.Intance.TimKiemKH(txtTimKiem.Text);
             ClearBinding();
             loadBinding();
         }

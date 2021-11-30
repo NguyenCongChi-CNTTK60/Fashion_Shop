@@ -10,17 +10,17 @@ using DTO;
 
 namespace DAO
 {
-    public class DAO_MatHang
+    public class MatHangDAO
     {
-        private static DAO_MatHang instance;
+        private static MatHangDAO instance;
 
-        public DAO_MatHang()
+        public MatHangDAO()
         {
         }
 
-        public static DAO_MatHang Intance
+        public static MatHangDAO Intance
         {
-            get { if (instance == null) instance = new DAO_MatHang(); return instance; }
+            get { if (instance == null) instance = new MatHangDAO(); return instance; }
             set => instance = value;
         }
 

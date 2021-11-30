@@ -48,6 +48,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Chuoiketnoi.cs" />
     <Compile Include="NhaCungCapDAO.cs" />
     <Compile Include="DonViTinhDAO.cs" />
     <Compile Include="HoaDonDAO.cs">
@@ -58,11 +59,11 @@
     <Compile Include="ChiTietHDDAO.cs" />
     <Compile Include="ChuyenDoiTienDAO.cs" />
     <Compile Include="PhieuNhapDAO.cs" />
-    <Compile Include="CouponInfoDAO.cs" />
+    <Compile Include="ChiTietPNDAO.cs" />
     <Compile Include="KhachHangDAO.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="NhanVienDAO.cs" />
-    <Compile Include="HangHoaDAO.cs" />
+    <Compile Include="MatHangDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

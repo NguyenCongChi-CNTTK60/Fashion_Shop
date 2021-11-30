@@ -73,7 +73,7 @@ namespace WindowsFormsApp
 
         bool Login(string userName, string passWord)
         {
-            return QuanLyNhanVien.Intance.Login(userName, passWord);
+            return NhanVienBUS.Intance.Login(userName, passWord);
         }
 
 
@@ -106,8 +106,8 @@ namespace WindowsFormsApp
                 string passWord = txtMatKhau.Text;
                 if (Login(tenDangNhap, passWord))
                 {
-                    tenHienThi = QuanLyNhanVien.Intance.getNVByID(tenDangNhap).TenHienThi;
-                    quyen = QuanLyNhanVien.Intance.getNVByID(tenDangNhap).Quyen;
+                    tenHienThi = NhanVienBUS.Intance.getNVByID(tenDangNhap).TenHienThi;
+                    quyen = NhanVienBUS.Intance.getNVByID(tenDangNhap).Quyen;
                     FormTrangChu f = new FormTrangChu(txtTenDangNhap.Text); // txtTenDangNhap.Text
                     f.Show();
                     this.Hide();

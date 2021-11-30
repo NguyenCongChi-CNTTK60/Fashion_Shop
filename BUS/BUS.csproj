@@ -61,7 +61,7 @@
     <Compile Include="ChiTietPNBUS.cs" />
     <Compile Include="KhachHangBUS.cs" />
     <Compile Include="NhanVienBUS.cs" />
-    <Compile Include="HangHoaBUS.cs" />
+    <Compile Include="MatHangBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

@@ -60,7 +60,7 @@
     <Compile Include="ChiTietPNDTO.cs" />
     <Compile Include="KhachHangDTO.cs" />
     <Compile Include="NhanVienDTO.cs" />
-    <Compile Include="HangHoaDTO.cs" />
+    <Compile Include="MatHangDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

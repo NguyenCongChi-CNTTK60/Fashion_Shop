@@ -50,11 +50,11 @@ namespace WindowsFormsApp
         {
             if (kiemTra())
             {
-                if (KhachHangBUS.Intance.themKH(txtMaKH.Text, txtHoTen.Text, "", txtSDT.Text, "", "","123456"))
+                if (KhachHangBUS.Intance.themKH(txtMaKH.Text, txtHoTen.Text, "", txtSDT.Text, ""))
                 {
                     MessageBox.Show("Thêm thành công!", "Thông báo");
-                    uc.txtInPutNumberPhone.Text = "";
-                    uc.txtInPutNumberPhone.Text = txtSDT.Text;
+                    uc.txtSDT.Text = "";
+                    uc.txtSDT.Text = txtSDT.Text;
                     this.Close();
                 }
             }

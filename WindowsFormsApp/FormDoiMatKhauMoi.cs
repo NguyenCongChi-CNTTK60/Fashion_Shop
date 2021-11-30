@@ -34,12 +34,12 @@ namespace WindowsFormsApp
 
         bool Login(string userName, string passWord)
         {
-            return QuanLyNhanVien.Intance.Login(userName, passWord);
+            return NhanVienBUS.Intance.Login(userName, passWord);
         }
 
         bool Doimkmoi(string userName, string passWord)
         {
-            return QuanLyNhanVien.Intance.capnhatmk1(userName, passWord);
+            return NhanVienBUS.Intance.capnhatmk1(userName, passWord);
         }
 
 
