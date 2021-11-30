@@ -4,10 +4,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace DAO
 {
-    class NhanVienDAO
+    public class NhanVienDAO
     {
         private static NhanVienDAO instance;
 
@@ -30,11 +31,11 @@ namespace DAO
             return result.Rows.Count > 0;
         }
 
-        public Models.NhanVien getNVByID(string id)
+        public NhanVienDTO getNVByID(string id)
         {
             string query = "SELECT * FROM NhanVien WHERE TenDangNhap = N'" + id + "'";
             DataRow a = DataProvider.Instance.ExecuteQuery(query).Rows[0];
-            return new Models.NhanVien(a);
+            return new NhanVienDTO(a);
         }
 
         public DataTable getListNV()

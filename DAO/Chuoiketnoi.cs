@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    class Chuoiketnoi
+    public  class Chuoiketnoi
     {
         string str;
         public Chuoiketnoi()

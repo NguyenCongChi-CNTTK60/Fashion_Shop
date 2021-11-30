@@ -27,14 +27,14 @@ namespace BUS
             return KhachHangDAO.Intance.getListKH();
         }
 
-        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang, string matKhau)
+        public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
         {
-            return KhachHangDAO.Intance.themKH(maKH, tenKH, DiaChi, SDT, email, maHang, matKhau);
+            return KhachHangDAO.Intance.themKH(maKH, tenKH, DiaChi, SDT, email);
         }
 
-        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email, string maHang)
+        public bool suaKH(string maKH, string tenKH, string DiaChi, int SDT, string email)
         {
-            return KhachHangDAO.Intance.suaKH(maKH, tenKH, DiaChi, SDT, email, maHang);
+            return KhachHangDAO.Intance.suaKH(maKH, tenKH, DiaChi, SDT, email);
         }
 
         public bool xoaKH(string maKH)
@@ -50,26 +50,6 @@ namespace BUS
         public string loadMaKH()
         {
             return KhachHangDAO.Intance.loadMaKH();
-        }
-
-        public KhachHangDTO GetTenBySDT(string id)
-        {
-            return KhachHangDAO.Intance.GetTenBySDT(id);
-        }
-
-        public bool Login(string username, string pass)
-        {
-            return KhachHangDAO.Intance.Login(username, pass);
-        }
-
-        public KhachHangDTO getDataByID(string id)
-        {
-            return KhachHangDAO.Intance.getDataByID(id);
-        }
-
-        public bool doiMatKhau(string maKH, string matKhauMoi)
-        {
-            return KhachHangDAO.Intance.doiMatKhau(maKH, matKhauMoi);
         }
     }
 }
