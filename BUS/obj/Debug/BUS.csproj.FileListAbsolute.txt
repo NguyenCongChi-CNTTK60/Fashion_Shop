@@ -24,3 +24,16 @@ D:\C#\pj\circleK-app-project\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\C#\pj\circleK-app-project\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\C#\pj\circleK-app-project\BUS\obj\Debug\BUS.dll
 D:\C#\pj\circleK-app-project\BUS\obj\Debug\BUS.pdb
+D:\C#\pj\store-manager-app\BUS\bin\Debug\BUS.dll
+D:\C#\pj\store-manager-app\BUS\bin\Debug\BUS.pdb
+D:\C#\pj\store-manager-app\BUS\bin\Debug\DAO.dll
+D:\C#\pj\store-manager-app\BUS\bin\Debug\DTO.dll
+D:\C#\pj\store-manager-app\BUS\bin\Debug\DAO.pdb
+D:\C#\pj\store-manager-app\BUS\bin\Debug\DTO.pdb
+D:\C#\pj\store-manager-app\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\C#\pj\store-manager-app\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\C#\pj\store-manager-app\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\C#\pj\store-manager-app\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\C#\pj\store-manager-app\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\C#\pj\store-manager-app\BUS\obj\Debug\BUS.dll
+D:\C#\pj\store-manager-app\BUS\obj\Debug\BUS.pdb

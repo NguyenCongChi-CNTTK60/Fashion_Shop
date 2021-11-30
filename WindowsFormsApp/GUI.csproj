@@ -216,17 +216,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataProvider.cs" />
-    <Compile Include="FormAddCustomer.cs">
+    <Compile Include="FormThemKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddCustomer.Designer.cs">
-      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    <Compile Include="FormThemKhachHang.Designer.cs">
+      <DependentUpon>FormThemKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAddProducts.cs">
+    <Compile Include="FormThemSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAddProducts.Designer.cs">
-      <DependentUpon>FormAddProducts.cs</DependentUpon>
+    <Compile Include="FormThemSanPham.Designer.cs">
+      <DependentUpon>FormThemSanPham.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBillInfo.cs">
       <SubType>Form</SubType>
@@ -234,11 +234,11 @@
     <Compile Include="FormBillInfo.Designer.cs">
       <DependentUpon>FormBillInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChangePassword.cs">
+    <Compile Include="FormDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChangePassword.Designer.cs">
-      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    <Compile Include="FormDoiMatKhau.Designer.cs">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="FormCoupon.cs">
       <SubType>Form</SubType>
@@ -246,23 +246,23 @@
     <Compile Include="FormCoupon.Designer.cs">
       <DependentUpon>FormCoupon.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCustomer.cs">
+    <Compile Include="FormKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCustomer.designer.cs">
-      <DependentUpon>FormCustomer.cs</DependentUpon>
+    <Compile Include="FormKhachHang.designer.cs">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormHomePage.cs">
+    <Compile Include="FormTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormHomePage.designer.cs">
-      <DependentUpon>FormHomePage.cs</DependentUpon>
+    <Compile Include="FormTrangChu.designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="FormDangNhap.designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="FormReport.cs">
       <SubType>Form</SubType>
@@ -270,11 +270,11 @@
     <Compile Include="FormReport.Designer.cs">
       <DependentUpon>FormReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUnit.cs">
+    <Compile Include="FormDonViTinh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUnit.Designer.cs">
-      <DependentUpon>FormUnit.cs</DependentUpon>
+    <Compile Include="FormDonViTinh.Designer.cs">
+      <DependentUpon>FormDonViTinh.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -284,115 +284,115 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="UC_Coupon.cs">
+    <Compile Include="UC_PhieuNhap.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Coupon.Designer.cs">
-      <DependentUpon>UC_Coupon.cs</DependentUpon>
+    <Compile Include="UC_PhieuNhap.Designer.cs">
+      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Customer.cs">
+    <Compile Include="UC_KhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Customer.Designer.cs">
-      <DependentUpon>UC_Customer.cs</DependentUpon>
+    <Compile Include="UC_KhachHang.Designer.cs">
+      <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Depot.cs">
+    <Compile Include="UC_KhoHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Depot.Designer.cs">
-      <DependentUpon>UC_Depot.cs</DependentUpon>
+    <Compile Include="UC_KhoHang.Designer.cs">
+      <DependentUpon>UC_KhoHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Employee.cs">
+    <Compile Include="UC_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Employee.Designer.cs">
-      <DependentUpon>UC_Employee.cs</DependentUpon>
+    <Compile Include="UC_NhanVien.Designer.cs">
+      <DependentUpon>UC_NhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_HomePage.cs">
+    <Compile Include="UC_TrangChu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_HomePage.Designer.cs">
-      <DependentUpon>UC_HomePage.cs</DependentUpon>
+    <Compile Include="UC_TrangChu.Designer.cs">
+      <DependentUpon>UC_TrangChu.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Sell.cs">
+    <Compile Include="UC_BanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Sell.Designer.cs">
-      <DependentUpon>UC_Sell.cs</DependentUpon>
+    <Compile Include="UC_BanHang.Designer.cs">
+      <DependentUpon>UC_BanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Statistic.cs">
+    <Compile Include="UC_ThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Statistic.Designer.cs">
-      <DependentUpon>UC_Statistic.cs</DependentUpon>
+    <Compile Include="UC_ThongKe.Designer.cs">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_StatisticGoods.cs">
+    <Compile Include="UC_ThongKeHangHoa.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_StatisticGoods.Designer.cs">
-      <DependentUpon>UC_StatisticGoods.cs</DependentUpon>
+    <Compile Include="UC_ThongKeHangHoa.Designer.cs">
+      <DependentUpon>UC_ThongKeHangHoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Supplier.cs">
+    <Compile Include="UC_NhaCC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Supplier.Designer.cs">
-      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    <Compile Include="UC_NhaCC.Designer.cs">
+      <DependentUpon>UC_NhaCC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormAddCustomer.resx">
-      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="FormThemKhachHang.resx">
+      <DependentUpon>FormThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAddProducts.resx">
-      <DependentUpon>FormAddProducts.cs</DependentUpon>
+    <EmbeddedResource Include="FormThemSanPham.resx">
+      <DependentUpon>FormThemSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBillInfo.resx">
       <DependentUpon>FormBillInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChangePassword.resx">
-      <DependentUpon>FormChangePassword.cs</DependentUpon>
+    <EmbeddedResource Include="FormDoiMatKhau.resx">
+      <DependentUpon>FormDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCustomer.resx">
-      <DependentUpon>FormCustomer.cs</DependentUpon>
+    <EmbeddedResource Include="FormKhachHang.resx">
+      <DependentUpon>FormKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormHomePage.resx">
-      <DependentUpon>FormHomePage.cs</DependentUpon>
+    <EmbeddedResource Include="FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUnit.resx">
-      <DependentUpon>FormUnit.cs</DependentUpon>
+    <EmbeddedResource Include="FormDonViTinh.resx">
+      <DependentUpon>FormDonViTinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Coupon.resx">
-      <DependentUpon>UC_Coupon.cs</DependentUpon>
+    <EmbeddedResource Include="UC_PhieuNhap.resx">
+      <DependentUpon>UC_PhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Customer.resx">
-      <DependentUpon>UC_Customer.cs</DependentUpon>
+    <EmbeddedResource Include="UC_KhachHang.resx">
+      <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Depot.resx">
-      <DependentUpon>UC_Depot.cs</DependentUpon>
+    <EmbeddedResource Include="UC_KhoHang.resx">
+      <DependentUpon>UC_KhoHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Employee.resx">
-      <DependentUpon>UC_Employee.cs</DependentUpon>
+    <EmbeddedResource Include="UC_NhanVien.resx">
+      <DependentUpon>UC_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_HomePage.resx">
-      <DependentUpon>UC_HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="UC_TrangChu.resx">
+      <DependentUpon>UC_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Sell.resx">
-      <DependentUpon>UC_Sell.cs</DependentUpon>
+    <EmbeddedResource Include="UC_BanHang.resx">
+      <DependentUpon>UC_BanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Statistic.resx">
-      <DependentUpon>UC_Statistic.cs</DependentUpon>
+    <EmbeddedResource Include="UC_ThongKe.resx">
+      <DependentUpon>UC_ThongKe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_StatisticGoods.resx">
-      <DependentUpon>UC_StatisticGoods.cs</DependentUpon>
+    <EmbeddedResource Include="UC_ThongKeHangHoa.resx">
+      <DependentUpon>UC_ThongKeHangHoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Supplier.resx">
-      <DependentUpon>UC_Supplier.cs</DependentUpon>
+    <EmbeddedResource Include="UC_NhaCC.resx">
+      <DependentUpon>UC_NhaCC.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

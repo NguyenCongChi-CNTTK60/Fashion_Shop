@@ -48,20 +48,20 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SupplierBUS.cs" />
-    <Compile Include="UnitBUS.cs" />
-    <Compile Include="BillBUS.cs">
+    <Compile Include="NhaCungCapBUS.cs" />
+    <Compile Include="DonViTinhBUS.cs" />
+    <Compile Include="HoaDonBUS.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillInfoBUS.cs" />
-    <Compile Include="ConvertMoneyBUS.cs" />
-    <Compile Include="CouponBUS.cs" />
-    <Compile Include="CouponInfoBUS.cs" />
-    <Compile Include="CustomerBUS.cs" />
-    <Compile Include="EmployeeBUS.cs" />
-    <Compile Include="GoodsBUS.cs" />
+    <Compile Include="ChiTietHDBUS.cs" />
+    <Compile Include="ChuyenDoiTienBUS.cs" />
+    <Compile Include="PhieuNhapBUS.cs" />
+    <Compile Include="ChiTietPNBUS.cs" />
+    <Compile Include="KhachHangBUS.cs" />
+    <Compile Include="NhanVienBUS.cs" />
+    <Compile Include="HangHoaBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

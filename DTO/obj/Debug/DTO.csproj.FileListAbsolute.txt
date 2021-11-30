@@ -14,3 +14,11 @@ D:\C#\pj\circleK-app-project\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
 D:\C#\pj\circleK-app-project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\C#\pj\circleK-app-project\DTO\obj\Debug\DTO.dll
 D:\C#\pj\circleK-app-project\DTO\obj\Debug\DTO.pdb
+D:\C#\pj\store-manager-app\DTO\bin\Debug\DTO.dll
+D:\C#\pj\store-manager-app\DTO\bin\Debug\DTO.pdb
+D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.Properties.Resources.resources
+D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.dll
+D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.pdb

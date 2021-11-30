@@ -15,7 +15,7 @@ namespace WindowsFormsApp
 {
     public partial class FormCoupon : Form
     {
-        string maPN = CouponBUS.Intance.loadID();
+        string maPN = PhieuNhapBUS.Intance.loadIDCoupon();
         DateTime DatePNSua = DateTime.Now;
         public FormCoupon()
         {
@@ -50,9 +50,9 @@ namespace WindowsFormsApp
 
         void loadData()
         {
-            List<GoodsDTO> list = GoodsBUS.Intance.getListSanPham();
+            List<HangHoaDTO> list = HangHoaBUS.Intance.getListSanPham();
             AutoCompleteStringCollection arrName = new AutoCompleteStringCollection();
-            foreach (GoodsDTO item in list)
+            foreach (HangHoaDTO item in list)
             {
                 arrName.Add(item.TenMH);
             }
@@ -62,9 +62,9 @@ namespace WindowsFormsApp
             cbbSanPham.ValueMember = "MaHang";
             cbbSanPham.SelectedIndex = -1;
 
-            List<SupplierDTO> list2 = SupplierBUS.Intance.getListSupplier();
+            List<NhaCungCapDTO> list2 = NhaCungCapBUS.Intance.getListNCC();
             AutoCompleteStringCollection arrName2 = new AutoCompleteStringCollection();
-            foreach (SupplierDTO item in list2)
+            foreach (NhaCungCapDTO item in list2)
             {
                 arrName2.Add(item.TenNCC);
             }
@@ -89,23 +89,23 @@ namespace WindowsFormsApp
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            CouponBUS.Intance.deleteCoupon(maPN);
+            PhieuNhapBUS.Intance.deleteCoupon(maPN);
             if (cbbNCC.SelectedIndex == -1)
             {
                 MessageBox.Show("Hãy chọn nhà cung cấp!");
             }
             else
             {
-                if (CouponBUS.Intance.insertCoupon(maPN, cbbNCC.SelectedValue.ToString(), DatePNSua, FormLogin.tk))
+                if (PhieuNhapBUS.Intance.insertCoupon(maPN, cbbNCC.SelectedValue.ToString(), DatePNSua, FormDangNhap.tk))
                 {
                     for (int i = 0; i < dgvCTPN.Rows.Count - 1; i++)
                     {
                         string maHang = dgvCTPN.Rows[i].Cells[0].Value.ToString();
                         int soluong = int.Parse(dgvCTPN.Rows[i].Cells[2].Value.ToString());
                         int dongia = int.Parse(dgvCTPN.Rows[i].Cells[3].Value.ToString());
-                        if (CouponInfoBUS.Intance.saveCoupon(maPN, maHang, soluong, dongia))
+                        if (ChiTietPNBUS.Intance.saveCoupon(maPN, maHang, soluong, dongia))
                         {
-                            GoodsBUS.Intance.capNhatHH(maHang, soluong, dongia);
+                            HangHoaBUS.Intance.updateGoods(maHang, soluong, dongia);
                         }
                     }
                     MessageBox.Show("Thành Công");
@@ -142,11 +142,11 @@ namespace WindowsFormsApp
                 {
                     DataGridViewRow row = (DataGridViewRow)dgvCTPN.Rows[0].Clone();
                     row.Cells[0].Value = cbbSanPham.SelectedValue;
-                    row.Cells[1].Value = GoodsBUS.Intance.getSP(cbbSanPham.SelectedValue.ToString()).TenMH;
+                    row.Cells[1].Value = HangHoaBUS.Intance.getSP(cbbSanPham.SelectedValue.ToString()).TenMH;
                     row.Cells[2].Value = 100;
-                    row.Cells[3].Value = GoodsBUS.Intance.getSP(cbbSanPham.SelectedValue.ToString()).GiaGoc;
+                    row.Cells[3].Value = HangHoaBUS.Intance.getSP(cbbSanPham.SelectedValue.ToString()).GiaGoc;
                     row.Cells[4].Value = DateTime.Now;
-                    row.Cells[5].Value = FormLogin.tenNgDung;
+                    row.Cells[5].Value = FormDangNhap.tenNgDung;
                     dgvCTPN.Rows.Add(row);
                     if (row.Cells[2].Value != null && row.Cells[3].Value != null)
                     {

@@ -48,19 +48,19 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SupplierDTO.cs" />
-    <Compile Include="UnitDTO.cs" />
-    <Compile Include="BillDTO.cs">
+    <Compile Include="NhaCungCapDTO.cs" />
+    <Compile Include="DonViTinhDTO.cs" />
+    <Compile Include="HoaDonDTO.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BillInfoDTO.cs" />
-    <Compile Include="CouponDTO.cs" />
-    <Compile Include="CouponInfoDTO.cs" />
-    <Compile Include="CustomerDTO.cs" />
-    <Compile Include="EmployeeDTO.cs" />
-    <Compile Include="GoodsDTO.cs" />
+    <Compile Include="ChiTietHDDTO.cs" />
+    <Compile Include="PhieuNhapDTO.cs" />
+    <Compile Include="ChiTietPNDTO.cs" />
+    <Compile Include="KhachHangDTO.cs" />
+    <Compile Include="NhanVienDTO.cs" />
+    <Compile Include="HangHoaDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
