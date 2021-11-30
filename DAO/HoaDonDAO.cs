@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using DTO;
-using System.Data;
 
 namespace DAO
 {
-    public class HoaDonDAO
+    class HoaDonDAO
     {
         private static HoaDonDAO instance;
 
         public HoaDonDAO()
         {
         }
+
         public static HoaDonDAO Intance
         {
             get { if (instance == null) instance = new HoaDonDAO(); return instance; }
@@ -42,16 +42,10 @@ namespace DAO
         public bool LuuDonHang(HoaDonDTO dh)
         {
             // Convert datetime to date SQL Server 
-            string query = String.Format("insert into HoaDon values('{0}','{1}','{2}','{3}','{4}')", dh.MaHD, dh.MaKH, dh.NgayTao, dh.TenDangNhap, dh.TongTien);
+            string query = String.Format("insert into HoaDon values('{0}','{1}','{2}','{3}','{4}')", dh.MaHD, dh.MaKH, dh.NgayTao, dh.MaNV, dh.TongTien);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public DataTable LoadDanhSachDonHangTheoKH(string MaKH)
-        {
-            string query = "select * from HoaDon where MaKH ='" + MaKH + "'";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            return data;
-        }
     }
 }

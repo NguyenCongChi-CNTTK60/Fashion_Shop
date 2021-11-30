@@ -9,7 +9,7 @@ namespace DTO
 {
     public class KhachHangDTO
     {
-        private string maKH, tenKH, diaChi, SDT, email, matKhau, maHang;
+        private string maKH, tenKH, diaChi, SDT, email;
 
         public KhachHangDTO()
         {
@@ -22,8 +22,6 @@ namespace DTO
             this.DiaChi = row["DiaChi"].ToString();
             this.SDT1 = row["SDT"].ToString();
             this.Email = row["Email"].ToString();
-            this.MatKhau = row["MatKhau"].ToString();
-            this.MaHang = row["MaHang"].ToString();
         }
 
         public string MaKH { get => maKH; set => maKH = value; }
@@ -31,7 +29,5 @@ namespace DTO
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string SDT1 { get => SDT; set => SDT = value; }
         public string Email { get => email; set => email = value; }
-        public string MatKhau { get => matKhau; set => matKhau = value; }
-        public string MaHang { get => maHang; set => maHang = value; }
     }
 }

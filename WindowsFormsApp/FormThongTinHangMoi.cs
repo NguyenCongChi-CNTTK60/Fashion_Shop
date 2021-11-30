@@ -33,20 +33,20 @@ namespace WindowsFormsApp
 
 
 
-        public List<DonViTinh> getListSanPham()
+        public List<DonViTinhDTO> getListSanPham()
         {
             string query = "select * from DonViTinh";
-            List<DonViTinh> list = new List<DonViTinh>();
+            List<DonViTinhDTO> list = new List<DonViTinhDTO>();
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in dt.Rows)
             {
-                DonViTinh product = new DonViTinh(item);
+                DonViTinhDTO product = new DonViTinhDTO(item);
                 list.Add(product);
             }
             return list;
         }
 
-        List<DonViTinh> list;
+        List<DonViTinhDTO> list;
 
 
         private void Lammoi()
@@ -57,20 +57,20 @@ namespace WindowsFormsApp
 
         }
 
-        public List<NhaCungCap> getListNCC()
+        public List<NhaCungCapDTO> getListNCC()
         {
-            string query = "select * from NhaCungCap";
-            List<NhaCungCap> list = new List<NhaCungCap>();
+            string query = "select * from NhaCungCa";
+            List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in dt.Rows)
             {
-                NhaCungCap product = new NhaCungCap(item);
+                NhaCungCapDTO product = new NhaCungCapDTO(item);
                 list.Add(product);
             }
             return list;
         }
 
-        List<NhaCungCap> list1;
+        List<NhaCungCapDTO> list1;
 
         private string Matudong()
         {

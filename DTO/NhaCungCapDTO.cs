@@ -9,8 +9,9 @@ namespace DTO
 {
     public class NhaCungCapDTO
     {
-        private string maNCC, tenNCC, email, diaChi;
-        private int sDT;
+      
+
+        private string maNCC, tenNCC, diaChi, sDT, email;
 
         public NhaCungCapDTO()
         {
@@ -20,16 +21,16 @@ namespace DTO
         {
             this.MaNCC = row["MaNCC"].ToString();
             this.TenNCC = row["TenNCC"].ToString();
-            this.SDT = (int)row["SDT"];
-            this.Email = row["Email"].ToString();
             this.DiaChi = row["DiaChi"].ToString();
+            this.SDT = row["SDT"].ToString();
+            this.Email = row["Email"].ToString();
         }
 
         public string MaNCC { get => maNCC; set => maNCC = value; }
         public string TenNCC { get => tenNCC; set => tenNCC = value; }
-        public string Email { get => email; set => email = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
-        public int SDT { get => sDT; set => sDT = value; }
+        public string SDT { get => sDT; set => sDT = value; }
+        public string Email { get => email; set => email = value; }
     }
 }
 

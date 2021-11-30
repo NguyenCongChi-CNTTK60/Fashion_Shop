@@ -8,7 +8,7 @@ namespace DTO
 {
     public class HoaDonDTO
     {
-        private string maHD, maKH, tenDangNhap;
+        private string maHD, maKH, maNV;
         private DateTime ngayTao;
         private int tongTien;
 
@@ -19,9 +19,8 @@ namespace DTO
 
         public string MaHD { get => maHD; set => maHD = value; }
         public string MaKH { get => maKH; set => maKH = value; }
-        public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
+        public string MaNV { get => maNV; set => maNV = value; }
         public DateTime NgayTao { get => ngayTao; set => ngayTao = value; }
         public int TongTien { get => tongTien; set => tongTien = value; }
-
     }
 }

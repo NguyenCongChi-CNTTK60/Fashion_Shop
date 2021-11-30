@@ -20,7 +20,7 @@ namespace BUS
             private set { ChuyenDoiTienBUS.instance = value; }
         }
 
-        public string chuyenDoi(double gnumber)
+        public string So_chu(double gnumber)
         {
             return ChuyenDoiTienDAO.Instance.So_chu(gnumber);
         }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DTO;
 
 namespace WindowsFormsApp
 {
@@ -29,7 +30,7 @@ namespace WindowsFormsApp
         void LoadData()
         {
             ClearBinding();
-            dgvThongTinNCC.DataSource = QuanLyNhaCC.Intance.getListNCC();
+            dgvThongTinNCC.DataSource = NhaCungCapBUS.Intance.getListNCC();
             loadBinding();
         }
 

@@ -10,24 +10,27 @@ namespace DTO
 {
     public class NhanVienDTO
     {
-        private string maNV, tenNV, chucVu, sdt, tenDangNhap, matKhau, quyen;
+        private string maNV, tenHienThi, sdt,diaChi ,tenDangNhap, matKhau, quyen;
+
         public NhanVienDTO(DataRow row)
         {
             this.MaNV = row["MaNV"].ToString();
-            this.TenNV = row["TenNV"].ToString();
-            this.ChucVu = row["ChucVu"].ToString();
-            this.Sdt = row["Sdt"].ToString();
+            this.TenHienThi = row["TenHienThi"].ToString();
+            this.Sdt = row["SDT"].ToString();
+            this.DiaChi = row["DiaChi"].ToString();
             this.TenDangNhap = row["TenDangNhap"].ToString();
+            this.MatKhau = row["MatKhau"].ToString();
             this.Quyen = row["Quyen"].ToString();
         }
 
         public string MaNV { get => maNV; set => maNV = value; }
-        public string TenNV { get => tenNV; set => tenNV = value; }
-        public string ChucVu { get => chucVu; set => chucVu = value; }
+        public string TenHienThi { get => tenHienThi; set => tenHienThi = value; }
         public string Sdt { get => sdt; set => sdt = value; }
+        public string DiaChi { get => diaChi; set => diaChi = value; }
         public string TenDangNhap { get => tenDangNhap; set => tenDangNhap = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public string Quyen { get => quyen; set => quyen = value; }
+
     }
 }
 

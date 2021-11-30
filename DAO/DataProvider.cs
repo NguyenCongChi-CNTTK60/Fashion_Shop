@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class DataProvider
+    class DataProvider
     {
         private static DataProvider instance; // Ctrl + R + E
 
@@ -20,7 +20,7 @@ namespace DAO
         }
 
         private DataProvider() { }
-        private string connectionSTR = @"Data Source=DESKTOP-RNOPI29;Initial Catalog=QuanLySieuThi;User ID=sa;Password=123";
+        private string connectionSTR = @"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123";
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();
@@ -118,5 +118,30 @@ namespace DAO
 
             return data;
         }
+
+
+
+
+        //
+        // THỐNG KÊ 3 THAM SỐ
+        //
+        Chuoiketnoi chuoiketnoi = new Chuoiketnoi();
+        public DataTable Thongkehoadon(DateTime ngaybd, DateTime ngaykt, string query)
+        {
+            SqlConnection con = chuoiketnoi.sqlConnection();
+            con.Open();
+            SqlDataAdapter dta = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            dta.Fill(dt);
+            con.Close();
+            return dt;
+        }
+
+
+
+
+
+
+
     }
 }

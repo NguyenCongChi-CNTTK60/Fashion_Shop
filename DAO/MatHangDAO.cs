@@ -8,51 +8,50 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 
-
 namespace DAO
 {
-    public class HangHoaDAO
+    public class DAO_MatHang
     {
-        private static HangHoaDAO instance;
+        private static DAO_MatHang instance;
 
-        public HangHoaDAO()
+        public DAO_MatHang()
         {
         }
 
-        public static HangHoaDAO Intance
+        public static DAO_MatHang Intance
         {
-            get { if (instance == null) instance = new HangHoaDAO(); return instance; }
+            get { if (instance == null) instance = new DAO_MatHang(); return instance; }
             set => instance = value;
         }
 
-        public List<HangHoaDTO> getListProduct()
+        public List<MatHangDTO> getListSanPham()
         {
-            List<HangHoaDTO> list = new List<HangHoaDTO>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from MATHANG");
+            List<MatHangDTO> list = new List<MatHangDTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from MatHang");
             foreach (DataRow item in data.Rows)
             {
-                HangHoaDTO MATHANG = new HangHoaDTO(item);
-                list.Add(MATHANG);
+                MatHangDTO MatHang = new MatHangDTO(item);
+                list.Add(MatHang);
             }
             return list;
         }
 
-        public bool editGoods(string MaMH, string TenHH, string DVT, int SoLuong, int GiaGoc, int GiaBan)
+        public bool suaHH(string MaHang, string TenHH, string DVT, int SoLuong, int GiaBan)
         {
-            string query = String.Format("update MATHANG set SoLuong = {0}, GiaGoc = {1}, GiaBan = {2}, TenMH = N'{3}', DonVi = '{4}'  where MaMH = '{5}'", SoLuong, GiaGoc, GiaBan, TenHH, DVT, MaMH);
+            string query = String.Format("update MatHang set SoLuong = {0},  GiaBan = {1}, TenMH = N'{2}', DonVi = '{3}'  where MaMH = '{4}'", SoLuong, GiaBan, TenHH, DVT, MaHang);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool checkDelete(string MaMH)
+        public bool kiemtraXoa(string maHang)
         {
-            string query = String.Format("select * from CTHD where MaMH = '{0}'", MaMH);
+            string query = String.Format("select * from ChiTietHD where MaMH = '{0}'", maHang);
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count > 0)
             {
                 return false;
             }
-            query = String.Format("select * from CTPN where MaMH = '{0}'", MaMH);
+            query = String.Format("select * from ChiTietPN where MaMH = '{0}'", maHang);
             data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count > 0)
             {
@@ -61,24 +60,24 @@ namespace DAO
             return true;
         }
 
-        public bool updateGoods(string MaMH, int SL, int DonGia)
+        public bool capNhatHH(string maHang, int SL, int DonGia)
         {
-            string query = String.Format("update MATHANG set SoLuong = {0} + SoLuong, GiaGoc = (GiaGoc + {1})/2 where MaMH = '{2}'", SL, DonGia, MaMH);
+            string query = String.Format("update MatHang set SoLuong = {0} + SoLuong, GiaGoc = (GiaGoc + {1})/2 where MaMH = '{2}'", SL, DonGia, maHang);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public bool deleteGoods(string maKH)
+        public bool xoaHang(string maKH)
         {
-            string query = String.Format("delete from MATHANG where MaMH = '{0}'", maKH);
+            string query = String.Format("delete from MatHang where MaMH = '{0}'", maKH);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
-        public string loadIDGoods()
+        public string loadMaHH()
         {
             string maKHnext = "SP001";
-            string query = "select top 1 MaMH from MATHANG order by MaMH desc";
+            string query = "select top 1 MaMH from MatHang order by MaMH desc";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count > 0)
             {
@@ -101,38 +100,37 @@ namespace DAO
             return maKHnext;
         }
 
-        public DataTable searchGoods(string maPN)
+        public DataTable TimKiemHH(string maPN)
         {
-            string query = "exec usp_timMATHANG @maPN";
+            string query = "exec usp_timMatHang @maPN";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });
             return data;
         }
 
-        public HangHoaDTO getProduct(string maSP)
+        public MatHangDTO getSP(string maSP)
         {
-            HangHoaDTO a = new HangHoaDTO();
-            string query = String.Format("select * from MATHANG where MaMH = N'{0}'", maSP);
+            MatHangDTO a = new MatHangDTO();
+            string query = String.Format("select * from MatHang where MaMH = N'{0}'", maSP);
             if (DataProvider.Instance.ExecuteQuery(query).Rows.Count > 0)
             {
                 DataRow data = DataProvider.Instance.ExecuteQuery(query).Rows[0];
                 a.TenMH = data["TenMH"].ToString();
                 a.MaMH = maSP;
-                a.GiaGoc = int.Parse(data["GiaGoc"].ToString());
                 a.GiaBan = int.Parse(data["GiaBan"].ToString());
             }
             return a;
         }
 
-        public bool imageGoods(HangHoaDTO data, string imgLocation)
+        public bool temHH(MatHangDTO data, string imgLocation)
         {
             byte[] images = null;
             FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
             BinaryReader brs = new BinaryReader(stream);
             images = brs.ReadBytes((int)stream.Length);
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QuanLySieuThi;User ID=sa;Password=123"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123"))
             {
-                string query = String.Format("Insert into MATHANG Values('{0}', N'{1}', '{2}', {3}, {4}, {5}, @hinh) ", data.MaMH, data.TenMH, data.DonVi, data.GiaBan, data.SoLuong, data.GiaGoc);
+                string query = String.Format("Insert into MatHang Values('{0}', N'{1}', '{2}', {3}, {4}, {5}, @hinh) ", data.MaMH, data.TenMH, data.DonVi, data.GiaBan, data.SoLuong);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.Add(new SqlParameter("@hinh", images));
 
@@ -147,16 +145,16 @@ namespace DAO
             return false;
         }
 
-        public void updateImages(string imgLocation, string MaMH)
+        public void capNhatHinh(string imgLocation, string maHang)
         {
             byte[] images = null;
             FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
             BinaryReader brs = new BinaryReader(stream);
             images = brs.ReadBytes((int)stream.Length);
             // Update hình nếu có
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QuanLySieuThi;User ID=sa;Password=123"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123"))
             {
-                string query = String.Format("Update MATHANG set Anh = @hinh where MaMH = '{0}'", MaMH);
+                string query = String.Format("Update MatHang set Anh = @hinh where MaMH = '{0}'", maHang);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.Add(new SqlParameter("@hinh", images));
                 connection.Open();
@@ -165,13 +163,12 @@ namespace DAO
             }
         }
 
-        public byte[] getImageByID(string ID)
+        public byte[] getAnhByID(string ID)
         {
-            string query = String.Format("select Anh from MATHANG where MaMH = '{0}'", ID);
+            string query = String.Format("select Anh from MatHang where MaMH = '{0}'", ID);
             DataRow data = DataProvider.Instance.ExecuteQuery(query).Rows[0];
             byte[] img = ((byte[])data["Anh"]);
             return img;
         }
-
     }
 }

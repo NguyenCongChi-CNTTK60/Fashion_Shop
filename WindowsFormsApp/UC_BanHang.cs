@@ -27,9 +27,9 @@ namespace WindowsFormsApp
             dpkNgayban.Value = new DateTime(today.Year, today.Month, today.Day);
 
 
-            list = MatHangDAO.Intance.getListSanPham();
+            list = MatHangBUS.Intance.getListSanPham();
             AutoCompleteStringCollection arrName = new AutoCompleteStringCollection();
-            foreach (Models.MatHang item in list)
+            foreach (MatHangDTO item in list)
             {
                 arrName.Add(item.MaMH);
             }
@@ -49,15 +49,15 @@ namespace WindowsFormsApp
             lblTennv.Text = tennv;
 
 
-            List<Models.KhachHang> listKH = new List<Models.KhachHang>();
-            DataTable data2 = QuanLyKhachHang.Intance.getListKH();
+            List<KhachHangDTO> listKH = new List<KhachHangDTO>();
+            DataTable data2 = KhachHangBUS.Intance.getListKH();
             foreach (DataRow item2 in data2.Rows)
             {
-                Models.KhachHang kh = new Models.KhachHang(item2);
+                KhachHangDTO kh = new KhachHangDTO(item2);
                 listKH.Add(kh);
             }
             AutoCompleteStringCollection arrName2 = new AutoCompleteStringCollection();
-            foreach (Models.KhachHang itemKH in listKH)
+            foreach (KhachHangDTO itemKH in listKH)
             {
                 arrName2.Add(itemKH.SDT);
             }
@@ -112,23 +112,23 @@ namespace WindowsFormsApp
             /*FormDonViTinh tdvt = new FormDonViTinh();
             tdvt.ShowDialog();*/
         }
-        List<Models.MatHang> list;
+        List<MatHangDTO> list;
 
 
-        Models.KhachHang khachHang = new Models.KhachHang()
+        KhachHangDTO khachHang = new KhachHangDTO()
         {
             MaKH = null
         };
 
-        public Models.KhachHang GetTenBySDT(string id)
+        public KhachHangDTO GetTenBySDT(string id)
         {
-            Models.KhachHang item = new Models.KhachHang();
+            KhachHangDTO item = new KhachHangDTO();
 
             string query = "select * from KhachHang where SDT ='" + id + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count > 0)
             {
-                item = new Models.KhachHang(data.Rows[0]);
+                item = new KhachHangDTO(data.Rows[0]);
             }
             return item;
         }
@@ -187,7 +187,7 @@ namespace WindowsFormsApp
                 }
                 tongTien += gia;
                 lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
-                lbTienBangChu.Text = ChuyenDoiTien.Instance.So_chu(tongTien);
+                lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
                 Tinhtienhoantra();
                 resetInfoProduct();
 
@@ -216,7 +216,7 @@ namespace WindowsFormsApp
                     string tien = lvSanPhamBan.Items[i].SubItems[4].Text.ToString();
                     tongTien -= Int32.Parse(tien);
                     lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
-                    lbTienBangChu.Text = ChuyenDoiTien.Instance.So_chu(tongTien);
+                    lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
                     lvSanPhamBan.Items[i].Remove();//xóa item đó đi
                     Tinhtienhoantra();
                     i--;
@@ -237,7 +237,7 @@ namespace WindowsFormsApp
             else
             if (lvSanPhamBan.Items.Count > 0)
             {
-                HoaDon hd = new HoaDon();
+                HoaDonDTO hd = new HoaDonDTO();
                 hd.MaHD = txtMaHĐ.Text;
                 hd.MaKH = lblMakh.Text;
                 hd.NgayTao = dpkNgayban.Value;
@@ -280,7 +280,7 @@ namespace WindowsFormsApp
         //
         // Lưu hóa đơn
         //
-        private bool LuuHD(HoaDon dh)
+        private bool LuuHD(HoaDonDTO dh)
         {
             // Convert datetime to date SQL Server 
             string query = String.Format("insert into HoaDon values('{0}','{1}','{2}','{3}','{4}')", dh.MaHD, dh.MaKH, dh.NgayTao, dh.MaNV, dh.TongTien);
@@ -354,7 +354,7 @@ namespace WindowsFormsApp
 
         private void btnThemMoiKH_Click(object sender, EventArgs e)
         {
-            FormThemKhachHang form = new FormThemKhachHang(QuanLyKhachHang.Intance.loadMaKH(), txtSDT.Text, this);
+            FormThemKhachHang form = new FormThemKhachHang(KhachHangBUS.Intance.loadMaKH(), txtSDT.Text, this);
             form.ShowDialog();
         }
 
