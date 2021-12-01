@@ -59,12 +59,6 @@ namespace WindowsFormsApp
                 txtTenMH.Focus();
                 return false;
             }
-            else if (cbbDVT.SelectedIndex == -1)
-            {
-                MessageBox.Show("Hãy chọn đơn vị tính", "Thông báo");
-                cbbDVT.Focus();
-                return false;
-            }
             else if (!int.TryParse(txtGiaBan.Text, out a))
             {
                 MessageBox.Show("Giá bán phải là một số", "Thông báo");
@@ -106,14 +100,13 @@ namespace WindowsFormsApp
         {
             if (dgvHangHoa.SelectedCells.Count > 0)
             {
-                if (MatHangBUS.Intance.suaHH(txtMaHang.Text, txtTenMH.Text, (string)cbbDVT.SelectedValue, int.Parse(txtSoLuong.Text), int.Parse(txtGiaBan.Text)))
+                if (MatHangBUS.Intance.suaHH(txtMaHang.Text, txtTenMH.Text,  int.Parse(txtSoLuong.Text), int.Parse(txtGiaBan.Text)))
                 {
                     if (imgLocation != Application.StartupPath + "\\Resources\\hanghoa.png")
                     {
                         MatHangBUS.Intance.capNhatHinh(imgLocation, txtMaHang.Text);
                     }
                     loadData();
-                    cbbDVT.SelectedValue = dgvHangHoa.Rows[0].Cells["DonVi"].Value;
                     imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
                     MessageBox.Show("Sửa Thành Công");
                 }
@@ -161,12 +154,20 @@ namespace WindowsFormsApp
                     }
                 }
                 catch (Exception) { }
-
-                cbbDVT.SelectedValue = row.Cells["DonVi"].Value;
             }
         }
 
         string imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (imgLocation != Application.StartupPath + "\\Resources\\hanghoa.png")
+            {
+                MatHangBUS.Intance.capNhatHinh(imgLocation, txtMaHang.Text);
+            }
+            loadData();
+            imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
+        }
 
         private void btnTaiAnh_Click(object sender, EventArgs e)
         {

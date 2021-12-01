@@ -36,9 +36,9 @@ namespace DAO
             return list;
         }
 
-        public bool suaHH(string MaHang, string TenHH, string DVT, int SoLuong, int GiaBan)
+        public bool suaHH(string MaHang, string TenHH, int SoLuong, int GiaBan)
         {
-            string query = String.Format("update MatHang set SoLuong = {0},  GiaBan = {1}, TenMH = N'{2}', DonVi = '{3}'  where MaMH = '{4}'", SoLuong, GiaBan, TenHH, DVT, MaHang);
+            string query = String.Format("update MatHang set SoLuong = {0},  GiaBan = {1}, TenMH = N'{2}'  where MaMH = '{3}'", SoLuong, GiaBan, TenHH, MaHang);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -130,7 +130,7 @@ namespace DAO
 
             using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123"))
             {
-                string query = String.Format("Insert into MatHang Values('{0}', N'{1}', '{2}', {3}, {4}, {5}, @hinh) ", data.MaMH, data.TenMH, data.DonVi, data.GiaBan, data.SoLuong);
+                string query = String.Format("Insert into MatHang Values('{0}', N'{1}', '{2}', {3}, {4}, @hinh) ", data.MaMH, data.TenMH, data.DonVi, data.GiaBan, data.SoLuong);
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.Add(new SqlParameter("@hinh", images));
 

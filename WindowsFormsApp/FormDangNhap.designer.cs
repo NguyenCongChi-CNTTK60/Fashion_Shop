@@ -30,7 +30,6 @@ namespace WindowsFormsApp
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
             this.panelTrangChu = new System.Windows.Forms.Panel();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -98,7 +97,7 @@ namespace WindowsFormsApp
             this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(36)))), ((int)(((byte)(66)))));
             this.btnDangNhap.HoverState.Parent = this.btnDangNhap;
-            this.btnDangNhap.Location = new System.Drawing.Point(113, 325);
+            this.btnDangNhap.Location = new System.Drawing.Point(112, 316);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.ShadowDecoration.Parent = this.btnDangNhap;
             this.btnDangNhap.Size = new System.Drawing.Size(282, 69);
@@ -108,7 +107,6 @@ namespace WindowsFormsApp
             // 
             // panel8
             // 
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
             this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel8.Location = new System.Drawing.Point(283, 414);
             this.panel8.Name = "panel8";
@@ -117,7 +115,6 @@ namespace WindowsFormsApp
             // 
             // panel6
             // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel6.Location = new System.Drawing.Point(224, 414);
             this.panel6.Name = "panel6";
@@ -126,7 +123,6 @@ namespace WindowsFormsApp
             // 
             // panel3
             // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Location = new System.Drawing.Point(166, 414);
             this.panel3.Name = "panel3";
@@ -206,7 +202,7 @@ namespace WindowsFormsApp
             // 
             // btnX
             // 
-            this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnX.BackColor = System.Drawing.Color.Red;
             this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -335,12 +331,12 @@ namespace WindowsFormsApp
             // 
             // BoFormDangnhap
             // 
-            this.BoFormDangnhap.BorderRadius = 40;
+            this.BoFormDangnhap.BorderRadius = 20;
             this.BoFormDangnhap.TargetControl = this;
             // 
             // Bopanelchinh
             // 
-            this.Bopanelchinh.BorderRadius = 30;
+            this.Bopanelchinh.BorderRadius = 20;
             this.Bopanelchinh.TargetControl = this.panelTrangChu;
             // 
             // errtxtTaikhoan

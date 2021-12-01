@@ -9,25 +9,27 @@ namespace DTO
 {
     public class DonViTinhDTO
     {
-        private string maDVTinh;
-        private string tenDVTinh;
-        public DonViTinhDTO(string maDVTinh, string tenDVTinh)
+        private string maDVT;
+        private string tenDVT;
+
+        public DonViTinhDTO(string maDVT, string tenDVT)
         {
-            this.maDVTinh = maDVTinh;
-            this.tenDVTinh = tenDVTinh;
+            this.maDVT = maDVT;
+            this.tenDVT = tenDVT;
         }
 
         public DonViTinhDTO()
         {
 
         }
-        public string MaDVTinh { get => maDVTinh; set => maDVTinh = value; }
-        public string TenDVTinh { get => tenDVTinh; set => tenDVTinh = value; }
+
+        public string MaDVT { get => maDVT; set => maDVT = value; }
+        public string TenDVT { get => tenDVT; set => tenDVT = value; }
 
         public DonViTinhDTO(DataRow row)
         {
-            this.MaDVTinh = row["MaDVT"].ToString();
-            this.TenDVTinh = row["TenDVT"].ToString();
+            this.MaDVT = row["MaDVT"].ToString();
+            this.TenDVT = row["TenDVT"].ToString();
         }
     }
 }

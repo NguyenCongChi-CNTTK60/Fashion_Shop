@@ -22,3 +22,11 @@ D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
 D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.dll
 D:\C#\pj\store-manager-app\DTO\obj\Debug\DTO.pdb
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\bin\Debug\DTO.dll
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\bin\Debug\DTO.pdb
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\obj\Debug\DTO.Properties.Resources.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\obj\Debug\DTO.csproj.GenerateResource.cache
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\obj\Debug\DTO.dll
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\DTO\obj\Debug\DTO.pdb

@@ -35,7 +35,7 @@ namespace WindowsFormsApp
             this.btnLuu = new System.Windows.Forms.Button();
             this.cmbDonvitinh = new System.Windows.Forms.ComboBox();
             this.txtTenmh = new System.Windows.Forms.TextBox();
-            this.cmbMaĐVT = new System.Windows.Forms.ComboBox();
+            this.cmbMaDVT = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -107,17 +107,17 @@ namespace WindowsFormsApp
             this.txtTenmh.Size = new System.Drawing.Size(266, 31);
             this.txtTenmh.TabIndex = 76;
             // 
-            // cmbMaĐVT
+            // cmbMaDVT
             // 
-            this.cmbMaĐVT.BackColor = System.Drawing.SystemColors.Control;
-            this.cmbMaĐVT.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbMaĐVT.ForeColor = System.Drawing.Color.Maroon;
-            this.cmbMaĐVT.FormattingEnabled = true;
-            this.cmbMaĐVT.Location = new System.Drawing.Point(510, 211);
-            this.cmbMaĐVT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbMaĐVT.Name = "cmbMaĐVT";
-            this.cmbMaĐVT.Size = new System.Drawing.Size(100, 34);
-            this.cmbMaĐVT.TabIndex = 77;
+            this.cmbMaDVT.BackColor = System.Drawing.SystemColors.Control;
+            this.cmbMaDVT.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMaDVT.ForeColor = System.Drawing.Color.Maroon;
+            this.cmbMaDVT.FormattingEnabled = true;
+            this.cmbMaDVT.Location = new System.Drawing.Point(510, 211);
+            this.cmbMaDVT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbMaDVT.Name = "cmbMaDVT";
+            this.cmbMaDVT.Size = new System.Drawing.Size(100, 34);
+            this.cmbMaDVT.TabIndex = 77;
             // 
             // label4
             // 
@@ -147,13 +147,14 @@ namespace WindowsFormsApp
             this.ClientSize = new System.Drawing.Size(674, 377);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cmbMaĐVT);
+            this.Controls.Add(this.cmbMaDVT);
             this.Controls.Add(this.txtTenmh);
             this.Controls.Add(this.cmbDonvitinh);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtMaHang);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormThongTinHangMoi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -171,7 +172,7 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.ComboBox cmbDonvitinh;
         private System.Windows.Forms.TextBox txtTenmh;
-        private System.Windows.Forms.ComboBox cmbMaĐVT;
+        private System.Windows.Forms.ComboBox cmbMaDVT;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
     }

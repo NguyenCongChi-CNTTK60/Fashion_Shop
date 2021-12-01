@@ -22,11 +22,11 @@ namespace WindowsFormsApp
             cmbDonvitinh.DataSource = list;
             cmbDonvitinh.ValueMember = "MaDVT";
             cmbDonvitinh.DisplayMember = "TenDVT";
-            cmbMaĐVT.DataSource = list;
-            cmbMaĐVT.ValueMember = "MaDVT";
-            cmbMaĐVT.DisplayMember = "MaDVT";
+            cmbMaDVT.DataSource = list;
+            cmbMaDVT.ValueMember = "MaDVT";
+            cmbMaDVT.DisplayMember = "MaDVT";
             list1 = getListNCC();
-            cmbMaĐVT.SelectedIndex = -1;
+            cmbMaDVT.SelectedIndex = -1;
             Lammoi();
 
         }
@@ -59,7 +59,7 @@ namespace WindowsFormsApp
 
         public List<NhaCungCapDTO> getListNCC()
         {
-            string query = "select * from NhaCungCa";
+            string query = "select * from NhaCungCap";
             List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in dt.Rows)
@@ -114,7 +114,7 @@ namespace WindowsFormsApp
             }
             else
             {
-                if (LuuHH(txtMaHang.Text, txtTenmh.Text, cmbMaĐVT.Text, 0, 1))
+                if (LuuHH(txtMaHang.Text, txtTenmh.Text, cmbMaDVT.Text, 0, 1))
                 {
                     MessageBox.Show("Lưu thông tin hàng thành công");
                     txtMaHang.Text = Matudong();

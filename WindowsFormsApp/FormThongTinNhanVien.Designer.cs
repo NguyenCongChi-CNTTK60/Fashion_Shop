@@ -29,6 +29,7 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,8 +47,9 @@ namespace WindowsFormsApp
             this.lblquyen = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.btnDoimatkhau = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,16 +227,6 @@ namespace WindowsFormsApp
             this.btnDoimatkhau.UseVisualStyleBackColor = false;
             this.btnDoimatkhau.Click += new System.EventHandler(this.btnDoimatkhau_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(574, 76);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(170, 134);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 191;
-            this.pictureBox1.TabStop = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -244,6 +236,21 @@ namespace WindowsFormsApp
             this.label6.Size = new System.Drawing.Size(209, 35);
             this.label6.TabIndex = 207;
             this.label6.Text = "Thông tin tài khoản";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 10;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(574, 76);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(170, 134);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 191;
+            this.pictureBox1.TabStop = false;
             // 
             // FormThongTinNhanVien
             // 
@@ -269,6 +276,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label7);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormThongTinNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -300,5 +308,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnDoimatkhau;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }

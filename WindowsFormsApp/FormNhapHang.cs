@@ -169,12 +169,11 @@ namespace WindowsFormsApp
         private void btnThem_Click(object sender, EventArgs e)
         {
             bool check = false;
-
             if (check_data() == true)
             {
-
-                string query = "update MatHangDTO set GiaBan = '" + txtGiaban.Text + "'  where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
+                string query = "update MatHang set GiaBan = '" + txtGiaban.Text + "'  where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
                 DataProvider.Instance.ExecuteQuery(query);
+                MatHangDTO data = new MatHangDTO();
                 if (Int32.Parse(txtSoLuong.Text.ToString()) <= 0)
                 {
                     MessageBox.Show("Số lượng nhập phải lớn hơn 0");
@@ -183,6 +182,7 @@ namespace WindowsFormsApp
                 {
                     MessageBox.Show("Giá nhập phải lớn hơn 0");
                 }
+                
                 else
                if (cmbTensp.SelectedIndex >= 0 && cmbTenncc.SelectedIndex >= 0)
                 {
@@ -192,7 +192,6 @@ namespace WindowsFormsApp
                         {
                             check = true;
                         }
-
                         if (check == true)
                         {
                             int temp = Int32.Parse(N.SubItems[2].Text) + Int32.Parse(txtSoLuong.Text.ToString());
@@ -201,7 +200,6 @@ namespace WindowsFormsApp
                             break;
                         }
                     }
-
 
                     int gia = Int32.Parse(txtGia.Text) * Int32.Parse(txtSoLuong.Text.ToString());
                     if (!check)
@@ -215,13 +213,9 @@ namespace WindowsFormsApp
                         ListViewItem listViewItem = new ListViewItem(arr);
                         lsvNhaphang.Items.Add(listViewItem);
                     }
-
                     tongTien += gia;
                     lbltong.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + "VNĐ";
                     Lammoi();
-
-
-
                 }
                 else
                 {
@@ -230,6 +224,7 @@ namespace WindowsFormsApp
             }
         }
 
+       
 
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -252,10 +247,11 @@ namespace WindowsFormsApp
         private void Lammoi()
         {
             cmbTensp.SelectedIndex = -1;
-            txtSoLuong.Text = "";
-            txtGia.Text = "";
+            txtSoLuong.Text = "0";
+            txtGia.Text = "0";  
             lblmasp.Text = "";
             lbltensp.Text = "";
+            pcbHangHoa.Image = null;
         }
 
 
@@ -296,7 +292,7 @@ namespace WindowsFormsApp
                     foreach (ListViewItem item in lsvNhaphang.Items)
                     {
                         LuuChitietPN(pn.MaPN, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text)); //lưu chi tiết hóa đơn
-                        string query = "update MatHangDTO set SoLuong = SoLuong + " + Int32.Parse(item.SubItems[2].Text) + "where MaMH = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
+                        string query = "update MatHang set SoLuong = SoLuong + " + Int32.Parse(item.SubItems[2].Text) + "where MaMH = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
                         DataProvider.Instance.ExecuteQuery(query);
 
                     }
@@ -323,7 +319,7 @@ namespace WindowsFormsApp
         private bool LuuPN(PhieuNhapDTO pn)
         {
             // Convert datetime to date SQL Server 
-            string query = String.Format("insert into PhieuNhapDTO values('{0}','{1}','{2}','{3}')", pn.MaPN, pn.MaNCC, pn.NgayNhap, pn.MaNV);
+            string query = String.Format("insert into PhieuNhap values('{0}','{1}','{2}','{3}')", pn.MaPN, pn.MaNCC, pn.NgayNhap, pn.MaNV);
 
             DataProvider.Instance.ExecuteQuery(query);
             return true;
@@ -381,7 +377,7 @@ namespace WindowsFormsApp
 
         private void label12_Click(object sender, EventArgs e)
         {
-            string query = "update MatHangDTO set SoLuong = 0,GiaBan = 0 where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
+            string query = "update MatHang set SoLuong = 0,GiaBan = 0 where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
             DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -398,6 +394,11 @@ namespace WindowsFormsApp
                 imgLocation = dlgOpen.FileName.ToString();
                 pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
             }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

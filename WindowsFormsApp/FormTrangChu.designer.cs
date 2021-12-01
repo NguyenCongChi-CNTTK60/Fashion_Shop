@@ -105,10 +105,10 @@
             this.btnX.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnX.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnX.HoverState.Parent = this.btnX;
-            this.btnX.Location = new System.Drawing.Point(914, 0);
+            this.btnX.Location = new System.Drawing.Point(908, 0);
             this.btnX.Name = "btnX";
             this.btnX.ShadowDecoration.Parent = this.btnX;
-            this.btnX.Size = new System.Drawing.Size(56, 71);
+            this.btnX.Size = new System.Drawing.Size(62, 71);
             this.btnX.TabIndex = 26;
             this.btnX.Text = "X";
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
@@ -586,7 +586,7 @@
             // 
             // bunifuElipse1
             // 
-            this.bunifuElipse1.ElipseRadius = 40;
+            this.bunifuElipse1.ElipseRadius = 25;
             this.bunifuElipse1.TargetControl = this;
             // 
             // FormTrangChu
