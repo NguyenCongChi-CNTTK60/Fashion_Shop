@@ -891,3 +891,4 @@ C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debu
 C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDangKy.resources
 C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormSDT.resources
 C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DoiMatKhau.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhapHang.resources

@@ -153,8 +153,8 @@ namespace WindowsFormsApp
 
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            FormNhapHang formNhaphang = new FormNhapHang(luumanv, luutennv);
-            formNhaphang.Show();
+            UC_NhapHang nh = new UC_NhapHang();
+            addControlsToPanel(nh);
         }
     }
 }
