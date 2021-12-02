@@ -31,13 +31,10 @@ namespace WindowsFormsApp
         {
             this.label12 = new System.Windows.Forms.Label();
             this.lblMapn = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.lsvNhaphang = new System.Windows.Forms.ListView();
             this.lbltong = new System.Windows.Forms.Label();
             this.lbltensp = new System.Windows.Forms.Label();
             this.lblmasp = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,7 +43,6 @@ namespace WindowsFormsApp
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTensp = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnLammoi = new System.Windows.Forms.Button();
             this.dtpkNgaynhap = new System.Windows.Forms.DateTimePicker();
             this.lblMancc = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,9 +64,10 @@ namespace WindowsFormsApp
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.btnTaiAnh = new Guna.UI2.WinForms.Guna2Button();
-            this.pcbHangHoa = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbHangHoa)).BeginInit();
+            this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLuu = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLammoi = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
             // label12
@@ -94,34 +91,6 @@ namespace WindowsFormsApp
             this.lblMapn.Size = new System.Drawing.Size(67, 22);
             this.lblMapn.TabIndex = 62;
             this.lblMapn.Text = "MaPN:";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(320, 634);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(138, 39);
-            this.btnLuu.TabIndex = 61;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(676, 634);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(124, 39);
-            this.btnXoa.TabIndex = 60;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // lsvNhaphang
             // 
@@ -167,20 +136,6 @@ namespace WindowsFormsApp
             this.lblmasp.Size = new System.Drawing.Size(60, 21);
             this.lblmasp.TabIndex = 55;
             this.lblmasp.Text = "MaSP:";
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThem.Location = new System.Drawing.Point(83, 633);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(205, 41);
-            this.btnThem.TabIndex = 54;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // label11
             // 
@@ -264,20 +219,6 @@ namespace WindowsFormsApp
             this.label3.TabIndex = 39;
             this.label3.Text = "Mã phiếu nhập:";
             // 
-            // btnLammoi
-            // 
-            this.btnLammoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnLammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLammoi.ForeColor = System.Drawing.Color.White;
-            this.btnLammoi.Location = new System.Drawing.Point(499, 634);
-            this.btnLammoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLammoi.Name = "btnLammoi";
-            this.btnLammoi.Size = new System.Drawing.Size(162, 39);
-            this.btnLammoi.TabIndex = 65;
-            this.btnLammoi.Text = "Làm mới";
-            this.btnLammoi.UseVisualStyleBackColor = false;
-            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
-            // 
             // dtpkNgaynhap
             // 
             this.dtpkNgaynhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -318,7 +259,6 @@ namespace WindowsFormsApp
             this.label15.Size = new System.Drawing.Size(100, 35);
             this.label15.TabIndex = 72;
             this.label15.Text = "Tên NCC:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // lblTenncc
             // 
@@ -502,38 +442,123 @@ namespace WindowsFormsApp
             this.lblEmail.TabIndex = 89;
             this.lblEmail.Text = "Email:";
             // 
-            // btnTaiAnh
+            // btnThem
             // 
-            this.btnTaiAnh.CheckedState.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.CustomImages.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.DisabledState.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnTaiAnh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTaiAnh.ForeColor = System.Drawing.Color.White;
-            this.btnTaiAnh.HoverState.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.Location = new System.Drawing.Point(925, 171);
-            this.btnTaiAnh.Name = "btnTaiAnh";
-            this.btnTaiAnh.ShadowDecoration.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.Size = new System.Drawing.Size(89, 25);
-            this.btnTaiAnh.TabIndex = 91;
-            this.btnTaiAnh.Text = "Upload";
-            this.btnTaiAnh.Click += new System.EventHandler(this.btnTaiAnh_Click);
+            this.btnThem.AutoRoundedCorners = true;
+            this.btnThem.BorderRadius = 22;
+            this.btnThem.CheckedState.Parent = this.btnThem;
+            this.btnThem.CustomImages.Parent = this.btnThem;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.DisabledState.Parent = this.btnThem;
+            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnThem.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnThem.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnThem.HoverState.Parent = this.btnThem;
+            this.btnThem.Location = new System.Drawing.Point(53, 615);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.ShadowDecoration.Parent = this.btnThem;
+            this.btnThem.Size = new System.Drawing.Size(148, 46);
+            this.btnThem.TabIndex = 133;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
-            // pcbHangHoa
+            // btnLuu
             // 
-            this.pcbHangHoa.Location = new System.Drawing.Point(789, 12);
-            this.pcbHangHoa.Name = "pcbHangHoa";
-            this.pcbHangHoa.Size = new System.Drawing.Size(233, 153);
-            this.pcbHangHoa.TabIndex = 90;
-            this.pcbHangHoa.TabStop = false;
+            this.btnLuu.AutoRoundedCorners = true;
+            this.btnLuu.BorderRadius = 22;
+            this.btnLuu.CheckedState.Parent = this.btnLuu;
+            this.btnLuu.CustomImages.Parent = this.btnLuu;
+            this.btnLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLuu.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLuu.DisabledState.Parent = this.btnLuu;
+            this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnLuu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnLuu.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnLuu.HoverState.Parent = this.btnLuu;
+            this.btnLuu.Location = new System.Drawing.Point(222, 615);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
+            this.btnLuu.Size = new System.Drawing.Size(148, 46);
+            this.btnLuu.TabIndex = 134;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
+            // 
+            // btnLammoi
+            // 
+            this.btnLammoi.AutoRoundedCorners = true;
+            this.btnLammoi.BorderRadius = 22;
+            this.btnLammoi.CheckedState.Parent = this.btnLammoi;
+            this.btnLammoi.CustomImages.Parent = this.btnLammoi;
+            this.btnLammoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLammoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLammoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLammoi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLammoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLammoi.DisabledState.Parent = this.btnLammoi;
+            this.btnLammoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnLammoi.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnLammoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLammoi.ForeColor = System.Drawing.Color.White;
+            this.btnLammoi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnLammoi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnLammoi.HoverState.Parent = this.btnLammoi;
+            this.btnLammoi.Location = new System.Drawing.Point(391, 615);
+            this.btnLammoi.Name = "btnLammoi";
+            this.btnLammoi.ShadowDecoration.Parent = this.btnLammoi;
+            this.btnLammoi.Size = new System.Drawing.Size(148, 46);
+            this.btnLammoi.TabIndex = 135;
+            this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click_1);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AutoRoundedCorners = true;
+            this.btnXoa.BorderRadius = 22;
+            this.btnXoa.CheckedState.Parent = this.btnXoa;
+            this.btnXoa.CustomImages.Parent = this.btnXoa;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.DisabledState.Parent = this.btnXoa;
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnXoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnXoa.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnXoa.HoverState.Parent = this.btnXoa;
+            this.btnXoa.Location = new System.Drawing.Point(564, 615);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
+            this.btnXoa.Size = new System.Drawing.Size(148, 46);
+            this.btnXoa.TabIndex = 136;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
             // 
             // FormNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 684);
-            this.Controls.Add(this.btnTaiAnh);
-            this.Controls.Add(this.pcbHangHoa);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnLammoi);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtGiaban);
@@ -555,16 +580,12 @@ namespace WindowsFormsApp
             this.Controls.Add(this.lblMancc);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dtpkNgaynhap);
-            this.Controls.Add(this.btnLammoi);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblMapn);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.lsvNhaphang);
             this.Controls.Add(this.lbltong);
             this.Controls.Add(this.lbltensp);
             this.Controls.Add(this.lblmasp);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -578,7 +599,6 @@ namespace WindowsFormsApp
             this.Name = "FormNhapHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormNhaphang";
-            ((System.ComponentModel.ISupportInitialize)(this.pcbHangHoa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,13 +608,10 @@ namespace WindowsFormsApp
 
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblMapn;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.ListView lsvNhaphang;
         private System.Windows.Forms.Label lbltong;
         private System.Windows.Forms.Label lbltensp;
         private System.Windows.Forms.Label lblmasp;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
@@ -603,7 +620,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTensp;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnLammoi;
         private System.Windows.Forms.DateTimePicker dtpkNgaynhap;
         private System.Windows.Forms.Label lblMancc;
         private System.Windows.Forms.Label label14;
@@ -625,7 +641,9 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.PictureBox pcbHangHoa;
-        private Guna.UI2.WinForms.Guna2Button btnTaiAnh;
+        private Guna.UI2.WinForms.Guna2GradientButton btnThem;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLuu;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLammoi;
+        private Guna.UI2.WinForms.Guna2GradientButton btnXoa;
     }
 }

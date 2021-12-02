@@ -66,7 +66,7 @@ namespace WindowsFormsApp
 
         }
 
-        private void btnLuu_Click_1(object sender, EventArgs e)
+        private void btnLuu_Click_2(object sender, EventArgs e)
         {
             if (check_data() == true)
             {

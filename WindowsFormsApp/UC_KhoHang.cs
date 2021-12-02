@@ -5,8 +5,6 @@ using System.IO;
 using System.Windows.Forms;
 using BUS;
 using DTO;
-
-
 namespace WindowsFormsApp
 {
     public partial class UC_KhoHang : UserControl
@@ -22,25 +20,18 @@ namespace WindowsFormsApp
             this.tennv = tennv;
             luutennv = tennv;
         }
-
         public void loadData()
         {
-
             dgvHangHoa.DataSource = MatHangBUS.Intance.getListSanPham();
             dgvHangHoa.Columns["MaMH"].HeaderText = "Mã Mặt Hàng";
             dgvHangHoa.Columns["TenMH"].HeaderText = "Tên mặt hàng ";
             dgvHangHoa.Columns["DonVi"].HeaderText = "Đơn Vị Tính";
             dgvHangHoa.Columns["GiaBan"].HeaderText = "Giá Bán";
             dgvHangHoa.Columns["SoLuong"].HeaderText = "Số Lượng";
-
-
             dgvHangHoa.AllowUserToAddRows = false;
             dgvHangHoa.EditMode = DataGridViewEditMode.EditProgrammatically;
-
             pcbHangHoa.SizeMode = PictureBoxSizeMode.StretchImage;
         }
-
-
         public void resetData()
         {
             txtTenMH.Text = "";
@@ -49,7 +40,6 @@ namespace WindowsFormsApp
             pcbHangHoa.Image = null;
         }
         public bool check = true;
-
         bool KiemTraNhap()
         {
             int a;
@@ -73,7 +63,6 @@ namespace WindowsFormsApp
             }
             return true;
         }
-
         void Binding()
         {
             txtMaHang.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "MaMH", true, DataSourceUpdateMode.Never));
@@ -81,7 +70,6 @@ namespace WindowsFormsApp
             txtSoLuong.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
             txtGiaBan.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaBan", true, DataSourceUpdateMode.Never));
         }
-
         void ClearBinding()
         {
             txtMaHang.DataBindings.Clear();
@@ -89,18 +77,16 @@ namespace WindowsFormsApp
             txtSoLuong.DataBindings.Clear();
             txtGiaBan.DataBindings.Clear();
         }
-
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
         {
             dgvHangHoa.DataSource = MatHangBUS.Intance.TimKiemHH(txtTimKiem.Text);
             dgvHangHoa.Columns["Anh"].Visible = false;
         }
-
         private void btnSua_Click(object sender, EventArgs e)
         {
             if (dgvHangHoa.SelectedCells.Count > 0)
             {
-                if (MatHangBUS.Intance.suaHH(txtMaHang.Text, txtTenMH.Text,  int.Parse(txtSoLuong.Text), int.Parse(txtGiaBan.Text)))
+                if (MatHangBUS.Intance.suaHH(txtMaHang.Text, txtTenMH.Text, int.Parse(txtSoLuong.Text), int.Parse(txtGiaBan.Text)))
                 {
                     if (imgLocation != Application.StartupPath + "\\Resources\\hanghoa.png")
                     {
@@ -112,7 +98,6 @@ namespace WindowsFormsApp
                 }
             }
         }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult dlr = MessageBox.Show("Bạn có muốn xóa không?",
@@ -129,10 +114,8 @@ namespace WindowsFormsApp
                 {
                     MessageBox.Show("Bạn không được xóa bản ghi này!", "Thông báo");
                 }
-
             }
         }
-
         private void dgvHangHoa_SelectionChanged_1(object sender, EventArgs e)
         {
             if (dgvHangHoa.SelectedCells.Count > 0)
@@ -181,7 +164,6 @@ namespace WindowsFormsApp
                 pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
             }
         }
-
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
             FormNhapHang formNhaphang = new FormNhapHang(luumanv, luutennv);

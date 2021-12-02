@@ -29,7 +29,16 @@ namespace WindowsFormsApp
 
 
         Chuoiketnoi chuoiketnoi = new Chuoiketnoi();
-        private void btnLuu_Click(object sender, EventArgs e)
+
+
+        private void btnQuaylai_Click_1(object sender, EventArgs e)
+        {
+            FormDangNhap formDangNhap = new FormDangNhap();
+            formDangNhap.Show();
+            this.Hide();
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
             SqlConnection con = chuoiketnoi.sqlConnection();
             con.Open();
@@ -47,13 +56,6 @@ namespace WindowsFormsApp
                 lblCanhbao.Text = "Số điện thoại không đúng";
             lblCanhbao.ForeColor = Color.Brown;
             con.Close();
-        }
-
-        private void btnQuaylai_Click(object sender, EventArgs e)
-        {
-            FormDangNhap formDangNhap = new FormDangNhap();
-            formDangNhap.Show();
-            this.Hide();
         }
     }
 }

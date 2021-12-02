@@ -57,42 +57,6 @@ namespace WindowsFormsApp
             return ma;
         }
 
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            string query = "select TenDangNhap as [TenDangNhap] from Nhanvien where TenDangnhap = '" + txtTendangnhap.Text + "'";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            int i = dt.Rows.Count;
-            if (check_data() == true)
-            {
-                if (i > 0)
-                {
-                    lblThongbao.Text = "Tên đăng nhập đã tồn tại";
-                    lblThongbao.ForeColor = Color.Brown;
-                }
-                else
-                {
-
-
-                    if (txtMatkhau.Text == txtXacnhanmk.Text)
-                    {
-                        if (NhanVienBUS.Intance.themNV(txtManv.Text, txtTennv.Text, txtGioitinh.Text, txtDiachi.Text, txtDienthoai.Text, txtTendangnhap.Text, txtMatkhau.Text))
-                        {
-                            lblThongbao.Text = "Đăng ký tài khoản thành công";
-                            lblThongbao.ForeColor = Color.Brown;
-                            txtManv.Text = Matudong();
-                        }
-                        else
-                            lblThongbao.Text = "Đăng ký tài khoản thất bại";
-                        lblThongbao.ForeColor = Color.Brown;
-                    }
-                    else
-                        lblThongbao.Text = "Mật khẩu xác nhận không đúng";
-                    lblThongbao.ForeColor = Color.Brown;
-                }
-            }
-        }
-
         private void txtTendangnhap_TextChanged(object sender, EventArgs e)
         {
             lblThongbao.Text = "";
@@ -174,11 +138,46 @@ namespace WindowsFormsApp
             return true;
         }
 
-        private void btnQuaylai_Click(object sender, EventArgs e)
+        private void btnQuaylai_Click_1(object sender, EventArgs e)
         {
             FormDangNhap formDangNhap = new FormDangNhap();
             formDangNhap.Show();
             this.Hide();
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+            string query = "select TenDangNhap as [TenDangNhap] from Nhanvien where TenDangnhap = '" + txtTendangnhap.Text + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            int i = dt.Rows.Count;
+            if (check_data() == true)
+            {
+                if (i > 0)
+                {
+                    lblThongbao.Text = "Tên đăng nhập đã tồn tại";
+                    lblThongbao.ForeColor = Color.Brown;
+                }
+                else
+                {
+
+
+                    if (txtMatkhau.Text == txtXacnhanmk.Text)
+                    {
+                        if (NhanVienBUS.Intance.themNV(txtManv.Text, txtTennv.Text, txtGioitinh.Text, txtDiachi.Text, txtDienthoai.Text, txtTendangnhap.Text, txtMatkhau.Text))
+                        {
+                            lblThongbao.Text = "Đăng ký tài khoản thành công";
+                            lblThongbao.ForeColor = Color.Brown;
+                            txtManv.Text = Matudong();
+                        }
+                        else
+                            lblThongbao.Text = "Đăng ký tài khoản thất bại";
+                        lblThongbao.ForeColor = Color.Brown;
+                    }
+                    else
+                        lblThongbao.Text = "Mật khẩu xác nhận không đúng";
+                    lblThongbao.ForeColor = Color.Brown;
+                }
+            }
         }
     }
 }

@@ -105,9 +105,17 @@ namespace WindowsFormsApp
             return ma;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
 
+        private bool LuuHH(string mh, string tenh, string madv, int sl, int dg)
+        {
+            // Convert datetime to date SQL Server 
+            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan)  values('{0}',N'{1}','{2}','{3}','{4}')", mh, tenh, madv, sl, dg);
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
             if (string.IsNullOrEmpty(txtMaHang.Text))
             {
                 MessageBox.Show("Tên mặt hàng không được trống");
@@ -123,24 +131,7 @@ namespace WindowsFormsApp
                 else
                     MessageBox.Show("Không thể lưu thông tin này");
             }
-
-
-
         }
-
-
-        private bool LuuHH(string mh, string tenh, string madv, int sl, int dg)
-        {
-            // Convert datetime to date SQL Server 
-            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan)  values('{0}',N'{1}','{2}','{3}','{4}')", mh, tenh, madv, sl, dg);
-            DataProvider.Instance.ExecuteQuery(query);
-            return true;
-        }
-
-
-
-
-
     }
 }
 

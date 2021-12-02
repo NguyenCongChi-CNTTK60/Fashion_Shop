@@ -301,6 +301,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="QLSieuThiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSieuThiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSieuThiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSieuThiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLSieuThiDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLSieuThiDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UC_DoiMatKhau.cs">
       <SubType>UserControl</SubType>
@@ -380,11 +395,17 @@
     <Compile Include="UC_XacNhanSDT.Designer.cs">
       <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSDT.resx">
+      <DependentUpon>FormSDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemKhachHang.resx">
       <DependentUpon>FormThemKhachHang.cs</DependentUpon>
@@ -405,6 +426,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DoiMatKhau.resx">
+      <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
@@ -456,6 +480,39 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="QLSieuThiDataSet.xsc">
+      <DependentUpon>QLSieuThiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLSieuThiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSieuThiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSieuThiDataSet.xss">
+      <DependentUpon>QLSieuThiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLSieuThiDataSet1.xsc">
+      <DependentUpon>QLSieuThiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLSieuThiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSieuThiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSieuThiDataSet1.xss">
+      <DependentUpon>QLSieuThiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLSieuThiDataSet2.xsc">
+      <DependentUpon>QLSieuThiDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLSieuThiDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLSieuThiDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLSieuThiDataSet2.xss">
+      <DependentUpon>QLSieuThiDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Circle_K_logo_tm.png" />
     <None Include="Resources\03_CircleK_Favor_1.jpg" />
     <None Include="Resources\unnamed.png" />

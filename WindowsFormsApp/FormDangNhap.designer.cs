@@ -259,7 +259,7 @@ namespace WindowsFormsApp
             // 
             this.txtMatKhau.BorderRadius = 9;
             this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMatKhau.DefaultText = "";
+            this.txtMatKhau.DefaultText = "123";
             this.txtMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -279,6 +279,7 @@ namespace WindowsFormsApp
             this.txtMatKhau.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtMatKhau.PlaceholderText = "Mật khẩu";
             this.txtMatKhau.SelectedText = "";
+            this.txtMatKhau.SelectionStart = 3;
             this.txtMatKhau.ShadowDecoration.Parent = this.txtMatKhau;
             this.txtMatKhau.Size = new System.Drawing.Size(302, 49);
             this.txtMatKhau.TabIndex = 9;
@@ -288,7 +289,7 @@ namespace WindowsFormsApp
             // 
             this.txtTenDangNhap.BorderRadius = 9;
             this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDangNhap.DefaultText = "";
+            this.txtTenDangNhap.DefaultText = "tan";
             this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -308,6 +309,7 @@ namespace WindowsFormsApp
             this.txtTenDangNhap.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtTenDangNhap.PlaceholderText = "Tên đăng nhập";
             this.txtTenDangNhap.SelectedText = "";
+            this.txtTenDangNhap.SelectionStart = 3;
             this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
             this.txtTenDangNhap.Size = new System.Drawing.Size(302, 51);
             this.txtTenDangNhap.TabIndex = 8;

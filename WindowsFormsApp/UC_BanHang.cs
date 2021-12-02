@@ -149,54 +149,6 @@ namespace WindowsFormsApp
 
         int tongTien = 0;
 
-        private void btnThemMatHang_Click(object sender, EventArgs e)
-        {
-            if (cmbMaMH.SelectedIndex < 0 || cmbTenmh.SelectedIndex < 0)
-            {
-                MessageBox.Show("Bạn phải chọn sản phẩm", "Thông báo");
-            }
-            else
-            if (cmbMaMH.SelectedIndex >= 0 && txtSoLuong.Value > 0)
-            {
-                bool check = false;
-                foreach (ListViewItem item in lvSanPhamBan.Items)
-                {
-                    if (item.SubItems[0].Text == cmbMaMH.SelectedValue.ToString())
-                    {
-                        check = true;
-                    }
-                    if (check)
-                    {
-                        int temp = Int32.Parse(item.SubItems[2].Text) + Int32.Parse(txtSoLuong.Value.ToString());
-                        item.SubItems[2].Text = temp.ToString();
-                        item.SubItems[3].Text = (Int32.Parse(item.SubItems[2].Text) * Int32.Parse(txtGia.Text)).ToString();
-                        break;
-                    }
-                }
-                int gia = Int32.Parse(txtGia.Text) * Int32.Parse(txtSoLuong.Value.ToString());
-                if (!check)
-                {
-                    string[] arr = new string[5];
-                    arr[0] = cmbMaMH.SelectedValue.ToString();
-                    arr[1] = cmbTenmh.Text;
-                    arr[2] = txtSoLuong.Value.ToString();
-                    arr[3] = txtGia.Text;
-                    arr[4] = gia.ToString();
-                    ListViewItem listViewItem = new ListViewItem(arr);
-                    lvSanPhamBan.Items.Add(listViewItem);
-                }
-                tongTien += gia;
-                lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
-                lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
-                Tinhtienhoantra();
-                resetInfoProduct();
-
-            }
-            else
-                MessageBox.Show("Số lượng phải lớn hơn 0", "Thông báo");
-
-        }
-
         private void resetInfoProduct()
         {
             cmbMaMH.SelectedIndex = -1;
@@ -205,77 +157,6 @@ namespace WindowsFormsApp
             cmbTenmh.Text = "";
             txtGia.Text = "";
         }
-
-        private void btnXoaMatHang_Click(object sender, EventArgs e)
-        {
-
-            for (int i = 0; i < lvSanPhamBan.Items.Count; i++) //duyệt tất cả các item trong list
-            {
-                if (lvSanPhamBan.Items[i].Checked)//nếu item đó dc check
-                {
-                    string tien = lvSanPhamBan.Items[i].SubItems[4].Text.ToString();
-                    tongTien -= Int32.Parse(tien);
-                    lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
-                    lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
-                    lvSanPhamBan.Items[i].Remove();//xóa item đó đi
-                    Tinhtienhoantra();
-                    i--;
-
-                }
-            }
-        }
-
-
-
-        private void btnThanhToan_Click(object sender, EventArgs e)
-        {
-
-            if (string.IsNullOrEmpty(txtSDT.Text))
-            {
-                MessageBox.Show("Chưa có thông tin của khách hàng");
-            }
-            else
-            if (lvSanPhamBan.Items.Count > 0)
-            {
-                HoaDonDTO hd = new HoaDonDTO();
-                hd.MaHD = txtMaHĐ.Text;
-                hd.MaKH = lblMakh.Text;
-                hd.NgayTao = dpkNgayban.Value;
-                hd.MaNV = lblManv.Text;
-                hd.TongTien = tongTien;
-
-
-
-
-                if (LuuHD(hd))   // lưu hóa đơn
-                {
-                    //FormInHD formInHD = new FormInHD(lblMakh.Text);
-                    foreach (ListViewItem item in lvSanPhamBan.Items)
-                    {
-                        LuuDH(hd.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text));  //lưu chi tiết hóa đơn
-                        string query = "update MatHang set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaMH = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
-                        DataProvider.Instance.ExecuteQuery(query);
-
-                    }
-                    FormInHoaDon formInHoaDon = new FormInHoaDon(txtMaHĐ.Text, txtTienkhachduafomart.Text, txtTienhoantra.Text);
-                    formInHoaDon.Show();
-                    lvSanPhamBan.Items.Clear();
-                    lbTienBangSo.Text = "0 VNĐ";
-                    lbTienBangChu.Text = "Không đồng";                                            // làm mới tất cả 
-                    lblMakh.Text = ".";
-                    txtTenKH.Text = "UNKNOW NAME";
-                    tongTien = 0;
-                    txtMaHĐ.Text = Matudong();
-
-                }
-                else
-                {
-                    MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
-                }
-
-            }
-        }
-
 
         //
         // Lưu hóa đơn
@@ -350,6 +231,119 @@ namespace WindowsFormsApp
             }
             else
                 txtTienhoantra.Text = "";
+        }
+
+        private void btnThemMatMH_Click(object sender, EventArgs e)
+        {
+            if (cmbMaMH.SelectedIndex < 0 || cmbTenmh.SelectedIndex < 0)
+            {
+                MessageBox.Show("Bạn phải chọn sản phẩm", "Thông báo");
+            }
+            else
+            if (cmbMaMH.SelectedIndex >= 0 && txtSoLuong.Value > 0)
+            {
+                bool check = false;
+                foreach (ListViewItem item in lvSanPhamBan.Items)
+                {
+                    if (item.SubItems[0].Text == cmbMaMH.SelectedValue.ToString())
+                    {
+                        check = true;
+                    }
+                    if (check)
+                    {
+                        int temp = Int32.Parse(item.SubItems[2].Text) + Int32.Parse(txtSoLuong.Value.ToString());
+                        item.SubItems[2].Text = temp.ToString();
+                        item.SubItems[3].Text = (Int32.Parse(item.SubItems[2].Text) * Int32.Parse(txtGia.Text)).ToString();
+                        break;
+                    }
+                }
+                int gia = Int32.Parse(txtGia.Text) * Int32.Parse(txtSoLuong.Value.ToString());
+                if (!check)
+                {
+                    string[] arr = new string[5];
+                    arr[0] = cmbMaMH.SelectedValue.ToString();
+                    arr[1] = cmbTenmh.Text;
+                    arr[2] = txtSoLuong.Value.ToString();
+                    arr[3] = txtGia.Text;
+                    arr[4] = gia.ToString();
+                    ListViewItem listViewItem = new ListViewItem(arr);
+                    lvSanPhamBan.Items.Add(listViewItem);
+                }
+                tongTien += gia;
+                lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
+                lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
+                Tinhtienhoantra();
+                resetInfoProduct();
+
+            }
+            else
+                MessageBox.Show("Số lượng phải lớn hơn 0", "Thông báo");
+        }
+
+        private void btnXoaMH_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < lvSanPhamBan.Items.Count; i++) //duyệt tất cả các item trong list
+            {
+                if (lvSanPhamBan.Items[i].Checked)//nếu item đó dc check
+                {
+                    string tien = lvSanPhamBan.Items[i].SubItems[4].Text.ToString();
+                    tongTien -= Int32.Parse(tien);
+                    lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
+                    lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
+                    lvSanPhamBan.Items[i].Remove();//xóa item đó đi
+                    Tinhtienhoantra();
+                    i--;
+
+                }
+            }
+        }
+
+        private void btnThanhToan_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtSDT.Text))
+            {
+                MessageBox.Show("Chưa có thông tin của khách hàng");
+            }
+            else
+            if (lvSanPhamBan.Items.Count > 0)
+            {
+                HoaDonDTO hd = new HoaDonDTO();
+                hd.MaHD = txtMaHĐ.Text;
+                hd.MaKH = lblMakh.Text;
+                hd.NgayTao = dpkNgayban.Value;
+                hd.MaNV = lblManv.Text;
+                hd.TongTien = tongTien;
+
+
+
+
+                if (LuuHD(hd))   // lưu hóa đơn
+                {
+                    //FormInHD formInHD = new FormInHD(lblMakh.Text);
+                    foreach (ListViewItem item in lvSanPhamBan.Items)
+                    {
+                        LuuDH(hd.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text));  //lưu chi tiết hóa đơn
+                        string query = "update MatHang set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaMH = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
+                        DataProvider.Instance.ExecuteQuery(query);
+
+                    }
+                    FormInHoaDon formInHoaDon = new FormInHoaDon(txtMaHĐ.Text, txtTienkhachduafomart.Text, txtTienhoantra.Text);
+                    formInHoaDon.Show();
+                    lvSanPhamBan.Items.Clear();
+                    lbTienBangSo.Text = "0 VNĐ";
+                    lbTienBangChu.Text = "Không đồng";                                            // làm mới tất cả 
+                    lblMakh.Text = ".";
+                    txtTenKH.Text = "UNKNOW NAME";
+                    tongTien = 0;
+                    txtMaHĐ.Text = Matudong();
+
+                }
+                else
+                {
+                    MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
+                }
+
+            }
         }
 
         private void btnThemMoiKH_Click(object sender, EventArgs e)

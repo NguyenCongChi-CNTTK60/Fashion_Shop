@@ -46,9 +46,9 @@ namespace WindowsFormsApp
             this.label13 = new System.Windows.Forms.Label();
             this.lblquyen = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.btnDoimatkhau = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnDoimatkhau = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -212,21 +212,6 @@ namespace WindowsFormsApp
             this.label15.TabIndex = 194;
             this.label15.Text = "Quyền đăng nhập:";
             // 
-            // btnDoimatkhau
-            // 
-            this.btnDoimatkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnDoimatkhau.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoimatkhau.ForeColor = System.Drawing.Color.White;
-            this.btnDoimatkhau.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDoimatkhau.Location = new System.Drawing.Point(509, 341);
-            this.btnDoimatkhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDoimatkhau.Name = "btnDoimatkhau";
-            this.btnDoimatkhau.Size = new System.Drawing.Size(320, 67);
-            this.btnDoimatkhau.TabIndex = 206;
-            this.btnDoimatkhau.Text = "    Đổi mật khẩu";
-            this.btnDoimatkhau.UseVisualStyleBackColor = false;
-            this.btnDoimatkhau.Click += new System.EventHandler(this.btnDoimatkhau_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -241,6 +226,33 @@ namespace WindowsFormsApp
             // 
             this.guna2Elipse1.BorderRadius = 10;
             this.guna2Elipse1.TargetControl = this;
+            // 
+            // btnDoimatkhau
+            // 
+            this.btnDoimatkhau.AutoRoundedCorners = true;
+            this.btnDoimatkhau.BorderRadius = 31;
+            this.btnDoimatkhau.CheckedState.Parent = this.btnDoimatkhau;
+            this.btnDoimatkhau.CustomImages.Parent = this.btnDoimatkhau;
+            this.btnDoimatkhau.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoimatkhau.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDoimatkhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDoimatkhau.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDoimatkhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDoimatkhau.DisabledState.Parent = this.btnDoimatkhau;
+            this.btnDoimatkhau.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnDoimatkhau.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnDoimatkhau.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDoimatkhau.ForeColor = System.Drawing.Color.White;
+            this.btnDoimatkhau.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnDoimatkhau.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnDoimatkhau.HoverState.Parent = this.btnDoimatkhau;
+            this.btnDoimatkhau.Location = new System.Drawing.Point(527, 323);
+            this.btnDoimatkhau.Name = "btnDoimatkhau";
+            this.btnDoimatkhau.ShadowDecoration.Parent = this.btnDoimatkhau;
+            this.btnDoimatkhau.Size = new System.Drawing.Size(291, 64);
+            this.btnDoimatkhau.TabIndex = 208;
+            this.btnDoimatkhau.Text = "Đổi mật khẩu";
+            this.btnDoimatkhau.Click += new System.EventHandler(this.btnDoimatkhau_Click_1);
             // 
             // pictureBox1
             // 
@@ -257,8 +269,8 @@ namespace WindowsFormsApp
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(915, 437);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnDoimatkhau);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblquyen);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.lblTentk);
@@ -306,8 +318,8 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblquyen;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btnDoimatkhau;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDoimatkhau;
     }
 }

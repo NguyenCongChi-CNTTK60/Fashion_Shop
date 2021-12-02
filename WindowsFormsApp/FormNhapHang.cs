@@ -134,8 +134,6 @@ namespace WindowsFormsApp
         }
         List<NhaCungCapDTO> list1;
 
-
-
         int i;
         private void cmbTensp_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -164,16 +162,91 @@ namespace WindowsFormsApp
             }
         }
 
+        private void Lammoi()
+        {
+            cmbTensp.SelectedIndex = -1;
+            txtSoLuong.Text = "0";
+            txtGia.Text = "0";  
+            lblmasp.Text = "";
+            lbltensp.Text = "";
+        }
+
+
+
+        private bool check_data()
+        {
+            if (string.IsNullOrEmpty(txtGia.Text))
+            {
+                MessageBox.Show("Giá nhập không được trống");
+                return false;
+            }
+            else if (string.IsNullOrEmpty(txtSoLuong.Text))
+            {
+                MessageBox.Show("Số lượng không được trống");
+                return false;
+            }
+
+            return true;
+        }
+
+
+
+        //
+        // Lưu phiếu nhập
+        //
+        private bool LuuPN(PhieuNhapDTO pn)
+        {
+            // Convert datetime to date SQL Server 
+            string query = String.Format("insert into PhieuNhap values('{0}','{1}','{2}','{3}')", pn.MaPN, pn.MaNCC, pn.NgayNhap, pn.MaNV);
+
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+
+
+        //
+        // Lưu chi tiết phiếu nhập
+        //
+        private bool LuuChitietPN(string mapn, string mahh, int sl, int dongia)
+        {
+            // Convert datetime to date SQL Server 
+            string query = String.Format("insert into ChiTietPN values('{0}','{1}','{2}','{3}')", mapn, mahh, sl, dongia);
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+
+
+
+
+
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            FormThongTinHangMoi f = new FormThongTinHangMoi();
+            f.Show();
+        }
+
+      
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+            string query = "update MatHang set SoLuong = 0,GiaBan = 0 where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
+            DataProvider.Instance.ExecuteQuery(query);
+        }
+
+       
 
         int tongTien;
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             bool check = false;
             if (check_data() == true)
             {
                 string query = "update MatHang set GiaBan = '" + txtGiaban.Text + "'  where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
                 DataProvider.Instance.ExecuteQuery(query);
-               
+
                 if (Int32.Parse(txtSoLuong.Text.ToString()) <= 0)
                 {
                     MessageBox.Show("Số lượng nhập phải lớn hơn 0");
@@ -182,7 +255,7 @@ namespace WindowsFormsApp
                 {
                     MessageBox.Show("Giá nhập phải lớn hơn 0");
                 }
-                
+
                 else
                if (cmbTensp.SelectedIndex >= 0 && cmbTenncc.SelectedIndex >= 0)
                 {
@@ -224,55 +297,7 @@ namespace WindowsFormsApp
             }
         }
 
-       
-
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < lsvNhaphang.Items.Count; i++) //duyệt tất cả các item trong list
-            {
-                if (lsvNhaphang.Items[i].Checked)//nếu item đó dc check
-                {
-                    string tien = lsvNhaphang.Items[i].SubItems[4].Text.ToString();
-                    tongTien -= Int32.Parse(tien);
-                    lbltong.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
-                    lsvNhaphang.Items[i].Remove();//xóa item đó đi
-                    i--;
-                }
-            }
-        }
-
-
-
-        private void Lammoi()
-        {
-            cmbTensp.SelectedIndex = -1;
-            txtSoLuong.Text = "0";
-            txtGia.Text = "0";  
-            lblmasp.Text = "";
-            lbltensp.Text = "";
-            pcbHangHoa.Image = null;
-        }
-
-
-
-        private bool check_data()
-        {
-            if (string.IsNullOrEmpty(txtGia.Text))
-            {
-                MessageBox.Show("Giá nhập không được trống");
-                return false;
-            }
-            else if (string.IsNullOrEmpty(txtSoLuong.Text))
-            {
-                MessageBox.Show("Số lượng không được trống");
-                return false;
-            }
-
-            return true;
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
             if (lsvNhaphang.Items.Count > 0)
             {
@@ -310,49 +335,10 @@ namespace WindowsFormsApp
                     MessageBox.Show("Bạn chưa có sản phẩm để Lưu");
                 }
             }
-
         }
 
-        //
-        // Lưu phiếu nhập
-        //
-        private bool LuuPN(PhieuNhapDTO pn)
+        private void btnLammoi_Click_1(object sender, EventArgs e)
         {
-            // Convert datetime to date SQL Server 
-            string query = String.Format("insert into PhieuNhap values('{0}','{1}','{2}','{3}')", pn.MaPN, pn.MaNCC, pn.NgayNhap, pn.MaNV);
-
-            DataProvider.Instance.ExecuteQuery(query);
-            return true;
-        }
-
-
-
-        //
-        // Lưu chi tiết phiếu nhập
-        //
-        private bool LuuChitietPN(string mapn, string mahh, int sl, int dongia)
-        {
-            // Convert datetime to date SQL Server 
-            string query = String.Format("insert into ChiTietPN values('{0}','{1}','{2}','{3}')", mapn, mahh, sl, dongia);
-            DataProvider.Instance.ExecuteQuery(query);
-            return true;
-        }
-
-
-
-
-
-
-
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            FormThongTinHangMoi f = new FormThongTinHangMoi();
-            f.Show();
-        }
-
-        private void btnLammoi_Click(object sender, EventArgs e)
-        {
-
             list = getListSanPham();
             cmbTensp.DataSource = list;
             cmbTensp.ValueMember = "MaMH";
@@ -375,30 +361,19 @@ namespace WindowsFormsApp
             Lammoi();
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
-            string query = "update MatHang set SoLuong = 0,GiaBan = 0 where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
-            DataProvider.Instance.ExecuteQuery(query);
-        }
-
-        string imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
-
-        private void btnTaiAnh_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dlgOpen = new OpenFileDialog();
-            dlgOpen.Filter = "PNG files(*.png)|*.png|JPEG(*.jpg)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
-            dlgOpen.FilterIndex = 2;
-            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
-            if (dlgOpen.ShowDialog() == DialogResult.OK)
+            for (int i = 0; i < lsvNhaphang.Items.Count; i++) //duyệt tất cả các item trong list
             {
-                imgLocation = dlgOpen.FileName.ToString();
-                pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
+                if (lsvNhaphang.Items[i].Checked)//nếu item đó dc check
+                {
+                    string tien = lsvNhaphang.Items[i].SubItems[4].Text.ToString();
+                    tongTien -= Int32.Parse(tien);
+                    lbltong.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
+                    lsvNhaphang.Items[i].Remove();//xóa item đó đi
+                    i--;
+                }
             }
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
