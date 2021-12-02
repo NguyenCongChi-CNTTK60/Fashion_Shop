@@ -55,11 +55,10 @@
             this.btnTrangChu = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label3 = new System.Windows.Forms.Label();
             this.pannelLeft1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnNhapHang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.pannelLeft1.SuspendLayout();
@@ -71,7 +70,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.panel3.Controls.Add(this.btnX);
             this.panel3.Controls.Add(this.lblTennv);
             this.panel3.Controls.Add(this.lblManv);
@@ -118,7 +117,7 @@
             // 
             this.lblTennv.AutoSize = true;
             this.lblTennv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTennv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.lblTennv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.lblTennv.Location = new System.Drawing.Point(591, 24);
             this.lblTennv.Name = "lblTennv";
             this.lblTennv.Size = new System.Drawing.Size(64, 22);
@@ -129,7 +128,7 @@
             // 
             this.lblManv.AutoSize = true;
             this.lblManv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.lblManv.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.lblManv.Location = new System.Drawing.Point(495, 22);
             this.lblManv.Name = "lblManv";
             this.lblManv.Size = new System.Drawing.Size(64, 22);
@@ -140,7 +139,7 @@
             // 
             this.lblQuyen.AutoSize = true;
             this.lblQuyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(237)))), ((int)(((byte)(247)))));
+            this.lblQuyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.lblQuyen.Location = new System.Drawing.Point(683, 19);
             this.lblQuyen.Name = "lblQuyen";
             this.lblQuyen.Size = new System.Drawing.Size(96, 25);
@@ -152,7 +151,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel1.Location = new System.Drawing.Point(112, 12);
+            this.panel1.Location = new System.Drawing.Point(159, 9);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(45, 37);
             this.panel1.TabIndex = 33;
@@ -163,7 +162,7 @@
             this.label2.AutoSize = true;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(28)))), ((int)(((byte)(97)))));
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(14, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 29);
@@ -177,8 +176,8 @@
             this.lblNguoidung.AutoSize = true;
             this.lblNguoidung.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNguoidung.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            this.lblNguoidung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(28)))), ((int)(((byte)(97)))));
-            this.lblNguoidung.Location = new System.Drawing.Point(203, 19);
+            this.lblNguoidung.ForeColor = System.Drawing.Color.White;
+            this.lblNguoidung.Location = new System.Drawing.Point(230, 19);
             this.lblNguoidung.Name = "lblNguoidung";
             this.lblNguoidung.Size = new System.Drawing.Size(92, 29);
             this.lblNguoidung.TabIndex = 7;
@@ -188,7 +187,7 @@
             // 
             // panelLeft
             // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.panelLeft.Controls.Add(this.btnNhapHang);
             this.panelLeft.Controls.Add(this.btnBanHang);
             this.panelLeft.Controls.Add(this.label8);
@@ -545,38 +544,13 @@
             // 
             // pannelLeft1
             // 
-            this.pannelLeft1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.pannelLeft1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.pannelLeft1.Controls.Add(this.label11);
-            this.pannelLeft1.Controls.Add(this.label1);
             this.pannelLeft1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pannelLeft1.Location = new System.Drawing.Point(0, 0);
             this.pannelLeft1.Name = "pannelLeft1";
             this.pannelLeft1.Size = new System.Drawing.Size(230, 87);
             this.pannelLeft1.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.White;
-            this.label11.Font = new System.Drawing.Font("Pacifico", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(18, 15);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 56);
-            this.label11.TabIndex = 5;
-            this.label11.Text = "Co.op";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Pacifico", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DeepPink;
-            this.label1.Location = new System.Drawing.Point(127, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 56);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "mart";
             // 
             // panelControl
             // 
@@ -623,6 +597,18 @@
             this.btnNhapHang.Text = "   Nhập hàng";
             this.btnNhapHang.UseTransparentBackground = true;
             this.btnNhapHang.Click += new System.EventHandler(this.btnNhapHang_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Font = new System.Drawing.Font("Pacifico", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label11.Location = new System.Drawing.Point(45, 15);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 56);
+            this.label11.TabIndex = 5;
+            this.label11.Text = "Co.op";
             // 
             // FormTrangChu
             // 
@@ -674,12 +660,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNguoidung;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblTennv;
         private System.Windows.Forms.Label lblManv;
         private System.Windows.Forms.Label lblQuyen;
         private Guna.UI2.WinForms.Guna2GradientButton btnX;
         private Guna.UI2.WinForms.Guna2GradientButton btnNhapHang;
+        private System.Windows.Forms.Label label11;
     }
 }

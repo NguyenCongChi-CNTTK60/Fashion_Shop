@@ -464,6 +464,15 @@
     <None Include="Image\home-page.png" />
     <None Include="Image\oto-giaohang.jpg" />
     <None Include="Image\icon-user.png" />
+    <None Include="Resources\Login.jpg" />
+    <None Include="Resources\Login1.jpg" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\icons8-password-30.png" />
+    <None Include="Resources\icons8-user-30.png" />
+    <None Include="Resources\icons8-facebook-48.png" />
+    <None Include="Resources\icons8-google-48.png" />
+    <None Include="Resources\icons8-instagram-48.png" />
+    <None Include="Resources\Login2.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

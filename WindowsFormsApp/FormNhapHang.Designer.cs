@@ -151,7 +151,7 @@ namespace WindowsFormsApp
             this.lbltensp.AutoSize = true;
             this.lbltensp.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltensp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbltensp.Location = new System.Drawing.Point(901, 221);
+            this.lbltensp.Location = new System.Drawing.Point(939, 221);
             this.lbltensp.Name = "lbltensp";
             this.lbltensp.Size = new System.Drawing.Size(64, 21);
             this.lbltensp.TabIndex = 56;
@@ -206,7 +206,7 @@ namespace WindowsFormsApp
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(724, 211);
+            this.label8.Location = new System.Drawing.Point(760, 218);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(148, 35);
             this.label8.TabIndex = 50;
@@ -282,7 +282,7 @@ namespace WindowsFormsApp
             // 
             this.dtpkNgaynhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpkNgaynhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpkNgaynhap.Location = new System.Drawing.Point(730, 325);
+            this.dtpkNgaynhap.Location = new System.Drawing.Point(760, 339);
             this.dtpkNgaynhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpkNgaynhap.Name = "dtpkNgaynhap";
             this.dtpkNgaynhap.Size = new System.Drawing.Size(222, 28);
