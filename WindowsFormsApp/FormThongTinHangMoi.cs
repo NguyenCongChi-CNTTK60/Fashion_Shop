@@ -132,7 +132,7 @@ namespace WindowsFormsApp
         private bool LuuHH(string mh, string tenh, string madv, int sl, int dg)
         {
             // Convert datetime to date SQL Server 
-            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan)  values('{0}','{1}','{2}','{3}','{4}')", mh, tenh, madv, sl, dg);
+            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan)  values('{0}',N'{1}','{2}','{3}','{4}')", mh, tenh, madv, sl, dg);
             DataProvider.Instance.ExecuteQuery(query);
             return true;
         }

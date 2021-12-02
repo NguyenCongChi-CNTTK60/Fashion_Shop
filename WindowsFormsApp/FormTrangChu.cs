@@ -14,6 +14,7 @@ namespace WindowsFormsApp
     public partial class FormTrangChu : Form
     {
         private string tk;
+        private string luumanv, luutennv;
         public FormTrangChu(string tk)  // string tk
         {
             InitializeComponent();
@@ -148,6 +149,12 @@ namespace WindowsFormsApp
         private void btnX_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnNhapHang_Click(object sender, EventArgs e)
+        {
+            FormNhapHang formNhaphang = new FormNhapHang(luumanv, luutennv);
+            formNhaphang.Show();
         }
     }
 }

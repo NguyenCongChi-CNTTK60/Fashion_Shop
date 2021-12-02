@@ -173,7 +173,7 @@ namespace WindowsFormsApp
             {
                 string query = "update MatHang set GiaBan = '" + txtGiaban.Text + "'  where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
                 DataProvider.Instance.ExecuteQuery(query);
-                MatHangDTO data = new MatHangDTO();
+               
                 if (Int32.Parse(txtSoLuong.Text.ToString()) <= 0)
                 {
                     MessageBox.Show("Số lượng nhập phải lớn hơn 0");
