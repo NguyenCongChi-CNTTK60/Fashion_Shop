@@ -21,18 +21,16 @@ namespace WindowsFormsApp
 
         private void Hienthi()
         {
-            string query = "USP_TKKH";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            DataTable dt = KhachHangBUS.Intance.TKKhachHang();
             dgvThongkekh.DataSource = dt;
         }
 
         private void txtTimkiemkhachhang_TextChanged(object sender, System.EventArgs e)
         {
             string tk = txtTimkiemkhachhang.Text;
-            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],SDT as [Số điện thoại], SUM(HoaDon.TongTien) AS [Tổng Tiền], Count(HoaDon.MaKH) as [Số lần mua hàng] from KhachHang inner join HoaDon on KhachHang.MaKH = HoaDon.MaKH where TenKH like N'%" + tk + "%' group by HoaDon.MaKH, KhachHang.MaKH,TenKH,SDT";
             if (!string.IsNullOrEmpty(txtTimkiemkhachhang.Text))
             {
-                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                DataTable dt = KhachHangBUS.Intance.TimKiemKhachHang(tk);
                 dgvThongkekh.DataSource = dt;
             }
             else

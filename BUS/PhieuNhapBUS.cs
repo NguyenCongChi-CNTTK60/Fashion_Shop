@@ -49,5 +49,20 @@ namespace BUS
         {
             return PhieuNhapDAO.Intance.searchCoupon(maPN);
         }
+
+
+
+        // CHÍ
+        public DataTable TKPhieuNhap()
+        {
+            return PhieuNhapDAO.Intance.TKPhieuNhap();
+        }
+
+
+        public DataTable TimKiemPN(string tk)
+        {
+            return PhieuNhapDAO.Intance.TimKiemPN(tk);
+        }
+
     }
 }

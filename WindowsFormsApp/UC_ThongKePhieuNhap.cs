@@ -22,23 +22,22 @@ namespace WindowsFormsApp
 
         private void Hienthi()
         {
-            string query = "USP_tkPhieunhap";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            DataTable dt = PhieuNhapBUS.Intance.TKPhieuNhap();
             dgvThongkepn.DataSource = dt;
         }
 
         private void txtTimkiemphieunhap_TextChanged(object sender, EventArgs e)
         {
-            string tk = txtTimkiemphieunhap.Text;
-            string query = "select MaPN as [Mã phiểu nhập], NgayNhap as[ Ngày nhập hàng],TenNCC as [Nhà cung cấp],TenHienThi as [Nhân viên nhập] from PhieuNhap inner join NhaCungCap on PhieuNhap.MaNCC = NhaCungCap.MaNCC inner join NhanVien on PhieuNhap.MaNV = NhanVien.MaNV where MaPN like '%" + tk + "%' or TenNCC like N'%" + tk + "%' or TenHienThi like N'%" + tk + "%' ";
+            string tk = txtTimkiemphieunhap.Text;     
             if (!string.IsNullOrEmpty(txtTimkiemphieunhap.Text))
             {
-                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                DataTable dt = PhieuNhapBUS.Intance.TimKiemPN(tk);
                 dgvThongkepn.DataSource = dt;
             }
             else
                 Hienthi();
         }
+
 
         private void dgvThongkepn_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

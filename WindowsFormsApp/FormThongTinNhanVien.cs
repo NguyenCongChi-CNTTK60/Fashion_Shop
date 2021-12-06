@@ -44,6 +44,7 @@ namespace WindowsFormsApp
         {
             FormDoiMatKhauMoi f = new FormDoiMatKhauMoi(lblTentk.Text);
             f.Show();
+            this.Hide();
 
         }
     }

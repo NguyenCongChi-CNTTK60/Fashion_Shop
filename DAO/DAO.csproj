@@ -49,8 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Chuoiketnoi.cs" />
+    <Compile Include="GiamGiaDAO.cs" />
+    <Compile Include="LoaiHangDAO.cs" />
     <Compile Include="NhaCungCapDAO.cs" />
-    <Compile Include="DonViTinhDAO.cs" />
     <Compile Include="HoaDonDAO.cs">
       <SubType>Code</SubType>
     </Compile>

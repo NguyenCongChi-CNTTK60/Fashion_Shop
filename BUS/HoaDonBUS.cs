@@ -36,5 +36,24 @@ namespace BUS
         {
             return HoaDonDAO.Intance.LoadDanhSachDonHangTheoKH(MaKH);
         }
+
+
+        // CHÍ
+        public DataTable TKHoaDon(DateTime ngaybd, DateTime ngaykt)
+        {
+            return HoaDonDAO.Intance.TKHoaDon(ngaybd, ngaykt);
+        }
+
+
+        public DataTable TongTienHoaDon()
+        {
+            return HoaDonDAO.Intance.TongTienHoaDon();
+        }
+
+
+        public DataTable TongTienTheoNgay(DateTime ngaybd, DateTime ngaykt)
+        {
+            return HoaDonDAO.Intance.TongTienTheoNgay(ngaybd,ngaykt);
+        }
     }
 }

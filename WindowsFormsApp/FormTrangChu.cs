@@ -19,11 +19,11 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             /*hiển thị trang chủ*/
-            UC_TrangChu tc = new UC_TrangChu();
-            themUC(tc);
+            //UC_TrangChu tc = new UC_TrangChu();
+            //themUC(tc);
             this.tk = tk;
             lblNguoidung.Text = tk;
-            Phanquyen();
+           // Phanquyen();
 
             TTnguoiban();
         }
@@ -32,13 +32,17 @@ namespace WindowsFormsApp
         {
             string name = lblNguoidung.Text;
             string query = "select MaNV,TenHienThi from Nhanvien where TenDangNhap = '" + tk + "'";
+            
             if (!string.IsNullOrEmpty(lblNguoidung.Text))
             {
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
                 lblManv.Text = dt.Rows[0]["MaNV"].ToString();
                 lblTennv.Text = dt.Rows[0]["TenHienThi"].ToString();
+                
             }
         }
+
+
         private void Phanquyen()
         {
             string Name = lblNguoidung.Text;
@@ -128,7 +132,7 @@ namespace WindowsFormsApp
 
         private void btnBanHang_Click_1(object sender, EventArgs e)
         {
-            UC_BanHang bh = new UC_BanHang(lblManv.Text, lblTennv.Text);
+            UC_BanHang bh = new UC_BanHang();  //lblManv.Text, lblTennv.Text
             addControlsToPanel(bh);
         }
 
@@ -151,10 +155,18 @@ namespace WindowsFormsApp
             Application.Exit();
         }
 
+        private void btnKhuyenMai_Click(object sender, EventArgs e)
+        {
+            UC_KhuyenMai uC_KhuyenMai = new UC_KhuyenMai();
+            themUC(uC_KhuyenMai);
+        }
+
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
-            FormNhapHang formNhaphang = new FormNhapHang(luumanv, luutennv);
-            formNhaphang.Show();
+            //FormNhapHang formNhaphang = new FormNhapHang(luumanv, luutennv);
+            //formNhaphang.Show();
+            UC_NhapHang f = new UC_NhapHang(lblManv.Text,lblTennv.Text);
+            addControlsToPanel(f);
         }
     }
 }

@@ -59,20 +59,20 @@ namespace WindowsFormsApp
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label3.Location = new System.Drawing.Point(3, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 23);
+            this.label3.Size = new System.Drawing.Size(119, 29);
             this.label3.TabIndex = 171;
             this.label3.Text = "Họ và tên:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label7.Location = new System.Drawing.Point(9, 83);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(82, 23);
+            this.label7.Size = new System.Drawing.Size(91, 29);
             this.label7.TabIndex = 178;
             this.label7.Text = "Mã NV:";
             // 
@@ -92,17 +92,17 @@ namespace WindowsFormsApp
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(337, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(268, 40);
+            this.label4.Size = new System.Drawing.Size(317, 48);
             this.label4.TabIndex = 226;
             this.label4.Text = "QUẢN LÝ NHÂN VIÊN";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label9.Location = new System.Drawing.Point(9, 252);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 23);
+            this.label9.Size = new System.Drawing.Size(119, 29);
             this.label9.TabIndex = 192;
             this.label9.Text = "Tìm kiếm:";
             // 
@@ -135,10 +135,10 @@ namespace WindowsFormsApp
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label10.Location = new System.Drawing.Point(531, 187);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 23);
+            this.label10.Size = new System.Drawing.Size(104, 29);
             this.label10.TabIndex = 195;
             this.label10.Text = "Chức vụ:";
             // 
@@ -167,10 +167,10 @@ namespace WindowsFormsApp
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label5.Location = new System.Drawing.Point(519, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 23);
+            this.label5.Size = new System.Drawing.Size(127, 29);
             this.label5.TabIndex = 197;
             this.label5.Text = "Điện thoại:";
             // 
@@ -231,6 +231,7 @@ namespace WindowsFormsApp
             this.dgvThongTinNhanVien.ThemeStyle.RowsStyle.Height = 24;
             this.dgvThongTinNhanVien.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvThongTinNhanVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvThongTinNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongTinNhanVien_CellContentClick);
             // 
             // txtHoTen
             // 
@@ -339,20 +340,20 @@ namespace WindowsFormsApp
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label6.Location = new System.Drawing.Point(531, 91);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 23);
+            this.label6.Size = new System.Drawing.Size(92, 29);
             this.label6.TabIndex = 225;
             this.label6.Text = "Địa chỉ:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label1.Location = new System.Drawing.Point(9, 173);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 23);
+            this.label1.Size = new System.Drawing.Size(107, 29);
             this.label1.TabIndex = 226;
             this.label1.Text = "Giới tính:";
             // 

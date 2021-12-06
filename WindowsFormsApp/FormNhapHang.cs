@@ -62,6 +62,8 @@ namespace WindowsFormsApp
             this.tennv = tennv;
             lblTennv.Text = tennv;
 
+            
+
         }
 
 

@@ -18,35 +18,18 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             txtMaHang.Text = Matudong();
-            list = getListSanPham();
-            cmbDonvitinh.DataSource = list;
-            cmbDonvitinh.ValueMember = "MaDVT";
-            cmbDonvitinh.DisplayMember = "TenDVT";
-            cmbMaDVT.DataSource = list;
-            cmbMaDVT.ValueMember = "MaDVT";
-            cmbMaDVT.DisplayMember = "MaDVT";
-            list1 = getListNCC();
-            cmbMaDVT.SelectedIndex = -1;
             Lammoi();
-
+            list1 = LoaiHangBUS.Intance.getListLoaiHang();
+            cmbLoaiHang.DataSource = list1;
+            cmbLoaiHang.DisplayMember = "TenLH";
+            cmbLoaiHang.ValueMember = "MaLH";
+            cmbMaLoaiHang.DataSource = list1;
+            cmbMaLoaiHang.DisplayMember = "MaLH";
         }
+        List<LoaiHangDTO> list1;
 
 
 
-        public List<DonViTinhDTO> getListSanPham()
-        {
-            string query = "select * from DonViTinh";
-            List<DonViTinhDTO> list = new List<DonViTinhDTO>();
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow item in dt.Rows)
-            {
-                DonViTinhDTO product = new DonViTinhDTO(item);
-                list.Add(product);
-            }
-            return list;
-        }
-
-        List<DonViTinhDTO> list;
 
 
         private void Lammoi()
@@ -54,23 +37,11 @@ namespace WindowsFormsApp
             txtTenmh.Text = "";
             cmbDonvitinh.SelectedIndex = -1;
             cmbDonvitinh.SelectedIndex = -1;
+            cmbLoaiHang.SelectedIndex = -1;
 
         }
 
-        public List<NhaCungCapDTO> getListNCC()
-        {
-            string query = "select * from NhaCungCap";
-            List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
-            foreach (DataRow item in dt.Rows)
-            {
-                NhaCungCapDTO product = new NhaCungCapDTO(item);
-                list.Add(product);
-            }
-            return list;
-        }
-
-        List<NhaCungCapDTO> list1;
+       
 
         private string Matudong()
         {
@@ -85,7 +56,7 @@ namespace WindowsFormsApp
             {
                 int k;
                 ma = "SP";
-                k = dt.Rows.Count + 3;
+                k = dt.Rows.Count;
                 k++;
                 if (k < 10)
                 {
@@ -105,16 +76,26 @@ namespace WindowsFormsApp
             return ma;
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
+        
 
+
+        private bool LuuHH(string mh, string tenh, string madv, int sl, int dg, string maLH)
+        {
+            // Convert datetime to date SQL Server 
+            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan,MaLH)  values('{0}',N'{1}',N'{2}','{3}','{4}','{5}')", mh, tenh, madv, sl, dg,maLH);
+            DataProvider.Instance.ExecuteQuery(query);
+            return true;
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
             if (string.IsNullOrEmpty(txtMaHang.Text))
             {
                 MessageBox.Show("Tên mặt hàng không được trống");
             }
             else
             {
-                if (LuuHH(txtMaHang.Text, txtTenmh.Text, cmbMaDVT.Text, 0, 1))
+                if (LuuHH(txtMaHang.Text, txtTenmh.Text, cmbDonvitinh.Text, 0, 1,cmbMaLoaiHang.Text))
                 {
                     MessageBox.Show("Lưu thông tin hàng thành công");
                     txtMaHang.Text = Matudong();
@@ -123,24 +104,28 @@ namespace WindowsFormsApp
                 else
                     MessageBox.Show("Không thể lưu thông tin này");
             }
-
-
-
         }
 
-
-        private bool LuuHH(string mh, string tenh, string madv, int sl, int dg)
+        private void cmbLoaiHang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Convert datetime to date SQL Server 
-            string query = String.Format(" insert into MatHang (MaMH,TenMH,DonVi,SoLuong,GiaBan)  values('{0}',N'{1}','{2}','{3}','{4}')", mh, tenh, madv, sl, dg);
-            DataProvider.Instance.ExecuteQuery(query);
-            return true;
+
         }
 
 
 
+        private void themUC(Control uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(uc);
+            uc.BringToFront();
+        }
 
-
+        private void btnThemLoaiHang_Click(object sender, EventArgs e)
+        {
+            UC_ThemLoaiHang f = new UC_ThemLoaiHang();
+            themUC(f);
+        }
     }
 }
 

@@ -31,21 +31,21 @@ namespace WindowsFormsApp
             string ma = "";
             if (dt.Rows.Count <= 0)
             {
-                ma = "NV01";
+                ma = "NV001";
             }
             else
             {
                 int k;
                 ma = "NV";
-                k = Convert.ToInt32(dt.Rows.Count - 1);
+                k = Convert.ToInt32(dt.Rows.Count);
                 k++;
                 if (k < 10)
                 {
-                    ma = ma + "0";
+                    ma = ma + "00";
                 }
                 else if (k >= 10 && k < 100)
                 {
-                    ma = ma + " ";
+                    ma = ma + "0";
                 }
                 else if (k >= 100 && k < 1000)
                 {

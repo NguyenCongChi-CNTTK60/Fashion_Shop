@@ -320,11 +320,29 @@
     <Compile Include="UC_KhoHang.Designer.cs">
       <DependentUpon>UC_KhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_KhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_KhuyenMai.Designer.cs">
+      <DependentUpon>UC_KhuyenMai.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UC_NhanVien.Designer.cs">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_NhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_NhapHang.Designer.cs">
+      <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ThemLoaiHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThemLoaiHang.Designer.cs">
+      <DependentUpon>UC_ThemLoaiHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ThongKeHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -386,6 +404,9 @@
     <EmbeddedResource Include="FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormReportThongKe.resx">
+      <DependentUpon>FormReportThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemKhachHang.resx">
       <DependentUpon>FormThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,14 +427,30 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_KhoHang.resx">
       <DependentUpon>UC_KhoHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_KhuyenMai.resx">
+      <DependentUpon>UC_KhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_NhanVien.resx">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_NhapHang.resx">
+      <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThemLoaiHang.resx">
+      <DependentUpon>UC_ThemLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongKeHoaDon.resx">
+      <DependentUpon>UC_ThongKeHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongKePhieuNhap.resx">
+      <DependentUpon>UC_ThongKePhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_TrangChu.resx">
       <DependentUpon>UC_TrangChu.cs</DependentUpon>

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using WindowsFormsApp;
 
 namespace DAO
 {
@@ -24,7 +25,7 @@ namespace DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = "SELECT * FROM NhanVien WHERE TenDangNhap = N'" + userName + "' AND MatKhau = N'" + passWord + "' ";
+            string query = "SELECT * FROM NhanVien WHERE TenDangNhap = N'" + userName + "' AND MatKhau = N'" + passWord + "'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
 

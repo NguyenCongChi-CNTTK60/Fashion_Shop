@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using WindowsFormsApp;
 
 namespace DAO
 {
@@ -77,6 +78,24 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });
             return data;
         }
+
+
+        // CHÍ
+        public DataTable TKPhieuNhap()
+        {
+            string query = "EXEC USP_TKPhieuNhap";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+
+        public DataTable TimKiemPN(string tk)
+        {
+            string query = "select MaPN as [Mã phiểu nhập], NgayNhap as[Ngày nhập hàng],TenNCC as [Nhà cung cấp],TenHienThi as [Nhân viên nhập] from PhieuNhap inner join NhaCungCap on PhieuNhap.MaNCC = NhaCungCap.MaNCC inner join NhanVien on PhieuNhap.MaNV = NhanVien.MaNV where MaPN like '%" + tk + "%' or TenNCC like N'%" + tk + "%' or TenHienThi like N'%" + tk + "%' ";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+
 
     }
 }

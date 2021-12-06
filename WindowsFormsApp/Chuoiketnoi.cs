@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp
 {
-    public  class Chuoiketnoi
+    class Chuoiketnoi
     {
         string str;
         public Chuoiketnoi()
         {
-            str = @"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123";
+            str = @"Data Source=DESKTOP-LRQ8VCB\SQLEXPRESS;Initial Catalog=QLCuaHangThoiTrang;Integrated Security=True";
         }
 
         public SqlConnection sqlConnection()

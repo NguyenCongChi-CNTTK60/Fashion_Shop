@@ -27,7 +27,7 @@ namespace WindowsFormsApp
         {
             SqlConnection con = chuoiketnoi.sqlConnection();
             con.Open();
-            string query = "USP_Chitietpn '" + Mapn + "'";
+            string query = "USP_XemChiTietPN '" + Mapn + "'";
             SqlDataAdapter dta = new SqlDataAdapter(query, con);
             DataSet1 dataSet1 = new DataSet1();
             dta.Fill(dataSet1, "DataTable1");

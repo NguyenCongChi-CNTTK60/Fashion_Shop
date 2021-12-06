@@ -106,8 +106,8 @@ namespace WindowsFormsApp
                 string passWord = txtMatKhau.Text;
                 if (Login(tenDangNhap, passWord))
                 {
-                    tenHienThi = NhanVienBUS.Intance.getNVByID(tenDangNhap).TenHienThi;
-                    quyen = NhanVienBUS.Intance.getNVByID(tenDangNhap).Quyen;
+                    //tenHienThi = NhanVienBUS.Intance.getNVByID(tenDangNhap).TenHienThi;
+                    //quyen = NhanVienBUS.Intance.getNVByID(tenDangNhap).Quyen;
                     FormTrangChu f = new FormTrangChu(txtTenDangNhap.Text); // txtTenDangNhap.Text
                     f.Show();
                     this.Hide();

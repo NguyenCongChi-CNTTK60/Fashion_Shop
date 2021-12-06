@@ -135,5 +135,10 @@ namespace WindowsFormsApp
                 LoadData();
             }
         }
+
+        private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
