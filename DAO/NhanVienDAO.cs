@@ -41,7 +41,7 @@ namespace DAO
 
         public DataTable getListNV()
         {
-            string query = "select * from NhanVien";
+            string query = "select MaNV,TenHienThi,GioiTinh,DiaChi,SDT,Quyen from NhanVien";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -101,5 +101,22 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+
+        public List<NhanVienDTO> getListNhanVien()
+        {
+            List<NhanVienDTO> list = new List<NhanVienDTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from NhanVien");
+            foreach (DataRow item in data.Rows)
+            {
+                NhanVienDTO Nhanvien = new NhanVienDTO(item);
+                list.Add(Nhanvien);
+            }
+            return list;
+        }
+
+
+
+
     }
 }

@@ -20,7 +20,7 @@ namespace WindowsFormsApp
             InitializeComponent();
             DateTime today = DateTime.Now;
             dpkNgaybd.Value = new DateTime(today.Year - 1, today.Month - 10, 1);
-            dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(10).AddDays(-1);
+            dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(11).AddDays(-1);
             DateTime ngaybd = dpkNgaybd.Value;
             DateTime ngaykt = dpkNgaykt.Value;
             DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd,ngaykt);

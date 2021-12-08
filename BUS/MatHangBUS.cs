@@ -90,5 +90,11 @@ namespace BUS
         {
             return MatHangDAO.Intance.TimKiemMH(tk);
         }
+
+
+        public DataTable TimKiemGiaBan(string maMH)
+        {
+            return MatHangDAO.Intance.TimKiemGiaBan(maMH);
+        }
     }
 }

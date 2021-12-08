@@ -1077,3 +1077,5 @@ C:\Users\Nguyen Cong Chi\Desktop\fashion-shop-manager\WindowsFormsApp\obj\Debug\
 C:\Users\Nguyen Cong Chi\Desktop\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhuyenMai.resources
 C:\Users\Nguyen Cong Chi\Desktop\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhapHang.resources
 C:\Users\Nguyen Cong Chi\Desktop\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThemLoaiHang.resources
+C:\Users\Nguyen Cong Chi\Desktop\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_CaLamViecNhanVien.resources
+C:\Users\Nguyen Cong Chi\Desktop\fashion-shop-manager\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete

@@ -73,6 +73,10 @@ namespace BUS
         }
 
 
+        public List<NhanVienDTO> getListNhanVien()
+        {
+            return NhanVienDAO.Intance.getListNhanVien();
+        }
     }
 }
 

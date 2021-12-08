@@ -23,7 +23,7 @@ namespace WindowsFormsApp
             //themUC(tc);
             this.tk = tk;
             lblNguoidung.Text = tk;
-           // Phanquyen();
+           Phanquyen();
 
             TTnguoiban();
         }
@@ -54,22 +54,20 @@ namespace WindowsFormsApp
             {
 
             }
-            else if (lblQuyen.Text == "Thủ kho")
+            else if (lblQuyen.Text == "Nhân viên")
             {
-                btnTrangChu.Enabled = false;
-                btnKhachHang.Enabled = false;
+
+                btnKhuyenMai.Enabled = false;
                 btnNhanVien.Enabled = false;
                 btnThongKe.Enabled = false;
-                btnBanHang.Enabled = false;
-            }
-            else if (lblQuyen.Text == "Bán hàng")
-            {
                 btnNhanVien.Enabled = false;
                 btnThongKe.Enabled = false;
                 btnKhoHang.Enabled = false;
                 btnNCC.Enabled = false;
-            }
+                btnNhapHang.Enabled = false;
 
+            }
+           
         }
 
         private void themUC(Control uc)
@@ -132,7 +130,7 @@ namespace WindowsFormsApp
 
         private void btnBanHang_Click_1(object sender, EventArgs e)
         {
-            UC_BanHang bh = new UC_BanHang();  //lblManv.Text, lblTennv.Text
+            UC_BanHang bh = new UC_BanHang(lblManv.Text,lblTennv.Text);  //lblManv.Text, lblTennv.Text
             addControlsToPanel(bh);
         }
 

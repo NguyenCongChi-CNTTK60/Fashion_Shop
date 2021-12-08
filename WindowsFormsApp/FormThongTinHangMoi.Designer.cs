@@ -30,6 +30,7 @@ namespace WindowsFormsApp
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThemLoaiHang = new System.Windows.Forms.Button();
             this.cmbMaLoaiHang = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbLoaiHang = new System.Windows.Forms.ComboBox();
@@ -41,7 +42,6 @@ namespace WindowsFormsApp
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaHang = new System.Windows.Forms.TextBox();
-            this.btnThemLoaiHang = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,20 @@ namespace WindowsFormsApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(758, 471);
             this.panel1.TabIndex = 0;
+            // 
+            // btnThemLoaiHang
+            // 
+            this.btnThemLoaiHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.btnThemLoaiHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemLoaiHang.ForeColor = System.Drawing.Color.White;
+            this.btnThemLoaiHang.Location = new System.Drawing.Point(563, 331);
+            this.btnThemLoaiHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThemLoaiHang.Name = "btnThemLoaiHang";
+            this.btnThemLoaiHang.Size = new System.Drawing.Size(39, 41);
+            this.btnThemLoaiHang.TabIndex = 127;
+            this.btnThemLoaiHang.Text = "+";
+            this.btnThemLoaiHang.UseVisualStyleBackColor = false;
+            this.btnThemLoaiHang.Click += new System.EventHandler(this.btnThemLoaiHang_Click);
             // 
             // cmbMaLoaiHang
             // 
@@ -195,20 +209,6 @@ namespace WindowsFormsApp
             this.txtMaHang.ReadOnly = true;
             this.txtMaHang.Size = new System.Drawing.Size(298, 35);
             this.txtMaHang.TabIndex = 94;
-            // 
-            // btnThemLoaiHang
-            // 
-            this.btnThemLoaiHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnThemLoaiHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemLoaiHang.ForeColor = System.Drawing.Color.White;
-            this.btnThemLoaiHang.Location = new System.Drawing.Point(574, 331);
-            this.btnThemLoaiHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThemLoaiHang.Name = "btnThemLoaiHang";
-            this.btnThemLoaiHang.Size = new System.Drawing.Size(39, 41);
-            this.btnThemLoaiHang.TabIndex = 127;
-            this.btnThemLoaiHang.Text = "+";
-            this.btnThemLoaiHang.UseVisualStyleBackColor = false;
-            this.btnThemLoaiHang.Click += new System.EventHandler(this.btnThemLoaiHang_Click);
             // 
             // FormThongTinHangMoi
             // 

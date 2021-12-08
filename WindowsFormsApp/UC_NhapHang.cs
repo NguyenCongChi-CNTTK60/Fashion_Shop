@@ -148,6 +148,7 @@ namespace WindowsFormsApp
             lblmasp.Text = "";
             lbltensp.Text = "";
             pcbHangHoa.Image = null;
+            txtGiaban.Text = "";
         }
 
 
@@ -386,6 +387,8 @@ namespace WindowsFormsApp
                 }
             }
         }
+
+
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {

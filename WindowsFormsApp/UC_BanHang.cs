@@ -15,8 +15,8 @@ namespace WindowsFormsApp
 {
     public partial class UC_BanHang : UserControl
     {
-        // private string manv, tennv;
-        public UC_BanHang()  // string manv, string tennv
+        private string manv, tennv;
+        public UC_BanHang(string manv, string tennv)  // string manv, string tennv
         {
             InitializeComponent();
 
@@ -47,13 +47,13 @@ namespace WindowsFormsApp
             cmbLoaiHH.DataSource = list1;
             cmbLoaiHH.DisplayMember = "TenLH";
             cmbLoaiHH.ValueMember = "MaLH";
-            
-            /* this.manv = manv;
+
+            this.manv = manv;
             lblManv.Text = "";
             lblManv.Text = manv;
             this.tennv = tennv;
             lblTennv.Text = "";
-            lblTennv.Text = tennv; */
+            lblTennv.Text = tennv;
 
 
             List<KhachHangDTO> listKH = new List<KhachHangDTO>();
@@ -142,11 +142,7 @@ namespace WindowsFormsApp
             return item;
         }
 
-        int i;
 
-
-
-        int tongTien = 0;
 
 
         private void resetInfoProduct()
@@ -157,6 +153,9 @@ namespace WindowsFormsApp
             txtSoLuong.Value = 0;
             cmbTenmh.Text = "";
             txtGiaBan.Text = "";
+            //txtTienkhachdua.Text = "";
+            txtPhanTram.Text = "";
+            //txtSDT.Text = "";
         }
 
 
@@ -206,19 +205,27 @@ namespace WindowsFormsApp
 
         }
 
+        private int i;
+        private int tiengiam = 0;
+        private int tongTien = 0;
+        private string Tienkhachduafomart;
 
-
+     
         private void Tinhtienhoantra()
         {
             if (!string.IsNullOrEmpty(txtTienkhachdua.Text))
             {
                 int tienkhachdua = Int32.Parse(txtTienkhachdua.Text);
-                int tienhoantra = tienkhachdua - tongTien;
-                txtTienhoantra.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tienhoantra) + " VNĐ";
-                txtTienkhachduafomart.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tienkhachdua) + " VNĐ";
+                    int tienhoantra = tienkhachdua - tongTien;
+                    txtTienhoantra.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tienhoantra) + " VNĐ";
+                    Tienkhachduafomart = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tienkhachdua) + " VNĐ";
+               
             }
             else
+            
                 txtTienhoantra.Text = "";
+               
+            
         }
 
         private void btnThemMoiKH_Click(object sender, EventArgs e)
@@ -276,6 +283,8 @@ namespace WindowsFormsApp
                 int Giaban = Int32.Parse(txtGiaBan.Text) - ((Int32.Parse(txtGiaBan.Text) * Int32.Parse(txtPhanTram.Text)) / 100);
 
 
+
+
                 if (!check)
                 {
                     string[] arr = new string[5];
@@ -287,6 +296,9 @@ namespace WindowsFormsApp
                     ListViewItem listViewItem = new ListViewItem(arr);
                     lvSanPhamBan.Items.Add(listViewItem);
                 }
+                int TienGiam = ((Int32.Parse(txtGiaBan.Text) * Int32.Parse(txtPhanTram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString()) ;
+                tiengiam += TienGiam;
+                txtTienGiam.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tiengiam) + " VNĐ";
                 tongTien += gia;
                 lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
                 lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
@@ -307,13 +319,20 @@ namespace WindowsFormsApp
             {
                 if (lvSanPhamBan.Items[i].Checked)//nếu item đó dc check
                 {
+                    cmbTenmh.Text = lvSanPhamBan.Items[i].SubItems[1].Text.ToString();
+                    Decimal b = Convert.ToDecimal(lvSanPhamBan.Items[i].SubItems[2].Text.ToString());
+                    txtSoLuong.Value = b;
                     string tien = lvSanPhamBan.Items[i].SubItems[4].Text.ToString();
                     tongTien -= Int32.Parse(tien);
+                    int TienGiam = ((Int32.Parse(txtGiaBan.Text) * Int32.Parse(txtPhanTram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString());
+                    tiengiam -= TienGiam;
+                    txtTienGiam.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tiengiam) + " VNĐ";
                     lbTienBangSo.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
                     lbTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(tongTien);
                     lvSanPhamBan.Items[i].Remove();//xóa item đó đi
                     Tinhtienhoantra();
                     i--;
+                    resetInfoProduct();
                 }
             }
         }
@@ -327,15 +346,15 @@ namespace WindowsFormsApp
                 i = cmbMaMH.SelectedIndex;
                 //txtTenMH.Text = list[i].TenMH;
                 //txtDVT.Text = list[i].DonVi;
-                txtGiaBan.Text = list[i].GiaBan.ToString();
-
+                //txtGiaBan.Text = list[i].GiaBan.ToString();
                 string tk = cmbMaMH.Text;
-
+                DataTable dt1 = MatHangBUS.Intance.TimKiemGiaBan(tk);
                 DataTable dt = GiamGiaBUS.Intance.TimKiemGG(tk);
-                if (dt.Rows.Count > 0)
+                if (dt.Rows.Count > 0 && dt1.Rows.Count > 0)
                 {
                     DateTime Ngaybd = Convert.ToDateTime(dt.Rows[0]["NgayBD"].ToString());
                     DateTime Ngaykt = Convert.ToDateTime(dt.Rows[0]["NgayKT"].ToString());
+                    txtGiaBan.Text = dt1.Rows[0]["GiaBan"].ToString();
                     if (Ngaybd <= dpkNgayban.Value && dpkNgayban.Value <= Ngaykt)
                     {
                         txtPhanTram.Text = dt.Rows[0]["PhanTram"].ToString();
@@ -348,10 +367,13 @@ namespace WindowsFormsApp
             }
         }
 
+
+
         private void txtTienkhachdua_TextChanged_1(object sender, EventArgs e)
         {
             Tinhtienhoantra();
         }
+
 
         private void btnThanhToan_Click_1(object sender, EventArgs e)
         {
@@ -359,8 +381,12 @@ namespace WindowsFormsApp
             {
                 MessageBox.Show("Chưa có thông tin của khách hàng");
             }
+            else if (string.IsNullOrEmpty(txtTienhoantra.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập tiền khách đưa");
+            }
             else
-           if (lvSanPhamBan.Items.Count > 0)
+             if (lvSanPhamBan.Items.Count > 0)
             {
                 HoaDonDTO hd = new HoaDonDTO();
                 hd.MaHD = txtMaHĐ.Text;
@@ -382,8 +408,8 @@ namespace WindowsFormsApp
                         DataProvider.Instance.ExecuteQuery(query);
 
                     }
-                    //FormInHoaDon formInHoaDon = new FormInHoaDon(txtMaHĐ.Text, txtTienkhachduafomart.Text, txtTienhoantra.Text);
-                    //formInHoaDon.Show();
+                    FormInHoaDon formInHoaDon = new FormInHoaDon(txtMaHĐ.Text, Tienkhachduafomart, txtTienhoantra.Text, txtTienGiam.Text);
+                    formInHoaDon.Show();
                     lvSanPhamBan.Items.Clear();
                     lbTienBangSo.Text = "0 VNĐ";
                     lbTienBangChu.Text = "Không đồng";                                            // làm mới tất cả 
@@ -391,7 +417,10 @@ namespace WindowsFormsApp
                     txtTenKH.Text = "UNKNOW NAME";
                     tongTien = 0;
                     txtMaHĐ.Text = Matudong();
-
+                    resetInfoProduct();
+                    txtSDT.Text = "";
+                    txtTienkhachdua.Text = "";
+                    txtTienGiam.Text = "";
                 }
                 else
                 {
@@ -400,6 +429,8 @@ namespace WindowsFormsApp
 
             }
         }
+
+
 
         private void txtSDT_TextChanged_1(object sender, EventArgs e)
         {
@@ -412,6 +443,8 @@ namespace WindowsFormsApp
                 txtTenKH.Text = "Khách hàng mới";
             }
         }
+
+
 
         private void cmbLoaiHH_SelectedIndexChanged(object sender, EventArgs e)
         {

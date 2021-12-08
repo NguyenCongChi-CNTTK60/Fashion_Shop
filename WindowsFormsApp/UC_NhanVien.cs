@@ -107,14 +107,24 @@ namespace WindowsFormsApp
             LoadData();
         }
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
+      
+
+
+     
+
+        private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnLamMoi_Click_1(object sender, EventArgs e)
         {
             txtMaNV.Text = "";
             txtSDT.Text = "";
             txtHoTen.Text = "";
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
             if (dgvThongTinNhanVien.SelectedCells.Count > 0)
             {
@@ -126,8 +136,9 @@ namespace WindowsFormsApp
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
+
             if (NhanVienBUS.Intance.xoaNV(txtMaNV.Text))
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo");
@@ -136,9 +147,18 @@ namespace WindowsFormsApp
             }
         }
 
-        private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
+        private void themUC(Control uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            pnlNhanVien.Controls.Clear();
+            pnlNhanVien.Controls.Add(uc);
+            uc.BringToFront();
+        }
+        private void btnGiaoCa_Click(object sender, EventArgs e)
+        {
+            UC_CaLamViecNhanVien f = new UC_CaLamViecNhanVien();
+            themUC(f);
         }
     }
 }

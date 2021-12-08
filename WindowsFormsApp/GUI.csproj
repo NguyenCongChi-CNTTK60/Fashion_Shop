@@ -302,6 +302,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UC_CaLamViecNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CaLamViecNhanVien.Designer.cs">
+      <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_DoiMatKhau.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -427,7 +433,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportInHoaDon.rdlc" />
     <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
+    <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
+      <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </EmbeddedResource>

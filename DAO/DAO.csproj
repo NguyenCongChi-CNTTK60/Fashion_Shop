@@ -48,6 +48,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CaLamViecDAO.cs" />
     <Compile Include="Chuoiketnoi.cs" />
     <Compile Include="GiamGiaDAO.cs" />
     <Compile Include="LoaiHangDAO.cs" />

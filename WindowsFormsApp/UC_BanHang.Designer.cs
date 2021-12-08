@@ -78,6 +78,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.cmbLoaiHH = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.txtTienGiam = new System.Windows.Forms.TextBox();
             this.panelRight.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSoLuong)).BeginInit();
@@ -153,7 +154,7 @@
             this.btnThemMatMH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemMatMH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemMatMH.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThemMatMH.Location = new System.Drawing.Point(300, 581);
+            this.btnThemMatMH.Location = new System.Drawing.Point(302, 594);
             this.btnThemMatMH.Name = "btnThemMatMH";
             this.btnThemMatMH.Size = new System.Drawing.Size(151, 44);
             this.btnThemMatMH.TabIndex = 7;
@@ -321,6 +322,7 @@
             this.txtTienkhachdua.Name = "txtTienkhachdua";
             this.txtTienkhachdua.Size = new System.Drawing.Size(266, 35);
             this.txtTienkhachdua.TabIndex = 198;
+            this.txtTienkhachdua.Text = "000";
             this.txtTienkhachdua.TextChanged += new System.EventHandler(this.txtTienkhachdua_TextChanged_1);
             // 
             // label13
@@ -435,7 +437,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.txtTienGiam);
             this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.txtTienkhachduafomart);
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1010, 59);
@@ -512,7 +516,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(212, 613);
+            this.label12.Location = new System.Drawing.Point(201, 613);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(22, 35);
             this.label12.TabIndex = 194;
@@ -536,7 +540,7 @@
             this.lblTennv.AutoSize = true;
             this.lblTennv.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTennv.ForeColor = System.Drawing.Color.Black;
-            this.lblTennv.Location = new System.Drawing.Point(229, 612);
+            this.lblTennv.Location = new System.Drawing.Point(218, 615);
             this.lblTennv.Name = "lblTennv";
             this.lblTennv.Size = new System.Drawing.Size(22, 35);
             this.lblTennv.TabIndex = 192;
@@ -569,9 +573,10 @@
             // txtTienkhachduafomart
             // 
             this.txtTienkhachduafomart.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTienkhachduafomart.BackColor = System.Drawing.Color.SteelBlue;
             this.txtTienkhachduafomart.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTienkhachduafomart.ForeColor = System.Drawing.Color.White;
-            this.txtTienkhachduafomart.Location = new System.Drawing.Point(305, 631);
+            this.txtTienkhachduafomart.Location = new System.Drawing.Point(697, 14);
             this.txtTienkhachduafomart.Name = "txtTienkhachduafomart";
             this.txtTienkhachduafomart.Size = new System.Drawing.Size(146, 28);
             this.txtTienkhachduafomart.TabIndex = 199;
@@ -620,7 +625,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(250, 453);
+            this.label16.Location = new System.Drawing.Point(246, 468);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(35, 29);
             this.label16.TabIndex = 208;
@@ -650,6 +655,18 @@
             this.label17.TabIndex = 209;
             this.label17.Text = "Loại MH :";
             // 
+            // txtTienGiam
+            // 
+            this.txtTienGiam.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTienGiam.BackColor = System.Drawing.Color.SteelBlue;
+            this.txtTienGiam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTienGiam.ForeColor = System.Drawing.Color.White;
+            this.txtTienGiam.Location = new System.Drawing.Point(36, 13);
+            this.txtTienGiam.Multiline = true;
+            this.txtTienGiam.Name = "txtTienGiam";
+            this.txtTienGiam.Size = new System.Drawing.Size(171, 35);
+            this.txtTienGiam.TabIndex = 211;
+            // 
             // UC_BanHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -660,7 +677,6 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.txtPhanTram);
             this.Controls.Add(this.dpkNgayban);
-            this.Controls.Add(this.txtTienkhachduafomart);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
@@ -747,5 +763,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox cmbLoaiHH;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtTienGiam;
     }
 }
