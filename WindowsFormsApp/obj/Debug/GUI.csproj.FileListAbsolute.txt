@@ -1461,3 +1461,4 @@ C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\
 C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDangKy.resources

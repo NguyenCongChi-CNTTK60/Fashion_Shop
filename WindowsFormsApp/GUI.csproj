@@ -404,6 +404,9 @@
     <Compile Include="UC_XacNhanSDT.Designer.cs">
       <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormDangKy.resx">
+      <DependentUpon>FormDangKy.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
