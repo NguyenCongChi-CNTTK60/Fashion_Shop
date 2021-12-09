@@ -28,16 +28,6 @@ namespace WindowsFormsApp
             TongtienHoadon();
         }
 
-        private void btnXem_Click(object sender, EventArgs e)
-        {
-            DateTime ngaybd = dpkNgaybd.Value;
-            DateTime ngaykt = dpkNgaykt.Value;          
-            DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd, ngaykt);
-            dgvThongkehd.DataSource = dt;
-            TongtienHoadontheongay();
-        }
-
-
         private void TongtienHoadon()
         {
             int Tongtien = 0;  
@@ -70,6 +60,15 @@ namespace WindowsFormsApp
         private void btnTangngay_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXem_Click_1(object sender, EventArgs e)
+        {
+            DateTime ngaybd = dpkNgaybd.Value;
+            DateTime ngaykt = dpkNgaykt.Value;
+            DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd, ngaykt);
+            dgvThongkehd.DataSource = dt;
+            TongtienHoadontheongay();
         }
     }
 

@@ -25,36 +25,28 @@ namespace WindowsFormsApp
             userControl.BringToFront();
         }
 
-        private void btnHoadon_Click_1(object sender, EventArgs e)
+        private void btnHoadon_Click(object sender, EventArgs e)
         {
-
             UC_ThongKeHoaDon uC_Thongkehoadon = new UC_ThongKeHoaDon();
             addUC(uC_Thongkehoadon);
         }
 
-        private void btnHanghoa_Click_1(object sender, EventArgs e)
+        private void btnHanghoa_Click(object sender, EventArgs e)
         {
-
             UC_ThongKeHangHoa uC_ThongKehanghoa = new UC_ThongKeHangHoa();
             addUC(uC_ThongKehanghoa);
         }
 
-        private void btnKhachhang_Click_1(object sender, EventArgs e)
+        private void btnKhachhang_Click(object sender, EventArgs e)
         {
-
             UC_ThongKeKhachHang uC_Thongkekhachhang = new UC_ThongKeKhachHang();
             addUC(uC_Thongkekhachhang);
         }
 
-        private void btnphieunhap_Click_1(object sender, EventArgs e)
+        private void btnphieunhap_Click(object sender, EventArgs e)
         {
             UC_ThongKePhieuNhap uC_Thongkephieunhap = new UC_ThongKePhieuNhap();
             addUC(uC_Thongkephieunhap);
-        }
-
-        private void pnlButton_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

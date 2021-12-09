@@ -116,6 +116,7 @@ namespace WindowsFormsApp
             this.btnLuu.Size = new System.Drawing.Size(124, 48);
             this.btnLuu.TabIndex = 247;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click_1);
             // 
             // btnQuayLai
             // 
@@ -142,6 +143,7 @@ namespace WindowsFormsApp
             this.btnQuayLai.Size = new System.Drawing.Size(124, 48);
             this.btnQuayLai.TabIndex = 244;
             this.btnQuayLai.Text = "Quay lại";
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click_1);
             // 
             // UC_ThemLoaiHang
             // 

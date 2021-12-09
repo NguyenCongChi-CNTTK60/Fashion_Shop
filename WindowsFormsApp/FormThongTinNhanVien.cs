@@ -40,11 +40,15 @@ namespace WindowsFormsApp
             }
         }
 
-        private void btnDoimatkhau_Click(object sender, EventArgs e)
+        private void btnDoimatkhau_Click_1(object sender, EventArgs e)
         {
             FormDoiMatKhauMoi f = new FormDoiMatKhauMoi(lblTentk.Text);
             f.Show();
             this.Hide();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
 
         }
     }

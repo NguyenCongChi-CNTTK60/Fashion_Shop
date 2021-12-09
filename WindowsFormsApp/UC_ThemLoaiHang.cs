@@ -52,20 +52,20 @@ namespace WindowsFormsApp
             }
             return ma;
         }
-
-        private void btnQuayLai_Click(object sender, EventArgs e)
-        {
-            FormThongTinHangMoi f = new FormThongTinHangMoi();
-            f.Show();
-        }
-
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
             if (LoaiHangBUS.Intance.ThemLH(txtMaLoaiHang.Text, txtTenLoaiHang.Text))
             {
                 MessageBox.Show("Thêm thành công", "Thông báo");
-            }else
+            }
+            else
                 MessageBox.Show("Thêm thất bại", "Thông báo");
+        }
+
+        private void btnQuayLai_Click_1(object sender, EventArgs e)
+        {
+            FormThongTinHangMoi f = new FormThongTinHangMoi();
+            f.Show();
         }
     }
 }

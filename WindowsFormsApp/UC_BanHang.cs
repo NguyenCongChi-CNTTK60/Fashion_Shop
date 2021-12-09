@@ -249,8 +249,60 @@ namespace WindowsFormsApp
             }
         }
 
+        private void cmbMaMH_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMaMH.SelectedIndex >= 0)
+            {
+                i = cmbMaMH.SelectedIndex;
+                //txtTenMH.Text = list[i].TenMH;
+                //txtDVT.Text = list[i].DonVi;
+                //txtGiaBan.Text = list[i].GiaBan.ToString();
+                string tk = cmbMaMH.Text;
+                DataTable dt1 = MatHangBUS.Intance.TimKiemGiaBan(tk);
+                DataTable dt = GiamGiaBUS.Intance.TimKiemGG(tk);
+                if (dt.Rows.Count > 0 && dt1.Rows.Count > 0)
+                {
+                    DateTime Ngaybd = Convert.ToDateTime(dt.Rows[0]["NgayBD"].ToString());
+                    DateTime Ngaykt = Convert.ToDateTime(dt.Rows[0]["NgayKT"].ToString());
+                    txtGiaBan.Text = dt1.Rows[0]["GiaBan"].ToString();
+                    if (Ngaybd <= dpkNgayban.Value && dpkNgayban.Value <= Ngaykt)
+                    {
+                        txtPhanTram.Text = dt.Rows[0]["PhanTram"].ToString();
+                    }
+                    else
+                        txtPhanTram.Text = "0";
+                }
+                else
+                    txtPhanTram.Text = "0";
+            }
+        }
 
-        private void btnThemMatMH_Click(object sender, EventArgs e)
+
+
+        private void txtTienkhachdua_TextChanged_1(object sender, EventArgs e)
+        {
+            Tinhtienhoantra();
+        }
+
+
+        private void txtSDT_TextChanged_1(object sender, EventArgs e)
+        {
+            khachHang = GetTenBySDT(txtSDT.Text);
+            txtTenKH.Text = khachHang.TenKH;
+            lblMakh.Text = khachHang.MaKH;
+            lblMakh.ForeColor = Color.Red;
+            if (txtSDT.Text.Length == 10 && txtTenKH.Text == "")
+            {
+                txtTenKH.Text = "Khách hàng mới";
+            }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnThemMatMH_Click_1(object sender, EventArgs e)
         {
             if (cmbMaMH.SelectedIndex < 0 || cmbTenmh.SelectedIndex < 0)
             {
@@ -296,7 +348,7 @@ namespace WindowsFormsApp
                     ListViewItem listViewItem = new ListViewItem(arr);
                     lvSanPhamBan.Items.Add(listViewItem);
                 }
-                int TienGiam = ((Int32.Parse(txtGiaBan.Text) * Int32.Parse(txtPhanTram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString()) ;
+                int TienGiam = ((Int32.Parse(txtGiaBan.Text) * Int32.Parse(txtPhanTram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString());
                 tiengiam += TienGiam;
                 txtTienGiam.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tiengiam) + " VNĐ";
                 tongTien += gia;
@@ -310,11 +362,8 @@ namespace WindowsFormsApp
                 MessageBox.Show("Số lượng phải lớn hơn 0", "Thông báo");
         }
 
-
-
-        private void btnXoaMH_Click(object sender, EventArgs e)
+        private void btnXoaMH_Click_1(object sender, EventArgs e)
         {
-
             for (int i = 0; i < lvSanPhamBan.Items.Count; i++) //duyệt tất cả các item trong list
             {
                 if (lvSanPhamBan.Items[i].Checked)//nếu item đó dc check
@@ -337,45 +386,7 @@ namespace WindowsFormsApp
             }
         }
 
-
-
-        private void cmbMaMH_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbMaMH.SelectedIndex >= 0)
-            {
-                i = cmbMaMH.SelectedIndex;
-                //txtTenMH.Text = list[i].TenMH;
-                //txtDVT.Text = list[i].DonVi;
-                //txtGiaBan.Text = list[i].GiaBan.ToString();
-                string tk = cmbMaMH.Text;
-                DataTable dt1 = MatHangBUS.Intance.TimKiemGiaBan(tk);
-                DataTable dt = GiamGiaBUS.Intance.TimKiemGG(tk);
-                if (dt.Rows.Count > 0 && dt1.Rows.Count > 0)
-                {
-                    DateTime Ngaybd = Convert.ToDateTime(dt.Rows[0]["NgayBD"].ToString());
-                    DateTime Ngaykt = Convert.ToDateTime(dt.Rows[0]["NgayKT"].ToString());
-                    txtGiaBan.Text = dt1.Rows[0]["GiaBan"].ToString();
-                    if (Ngaybd <= dpkNgayban.Value && dpkNgayban.Value <= Ngaykt)
-                    {
-                        txtPhanTram.Text = dt.Rows[0]["PhanTram"].ToString();
-                    }
-                    else
-                        txtPhanTram.Text = "0";
-                }
-                else
-                    txtPhanTram.Text = "0";
-            }
-        }
-
-
-
-        private void txtTienkhachdua_TextChanged_1(object sender, EventArgs e)
-        {
-            Tinhtienhoantra();
-        }
-
-
-        private void btnThanhToan_Click_1(object sender, EventArgs e)
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtSDT.Text))
             {
@@ -394,9 +405,6 @@ namespace WindowsFormsApp
                 hd.NgayTao = dpkNgayban.Value;
                 hd.MaNV = lblManv.Text;
                 hd.TongTien = tongTien;
-
-
-
 
                 if (LuuHD(hd))   // lưu hóa đơn
                 {
@@ -429,22 +437,6 @@ namespace WindowsFormsApp
 
             }
         }
-
-
-
-        private void txtSDT_TextChanged_1(object sender, EventArgs e)
-        {
-            khachHang = GetTenBySDT(txtSDT.Text);
-            txtTenKH.Text = khachHang.TenKH;
-            lblMakh.Text = khachHang.MaKH;
-            lblMakh.ForeColor = Color.Red;
-            if (txtSDT.Text.Length == 10 && txtTenKH.Text == "")
-            {
-                txtTenKH.Text = "Khách hàng mới";
-            }
-        }
-
-
 
         private void cmbLoaiHH_SelectedIndexChanged(object sender, EventArgs e)
         {

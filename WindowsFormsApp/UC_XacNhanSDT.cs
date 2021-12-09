@@ -22,8 +22,6 @@ namespace WindowsFormsApp
             txtSđtnv.Text = sdt;
             timer1.Start();
         }
-
-
         int i = 60;
         private void click(object sender, EventArgs e)
         {
@@ -36,12 +34,6 @@ namespace WindowsFormsApp
             timer1.Stop();
         }
 
-        private void btnQuaylai_Click(object sender, EventArgs e)
-        {
-            FormSDT formSDT = new FormSDT();
-            formSDT.ShowDialog();
-        }
-
         Chuoiketnoi chuoiketnoi = new Chuoiketnoi();
         private void addUC(UserControl userControl)
         {
@@ -51,7 +43,14 @@ namespace WindowsFormsApp
             userControl.BringToFront();
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
+
+        private void btnQuaylai_Click_1(object sender, EventArgs e)
+        {
+            FormSDT formSDT = new FormSDT();
+            formSDT.ShowDialog();
+        }
+
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
             SqlConnection con = chuoiketnoi.sqlConnection();
             con.Open();

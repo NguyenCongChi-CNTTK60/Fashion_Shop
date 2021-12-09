@@ -33,10 +33,8 @@ namespace WindowsFormsApp
             cmbMaPhantram.DisplayMember = "MaGG";
             cmbMaPhantram.ValueMember = "MaGG";
           
-
             LamMoi();
             HienThi();
-            
         }
         List<GiamGiaDTO> list;
         List<MatHangDTO> list1;
@@ -46,7 +44,6 @@ namespace WindowsFormsApp
             DataTable dt = GiamGiaBUS.Intance.Hienthi();
             dgvGiamGia.DataSource = dt;
         }
-           
 
         private void LamMoi()
         {
@@ -67,30 +64,31 @@ namespace WindowsFormsApp
             dpkNgaykt.Value = Convert.ToDateTime(dgvGiamGia.Rows[indexx].Cells[5].Value);
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private bool CheckData()
         {
-
-            if (CheckData() == true)
+            if (string.IsNullOrEmpty(cmbTenmh.Text))
             {
-                if (dgvGiamGia.SelectedCells.Count > 0)
-                {
-                    int phantram = Convert.ToInt32(cmbPhantram.Text);
-
-                    if (GiamGiaBUS.Intance.suaGiamGia(phantram, cmbMaPhantram.Text))
-                    {
-                        if (GiamGiaBUS.Intance.suaChitietGG(cmbMamh.Text, cmbMaPhantram.Text, dpkNgaybd.Value, dpkNgaykt.Value))
-                        {
-                            MessageBox.Show("Sửa thành công!", "Thông báo");
-                            LamMoi();
-                            HienThi();
-                        }
-                    }
-                }
+                MessageBox.Show("Tên mặt hàng không được trống!", "Thông báo");
+                return false;
+            } else if (string.IsNullOrEmpty(cmbPhantram.Text))
+            {
+                MessageBox.Show("Phần trăm giảm giá không được trống!", "Thông báo");
+                return false;
+            }else if (string.IsNullOrEmpty(cmbMaPhantram.Text))
+            {
+                MessageBox.Show("Mã phần trăm giảm giá không được trống!", "Thông báo");
+                return false;
             }
+
+            return true;
         }
 
+        private void btnLamMoi_Click_1(object sender, EventArgs e)
+        {
+            LamMoi();
+        }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnThem_Click_1(object sender, EventArgs e)
         {
             if (CheckData() == true)
             {
@@ -102,7 +100,8 @@ namespace WindowsFormsApp
                     if (dpkNgaybd.Value < Ngaykt)
                     {
                         MessageBox.Show("Sản phẩm đang trong thời gian khuyến mãi, Bạn không thể thêm mới!", "Thông báo");
-                    }else
+                    }
+                    else
                     if (GiamGiaBUS.Intance.themChitietGG(cmbMamh.Text, cmbMaPhantram.Text, dpkNgaybd.Value, dpkNgaykt.Value) == true)
                     {
                         MessageBox.Show("Thêm thành công!", "Thông báo");
@@ -124,46 +123,40 @@ namespace WindowsFormsApp
                     else
                         MessageBox.Show("Sản phẩm đã tồn tại!", "Thông báo");
                 }
-                
             }
         }
 
-
-
-        private bool CheckData()
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(cmbTenmh.Text))
+            if (CheckData() == true)
             {
-                MessageBox.Show("Tên mặt hàng không được trống!", "Thông báo");
-                return false;
-            } else if (string.IsNullOrEmpty(cmbPhantram.Text))
-            {
-                MessageBox.Show("Phần trăm giảm giá không được trống!", "Thông báo");
-                return false;
-            }else if (string.IsNullOrEmpty(cmbMaPhantram.Text))
-            {
-                MessageBox.Show("Mã phần trăm giảm giá không được trống!", "Thông báo");
-                return false;
-            }
+                if (dgvGiamGia.SelectedCells.Count > 0)
+                {
+                    int phantram = Convert.ToInt32(cmbPhantram.Text);
 
-            return true;
+                    if (GiamGiaBUS.Intance.suaGiamGia(phantram, cmbMaPhantram.Text))
+                    {
+                        if (GiamGiaBUS.Intance.suaChitietGG(cmbMamh.Text, cmbMaPhantram.Text, dpkNgaybd.Value, dpkNgaykt.Value))
+                        {
+                            MessageBox.Show("Sửa thành công!", "Thông báo");
+                            LamMoi();
+                            HienThi();
+                        }
+                    }
+                }
+            }
         }
 
-
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
             if (GiamGiaBUS.Intance.xoaGiamGia(cmbMamh.Text, cmbMaPhantram.Text))
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo");
                 LamMoi();
                 HienThi();
-            }else
+            }
+            else
                 MessageBox.Show("Không thể xóa", "Thông báo");
-        }
-
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            LamMoi();
         }
     }
 }

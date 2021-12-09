@@ -416,6 +416,9 @@
     <EmbeddedResource Include="FormReportThongKe.resx">
       <DependentUpon>FormReportThongKe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormSDT.resx">
+      <DependentUpon>FormSDT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormThemKhachHang.resx">
       <DependentUpon>FormThemKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -464,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThongKeHoaDon.resx">
       <DependentUpon>UC_ThongKeHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongKeKhachHang.resx">
+      <DependentUpon>UC_ThongKeKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThongKePhieuNhap.resx">
       <DependentUpon>UC_ThongKePhieuNhap.cs</DependentUpon>

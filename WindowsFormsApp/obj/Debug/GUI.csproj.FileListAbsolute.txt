@@ -1464,3 +1464,17 @@ C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\
 C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDangKy.resources
 C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DoiMatKhau.resources
 C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_XacNhanSDT.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormDangKy.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormReportThongKe.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormSDT.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_CaLamViecNhanVien.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DoiMatKhau.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_KhuyenMai.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_NhapHang.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThemLoaiHang.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKeHoaDon.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKeKhachHang.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongKePhieuNhap.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_XacNhanSDT.resources
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\RdlCompile.cache
+C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager\WindowsFormsApp\obj\Debug\RdlCompile.compiled

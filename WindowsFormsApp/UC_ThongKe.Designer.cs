@@ -31,15 +31,15 @@ namespace WindowsFormsApp
         {
             this.components = new System.ComponentModel.Container();
             this.pnlButton = new System.Windows.Forms.Panel();
+            this.btnHanghoa = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnphieunhap = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnKhachhang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnHoadon = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnlTK = new System.Windows.Forms.Panel();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.btnHanghoa = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnphieunhap = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnKhachhang = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnHoadon = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnlButton.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,30 +56,6 @@ namespace WindowsFormsApp
             this.pnlButton.Name = "pnlButton";
             this.pnlButton.Size = new System.Drawing.Size(1010, 66);
             this.pnlButton.TabIndex = 24;
-            this.pnlButton.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlButton_Paint);
-            // 
-            // pnlTK
-            // 
-            this.pnlTK.Location = new System.Drawing.Point(0, 73);
-            this.pnlTK.Name = "pnlTK";
-            this.pnlTK.Size = new System.Drawing.Size(1010, 589);
-            this.pnlTK.TabIndex = 25;
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 25;
-            // 
-            // bunifuElipse2
-            // 
-            this.bunifuElipse2.ElipseRadius = 25;
-            // 
-            // bunifuElipse3
-            // 
-            this.bunifuElipse3.ElipseRadius = 25;
-            // 
-            // bunifuElipse4
-            // 
-            this.bunifuElipse4.ElipseRadius = 25;
             // 
             // btnHanghoa
             // 
@@ -106,6 +82,7 @@ namespace WindowsFormsApp
             this.btnHanghoa.Size = new System.Drawing.Size(166, 63);
             this.btnHanghoa.TabIndex = 247;
             this.btnHanghoa.Text = "Hàng hóa";
+            this.btnHanghoa.Click += new System.EventHandler(this.btnHanghoa_Click);
             // 
             // btnphieunhap
             // 
@@ -132,6 +109,7 @@ namespace WindowsFormsApp
             this.btnphieunhap.Size = new System.Drawing.Size(166, 63);
             this.btnphieunhap.TabIndex = 246;
             this.btnphieunhap.Text = "Phiếu nhập";
+            this.btnphieunhap.Click += new System.EventHandler(this.btnphieunhap_Click);
             // 
             // btnKhachhang
             // 
@@ -158,6 +136,7 @@ namespace WindowsFormsApp
             this.btnKhachhang.Size = new System.Drawing.Size(166, 63);
             this.btnKhachhang.TabIndex = 245;
             this.btnKhachhang.Text = "Khách hàng";
+            this.btnKhachhang.Click += new System.EventHandler(this.btnKhachhang_Click);
             // 
             // btnHoadon
             // 
@@ -184,6 +163,34 @@ namespace WindowsFormsApp
             this.btnHoadon.Size = new System.Drawing.Size(166, 63);
             this.btnHoadon.TabIndex = 244;
             this.btnHoadon.Text = "Hóa đơn";
+            this.btnHoadon.Click += new System.EventHandler(this.btnHoadon_Click);
+            // 
+            // pnlTK
+            // 
+            this.pnlTK.Location = new System.Drawing.Point(0, 73);
+            this.pnlTK.Name = "pnlTK";
+            this.pnlTK.Size = new System.Drawing.Size(1010, 589);
+            this.pnlTK.TabIndex = 25;
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 25;
+            this.bunifuElipse1.TargetControl = this;
+            // 
+            // bunifuElipse2
+            // 
+            this.bunifuElipse2.ElipseRadius = 25;
+            this.bunifuElipse2.TargetControl = this;
+            // 
+            // bunifuElipse3
+            // 
+            this.bunifuElipse3.ElipseRadius = 25;
+            this.bunifuElipse3.TargetControl = this;
+            // 
+            // bunifuElipse4
+            // 
+            this.bunifuElipse4.ElipseRadius = 25;
+            this.bunifuElipse4.TargetControl = this;
             // 
             // UC_ThongKe
             // 

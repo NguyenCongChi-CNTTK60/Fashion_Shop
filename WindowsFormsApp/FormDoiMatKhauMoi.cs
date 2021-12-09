@@ -20,7 +20,6 @@ namespace WindowsFormsApp
             this.tk = tk;
             txTentaikhoan.Text = tk;
         }
-
         private bool check_data()
         {
             if (string.IsNullOrEmpty(txtmkMoi.Text))
@@ -29,8 +28,6 @@ namespace WindowsFormsApp
             }
             return true;
         }
-
-
 
         bool Login(string userName, string passWord)
         {
@@ -42,12 +39,6 @@ namespace WindowsFormsApp
             return NhanVienBUS.Intance.capnhatmk1(userName, passWord);
         }
 
-
-
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
         {
@@ -66,7 +57,7 @@ namespace WindowsFormsApp
 
         }
 
-        private void btnLuu_Click_1(object sender, EventArgs e)
+        private void btnLuu_Click_2(object sender, EventArgs e)
         {
             if (check_data() == true)
             {

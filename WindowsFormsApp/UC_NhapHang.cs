@@ -14,14 +14,11 @@ namespace WindowsFormsApp
 {
     public partial class UC_NhapHang : UserControl
     {
-
         private string manv;
         private string tennv;
         public UC_NhapHang(string manv, string tennv)
         {
             InitializeComponent();
-
-
 
             lsvNhaphang.View = View.Details;
             lsvNhaphang.GridLines = true;
@@ -34,7 +31,6 @@ namespace WindowsFormsApp
             lsvNhaphang.Columns.Add("Tổng tiền", 220);  // 4
 
             lblMapn.Text = Matudong();
-
 
             list = getListSanPham();
             cmbTensp.DataSource = list;
@@ -65,8 +61,6 @@ namespace WindowsFormsApp
 
 
         }
-
-
 
         private string Matudong()
         {
@@ -100,9 +94,6 @@ namespace WindowsFormsApp
             }
             return ma;
         }
-
-
-
 
         public List<MatHangDTO> getListSanPham()
         {
@@ -170,11 +161,7 @@ namespace WindowsFormsApp
             return true;
         }
 
-
-
-        //
         // Lưu phiếu nhập
-        //
         private bool LuuPN(PhieuNhapDTO pn)
         {
             // Convert datetime to date SQL Server 
@@ -183,12 +170,7 @@ namespace WindowsFormsApp
             DataProvider.Instance.ExecuteQuery(query);
             return true;
         }
-
-
-
-        //
         // Lưu chi tiết phiếu nhập
-        //
         private bool LuuChitietPN(string mapn, string mahh, int sl, int dongia)
         {
             // Convert datetime to date SQL Server 
@@ -197,20 +179,11 @@ namespace WindowsFormsApp
             return true;
         }
 
-
-
-
-
-
-
-
-
         private void label12_Click(object sender, EventArgs e)
         {
             string query = "update MatHang set SoLuong = 0,GiaBan = 0 where MaMH = '" + lblmasp.Text + "'";  // cập nhật lại số lượng 
             DataProvider.Instance.ExecuteQuery(query);
         }
-
 
         string imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
 
@@ -226,8 +199,38 @@ namespace WindowsFormsApp
                 pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
             }
         }
+        private void cmbTenncc_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbTenncc.SelectedIndex >= 0)
+            {
+                i = cmbTenncc.SelectedIndex;
+                lblMancc.Text = list1[i].MaNCC;
+                lblTenncc.Text = list1[i].TenNCC;
+                lblDiachi.Text = list1[i].DiaChi;
+                lblSĐT.Text = list1[i].SDT;
+                lblEmail.Text = list1[i].Email;
+            }
+        }
 
-        private void btnThem_Click_1(object sender, EventArgs e)
+        private void cmbTensp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTensp.SelectedIndex >= 0)
+            {
+                i = cmbTensp.SelectedIndex;
+                lblmasp.Text = list[i].MaMH;
+                lbltensp.Text = list[i].TenMH;
+                txtGiaban.Text = list[i].GiaBan.ToString();
+                //txtGia.Text = list[i].GiaGoc.ToString();
+            }
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            FormThongTinHangMoi f = new FormThongTinHangMoi();
+            f.Show();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
             bool check = false;
             if (check_data() == true)
@@ -285,32 +288,12 @@ namespace WindowsFormsApp
             }
         }
 
-        private void cmbTenncc_SelectedIndexChanged_1(object sender, EventArgs e)
+        private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            if (cmbTenncc.SelectedIndex >= 0)
-            {
-                i = cmbTenncc.SelectedIndex;
-                lblMancc.Text = list1[i].MaNCC;
-                lblTenncc.Text = list1[i].TenNCC;
-                lblDiachi.Text = list1[i].DiaChi;
-                lblSĐT.Text = list1[i].SDT;
-                lblEmail.Text = list1[i].Email;
-            }
+
         }
 
-        private void cmbTensp_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbTensp.SelectedIndex >= 0)
-            {
-                i = cmbTensp.SelectedIndex;
-                lblmasp.Text = list[i].MaMH;
-                lbltensp.Text = list[i].TenMH;
-                txtGiaban.Text = list[i].GiaBan.ToString();
-                //txtGia.Text = list[i].GiaGoc.ToString();
-            }
-        }
-
-        private void btnLammoi_Click(object sender, EventArgs e)
+        private void btnLammoi_Click_1(object sender, EventArgs e)
         {
             list = getListSanPham();
             cmbTensp.DataSource = list;
@@ -334,67 +317,9 @@ namespace WindowsFormsApp
             Lammoi();
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if (lsvNhaphang.Items.Count > 0)
-            {
-                PhieuNhapDTO pn = new PhieuNhapDTO();
-                pn.MaPN = lblMapn.Text;
-                pn.NgayNhap = dtpkNgaynhap.Value;
-                pn.MaNCC = lblMancc.Text;
-                pn.MaNV = lblManv.Text;
-
-
-
-
-
-                if (LuuPN(pn))   // lưu hóa đơn
-                {
-                    //FormInHD formInHD = new FormInHD(lblMakh.Text);
-                    foreach (ListViewItem item in lsvNhaphang.Items)
-                    {
-                        LuuChitietPN(pn.MaPN, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text)); //lưu chi tiết hóa đơn
-                        string query = "update MatHang set SoLuong = SoLuong + " + Int32.Parse(item.SubItems[2].Text) + "where MaMH = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
-                        DataProvider.Instance.ExecuteQuery(query);
-
-                    }
-
-                    lsvNhaphang.Items.Clear();
-                    lbltong.Text = "0 VNĐ";
-                    tongTien = 0;
-                    lblMapn.Text = Matudong();
-                    Lammoi();
-                    MessageBox.Show("Nhập hàng thành công");
-
-                }
-                else
-                {
-                    MessageBox.Show("Bạn chưa có sản phẩm để Lưu");
-                }
-            }
-        }
-
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lsvNhaphang.Items.Count; i++) //duyệt tất cả các item trong list
-            {
-                if (lsvNhaphang.Items[i].Checked)//nếu item đó dc check
-                {
-                    string tien = lsvNhaphang.Items[i].SubItems[4].Text.ToString();
-                    tongTien -= Int32.Parse(tien);
-                    lbltong.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
-                    lsvNhaphang.Items[i].Remove();//xóa item đó đi
-                    i--;
-                }
-            }
-        }
 
-
-
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            FormThongTinHangMoi f = new FormThongTinHangMoi();
-            f.Show();
         }
     }
 }

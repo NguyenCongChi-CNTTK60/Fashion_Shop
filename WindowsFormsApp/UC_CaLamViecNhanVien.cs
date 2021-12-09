@@ -48,39 +48,6 @@ namespace WindowsFormsApp
             dpkNgayban.Value = Convert.ToDateTime(dgvCalamviec.Rows[indexx].Cells[3].Value.ToString());
         }
 
-
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-                if (CaLamViecBUS.Intance.themCLV(maclv, manv, dpkNgayban.Value))
-                {
-                    MessageBox.Show("Thêm thành công", "Thông báo");
-                    Hienthi();
-                    LamMoi();
-                }
-        }
-
-
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            DataTable dt = CaLamViecBUS.Intance.TimkiemMaNgaylam(cmbTennv.Text, dpkNgayban.Value);
-
-            if (dt.Rows.Count > 0)
-            {
-                string manv = dt.Rows[0]["MaNV"].ToString();
-                DateTime nl = Convert.ToDateTime(dt.Rows[0]["NgayLam"].ToString());
-                if (CaLamViecBUS.Intance.xoaCLV(manv, dpkNgayban.Value))
-                {
-                    MessageBox.Show("Xóa thành công", "Thông báo");
-                    Hienthi();
-                    LamMoi();
-                }
-            }
-        }
-
-
-
         string manv;
         private void cmbTennv_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -109,13 +76,44 @@ namespace WindowsFormsApp
             cmbCalamviec.SelectedIndex = -1;
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            LamMoi();
+        }
+
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            if (CaLamViecBUS.Intance.themCLV(maclv, manv, dpkNgayban.Value))
+            {
+                MessageBox.Show("Thêm thành công", "Thông báo");
+                Hienthi();
+                LamMoi();
+            }
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
         {
             if (CaLamViecBUS.Intance.suaCLV(maclv, manv, dpkNgayban.Value))
             {
                 MessageBox.Show("Sửa thành công");
                 Hienthi();
                 LamMoi();
+            }
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+            DataTable dt = CaLamViecBUS.Intance.TimkiemMaNgaylam(cmbTennv.Text, dpkNgayban.Value);
+            if (dt.Rows.Count > 0)
+            {
+                string manv = dt.Rows[0]["MaNV"].ToString();
+                DateTime nl = Convert.ToDateTime(dt.Rows[0]["NgayLam"].ToString());
+                if (CaLamViecBUS.Intance.xoaCLV(manv, dpkNgayban.Value))
+                {
+                    MessageBox.Show("Xóa thành công", "Thông báo");
+                    Hienthi();
+                    LamMoi();
+                }
             }
         }
     }

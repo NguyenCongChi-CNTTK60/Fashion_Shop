@@ -87,25 +87,6 @@ namespace WindowsFormsApp
             return true;
         }
 
-        private void btnLuu_Click_1(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtMaHang.Text))
-            {
-                MessageBox.Show("Tên mặt hàng không được trống");
-            }
-            else
-            {
-                if (LuuHH(txtMaHang.Text, txtTenmh.Text, cmbDonvitinh.Text, 0, 1,cmbMaLoaiHang.Text))
-                {
-                    MessageBox.Show("Lưu thông tin hàng thành công");
-                    txtMaHang.Text = Matudong();
-                    Lammoi();
-                }
-                else
-                    MessageBox.Show("Không thể lưu thông tin này");
-            }
-        }
-
         private void cmbLoaiHang_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -125,6 +106,25 @@ namespace WindowsFormsApp
         {
             UC_ThemLoaiHang f = new UC_ThemLoaiHang();
             themUC(f);
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMaHang.Text))
+            {
+                MessageBox.Show("Tên mặt hàng không được trống");
+            }
+            else
+            {
+                if (LuuHH(txtMaHang.Text, txtTenmh.Text, cmbDonvitinh.Text, 0, 1, cmbMaLoaiHang.Text))
+                {
+                    MessageBox.Show("Lưu thông tin hàng thành công");
+                    txtMaHang.Text = Matudong();
+                    Lammoi();
+                }
+                else
+                    MessageBox.Show("Không thể lưu thông tin này");
+            }
         }
     }
 }
