@@ -441,6 +441,9 @@
     <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_DoiMatKhau.resx">
+      <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -479,6 +482,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NhaCungCap.resx">
       <DependentUpon>UC_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_XacNhanSDT.resx">
+      <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

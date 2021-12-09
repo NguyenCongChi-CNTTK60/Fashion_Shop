@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDangXuat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.lblTennv = new System.Windows.Forms.Label();
             this.lblManv = new System.Windows.Forms.Label();
             this.lblQuyen = new System.Windows.Forms.Label();
@@ -46,7 +47,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnDangXuat = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnNhanVien = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnThongKe = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnKhoHang = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -83,6 +83,39 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(970, 41);
             this.panel3.TabIndex = 4;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Animated = true;
+            this.btnDangXuat.AutoRoundedCorners = true;
+            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.BorderRadius = 18;
+            this.btnDangXuat.CheckedState.Parent = this.btnDangXuat;
+            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Default;
+            this.btnDangXuat.CustomImages.Parent = this.btnDangXuat;
+            this.btnDangXuat.CustomizableEdges.BottomRight = false;
+            this.btnDangXuat.CustomizableEdges.TopRight = false;
+            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangXuat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDangXuat.DisabledState.Parent = this.btnDangXuat;
+            this.btnDangXuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnDangXuat.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnDangXuat.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnDangXuat.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnDangXuat.HoverState.Parent = this.btnDangXuat;
+            this.btnDangXuat.Location = new System.Drawing.Point(844, 3);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.ShadowDecoration.Parent = this.btnDangXuat;
+            this.btnDangXuat.Size = new System.Drawing.Size(123, 38);
+            this.btnDangXuat.TabIndex = 20;
+            this.btnDangXuat.Text = "   Đăng xuất";
+            this.btnDangXuat.UseTransparentBackground = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click_1);
             // 
             // lblTennv
             // 
@@ -204,7 +237,7 @@
             this.btnKhuyenMai.DisabledState.Parent = this.btnKhuyenMai;
             this.btnKhuyenMai.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnKhuyenMai.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnKhuyenMai.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhuyenMai.ForeColor = System.Drawing.SystemColors.Control;
             this.btnKhuyenMai.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnKhuyenMai.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -237,7 +270,7 @@
             this.btnNhapHang.DisabledState.Parent = this.btnNhapHang;
             this.btnNhapHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnNhapHang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnNhapHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnNhapHang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhapHang.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNhapHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnNhapHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -270,7 +303,7 @@
             this.btnBanHang.DisabledState.Parent = this.btnBanHang;
             this.btnBanHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnBanHang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnBanHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnBanHang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBanHang.ForeColor = System.Drawing.SystemColors.Control;
             this.btnBanHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnBanHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -332,39 +365,6 @@
             this.label5.TabIndex = 22;
             this.label5.Text = "Địa chỉ: ";
             // 
-            // btnDangXuat
-            // 
-            this.btnDangXuat.Animated = true;
-            this.btnDangXuat.AutoRoundedCorners = true;
-            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.BorderRadius = 18;
-            this.btnDangXuat.CheckedState.Parent = this.btnDangXuat;
-            this.btnDangXuat.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnDangXuat.CustomImages.Parent = this.btnDangXuat;
-            this.btnDangXuat.CustomizableEdges.BottomRight = false;
-            this.btnDangXuat.CustomizableEdges.TopRight = false;
-            this.btnDangXuat.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangXuat.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDangXuat.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangXuat.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDangXuat.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDangXuat.DisabledState.Parent = this.btnDangXuat;
-            this.btnDangXuat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnDangXuat.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnDangXuat.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDangXuat.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDangXuat.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
-            this.btnDangXuat.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnDangXuat.HoverState.Parent = this.btnDangXuat;
-            this.btnDangXuat.Location = new System.Drawing.Point(844, 3);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.ShadowDecoration.Parent = this.btnDangXuat;
-            this.btnDangXuat.Size = new System.Drawing.Size(123, 38);
-            this.btnDangXuat.TabIndex = 20;
-            this.btnDangXuat.Text = "   Đăng xuất";
-            this.btnDangXuat.UseTransparentBackground = true;
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click_1);
-            // 
             // btnNhanVien
             // 
             this.btnNhanVien.Animated = true;
@@ -384,7 +384,7 @@
             this.btnNhanVien.DisabledState.Parent = this.btnNhanVien;
             this.btnNhanVien.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnNhanVien.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnNhanVien.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNhanVien.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNhanVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnNhanVien.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -417,7 +417,7 @@
             this.btnThongKe.DisabledState.Parent = this.btnThongKe;
             this.btnThongKe.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnThongKe.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.SystemColors.Control;
             this.btnThongKe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnThongKe.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -450,7 +450,7 @@
             this.btnKhoHang.DisabledState.Parent = this.btnKhoHang;
             this.btnKhoHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnKhoHang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnKhoHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnKhoHang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhoHang.ForeColor = System.Drawing.SystemColors.Control;
             this.btnKhoHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnKhoHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -483,7 +483,7 @@
             this.btnNCC.DisabledState.Parent = this.btnNCC;
             this.btnNCC.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnNCC.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnNCC.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnNCC.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNCC.ForeColor = System.Drawing.SystemColors.Control;
             this.btnNCC.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnNCC.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -516,7 +516,7 @@
             this.btnKhachHang.DisabledState.Parent = this.btnKhachHang;
             this.btnKhachHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnKhachHang.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnKhachHang.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhachHang.ForeColor = System.Drawing.SystemColors.Control;
             this.btnKhachHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnKhachHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
@@ -549,7 +549,7 @@
             this.btnTrangChu.DisabledState.Parent = this.btnTrangChu;
             this.btnTrangChu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
             this.btnTrangChu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
-            this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnTrangChu.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrangChu.ForeColor = System.Drawing.SystemColors.Control;
             this.btnTrangChu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
             this.btnTrangChu.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));

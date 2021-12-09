@@ -30,7 +30,6 @@ namespace WindowsFormsApp
         private void InitializeComponent()
         {
             this.btnTaiAnh = new Guna.UI2.WinForms.Guna2Button();
-            this.pcbHangHoa = new System.Windows.Forms.PictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtGiaban = new System.Windows.Forms.TextBox();
@@ -52,16 +51,12 @@ namespace WindowsFormsApp
             this.lblMancc = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dtpkNgaynhap = new System.Windows.Forms.DateTimePicker();
-            this.btnLammoi = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.lblMapn = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.lsvNhaphang = new System.Windows.Forms.ListView();
             this.lbltong = new System.Windows.Forms.Label();
             this.lbltensp = new System.Windows.Forms.Label();
             this.lblmasp = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -70,6 +65,11 @@ namespace WindowsFormsApp
             this.label2 = new System.Windows.Forms.Label();
             this.cmbTensp = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnThem = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLammoi = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLuu = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.pcbHangHoa = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbHangHoa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,14 +88,6 @@ namespace WindowsFormsApp
             this.btnTaiAnh.Size = new System.Drawing.Size(89, 25);
             this.btnTaiAnh.TabIndex = 132;
             this.btnTaiAnh.Text = "Upload";
-            // 
-            // pcbHangHoa
-            // 
-            this.pcbHangHoa.Location = new System.Drawing.Point(817, 8);
-            this.pcbHangHoa.Name = "pcbHangHoa";
-            this.pcbHangHoa.Size = new System.Drawing.Size(233, 153);
-            this.pcbHangHoa.TabIndex = 131;
-            this.pcbHangHoa.TabStop = false;
             // 
             // lblEmail
             // 
@@ -322,25 +314,11 @@ namespace WindowsFormsApp
             this.dtpkNgaynhap.Size = new System.Drawing.Size(222, 28);
             this.dtpkNgaynhap.TabIndex = 110;
             // 
-            // btnLammoi
-            // 
-            this.btnLammoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnLammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLammoi.ForeColor = System.Drawing.Color.White;
-            this.btnLammoi.Location = new System.Drawing.Point(526, 630);
-            this.btnLammoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLammoi.Name = "btnLammoi";
-            this.btnLammoi.Size = new System.Drawing.Size(162, 39);
-            this.btnLammoi.TabIndex = 109;
-            this.btnLammoi.Text = "Làm mới";
-            this.btnLammoi.UseVisualStyleBackColor = false;
-            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(914, 622);
+            this.label12.Location = new System.Drawing.Point(873, 622);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(66, 35);
             this.label12.TabIndex = 108;
@@ -356,34 +334,6 @@ namespace WindowsFormsApp
             this.lblMapn.Size = new System.Drawing.Size(67, 22);
             this.lblMapn.TabIndex = 107;
             this.lblMapn.Text = "MaPN:";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(348, 630);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(138, 39);
-            this.btnLuu.TabIndex = 106;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(703, 630);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(124, 39);
-            this.btnXoa.TabIndex = 105;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // lsvNhaphang
             // 
@@ -402,7 +352,7 @@ namespace WindowsFormsApp
             this.lbltong.AutoSize = true;
             this.lbltong.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbltong.Location = new System.Drawing.Point(995, 632);
+            this.lbltong.Location = new System.Drawing.Point(949, 632);
             this.lbltong.Name = "lbltong";
             this.lbltong.Size = new System.Drawing.Size(15, 21);
             this.lbltong.TabIndex = 103;
@@ -429,20 +379,6 @@ namespace WindowsFormsApp
             this.lblmasp.Size = new System.Drawing.Size(60, 21);
             this.lblmasp.TabIndex = 101;
             this.lblmasp.Text = "MaSP:";
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThem.Location = new System.Drawing.Point(110, 629);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(205, 41);
-            this.btnThem.TabIndex = 100;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
             // 
             // label11
             // 
@@ -526,11 +462,127 @@ namespace WindowsFormsApp
             this.label3.TabIndex = 92;
             this.label3.Text = "Mã phiếu nhập:";
             // 
+            // btnThem
+            // 
+            this.btnThem.AutoRoundedCorners = true;
+            this.btnThem.BorderRadius = 23;
+            this.btnThem.CheckedState.Parent = this.btnThem;
+            this.btnThem.CustomImages.Parent = this.btnThem;
+            this.btnThem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThem.DisabledState.Parent = this.btnThem;
+            this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnThem.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnThem.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnThem.HoverState.Parent = this.btnThem;
+            this.btnThem.Location = new System.Drawing.Point(75, 622);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.ShadowDecoration.Parent = this.btnThem;
+            this.btnThem.Size = new System.Drawing.Size(124, 48);
+            this.btnThem.TabIndex = 247;
+            this.btnThem.Text = "Thêm";
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.AutoRoundedCorners = true;
+            this.guna2GradientButton1.BorderRadius = 23;
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.DisabledState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.guna2GradientButton1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(521, 622);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(124, 48);
+            this.guna2GradientButton1.TabIndex = 246;
+            this.guna2GradientButton1.Text = "Xóa";
+            // 
+            // btnLammoi
+            // 
+            this.btnLammoi.AutoRoundedCorners = true;
+            this.btnLammoi.BorderRadius = 23;
+            this.btnLammoi.CheckedState.Parent = this.btnLammoi;
+            this.btnLammoi.CustomImages.Parent = this.btnLammoi;
+            this.btnLammoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLammoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLammoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLammoi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLammoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLammoi.DisabledState.Parent = this.btnLammoi;
+            this.btnLammoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLammoi.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLammoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLammoi.ForeColor = System.Drawing.Color.White;
+            this.btnLammoi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnLammoi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLammoi.HoverState.Parent = this.btnLammoi;
+            this.btnLammoi.Location = new System.Drawing.Point(382, 622);
+            this.btnLammoi.Name = "btnLammoi";
+            this.btnLammoi.ShadowDecoration.Parent = this.btnLammoi;
+            this.btnLammoi.Size = new System.Drawing.Size(124, 48);
+            this.btnLammoi.TabIndex = 245;
+            this.btnLammoi.Text = "Làm mới";
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.AutoRoundedCorners = true;
+            this.btnLuu.BorderRadius = 23;
+            this.btnLuu.CheckedState.Parent = this.btnLuu;
+            this.btnLuu.CustomImages.Parent = this.btnLuu;
+            this.btnLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLuu.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLuu.DisabledState.Parent = this.btnLuu;
+            this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLuu.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnLuu.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLuu.HoverState.Parent = this.btnLuu;
+            this.btnLuu.Location = new System.Drawing.Point(228, 621);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.ShadowDecoration.Parent = this.btnLuu;
+            this.btnLuu.Size = new System.Drawing.Size(124, 48);
+            this.btnLuu.TabIndex = 244;
+            this.btnLuu.Text = "Lưu";
+            // 
+            // pcbHangHoa
+            // 
+            this.pcbHangHoa.Location = new System.Drawing.Point(817, 8);
+            this.pcbHangHoa.Name = "pcbHangHoa";
+            this.pcbHangHoa.Size = new System.Drawing.Size(233, 153);
+            this.pcbHangHoa.TabIndex = 131;
+            this.pcbHangHoa.TabStop = false;
+            // 
             // UC_NhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.guna2GradientButton1);
+            this.Controls.Add(this.btnLammoi);
+            this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnTaiAnh);
             this.Controls.Add(this.pcbHangHoa);
             this.Controls.Add(this.lblEmail);
@@ -554,16 +606,12 @@ namespace WindowsFormsApp
             this.Controls.Add(this.lblMancc);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.dtpkNgaynhap);
-            this.Controls.Add(this.btnLammoi);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblMapn);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.lsvNhaphang);
             this.Controls.Add(this.lbltong);
             this.Controls.Add(this.lbltensp);
             this.Controls.Add(this.lblmasp);
-            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -606,16 +654,12 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label lblMancc;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker dtpkNgaynhap;
-        private System.Windows.Forms.Button btnLammoi;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblMapn;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.ListView lsvNhaphang;
         private System.Windows.Forms.Label lbltong;
         private System.Windows.Forms.Label lbltensp;
         private System.Windows.Forms.Label lblmasp;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
@@ -624,5 +668,9 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbTensp;
         private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2GradientButton btnThem;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLammoi;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLuu;
     }
 }

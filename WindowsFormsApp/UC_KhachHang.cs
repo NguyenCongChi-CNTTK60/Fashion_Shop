@@ -140,5 +140,25 @@ namespace WindowsFormsApp
             ClearBinding();
             loadBinding();
         }
+
+        private void btnLamMoi_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnXoa_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

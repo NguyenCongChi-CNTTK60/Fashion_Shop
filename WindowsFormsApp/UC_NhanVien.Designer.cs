@@ -34,26 +34,26 @@ namespace WindowsFormsApp
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNhanVien = new System.Windows.Forms.Panel();
             this.cmbGioiTinh = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtHoTen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
             this.dgvThongTinNhanVien = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.cmbChucVu = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnGiaoCa = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnGiaoCa = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnXoa = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSua = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnLamMoi = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pnlNhanVien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongTinNhanVien)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,26 +61,25 @@ namespace WindowsFormsApp
             // 
             // pnlNhanVien
             // 
-            this.pnlNhanVien.Controls.Add(this.btnGiaoCa);
+            this.pnlNhanVien.Controls.Add(this.btnXoa);
+            this.pnlNhanVien.Controls.Add(this.btnSua);
+            this.pnlNhanVien.Controls.Add(this.btnLamMoi);
+            this.pnlNhanVien.Controls.Add(this.label16);
+            this.pnlNhanVien.Controls.Add(this.label12);
+            this.pnlNhanVien.Controls.Add(this.label11);
+            this.pnlNhanVien.Controls.Add(this.label8);
+            this.pnlNhanVien.Controls.Add(this.label14);
+            this.pnlNhanVien.Controls.Add(this.label15);
+            this.pnlNhanVien.Controls.Add(this.label2);
             this.pnlNhanVien.Controls.Add(this.cmbGioiTinh);
-            this.pnlNhanVien.Controls.Add(this.label1);
-            this.pnlNhanVien.Controls.Add(this.label6);
             this.pnlNhanVien.Controls.Add(this.txtSDT);
             this.pnlNhanVien.Controls.Add(this.txtTimKiem);
             this.pnlNhanVien.Controls.Add(this.txtDiaChi);
             this.pnlNhanVien.Controls.Add(this.txtHoTen);
-            this.pnlNhanVien.Controls.Add(this.btnXoa);
-            this.pnlNhanVien.Controls.Add(this.btnSua);
-            this.pnlNhanVien.Controls.Add(this.btnLamMoi);
             this.pnlNhanVien.Controls.Add(this.dgvThongTinNhanVien);
-            this.pnlNhanVien.Controls.Add(this.label5);
             this.pnlNhanVien.Controls.Add(this.cmbChucVu);
-            this.pnlNhanVien.Controls.Add(this.label10);
             this.pnlNhanVien.Controls.Add(this.txtMaNV);
-            this.pnlNhanVien.Controls.Add(this.label9);
             this.pnlNhanVien.Controls.Add(this.panel2);
-            this.pnlNhanVien.Controls.Add(this.label7);
-            this.pnlNhanVien.Controls.Add(this.label3);
             this.pnlNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlNhanVien.Location = new System.Drawing.Point(0, 0);
             this.pnlNhanVien.Name = "pnlNhanVien";
@@ -102,32 +101,12 @@ namespace WindowsFormsApp
             this.cmbGioiTinh.HoverState.Parent = this.cmbGioiTinh;
             this.cmbGioiTinh.ItemHeight = 30;
             this.cmbGioiTinh.ItemsAppearance.Parent = this.cmbGioiTinh;
-            this.cmbGioiTinh.Location = new System.Drawing.Point(121, 166);
+            this.cmbGioiTinh.Location = new System.Drawing.Point(121, 175);
             this.cmbGioiTinh.Name = "cmbGioiTinh";
             this.cmbGioiTinh.ShadowDecoration.Parent = this.cmbGioiTinh;
             this.cmbGioiTinh.Size = new System.Drawing.Size(288, 36);
             this.cmbGioiTinh.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cmbGioiTinh.TabIndex = 246;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(9, 179);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 29);
-            this.label1.TabIndex = 245;
-            this.label1.Text = "Giới tính:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(531, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 29);
-            this.label6.TabIndex = 244;
-            this.label6.Text = "Địa chỉ:";
             // 
             // txtSDT
             // 
@@ -212,7 +191,7 @@ namespace WindowsFormsApp
             this.txtHoTen.BorderColor = System.Drawing.Color.Black;
             this.txtHoTen.BorderRadius = 10;
             this.txtHoTen.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtHoTen.DefaultText = "";
+            this.txtHoTen.DefaultText = "Họ và tên";
             this.txtHoTen.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtHoTen.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtHoTen.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -228,52 +207,11 @@ namespace WindowsFormsApp
             this.txtHoTen.PasswordChar = '\0';
             this.txtHoTen.PlaceholderText = "";
             this.txtHoTen.SelectedText = "";
+            this.txtHoTen.SelectionStart = 9;
             this.txtHoTen.ShadowDecoration.Parent = this.txtHoTen;
             this.txtHoTen.Size = new System.Drawing.Size(288, 31);
             this.txtHoTen.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtHoTen.TabIndex = 240;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnXoa.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(498, 601);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(114, 46);
-            this.btnXoa.TabIndex = 239;
-            this.btnXoa.Text = "  Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click_1);
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnSua.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(345, 601);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(114, 46);
-            this.btnSua.TabIndex = 238;
-            this.btnSua.Text = "  Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click_1);
-            // 
-            // btnLamMoi
-            // 
-            this.btnLamMoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnLamMoi.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLamMoi.Location = new System.Drawing.Point(647, 601);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(135, 46);
-            this.btnLamMoi.TabIndex = 237;
-            this.btnLamMoi.Text = "    Làm Mới";
-            this.btnLamMoi.UseVisualStyleBackColor = false;
-            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click_1);
             // 
             // dgvThongTinNhanVien
             // 
@@ -333,16 +271,6 @@ namespace WindowsFormsApp
             this.dgvThongTinNhanVien.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvThongTinNhanVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label5.Location = new System.Drawing.Point(519, 143);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 29);
-            this.label5.TabIndex = 235;
-            this.label5.Text = "Điện thoại:";
-            // 
             // cmbChucVu
             // 
             this.cmbChucVu.BackColor = System.Drawing.Color.Transparent;
@@ -365,22 +293,12 @@ namespace WindowsFormsApp
             this.cmbChucVu.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cmbChucVu.TabIndex = 234;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label10.Location = new System.Drawing.Point(531, 193);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(104, 29);
-            this.label10.TabIndex = 233;
-            this.label10.Text = "Chức vụ:";
-            // 
             // txtMaNV
             // 
             this.txtMaNV.BorderColor = System.Drawing.Color.Black;
             this.txtMaNV.BorderRadius = 10;
             this.txtMaNV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaNV.DefaultText = "";
+            this.txtMaNV.DefaultText = "Mã nhân viên";
             this.txtMaNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtMaNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -401,19 +319,10 @@ namespace WindowsFormsApp
             this.txtMaNV.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtMaNV.TabIndex = 232;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label9.Location = new System.Drawing.Point(9, 258);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 29);
-            this.label9.TabIndex = 231;
-            this.label9.Text = "Tìm kiếm:";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
+            this.panel2.Controls.Add(this.btnGiaoCa);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -426,45 +335,199 @@ namespace WindowsFormsApp
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sitka Banner", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(337, 0);
+            this.label4.Location = new System.Drawing.Point(353, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(317, 48);
+            this.label4.Size = new System.Drawing.Size(268, 40);
             this.label4.TabIndex = 226;
             this.label4.Text = "QUẢN LÝ NHÂN VIÊN";
             // 
-            // label7
+            // label16
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label7.Location = new System.Drawing.Point(9, 89);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 29);
-            this.label7.TabIndex = 229;
-            this.label7.Text = "Mã NV:";
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label16.Location = new System.Drawing.Point(16, 273);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(102, 25);
+            this.label16.TabIndex = 254;
+            this.label16.Text = "Tìm kiếm :";
             // 
-            // label3
+            // label12
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label3.Location = new System.Drawing.Point(3, 134);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(119, 29);
-            this.label3.TabIndex = 228;
-            this.label3.Text = "Họ và tên:";
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(539, 191);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(96, 25);
+            this.label12.TabIndex = 253;
+            this.label12.Text = "Chức vụ :";
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(526, 140);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 25);
+            this.label11.TabIndex = 252;
+            this.label11.Text = "Điện thoại :";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(539, 87);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 25);
+            this.label8.TabIndex = 251;
+            this.label8.Text = "Địa chỉ :";
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(25, 186);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(93, 25);
+            this.label14.TabIndex = 250;
+            this.label14.Text = "Giới tính :";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label15.Location = new System.Drawing.Point(14, 140);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(106, 25);
+            this.label15.TabIndex = 249;
+            this.label15.Text = "Họ và tên :";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(34, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 25);
+            this.label2.TabIndex = 248;
+            this.label2.Text = "Mã NV :";
             // 
             // btnGiaoCa
             // 
-            this.btnGiaoCa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnGiaoCa.Font = new System.Drawing.Font("Sitka Banner", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiaoCa.AutoRoundedCorners = true;
+            this.btnGiaoCa.BorderRadius = 23;
+            this.btnGiaoCa.CheckedState.Parent = this.btnGiaoCa;
+            this.btnGiaoCa.CustomImages.Parent = this.btnGiaoCa;
+            this.btnGiaoCa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiaoCa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGiaoCa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiaoCa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGiaoCa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGiaoCa.DisabledState.Parent = this.btnGiaoCa;
+            this.btnGiaoCa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnGiaoCa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnGiaoCa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnGiaoCa.ForeColor = System.Drawing.Color.White;
-            this.btnGiaoCa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGiaoCa.Location = new System.Drawing.Point(825, 601);
+            this.btnGiaoCa.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnGiaoCa.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnGiaoCa.HoverState.Parent = this.btnGiaoCa;
+            this.btnGiaoCa.Location = new System.Drawing.Point(19, 3);
             this.btnGiaoCa.Name = "btnGiaoCa";
-            this.btnGiaoCa.Size = new System.Drawing.Size(135, 46);
-            this.btnGiaoCa.TabIndex = 247;
-            this.btnGiaoCa.Text = "  Giao ca";
-            this.btnGiaoCa.UseVisualStyleBackColor = false;
-            this.btnGiaoCa.Click += new System.EventHandler(this.btnGiaoCa_Click);
+            this.btnGiaoCa.ShadowDecoration.Parent = this.btnGiaoCa;
+            this.btnGiaoCa.Size = new System.Drawing.Size(124, 48);
+            this.btnGiaoCa.TabIndex = 258;
+            this.btnGiaoCa.Text = "Giao ca";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.AutoRoundedCorners = true;
+            this.btnXoa.BorderRadius = 23;
+            this.btnXoa.CheckedState.Parent = this.btnXoa;
+            this.btnXoa.CustomImages.Parent = this.btnXoa;
+            this.btnXoa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnXoa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnXoa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnXoa.DisabledState.Parent = this.btnXoa;
+            this.btnXoa.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnXoa.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnXoa.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnXoa.HoverState.Parent = this.btnXoa;
+            this.btnXoa.Location = new System.Drawing.Point(811, 601);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.ShadowDecoration.Parent = this.btnXoa;
+            this.btnXoa.Size = new System.Drawing.Size(124, 48);
+            this.btnXoa.TabIndex = 257;
+            this.btnXoa.Text = "Xóa";
+            // 
+            // btnSua
+            // 
+            this.btnSua.AutoRoundedCorners = true;
+            this.btnSua.BorderRadius = 23;
+            this.btnSua.CheckedState.Parent = this.btnSua;
+            this.btnSua.CustomImages.Parent = this.btnSua;
+            this.btnSua.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSua.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSua.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSua.DisabledState.Parent = this.btnSua;
+            this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnSua.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnSua.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnSua.HoverState.Parent = this.btnSua;
+            this.btnSua.Location = new System.Drawing.Point(664, 601);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.ShadowDecoration.Parent = this.btnSua;
+            this.btnSua.Size = new System.Drawing.Size(124, 48);
+            this.btnSua.TabIndex = 256;
+            this.btnSua.Text = "Sửa";
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.AutoRoundedCorners = true;
+            this.btnLamMoi.BorderRadius = 23;
+            this.btnLamMoi.CheckedState.Parent = this.btnLamMoi;
+            this.btnLamMoi.CustomImages.Parent = this.btnLamMoi;
+            this.btnLamMoi.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLamMoi.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLamMoi.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLamMoi.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLamMoi.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLamMoi.DisabledState.Parent = this.btnLamMoi;
+            this.btnLamMoi.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLamMoi.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(84)))), ((int)(((byte)(127)))));
+            this.btnLamMoi.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(52)))), ((int)(((byte)(88)))));
+            this.btnLamMoi.HoverState.Parent = this.btnLamMoi;
+            this.btnLamMoi.Location = new System.Drawing.Point(511, 601);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.ShadowDecoration.Parent = this.btnLamMoi;
+            this.btnLamMoi.Size = new System.Drawing.Size(124, 48);
+            this.btnLamMoi.TabIndex = 255;
+            this.btnLamMoi.Text = "Làm Mới";
             // 
             // UC_NhanVien
             // 
@@ -487,25 +550,25 @@ namespace WindowsFormsApp
 
         private System.Windows.Forms.Panel pnlNhanVien;
         private Guna.UI2.WinForms.Guna2ComboBox cmbGioiTinh;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
         private Guna.UI2.WinForms.Guna2TextBox txtHoTen;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnLamMoi;
         private Guna.UI2.WinForms.Guna2DataGridView dgvThongTinNhanVien;
-        private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2ComboBox cmbChucVu;
-        private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2TextBox txtMaNV;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnGiaoCa;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2GradientButton btnGiaoCa;
+        private Guna.UI2.WinForms.Guna2GradientButton btnXoa;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSua;
+        private Guna.UI2.WinForms.Guna2GradientButton btnLamMoi;
     }
 }
