@@ -76,3 +76,16 @@ C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager-Chi\BUS\obj\Debug\BUS.cs
 C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager-Chi\BUS\obj\Debug\BUS.csproj.CopyComplete
 C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager-Chi\BUS\obj\Debug\BUS.dll
 C:\Users\buiva\OneDrive\Máy tính\fashion-shop-manager-Chi\BUS\obj\Debug\BUS.pdb
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\bin\Debug\BUS.dll
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\bin\Debug\BUS.pdb
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\bin\Debug\DAO.dll
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\bin\Debug\DTO.dll
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\bin\Debug\DAO.pdb
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\bin\Debug\DTO.pdb
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\obj\Debug\BUS.Properties.Resources.resources
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\obj\Debug\BUS.csproj.CopyComplete
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\obj\Debug\BUS.dll
+C:\Users\buiva\OneDrive\Máy tính\new\fashion-shop-manager\BUS\obj\Debug\BUS.pdb

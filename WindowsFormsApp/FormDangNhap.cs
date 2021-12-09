@@ -98,7 +98,12 @@ namespace WindowsFormsApp
             Application.Exit();
         }
 
-        private void btnDangNhap_Click(object sender, EventArgs e)
+        private void lblCanhbao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangNhap_Click_1(object sender, EventArgs e)
         {
             if (check_data() == true)
             {
@@ -118,7 +123,17 @@ namespace WindowsFormsApp
             }
         }
 
-        private void lblCanhbao_Click(object sender, EventArgs e)
+        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
         {
 
         }

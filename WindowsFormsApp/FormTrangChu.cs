@@ -159,6 +159,11 @@ namespace WindowsFormsApp
             themUC(uC_KhuyenMai);
         }
 
+        private void pannelLeft1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnNhapHang_Click(object sender, EventArgs e)
         {
             //FormNhapHang formNhaphang = new FormNhapHang(luumanv, luutennv);
