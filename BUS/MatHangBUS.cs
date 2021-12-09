@@ -50,7 +50,7 @@ namespace BUS
 
         public bool suaHH(string MaHang, string TenHH, int SoLuong, int GiaBan)
         {
-            return MatHangDAO.Intance.suaHH(MaHang, TenHH,  SoLuong, GiaBan);
+            return MatHangDAO.Intance.suaHH(MaHang, TenHH, SoLuong, GiaBan);
         }
 
         public bool kiemtraXoa(string maHang)
@@ -76,6 +76,25 @@ namespace BUS
         public DataTable TimKiemHH(string maPN)
         {
             return MatHangDAO.Intance.TimKiemHH(maPN);
+        }
+
+
+        // CHÍ
+        public DataTable TKMatHang()
+        {
+            return MatHangDAO.Intance.TKMatHang();
+        }
+
+
+        public DataTable TimKiemMH(string tk)
+        {
+            return MatHangDAO.Intance.TimKiemMH(tk);
+        }
+
+
+        public DataTable TimKiemGiaBan(string maMH)
+        {
+            return MatHangDAO.Intance.TimKiemGiaBan(maMH);
         }
     }
 }

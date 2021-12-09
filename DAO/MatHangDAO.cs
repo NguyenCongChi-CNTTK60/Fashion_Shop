@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using WindowsFormsApp;
 
 namespace DAO
 {
@@ -42,6 +43,7 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
 
         public bool kiemtraXoa(string maHang)
         {
@@ -107,6 +109,7 @@ namespace DAO
             return data;
         }
 
+
         public MatHangDTO getSP(string maSP)
         {
             MatHangDTO a = new MatHangDTO();
@@ -128,7 +131,7 @@ namespace DAO
             BinaryReader brs = new BinaryReader(stream);
             images = brs.ReadBytes((int)stream.Length);
 
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLCuaHangThoiTrang;User ID=sa;Password=123"))
             {
                 string query = String.Format("Insert into MatHang Values('{0}', N'{1}', '{2}', {3}, {4}, @hinh) ", data.MaMH, data.TenMH, data.DonVi, data.GiaBan, data.SoLuong);
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -152,7 +155,7 @@ namespace DAO
             BinaryReader brs = new BinaryReader(stream);
             images = brs.ReadBytes((int)stream.Length);
             // Update hình nếu có
-            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123"))
+            using (SqlConnection connection = new SqlConnection(@"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLCuaHangThoiTrang;User ID=sa;Password=123"))
             {
                 string query = String.Format("Update MatHang set Anh = @hinh where MaMH = '{0}'", maHang);
                 SqlCommand cmd = new SqlCommand(query, connection);
@@ -169,6 +172,31 @@ namespace DAO
             DataRow data = DataProvider.Instance.ExecuteQuery(query).Rows[0];
             byte[] img = ((byte[])data["Anh"]);
             return img;
+        }
+
+
+        // CHÍ
+        public DataTable TKMatHang()
+        {
+            string query = "USP_TKMatHang";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+
+        public DataTable TimKiemMH (string tk)
+        {
+            string query = "select MatHang.MaMH as [Mã hàng hóa],MatHang.TenMH as [Tên hàng hóa],DonVi as [Đơn vị tính],sum(ChitietPN.Soluong) as [Số lượng nhập],MatHang.SoLuong as [Số lượng tồn], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [Số lượng bán],MatHang.GiaBan as [Giá bán] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH where MatHang.TenMH like N'%" + tk + "%' or MatHang.MaMH like '%" + tk + "%'  group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,MatHang.DonVi,DonVi,MatHang.GiaBan";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+
+        public DataTable TimKiemGiaBan(string maMH)
+        {
+            string query = "select GiaBan from MatHang where MaMH = '" + maMH + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
         }
     }
 }

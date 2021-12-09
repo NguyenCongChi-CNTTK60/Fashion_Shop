@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
+using WindowsFormsApp;
 
 namespace DAO
 {
@@ -24,7 +25,7 @@ namespace DAO
 
         public bool Login(string userName, string passWord)
         {
-            string query = "SELECT * FROM NhanVien WHERE TenDangNhap = N'" + userName + "' AND MatKhau = N'" + passWord + "' ";
+            string query = "SELECT * FROM NhanVien WHERE TenDangNhap = N'" + userName + "' AND MatKhau = N'" + passWord + "'";
 
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
 
@@ -40,7 +41,7 @@ namespace DAO
 
         public DataTable getListNV()
         {
-            string query = "select * from NhanVien";
+            string query = "select MaNV,TenHienThi,GioiTinh,DiaChi,SDT,Quyen from NhanVien";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
@@ -100,5 +101,22 @@ namespace DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+
+        public List<NhanVienDTO> getListNhanVien()
+        {
+            List<NhanVienDTO> list = new List<NhanVienDTO>();
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from NhanVien");
+            foreach (DataRow item in data.Rows)
+            {
+                NhanVienDTO Nhanvien = new NhanVienDTO(item);
+                list.Add(Nhanvien);
+            }
+            return list;
+        }
+
+
+
+
     }
 }

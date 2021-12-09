@@ -17,8 +17,8 @@ namespace WindowsFormsApp
         public UC_TrangChu()
         {
             InitializeComponent();
-            fillChart();
-            loadDashboard();
+            //fillChart();
+            //loadDashboard();
         }
 
         void loadDashboard()

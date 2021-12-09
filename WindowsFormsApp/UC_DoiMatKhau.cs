@@ -22,18 +22,14 @@ namespace WindowsFormsApp
             txtSđtnv.Text = sdt;
         }
 
-        private void txtxacnhan_TextChanged(object sender, EventArgs e)
-        {
-            lblCanhbao.Text = "";
-        }
-
-        private void btnQuaylai_Click_1(object sender, EventArgs e)
+        private void btnQuaylai_Click(object sender, EventArgs e)
         {
             FormDangNhap formDangNhap = new FormDangNhap();
             formDangNhap.ShowDialog();
         }
 
-        private void btnLuu_Click_1(object sender, EventArgs e)
+
+        private void btnLuu_Click(object sender, EventArgs e)
         {
             if (txtmatkhaumoi.Text == txtxacnhan.Text)
             {
@@ -49,6 +45,11 @@ namespace WindowsFormsApp
             else
                 lblCanhbao.Text = "Mật khẩu xác nhận ko đúng";
             lblCanhbao.ForeColor = Color.Brown;
+        }
+
+        private void txtxacnhan_TextChanged(object sender, EventArgs e)
+        {
+            lblCanhbao.Text = "";
         }
     }
 }

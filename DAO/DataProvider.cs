@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAO;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -7,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAO
+namespace WindowsFormsApp
 {
-    public class DataProvider
+    class DataProvider
     {
         private static DataProvider instance; // Ctrl + R + E
 
@@ -20,12 +21,14 @@ namespace DAO
         }
 
         private DataProvider() { }
-        private string connectionSTR = @"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123";
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
-            DataTable data = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            DataTable data = new DataTable();
+            Chuoiketnoi chuoiketnoi = new Chuoiketnoi();
+
+            using (SqlConnection connection = chuoiketnoi.sqlConnection())
             {
                 connection.Open();
 
@@ -59,7 +62,7 @@ namespace DAO
         {
             int data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = chuoiketnoi.sqlConnection())
             {
                 connection.Open();
 
@@ -91,7 +94,7 @@ namespace DAO
         {
             object data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = chuoiketnoi.sqlConnection())
             {
                 connection.Open();
 

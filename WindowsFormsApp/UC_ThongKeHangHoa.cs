@@ -22,8 +22,7 @@ namespace WindowsFormsApp
 
         private void Hienthi()
         {
-            string query = "USP_TKMatHang";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            DataTable dt = MatHangBUS.Intance.TKMatHang();
             dgvThongkehh.DataSource = dt;
         }
 
@@ -31,10 +30,10 @@ namespace WindowsFormsApp
         private void txtTimkiemhanghoa_TextChanged(object sender, EventArgs e)
         {
             string tk = txtTimkiemhanghoa.Text;
-            string query = "select MatHang.MaMH as [Mã hàng hóa],MatHang.TenMH as [Tên hàng hóa],DonViTinh.TenDVT as [Đơn vị tính],sum(ChitietPN.Soluong) as [Số lượng nhập],MatHang.SoLuong as [Số lượng tồn], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [Số lượng bán],MatHang.GiaBan as [Giá bán] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH inner join DonViTinh on DonViTinh.MaDVT = MatHang.DonVi where MatHang.TenMH like N'%" + tk + "%' or MatHang.MaMH like '%" + tk + "%'  group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,MatHang.DonVi,DonViTinh.TenDVT,MatHang.GiaBan";
+            
             if (!string.IsNullOrEmpty(txtTimkiemhanghoa.Text))
             {
-                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                DataTable dt = MatHangBUS.Intance.TimKiemMH(tk);
                 dgvThongkehh.DataSource = dt;
             }
             else

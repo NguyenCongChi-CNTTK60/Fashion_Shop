@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -20,12 +19,14 @@ namespace WindowsFormsApp
         }
 
         private DataProvider() { }
-        private string connectionSTR = @"Data Source=DESKTOP-RNOPI29;Initial Catalog=QLSieuThi;User ID=sa;Password=123";
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
-            DataTable data = new DataTable();
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            DataTable data = new DataTable();
+            Chuoiketnoi chuoiketnoi = new Chuoiketnoi();
+
+            using (SqlConnection connection = chuoiketnoi.sqlConnection())
             {
                 connection.Open();
 
@@ -59,7 +60,7 @@ namespace WindowsFormsApp
         {
             int data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = chuoiketnoi.sqlConnection())
             {
                 connection.Open();
 
@@ -91,7 +92,7 @@ namespace WindowsFormsApp
         {
             object data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionSTR))
+            using (SqlConnection connection = chuoiketnoi.sqlConnection())
             {
                 connection.Open();
 
@@ -145,3 +146,4 @@ namespace WindowsFormsApp
 
     }
 }
+

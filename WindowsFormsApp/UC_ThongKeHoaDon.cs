@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,11 +20,10 @@ namespace WindowsFormsApp
             InitializeComponent();
             DateTime today = DateTime.Now;
             dpkNgaybd.Value = new DateTime(today.Year - 1, today.Month - 10, 1);
-            dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(10).AddDays(-1);
+            dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(11).AddDays(-1);
             DateTime ngaybd = dpkNgaybd.Value;
             DateTime ngaykt = dpkNgaykt.Value;
-            string query = "select HoaDon.MaHD as [Mã hóa đơn],KhachHang.TenKH as [Tên khách hàng],NgayTao as [Ngày tạo],TongTien[Tổng tiền],TenHienThi as [Nhân viên tạo] from HoaDon inner join KhachHang on HoaDon.MaKH = KhachHang.MaKH inner join NhanVien on NhanVien.MaNV = HoaDon.MaNV where  NgayTao between '" + ngaybd + "' and '" + ngaykt + "'";
-            DataTable dt = DataProvider.Instance.Thongkehoadon(ngaybd, ngaykt, query);
+            DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd,ngaykt);
             dgvThongkehd.DataSource = dt;
             TongtienHoadon();
         }
@@ -31,9 +31,8 @@ namespace WindowsFormsApp
         private void btnXem_Click(object sender, EventArgs e)
         {
             DateTime ngaybd = dpkNgaybd.Value;
-            DateTime ngaykt = dpkNgaykt.Value;
-            string query = "select HoaDon.MaHD as [Mã hóa đơn],KhachHang.TenKH as [Tên khách hàng],NgayTao as [Ngày tạo],TongTien[Tổng tiền],TenHienThi as [Nhân viên tạo] from HoaDon inner join KhachHang on HoaDon.MaKH = KhachHang.MaKH inner join NhanVien on NhanVien.MaNV = HoaDon.MaNV where  NgayTao between '" + ngaybd + "' and '" + ngaykt + "'";
-            DataTable dt = DataProvider.Instance.Thongkehoadon(ngaybd, ngaykt, query);
+            DateTime ngaykt = dpkNgaykt.Value;          
+            DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd, ngaykt);
             dgvThongkehd.DataSource = dt;
             TongtienHoadontheongay();
         }
@@ -41,12 +40,11 @@ namespace WindowsFormsApp
 
         private void TongtienHoadon()
         {
-            int Tongtien = 0;
-            string query = "select sum(Tongtien) as [Tổng tiền hóa đơn]from Hoadon";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            int Tongtien = 0;  
+            DataTable dt = HoaDonBUS.Intance.TongTienHoaDon();
             string tien = dt.Rows[0]["Tổng tiền hóa đơn"].ToString();
             Tongtien = Int32.Parse(tien);
-            txtTongtienhoadon.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", Tongtien) + " VNĐ";
+            lblTongTien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Tongtien) + " đ";
         }
 
 
@@ -55,18 +53,23 @@ namespace WindowsFormsApp
             int Tongtien = 0;
             DateTime ngaybd = dpkNgaybd.Value;
             DateTime ngaykt = dpkNgaykt.Value;
-            string query = "select sum(Tongtien) as [Tổng tiền hóa đơn]from Hoadon where  NgayTao between '" + ngaybd + "' and '" + ngaykt + "'";
-            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            DataTable dt = HoaDonBUS.Intance.TongTienTheoNgay(ngaybd, ngaykt);
             string tien = dt.Rows[0]["Tổng tiền hóa đơn"].ToString();
             Tongtien = Int32.Parse(tien);
-            txtTongtienhoadon.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", Tongtien) + " VNĐ";
+            lblTongTien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Tongtien) + " đ";
         }
+
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             UC_ThongKe tk = new UC_ThongKe();
             tk.Show();
             this.Hide();
+        }
+
+        private void btnTangngay_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp;
 
 namespace DAO
 {
@@ -63,5 +64,23 @@ namespace DAO
             maKHnext = data["MaKH"].ToString();
             return maKHnext;
         }
+
+
+        // CHÍ
+        public DataTable TKKhachHang()
+        {
+            string query = "USP_TKKhachHang";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+
+        public DataTable TimKiemKhachHang(string tk)
+        {
+            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],SDT as [Số điện thoại], SUM(HoaDon.TongTien) AS[Tổng Tiền], Count(HoaDon.MaKH) as [Số lần mua hàng] from KhachHang inner join HoaDon on KhachHang.MaKH = HoaDon.MaKH where TenKH like N'%" + tk + "%' group by HoaDon.MaKH, KhachHang.MaKH,TenKH,SDT";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
     }
 }

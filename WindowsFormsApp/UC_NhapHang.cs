@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,19 +9,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
-using BUS;
-using DTO;
 
 namespace WindowsFormsApp
 {
     public partial class UC_NhapHang : UserControl
     {
+
         private string manv;
         private string tennv;
-        public UC_NhapHang()
+        public UC_NhapHang(string manv, string tennv)
         {
             InitializeComponent();
+
+
 
             lsvNhaphang.View = View.Details;
             lsvNhaphang.GridLines = true;
@@ -60,7 +61,12 @@ namespace WindowsFormsApp
             lblManv.Text = manv;
             this.tennv = tennv;
             lblTennv.Text = tennv;
+
+
+
         }
+
+
 
         private string Matudong()
         {
@@ -130,34 +136,10 @@ namespace WindowsFormsApp
         }
         List<NhaCungCapDTO> list1;
 
+
+
         int i;
-        private void cmbTensp_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbTensp.SelectedIndex >= 0)
-            {
-                i = cmbTensp.SelectedIndex;
-                lblmasp.Text = list[i].MaMH;
-                lbltensp.Text = list[i].TenMH;
-                txtGiaban.Text = list[i].GiaBan.ToString();
-                //txtGia.Text = list[i].GiaGoc.ToString();
-            }
-
-
-
-        }
-
-        private void cmbTenncc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cmbTenncc.SelectedIndex >= 0)
-            {
-                i = cmbTenncc.SelectedIndex;
-                lblMancc.Text = list1[i].MaNCC;
-                lblTenncc.Text = list1[i].TenNCC;
-                lblDiachi.Text = list1[i].DiaChi;
-                lblSĐT.Text = list1[i].SDT;
-            }
-        }
-
+        int tongTien;
         private void Lammoi()
         {
             cmbTensp.SelectedIndex = -1;
@@ -165,6 +147,9 @@ namespace WindowsFormsApp
             txtGia.Text = "0";
             lblmasp.Text = "";
             lbltensp.Text = "";
+            pcbHangHoa.Image = null;
+            txtGiaban.Text = "";
+            lblEmail.Text = "";
         }
 
 
@@ -218,12 +203,6 @@ namespace WindowsFormsApp
 
 
 
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            FormThongTinHangMoi f = new FormThongTinHangMoi();
-            f.Show();
-        }
-
 
 
         private void label12_Click(object sender, EventArgs e)
@@ -233,8 +212,21 @@ namespace WindowsFormsApp
         }
 
 
+        string imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
 
-        int tongTien;
+        private void btnTaiAnh_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dlgOpen = new OpenFileDialog();
+            dlgOpen.Filter = "PNG files(*.png)|*.png|JPEG(*.jpg)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
+            dlgOpen.FilterIndex = 2;
+            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
+            if (dlgOpen.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dlgOpen.FileName.ToString();
+                pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
+            }
+        }
+
         private void btnThem_Click_1(object sender, EventArgs e)
         {
             bool check = false;
@@ -293,7 +285,56 @@ namespace WindowsFormsApp
             }
         }
 
-        private void btnLuu_Click_1(object sender, EventArgs e)
+        private void cmbTenncc_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (cmbTenncc.SelectedIndex >= 0)
+            {
+                i = cmbTenncc.SelectedIndex;
+                lblMancc.Text = list1[i].MaNCC;
+                lblTenncc.Text = list1[i].TenNCC;
+                lblDiachi.Text = list1[i].DiaChi;
+                lblSĐT.Text = list1[i].SDT;
+                lblEmail.Text = list1[i].Email;
+            }
+        }
+
+        private void cmbTensp_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbTensp.SelectedIndex >= 0)
+            {
+                i = cmbTensp.SelectedIndex;
+                lblmasp.Text = list[i].MaMH;
+                lbltensp.Text = list[i].TenMH;
+                txtGiaban.Text = list[i].GiaBan.ToString();
+                //txtGia.Text = list[i].GiaGoc.ToString();
+            }
+        }
+
+        private void btnLammoi_Click(object sender, EventArgs e)
+        {
+            list = getListSanPham();
+            cmbTensp.DataSource = list;
+            cmbTensp.ValueMember = "MaMH";
+            cmbTensp.DisplayMember = "TenMH";
+
+
+            list1 = getListNhaCungCap();
+            cmbTenncc.DataSource = list1;
+            cmbTenncc.ValueMember = "MaNCC";
+            cmbTenncc.DisplayMember = "TenNCC";
+
+            cmbTensp.SelectedIndex = -1;
+            cmbTenncc.SelectedIndex = -1;
+            lblMancc.Text = "";
+            lblTenncc.Text = "";
+            lblDiachi.Text = "";
+            lblSĐT.Text = "";
+            cmbTenncc.SelectedIndex = -1;
+            txtGiaban.Text = "";
+            Lammoi();
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
         {
             if (lsvNhaphang.Items.Count > 0)
             {
@@ -333,31 +374,7 @@ namespace WindowsFormsApp
             }
         }
 
-        private void btnLammoi_Click_1(object sender, EventArgs e)
-        {
-            list = getListSanPham();
-            cmbTensp.DataSource = list;
-            cmbTensp.ValueMember = "MaMH";
-            cmbTensp.DisplayMember = "TenMH";
-
-
-            list1 = getListNhaCungCap();
-            cmbTenncc.DataSource = list1;
-            cmbTenncc.ValueMember = "MaNCC";
-            cmbTenncc.DisplayMember = "TenNCC";
-
-            cmbTensp.SelectedIndex = -1;
-            cmbTenncc.SelectedIndex = -1;
-            lblMancc.Text = "";
-            lblTenncc.Text = "";
-            lblDiachi.Text = "";
-            lblSĐT.Text = "";
-            cmbTenncc.SelectedIndex = -1;
-            txtGiaban.Text = "";
-            Lammoi();
-        }
-
-        private void btnXoa_Click_1(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < lsvNhaphang.Items.Count; i++) //duyệt tất cả các item trong list
             {
@@ -370,6 +387,14 @@ namespace WindowsFormsApp
                     i--;
                 }
             }
+        }
+
+
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            FormThongTinHangMoi f = new FormThongTinHangMoi();
+            f.Show();
         }
     }
 }

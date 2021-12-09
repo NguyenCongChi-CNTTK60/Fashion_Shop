@@ -48,7 +48,15 @@ namespace WindowsFormsApp
             return true;
         }
 
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+            lblCanhbao.Text = "";
+        }
 
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            lblCanhbao.Text = "";
+        }
 
         private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
         {
@@ -90,22 +98,6 @@ namespace WindowsFormsApp
             Application.Exit();
         }
 
-        private void lblCanhbao_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTenDangNhap_TextChanged_1(object sender, EventArgs e)
-        {
-            lblCanhbao.Text = "";
-        }
-
-        private void txtMatKhau_TextChanged(object sender, EventArgs e)
-        {
-            lblCanhbao.Text = "";
-        }
-
-
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             if (check_data() == true)
@@ -114,8 +106,8 @@ namespace WindowsFormsApp
                 string passWord = txtMatKhau.Text;
                 if (Login(tenDangNhap, passWord))
                 {
-                    tenHienThi = NhanVienBUS.Intance.getNVByID(tenDangNhap).TenHienThi;
-                    quyen = NhanVienBUS.Intance.getNVByID(tenDangNhap).Quyen;
+                    //tenHienThi = NhanVienBUS.Intance.getNVByID(tenDangNhap).TenHienThi;
+                    //quyen = NhanVienBUS.Intance.getNVByID(tenDangNhap).Quyen;
                     FormTrangChu f = new FormTrangChu(txtTenDangNhap.Text); // txtTenDangNhap.Text
                     f.Show();
                     this.Hide();
@@ -124,6 +116,11 @@ namespace WindowsFormsApp
                     lblCanhbao.Text = "Sai tài khoản hoặc mật khẩu!";
                 lblCanhbao.ForeColor = Color.Brown;
             }
+        }
+
+        private void lblCanhbao_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnX_Click(object sender, EventArgs e)

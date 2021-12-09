@@ -301,22 +301,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="QLSieuThiDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSieuThiDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QLSieuThiDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSieuThiDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QLSieuThiDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLSieuThiDataSet2.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UC_CaLamViecNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_CaLamViecNhanVien.Designer.cs">
+      <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_DoiMatKhau.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -335,6 +326,12 @@
     <Compile Include="UC_KhoHang.Designer.cs">
       <DependentUpon>UC_KhoHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_KhuyenMai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_KhuyenMai.Designer.cs">
+      <DependentUpon>UC_KhuyenMai.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_NhanVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -346,6 +343,12 @@
     </Compile>
     <Compile Include="UC_NhapHang.Designer.cs">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ThemLoaiHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ThemLoaiHang.Designer.cs">
+      <DependentUpon>UC_ThemLoaiHang.cs</DependentUpon>
     </Compile>
     <Compile Include="UC_ThongKeHoaDon.cs">
       <SubType>UserControl</SubType>
@@ -401,17 +404,14 @@
     <Compile Include="UC_XacNhanSDT.Designer.cs">
       <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormDangKy.resx">
-      <DependentUpon>FormDangKy.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSDT.resx">
-      <DependentUpon>FormSDT.cs</DependentUpon>
+    <EmbeddedResource Include="FormReportThongKe.resx">
+      <DependentUpon>FormReportThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemKhachHang.resx">
       <DependentUpon>FormThemKhachHang.cs</DependentUpon>
@@ -433,8 +433,10 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_DoiMatKhau.resx">
-      <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
+    <EmbeddedResource Include="Report\ReportInHoaDon.rdlc" />
+    <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
+    <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
+      <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
@@ -442,11 +444,23 @@
     <EmbeddedResource Include="UC_KhoHang.resx">
       <DependentUpon>UC_KhoHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_KhuyenMai.resx">
+      <DependentUpon>UC_KhuyenMai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_NhanVien.resx">
       <DependentUpon>UC_NhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NhapHang.resx">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThemLoaiHang.resx">
+      <DependentUpon>UC_ThemLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongKeHoaDon.resx">
+      <DependentUpon>UC_ThongKeHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ThongKePhieuNhap.resx">
+      <DependentUpon>UC_ThongKePhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_TrangChu.resx">
       <DependentUpon>UC_TrangChu.cs</DependentUpon>
@@ -489,39 +503,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLSieuThiDataSet.xsc">
-      <DependentUpon>QLSieuThiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLSieuThiDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLSieuThiDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLSieuThiDataSet.xss">
-      <DependentUpon>QLSieuThiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLSieuThiDataSet1.xsc">
-      <DependentUpon>QLSieuThiDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QLSieuThiDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLSieuThiDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLSieuThiDataSet1.xss">
-      <DependentUpon>QLSieuThiDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QLSieuThiDataSet2.xsc">
-      <DependentUpon>QLSieuThiDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="QLSieuThiDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLSieuThiDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLSieuThiDataSet2.xss">
-      <DependentUpon>QLSieuThiDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="Resources\Circle_K_logo_tm.png" />
     <None Include="Resources\03_CircleK_Favor_1.jpg" />
     <None Include="Resources\unnamed.png" />
@@ -530,15 +511,6 @@
     <None Include="Image\home-page.png" />
     <None Include="Image\oto-giaohang.jpg" />
     <None Include="Image\icon-user.png" />
-    <None Include="Resources\Login.jpg" />
-    <None Include="Resources\Login1.jpg" />
-    <None Include="Resources\user.png" />
-    <None Include="Resources\icons8-password-30.png" />
-    <None Include="Resources\icons8-user-30.png" />
-    <None Include="Resources\icons8-facebook-48.png" />
-    <None Include="Resources\icons8-google-48.png" />
-    <None Include="Resources\icons8-instagram-48.png" />
-    <None Include="Resources\Login2.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

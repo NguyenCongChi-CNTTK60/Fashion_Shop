@@ -51,5 +51,18 @@ namespace BUS
         {
             return KhachHangDAO.Intance.loadMaKH();
         }
+
+
+        // CHÍ 
+        public DataTable TKKhachHang()
+        {
+            return KhachHangDAO.Intance.TKKhachHang();
+        }
+
+
+        public DataTable TimKiemKhachHang(string tk)
+        {
+            return KhachHangDAO.Intance.TimKiemKhachHang(tk);
+        }
     }
 }
