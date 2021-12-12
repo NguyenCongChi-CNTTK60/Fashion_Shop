@@ -96,5 +96,11 @@ namespace BUS
         {
             return MatHangDAO.Intance.TimKiemGiaBan(maMH);
         }
+
+
+        public DataTable HienThi()
+        {
+            return MatHangDAO.Intance.HienThi();
+        }
     }
 }

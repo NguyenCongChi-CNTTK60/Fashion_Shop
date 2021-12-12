@@ -17,55 +17,116 @@ namespace WindowsFormsApp
         public UC_NhaCungCap()
         {
             InitializeComponent();
-            LoadData();
+            HienThi();
         }
-        void loadBinding()
+
+       
+
+        private void txtKH_Enter(object sender, EventArgs e)
         {
-            txtMaNCC.DataBindings.Add(new Binding("Text", dgvThongTinNCC.DataSource, "MaNCC", true, DataSourceUpdateMode.Never));
-            txtTenNCC.DataBindings.Add(new Binding("Text", dgvThongTinNCC.DataSource, "TenNCC", true, DataSourceUpdateMode.Never));
-            txtDiaChi.DataBindings.Add(new Binding("Text", dgvThongTinNCC.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
-            txtSDT.DataBindings.Add(new Binding("Text", dgvThongTinNCC.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-            txtEmail.DataBindings.Add(new Binding("Text", dgvThongTinNCC.DataSource, "Email", true, DataSourceUpdateMode.Never));
+            if (txtKH.Text == "Nhập tên")
+            {
+                txtKH.Text = "";
+                txtKH.ForeColor = Color.Black;
+            }
         }
-        void LoadData()
+
+        private void txtKH_Leave(object sender, EventArgs e)
         {
-            ClearBinding();
-            dgvThongTinNCC.DataSource = NhaCungCapBUS.Intance.getListNCC();
-            loadBinding();
+            if (txtKH.Text == "")
+            {
+                txtKH.Text = "Nhập tên";
+                txtKH.ForeColor = Color.Gray;
+            }
         }
 
-        void ClearBinding()
+        private void txtSĐT_Enter(object sender, EventArgs e)
         {
-            txtMaNCC.DataBindings.Clear();
-            txtTenNCC.DataBindings.Clear();
-            txtDiaChi.DataBindings.Clear();
-            txtSDT.DataBindings.Clear();
-            txtEmail.DataBindings.Clear();
+            if (txtSĐT.Text == "Nhập số điện thoại")
+            {
+                txtSĐT.Text = "";
+                txtSĐT.ForeColor = Color.Black;
+            }
         }
 
-        private void btnLuuNCC_Click(object sender, EventArgs e)
+        private void txtSĐT_Leave(object sender, EventArgs e)
         {
-
+            if (txtSĐT.Text == "")
+            {
+                txtSĐT.Text = "Nhập số điện thoại";
+                txtSĐT.ForeColor = Color.Gray;
+            }
         }
 
-        private void btnLamMoi_Click(object sender, EventArgs e)
+        private void txtEmail_Enter(object sender, EventArgs e)
         {
-
+            if (txtEmail.Text == "Nhập địa chỉ email")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Black;
+            }
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void txtEmail_Leave(object sender, EventArgs e)
         {
-
+            if (txtEmail.Text == "")
+            {
+                txtEmail.Text = "Nhập địa chỉ email";
+                txtEmail.ForeColor = Color.Gray;
+            }
         }
 
-        private void btnSua_Click(object sender, EventArgs e)
+        private void txtDiachi_Enter(object sender, EventArgs e)
         {
-
+            if (txtDiachi.Text == "Nhập địa chỉ")
+            {
+                txtDiachi.Text = "";
+                txtDiachi.ForeColor = Color.Black;
+            }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void txtDiachi_Leave(object sender, EventArgs e)
         {
-
+            if (txtDiachi.Text == "")
+            {
+                txtDiachi.Text = "Nhập địa chỉ";
+                txtDiachi.ForeColor = Color.Gray;
+            }
         }
+
+        private void txtTimkiem_Enter(object sender, EventArgs e)
+        {
+            if (txtTimkiem.Text == "Tìm kiếm theo mã, tên, sđt khách hàng")
+            {
+                txtTimkiem.Text = "";
+                txtTimkiem.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtTimkiem_Leave(object sender, EventArgs e)
+        {
+            if (txtTimkiem.Text == "")
+            {
+                txtTimkiem.Text = "Tìm kiếm theo mã, tên, sđt khách hàng";
+                txtTimkiem.ForeColor = Color.Gray;
+            }
+        }
+
+
+        private void HienThi()
+        {
+            DataTable dt = NhaCungCapBUS.Intance.HienThi();
+            dgvNCC.DataSource = dt;
+        }
+
+
+
+
+
+
+
+
+
+ 
     }
 }

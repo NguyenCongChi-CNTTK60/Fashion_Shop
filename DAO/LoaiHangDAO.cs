@@ -48,8 +48,8 @@ namespace DAO
 
         public DataTable TimKiemMaMH(string tenLH)
         {
-            string query = "select MaMH from MatHang inner join LoaiHang on MatHang.MaLH = LoaiHang.MaLH where TenLH = N'" + tenLH + "'";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { tenLH });
+            string query = "select MaMH,GiaBan from MatHang  where TenMH = N'" + tenLH + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
 

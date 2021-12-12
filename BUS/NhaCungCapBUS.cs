@@ -51,5 +51,11 @@ namespace BUS
         {
             return NhaCungCapDAO.Intance.TimKiemNCC(maPN);
         }
+
+
+        public DataTable HienThi()
+        {
+            return NhaCungCapDAO.Intance.HienThi();
+        }
     }
 }

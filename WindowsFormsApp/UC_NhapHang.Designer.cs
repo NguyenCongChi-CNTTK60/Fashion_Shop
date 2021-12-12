@@ -29,601 +29,534 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnTaiAnh = new Guna.UI2.WinForms.Guna2Button();
-            this.pcbHangHoa = new System.Windows.Forms.PictureBox();
-            this.lblEmail = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTk = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtGiaban = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnThemSP = new System.Windows.Forms.Button();
-            this.lblTennv = new System.Windows.Forms.Label();
-            this.lblManv = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSoLuong = new System.Windows.Forms.TextBox();
-            this.txtGia = new System.Windows.Forms.TextBox();
-            this.lblSĐT = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblDiachi = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.cmbTenncc = new System.Windows.Forms.ComboBox();
-            this.lblTenncc = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.lblMancc = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.dtpkNgaynhap = new System.Windows.Forms.DateTimePicker();
-            this.btnLammoi = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblMapn = new System.Windows.Forms.Label();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.lsvNhaphang = new System.Windows.Forms.ListView();
-            this.lbltong = new System.Windows.Forms.Label();
-            this.lbltensp = new System.Windows.Forms.Label();
-            this.lblmasp = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.cmbTensp = new System.Windows.Forms.ComboBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblMapn = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.lblmasp = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmbTensp = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.dpkNgaykt = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label24 = new System.Windows.Forms.Label();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbHangHoa)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnTaiAnh
+            // panel2
             // 
-            this.btnTaiAnh.CheckedState.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.CustomImages.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.DisabledState.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnTaiAnh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnTaiAnh.ForeColor = System.Drawing.Color.White;
-            this.btnTaiAnh.HoverState.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.Location = new System.Drawing.Point(1072, 209);
-            this.btnTaiAnh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTaiAnh.Name = "btnTaiAnh";
-            this.btnTaiAnh.ShadowDecoration.Parent = this.btnTaiAnh;
-            this.btnTaiAnh.Size = new System.Drawing.Size(100, 31);
-            this.btnTaiAnh.TabIndex = 132;
-            this.btnTaiAnh.Text = "Upload";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lblTk);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1411, 68);
+            this.panel2.TabIndex = 220;
             // 
-            // pcbHangHoa
+            // lblTk
             // 
-            this.pcbHangHoa.Location = new System.Drawing.Point(919, 10);
-            this.pcbHangHoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pcbHangHoa.Name = "pcbHangHoa";
-            this.pcbHangHoa.Size = new System.Drawing.Size(262, 191);
-            this.pcbHangHoa.TabIndex = 131;
-            this.pcbHangHoa.TabStop = false;
+            this.lblTk.AutoSize = true;
+            this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.Location = new System.Drawing.Point(15, 12);
+            this.lblTk.Name = "lblTk";
+            this.lblTk.Size = new System.Drawing.Size(121, 35);
+            this.lblTk.TabIndex = 14;
+            this.lblTk.Text = "Nhập hàng";
             // 
-            // lblEmail
+            // panel1
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblEmail.Location = new System.Drawing.Point(670, 305);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(69, 25);
-            this.lblEmail.TabIndex = 130;
-            this.lblEmail.Text = "Email:";
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.guna2TextBox4);
+            this.panel1.Controls.Add(this.guna2TextBox3);
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.dpkNgaykt);
+            this.panel1.Controls.Add(this.label23);
+            this.panel1.Controls.Add(this.guna2TextBox2);
+            this.panel1.Controls.Add(this.guna2TextBox1);
+            this.panel1.Controls.Add(this.label21);
+            this.panel1.Controls.Add(this.label22);
+            this.panel1.Controls.Add(this.label19);
+            this.panel1.Controls.Add(this.label20);
+            this.panel1.Controls.Add(this.label18);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label16);
+            this.panel1.Controls.Add(this.cmbTensp);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.lblmasp);
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.lblMapn);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Location = new System.Drawing.Point(12, 88);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1384, 515);
+            this.panel1.TabIndex = 221;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.ForeColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(10, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(664, 49);
+            this.panel4.TabIndex = 234;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(570, 295);
+            this.label1.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 40);
-            this.label1.TabIndex = 129;
-            this.label1.Text = "Email:";
-            // 
-            // txtGiaban
-            // 
-            this.txtGiaban.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiaban.Location = new System.Drawing.Point(226, 294);
-            this.txtGiaban.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGiaban.Multiline = true;
-            this.txtGiaban.Name = "txtGiaban";
-            this.txtGiaban.Size = new System.Drawing.Size(282, 36);
-            this.txtGiaban.TabIndex = 128;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(67, 285);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(105, 40);
-            this.label13.TabIndex = 127;
-            this.label13.Text = "Giá bán:";
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnThemSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemSP.ForeColor = System.Drawing.Color.White;
-            this.btnThemSP.Location = new System.Drawing.Point(459, 174);
-            this.btnThemSP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.Size = new System.Drawing.Size(51, 42);
-            this.btnThemSP.TabIndex = 126;
-            this.btnThemSP.Text = "+";
-            this.btnThemSP.UseVisualStyleBackColor = false;
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
-            // lblTennv
-            // 
-            this.lblTennv.AutoSize = true;
-            this.lblTennv.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTennv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTennv.ForeColor = System.Drawing.Color.Maroon;
-            this.lblTennv.Location = new System.Drawing.Point(351, 434);
-            this.lblTennv.Name = "lblTennv";
-            this.lblTennv.Size = new System.Drawing.Size(84, 27);
-            this.lblTennv.TabIndex = 125;
-            this.lblTennv.Text = "TenNV:";
-            // 
-            // lblManv
-            // 
-            this.lblManv.AutoSize = true;
-            this.lblManv.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblManv.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblManv.ForeColor = System.Drawing.Color.Maroon;
-            this.lblManv.Location = new System.Drawing.Point(270, 434);
-            this.lblManv.Name = "lblManv";
-            this.lblManv.Size = new System.Drawing.Size(50, 27);
-            this.lblManv.TabIndex = 124;
-            this.lblManv.Text = "Mã:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(52, 421);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 40);
-            this.label5.TabIndex = 123;
-            this.label5.Text = "Nhân viên nhập:";
-            // 
-            // txtSoLuong
-            // 
-            this.txtSoLuong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(226, 345);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSoLuong.Multiline = true;
-            this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(282, 36);
-            this.txtSoLuong.TabIndex = 122;
-            // 
-            // txtGia
-            // 
-            this.txtGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGia.Location = new System.Drawing.Point(226, 242);
-            this.txtGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGia.Multiline = true;
-            this.txtGia.Name = "txtGia";
-            this.txtGia.Size = new System.Drawing.Size(282, 36);
-            this.txtGia.TabIndex = 121;
-            // 
-            // lblSĐT
-            // 
-            this.lblSĐT.AutoSize = true;
-            this.lblSĐT.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSĐT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblSĐT.Location = new System.Drawing.Point(670, 248);
-            this.lblSĐT.Name = "lblSĐT";
-            this.lblSĐT.Size = new System.Drawing.Size(59, 25);
-            this.lblSĐT.TabIndex = 120;
-            this.lblSĐT.Text = "SDT:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(570, 248);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 40);
-            this.label9.TabIndex = 119;
-            this.label9.Text = "SĐT:";
-            // 
-            // lblDiachi
-            // 
-            this.lblDiachi.AutoSize = true;
-            this.lblDiachi.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiachi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblDiachi.Location = new System.Drawing.Point(685, 196);
-            this.lblDiachi.Name = "lblDiachi";
-            this.lblDiachi.Size = new System.Drawing.Size(81, 25);
-            this.lblDiachi.TabIndex = 118;
-            this.lblDiachi.Text = "DiaChi:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(567, 184);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 40);
-            this.label4.TabIndex = 117;
-            this.label4.Text = "Địa chỉ:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(549, 118);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(117, 40);
-            this.label17.TabIndex = 116;
-            this.label17.Text = "Tên NCC:";
-            // 
-            // cmbTenncc
-            // 
-            this.cmbTenncc.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTenncc.ForeColor = System.Drawing.Color.Maroon;
-            this.cmbTenncc.FormattingEnabled = true;
-            this.cmbTenncc.Location = new System.Drawing.Point(688, 118);
-            this.cmbTenncc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbTenncc.Name = "cmbTenncc";
-            this.cmbTenncc.Size = new System.Drawing.Size(221, 40);
-            this.cmbTenncc.TabIndex = 115;
-            this.cmbTenncc.SelectedIndexChanged += new System.EventHandler(this.cmbTenncc_SelectedIndexChanged_1);
-            // 
-            // lblTenncc
-            // 
-            this.lblTenncc.AutoSize = true;
-            this.lblTenncc.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenncc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblTenncc.Location = new System.Drawing.Point(1045, 324);
-            this.lblTenncc.Name = "lblTenncc";
-            this.lblTenncc.Size = new System.Drawing.Size(96, 25);
-            this.lblTenncc.TabIndex = 114;
-            this.lblTenncc.Text = "TenNCC:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(886, 311);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(117, 40);
-            this.label15.TabIndex = 113;
-            this.label15.Text = "Tên NCC:";
-            // 
-            // lblMancc
-            // 
-            this.lblMancc.AutoSize = true;
-            this.lblMancc.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMancc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblMancc.Location = new System.Drawing.Point(685, 78);
-            this.lblMancc.Name = "lblMancc";
-            this.lblMancc.Size = new System.Drawing.Size(93, 25);
-            this.lblMancc.TabIndex = 112;
-            this.lblMancc.Text = "MaNCC:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(570, 60);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 40);
-            this.label14.TabIndex = 111;
-            this.label14.Text = "Mã NCC:";
-            // 
-            // dtpkNgaynhap
-            // 
-            this.dtpkNgaynhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpkNgaynhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpkNgaynhap.Location = new System.Drawing.Point(774, 378);
-            this.dtpkNgaynhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpkNgaynhap.Name = "dtpkNgaynhap";
-            this.dtpkNgaynhap.Size = new System.Drawing.Size(249, 32);
-            this.dtpkNgaynhap.TabIndex = 110;
-            // 
-            // btnLammoi
-            // 
-            this.btnLammoi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnLammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLammoi.ForeColor = System.Drawing.Color.White;
-            this.btnLammoi.Location = new System.Drawing.Point(592, 787);
-            this.btnLammoi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLammoi.Name = "btnLammoi";
-            this.btnLammoi.Size = new System.Drawing.Size(182, 49);
-            this.btnLammoi.TabIndex = 109;
-            this.btnLammoi.Text = "Làm mới";
-            this.btnLammoi.UseVisualStyleBackColor = false;
-            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1028, 777);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(77, 40);
-            this.label12.TabIndex = 108;
-            this.label12.Text = "Tổng:";
-            // 
-            // lblMapn
-            // 
-            this.lblMapn.AutoSize = true;
-            this.lblMapn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMapn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblMapn.Location = new System.Drawing.Point(239, 73);
-            this.lblMapn.Name = "lblMapn";
-            this.lblMapn.Size = new System.Drawing.Size(81, 27);
-            this.lblMapn.TabIndex = 107;
-            this.lblMapn.Text = "MaPN:";
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.White;
-            this.btnLuu.Location = new System.Drawing.Point(391, 787);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(155, 49);
-            this.btnLuu.TabIndex = 106;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = false;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(791, 787);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(140, 49);
-            this.btnXoa.TabIndex = 105;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // lsvNhaphang
-            // 
-            this.lsvNhaphang.CheckBoxes = true;
-            this.lsvNhaphang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsvNhaphang.HideSelection = false;
-            this.lsvNhaphang.Location = new System.Drawing.Point(74, 490);
-            this.lsvNhaphang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lsvNhaphang.Name = "lsvNhaphang";
-            this.lsvNhaphang.Size = new System.Drawing.Size(1085, 266);
-            this.lsvNhaphang.TabIndex = 104;
-            this.lsvNhaphang.UseCompatibleStateImageBehavior = false;
-            // 
-            // lbltong
-            // 
-            this.lbltong.AutoSize = true;
-            this.lbltong.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbltong.Location = new System.Drawing.Point(1119, 790);
-            this.lbltong.Name = "lbltong";
-            this.lbltong.Size = new System.Drawing.Size(18, 25);
-            this.lbltong.TabIndex = 103;
-            this.lbltong.Text = ".";
-            // 
-            // lbltensp
-            // 
-            this.lbltensp.AutoSize = true;
-            this.lbltensp.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltensp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbltensp.Location = new System.Drawing.Point(1045, 271);
-            this.lbltensp.Name = "lbltensp";
-            this.lbltensp.Size = new System.Drawing.Size(74, 25);
-            this.lbltensp.TabIndex = 102;
-            this.lbltensp.Text = "TenSP:";
-            // 
-            // lblmasp
-            // 
-            this.lblmasp.AutoSize = true;
-            this.lblmasp.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblmasp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lblmasp.Location = new System.Drawing.Point(239, 129);
-            this.lblmasp.Name = "lblmasp";
-            this.lblmasp.Size = new System.Drawing.Size(71, 25);
-            this.lblmasp.TabIndex = 101;
-            this.lblmasp.Text = "MaSP:";
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(47)))), ((int)(((byte)(75)))));
-            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnThem.Location = new System.Drawing.Point(124, 786);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(231, 51);
-            this.btnThem.TabIndex = 100;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click_1);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(52, 233);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(120, 40);
-            this.label11.TabIndex = 99;
-            this.label11.Text = "Giá nhập:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(64, 345);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 40);
-            this.label10.TabIndex = 98;
-            this.label10.Text = "Số lượng:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(850, 259);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(173, 40);
-            this.label8.TabIndex = 97;
-            this.label8.Text = "Tên sản phẩm:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(40, 111);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 40);
-            this.label7.TabIndex = 96;
-            this.label7.Text = "Mã sản phẩm:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(40, 171);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(173, 40);
-            this.label6.TabIndex = 95;
-            this.label6.Text = "Tên sản phẩm:";
+            this.label1.Size = new System.Drawing.Size(379, 26);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "                                     Thông tin mặt hàng";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderColor = System.Drawing.Color.Silver;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "0";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.Parent = this.txtEmail;
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.FocusedState.Parent = this.txtEmail;
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.HoverState.Parent = this.txtEmail;
+            this.txtEmail.Location = new System.Drawing.Point(435, 225);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
+            this.txtEmail.Size = new System.Drawing.Size(248, 45);
+            this.txtEmail.TabIndex = 221;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(570, 372);
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(23, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(198, 40);
-            this.label2.TabIndex = 94;
-            this.label2.Text = "Ngày nhập hàng:";
+            this.label2.Size = new System.Drawing.Size(157, 35);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Mã phiếu nhập:";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Location = new System.Drawing.Point(10, 60);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1355, 1);
+            this.panel3.TabIndex = 16;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.ForeColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(713, 5);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(664, 49);
+            this.panel5.TabIndex = 235;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(14, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(415, 26);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "                                     Thông tin nhà cung cấp\r\n";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Silver;
+            this.panel6.Location = new System.Drawing.Point(692, 5);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 510);
+            this.panel6.TabIndex = 236;
+            // 
+            // lblMapn
+            // 
+            this.lblMapn.AutoSize = true;
+            this.lblMapn.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMapn.ForeColor = System.Drawing.Color.Black;
+            this.lblMapn.Location = new System.Drawing.Point(186, 85);
+            this.lblMapn.Name = "lblMapn";
+            this.lblMapn.Size = new System.Drawing.Size(72, 23);
+            this.lblMapn.TabIndex = 237;
+            this.lblMapn.Text = " PN005";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(23, 127);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(140, 35);
+            this.label14.TabIndex = 238;
+            this.label14.Text = "Mã mặt hàng:";
+            // 
+            // lblmasp
+            // 
+            this.lblmasp.AutoSize = true;
+            this.lblmasp.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmasp.ForeColor = System.Drawing.Color.Black;
+            this.lblmasp.Location = new System.Drawing.Point(187, 136);
+            this.lblmasp.Name = "lblmasp";
+            this.lblmasp.Size = new System.Drawing.Size(64, 23);
+            this.lblmasp.TabIndex = 239;
+            this.lblmasp.Text = "SP008";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(22, 187);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(139, 35);
+            this.label15.TabIndex = 240;
+            this.label15.Text = "Tên mặt hàng";
             // 
             // cmbTensp
             // 
-            this.cmbTensp.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTensp.ForeColor = System.Drawing.Color.Maroon;
-            this.cmbTensp.FormattingEnabled = true;
-            this.cmbTensp.Location = new System.Drawing.Point(226, 174);
-            this.cmbTensp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cmbTensp.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTensp.BorderColor = System.Drawing.Color.Black;
+            this.cmbTensp.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTensp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTensp.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTensp.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTensp.FocusedState.Parent = this.cmbTensp;
+            this.cmbTensp.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTensp.ForeColor = System.Drawing.Color.Black;
+            this.cmbTensp.HoverState.Parent = this.cmbTensp;
+            this.cmbTensp.ItemHeight = 30;
+            this.cmbTensp.Items.AddRange(new object[] {
+            "----- Chọn tên sản phẩm -----"});
+            this.cmbTensp.ItemsAppearance.Parent = this.cmbTensp;
+            this.cmbTensp.Location = new System.Drawing.Point(29, 225);
             this.cmbTensp.Name = "cmbTensp";
-            this.cmbTensp.Size = new System.Drawing.Size(224, 40);
-            this.cmbTensp.TabIndex = 93;
-            this.cmbTensp.SelectedIndexChanged += new System.EventHandler(this.cmbTensp_SelectedIndexChanged);
+            this.cmbTensp.ShadowDecoration.Parent = this.cmbTensp;
+            this.cmbTensp.Size = new System.Drawing.Size(345, 36);
+            this.cmbTensp.TabIndex = 241;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Red;
+            this.label16.Location = new System.Drawing.Point(154, 187);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(26, 35);
+            this.label16.TabIndex = 242;
+            this.label16.Text = "*";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(429, 183);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 35);
+            this.label17.TabIndex = 243;
+            this.label17.Text = "Giá nhập";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(522, 183);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(26, 35);
+            this.label18.TabIndex = 244;
+            this.label18.Text = "*";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(527, 295);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(26, 35);
+            this.label19.TabIndex = 247;
+            this.label19.Text = "*";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(434, 295);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(84, 35);
+            this.label20.TabIndex = 246;
+            this.label20.Text = "Giá bán";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(522, 417);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(26, 35);
+            this.label21.TabIndex = 250;
+            this.label21.Text = "*";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(434, 417);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(100, 35);
+            this.label22.TabIndex = 249;
+            this.label22.Text = "Số lượng";
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "0";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(435, 337);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(248, 45);
+            this.guna2TextBox1.TabIndex = 251;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.Silver;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "0";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Location = new System.Drawing.Point(435, 459);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Size = new System.Drawing.Size(248, 45);
+            this.guna2TextBox2.TabIndex = 252;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(23, 295);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(112, 35);
+            this.label23.TabIndex = 253;
+            this.label23.Text = "Ngày nhập";
+            // 
+            // dpkNgaykt
+            // 
+            this.dpkNgaykt.BorderThickness = 1;
+            this.dpkNgaykt.CheckedState.Parent = this.dpkNgaykt;
+            this.dpkNgaykt.FillColor = System.Drawing.Color.White;
+            this.dpkNgaykt.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dpkNgaykt.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpkNgaykt.HoverState.Parent = this.dpkNgaykt;
+            this.dpkNgaykt.Location = new System.Drawing.Point(28, 346);
+            this.dpkNgaykt.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dpkNgaykt.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dpkNgaykt.Name = "dpkNgaykt";
+            this.dpkNgaykt.ShadowDecoration.Parent = this.dpkNgaykt;
+            this.dpkNgaykt.Size = new System.Drawing.Size(223, 36);
+            this.dpkNgaykt.TabIndex = 254;
+            this.dpkNgaykt.Value = new System.DateTime(2021, 12, 9, 19, 36, 10, 687);
+            this.dpkNgaykt.ValueChanged += new System.EventHandler(this.dpkNgaykt_ValueChanged);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(23, 417);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(159, 35);
+            this.label24.TabIndex = 255;
+            this.label24.Text = "Nhân viên nhập";
+            // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.BorderColor = System.Drawing.Color.Silver;
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "Nguyễn Công Chí";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Location = new System.Drawing.Point(160, 459);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PasswordChar = '\0';
+            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
+            this.guna2TextBox3.Size = new System.Drawing.Size(214, 45);
+            this.guna2TextBox3.TabIndex = 253;
+            // 
+            // guna2TextBox4
+            // 
+            this.guna2TextBox4.BorderColor = System.Drawing.Color.Silver;
+            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox4.DefaultText = "NV003";
+            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.DisabledState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.FocusedState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox4.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox4.HoverState.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Location = new System.Drawing.Point(21, 459);
+            this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.guna2TextBox4.Name = "guna2TextBox4";
+            this.guna2TextBox4.PasswordChar = '\0';
+            this.guna2TextBox4.PlaceholderText = "";
+            this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
+            this.guna2TextBox4.Size = new System.Drawing.Size(93, 45);
+            this.guna2TextBox4.TabIndex = 254;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 60);
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(123, 459);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 40);
-            this.label3.TabIndex = 92;
-            this.label3.Text = "Mã phiếu nhập:";
+            this.label3.Size = new System.Drawing.Size(31, 35);
+            this.label3.TabIndex = 254;
+            this.label3.Text = "--";
             // 
             // UC_NhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Controls.Add(this.btnTaiAnh);
-            this.Controls.Add(this.pcbHangHoa);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtGiaban);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.btnThemSP);
-            this.Controls.Add(this.lblTennv);
-            this.Controls.Add(this.lblManv);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtSoLuong);
-            this.Controls.Add(this.txtGia);
-            this.Controls.Add(this.lblSĐT);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.lblDiachi);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.cmbTenncc);
-            this.Controls.Add(this.lblTenncc);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.lblMancc);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.dtpkNgaynhap);
-            this.Controls.Add(this.btnLammoi);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.lblMapn);
-            this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.lsvNhaphang);
-            this.Controls.Add(this.lbltong);
-            this.Controls.Add(this.lbltensp);
-            this.Controls.Add(this.lblmasp);
-            this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.cmbTensp);
-            this.Controls.Add(this.label3);
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "UC_NhapHang";
-            this.Size = new System.Drawing.Size(1273, 947);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbHangHoa)).EndInit();
+            this.Size = new System.Drawing.Size(1411, 1150);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button btnTaiAnh;
-        private System.Windows.Forms.PictureBox pcbHangHoa;
-        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lblTk;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtGiaban;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button btnThemSP;
-        private System.Windows.Forms.Label lblTennv;
-        private System.Windows.Forms.Label lblManv;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtSoLuong;
-        private System.Windows.Forms.TextBox txtGia;
-        private System.Windows.Forms.Label lblSĐT;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblDiachi;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.ComboBox cmbTenncc;
-        private System.Windows.Forms.Label lblTenncc;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lblMancc;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DateTimePicker dtpkNgaynhap;
-        private System.Windows.Forms.Button btnLammoi;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblMapn;
-        private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.ListView lsvNhaphang;
-        private System.Windows.Forms.Label lbltong;
-        private System.Windows.Forms.Label lbltensp;
-        private System.Windows.Forms.Label lblmasp;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbTensp;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblMapn;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTensp;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblmasp;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Label label23;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dpkNgaykt;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label3;
     }
 }

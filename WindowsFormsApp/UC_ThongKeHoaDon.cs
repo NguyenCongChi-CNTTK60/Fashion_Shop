@@ -24,19 +24,11 @@ namespace WindowsFormsApp
             DateTime ngaybd = dpkNgaybd.Value;
             DateTime ngaykt = dpkNgaykt.Value;
             DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd,ngaykt);
-            dgvThongkehd.DataSource = dt;
+            dgvHd.DataSource = dt;
             TongtienHoadon();
         }
 
-        private void btnXem_Click(object sender, EventArgs e)
-        {
-            DateTime ngaybd = dpkNgaybd.Value;
-            DateTime ngaykt = dpkNgaykt.Value;          
-            DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd, ngaykt);
-            dgvThongkehd.DataSource = dt;
-            TongtienHoadontheongay();
-        }
-
+       
 
         private void TongtienHoadon()
         {
@@ -54,9 +46,16 @@ namespace WindowsFormsApp
             DateTime ngaybd = dpkNgaybd.Value;
             DateTime ngaykt = dpkNgaykt.Value;
             DataTable dt = HoaDonBUS.Intance.TongTienTheoNgay(ngaybd, ngaykt);
-            string tien = dt.Rows[0]["Tổng tiền hóa đơn"].ToString();
-            Tongtien = Int32.Parse(tien);
-            lblTongTien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Tongtien) + " đ";
+
+            if (dt.Rows.Count > 0)
+            {
+                string tien = dt.Rows[0]["Tổng tiền hóa đơn"].ToString();
+                Tongtien = Int32.Parse(tien);
+                lblTongTien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Tongtien) + " đ";
+            }
+            else
+                lblTongTien.Text = "0";
+                   
         }
 
 
@@ -70,6 +69,15 @@ namespace WindowsFormsApp
         private void btnTangngay_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnXem_Click_1(object sender, EventArgs e)
+        {
+            DateTime ngaybd = dpkNgaybd.Value;
+            DateTime ngaykt = dpkNgaykt.Value;
+            DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd, ngaykt);
+            dgvHd.DataSource = dt;
+            TongtienHoadontheongay();
         }
     }
 

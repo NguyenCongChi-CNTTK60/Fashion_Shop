@@ -13,179 +13,89 @@ namespace WindowsFormsApp
     {
         private string manv, tennv;
         private string luumanv, luutennv;
-        public UC_KhoHang(string manv, string tennv)
+        public UC_KhoHang()    //string manv, string tennv)
         {
             InitializeComponent();
-            loadData();
-            this.manv = manv;
-            luumanv = manv;
-            this.tennv = tennv;
-            luutennv = tennv;
-        }
-
-        public void loadData()
-        {
-
-            dgvHangHoa.DataSource = MatHangBUS.Intance.getListSanPham();
-            dgvHangHoa.Columns["MaMH"].HeaderText = "Mã Mặt Hàng";
-            dgvHangHoa.Columns["TenMH"].HeaderText = "Tên mặt hàng ";
-            dgvHangHoa.Columns["DonVi"].HeaderText = "Đơn Vị Tính";
-            dgvHangHoa.Columns["GiaBan"].HeaderText = "Giá Bán";
-            dgvHangHoa.Columns["SoLuong"].HeaderText = "Số Lượng";
-
-
-            dgvHangHoa.AllowUserToAddRows = false;
-            dgvHangHoa.EditMode = DataGridViewEditMode.EditProgrammatically;
-
-            pcbHangHoa.SizeMode = PictureBoxSizeMode.StretchImage;
+            //loadData();
+            // this.manv = manv;
+            //luumanv = manv;
+            //this.tennv = tennv;
+            //luutennv = tennv;
+            cmbĐVT.SelectedIndex = 0;
+            cmbLoaiHang.SelectedIndex = 0;
+            HienThi();
         }
 
 
-        public void resetData()
-        {
-            txtTenMH.Text = "";
-            txtSoLuong.Text = "0";
-            txtGiaBan.Text = "0";
-            pcbHangHoa.Image = null;
-        }
-        public bool check = true;
 
-        bool KiemTraNhap()
+        private void txtKH_Enter(object sender, EventArgs e)
         {
-            int a;
-            if (txtTenMH.Text == "")
+            if(txtKH.Text == "Tên mặt hàng")
             {
-                MessageBox.Show("Hãy nhập tên hàng hóa", "Thông báo");
-                txtTenMH.Focus();
-                return false;
-            }
-            else if (!int.TryParse(txtGiaBan.Text, out a))
-            {
-                MessageBox.Show("Giá bán phải là một số", "Thông báo");
-                txtGiaBan.Focus();
-                return false;
-            }
-            else if (!int.TryParse(txtSoLuong.Text, out a))
-            {
-                MessageBox.Show("Số lượng phải là một số", "Thông báo");
-                txtSoLuong.Focus();
-                return false;
-            }
-            return true;
-        }
-
-        void Binding()
-        {
-            txtMaHang.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "MaMH", true, DataSourceUpdateMode.Never));
-            txtTenMH.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "TenMH", true, DataSourceUpdateMode.Never));
-            txtSoLuong.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "SoLuong", true, DataSourceUpdateMode.Never));
-            txtGiaBan.DataBindings.Add(new Binding("Text", dgvHangHoa.DataSource, "GiaBan", true, DataSourceUpdateMode.Never));
-        }
-
-        void ClearBinding()
-        {
-            txtMaHang.DataBindings.Clear();
-            txtTenMH.DataBindings.Clear();
-            txtSoLuong.DataBindings.Clear();
-            txtGiaBan.DataBindings.Clear();
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            dgvHangHoa.DataSource = MatHangBUS.Intance.TimKiemHH(txtTimKiem.Text);
-            dgvHangHoa.Columns["Anh"].Visible = false;
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            if (dgvHangHoa.SelectedCells.Count > 0)
-            {
-                if (MatHangBUS.Intance.suaHH(txtMaHang.Text, txtTenMH.Text,  int.Parse(txtSoLuong.Text), int.Parse(txtGiaBan.Text)))
-                {
-                    if (imgLocation != Application.StartupPath + "\\Resources\\hanghoa.png")
-                    {
-                        MatHangBUS.Intance.capNhatHinh(imgLocation, txtMaHang.Text);
-                    }
-                    loadData();
-                    imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
-                    MessageBox.Show("Sửa Thành Công");
-                }
+                txtKH.Text = "";
+                txtKH.ForeColor = Color.Black;
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void txtTimkiem_Enter(object sender, EventArgs e)
         {
-            DialogResult dlr = MessageBox.Show("Bạn có muốn xóa không?",
-            "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dlr == DialogResult.Yes)
+            if (txtTimkiem.Text == "Tìm kiếm theo mã, tên")
             {
-                if (MatHangBUS.Intance.kiemtraXoa(txtMaHang.Text))
-                {
-                    MatHangBUS.Intance.xoaHang(txtMaHang.Text);
-                    MessageBox.Show("Xóa thành công!", "Thông báo");
-                    loadData();
-                }
-                else
-                {
-                    MessageBox.Show("Bạn không được xóa bản ghi này!", "Thông báo");
-                }
-
+                txtTimkiem.Text = "";
+                txtTimkiem.ForeColor = Color.Black;
             }
         }
 
-        private void dgvHangHoa_SelectionChanged_1(object sender, EventArgs e)
+        private void dgvHH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dgvHangHoa.SelectedCells.Count > 0)
+            int indexx;
+            indexx = e.RowIndex;
+            txtKH.Text = dgvHH.Rows[indexx].Cells[1].Value.ToString();
+            txtMaMH.Text = dgvHH.Rows[indexx].Cells[0].Value.ToString();
+            txtGiaBan.Text = dgvHH.Rows[indexx].Cells[4].Value.ToString();
+            txtSL.Text = dgvHH.Rows[indexx].Cells[3].Value.ToString();
+            cmbĐVT.Text = dgvHH.Rows[indexx].Cells[2].Value.ToString();
+            cmbLoaiHang.Text = dgvHH.Rows[indexx].Cells[5].Value.ToString();
+            txtKH.ForeColor = Color.Black;
+            txtMaMH.ForeColor = Color.Black;
+            txtGiaBan.ForeColor = Color.Black;
+            txtSL.ForeColor = Color.Black;
+            cmbĐVT.ForeColor = Color.Black;
+            cmbLoaiHang.ForeColor = Color.Black;
+        }
+
+
+
+
+        private void addUC(UserControl uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(uc);
+            uc.BringToFront();
+        }
+        private void btnNhaphang_Click(object sender, EventArgs e)
+        {
+            UC_NhapHang _NhapHang = new UC_NhapHang();
+            addUC(_NhapHang);
+        }
+
+        private void txtKH_Leave(object sender, EventArgs e)
+        {
+            if (txtKH.Text == "")
             {
-                ClearBinding();
-                Binding();
-                DataGridViewRow row = dgvHangHoa.SelectedCells[0].OwningRow;
-                try
-                {
-                    string maMH = row.Cells["MaMH"].Value.ToString();
-                    if (MatHangBUS.Intance.getAnhByID(maMH) == null)
-                    {
-                        pcbHangHoa.Image = null;
-                    }
-                    else
-                    {
-                        MemoryStream ms = new MemoryStream(MatHangBUS.Intance.getAnhByID(maMH));
-                        pcbHangHoa.Image = Image.FromStream(ms);
-                    }
-                }
-                catch (Exception) { }
+                txtKH.Text = "Tên mặt hàng";
+                txtKH.ForeColor = Color.Gray;
             }
         }
 
-        string imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
+       
 
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void HienThi()
         {
-            if (imgLocation != Application.StartupPath + "\\Resources\\hanghoa.png")
-            {
-                MatHangBUS.Intance.capNhatHinh(imgLocation, txtMaHang.Text);
-            }
-            loadData();
-            imgLocation = Application.StartupPath + "\\Resources\\hanghoa.png";
+            DataTable dt = MatHangBUS.Intance.HienThi();
+            dgvHH.DataSource = dt;
         }
-
-        private void btnTaiAnh_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog dlgOpen = new OpenFileDialog();
-            dlgOpen.Filter = "PNG files(*.png)|*.png|JPEG(*.jpg)|*.jpg|GIF(*.gif)|*.gif|All files(*.*)|*.*";
-            dlgOpen.FilterIndex = 2;
-            dlgOpen.Title = "Chọn ảnh minh hoạ cho sản phẩm";
-            if (dlgOpen.ShowDialog() == DialogResult.OK)
-            {
-                imgLocation = dlgOpen.FileName.ToString();
-                pcbHangHoa.Image = Image.FromFile(dlgOpen.FileName);
-            }
-        }
-
-        private void btnNhapHang_Click(object sender, EventArgs e)
-        {
-            FormNhapHang formNhaphang = new FormNhapHang(luumanv, luutennv);
-            formNhaphang.Show();
-        }
+     
     }
 }

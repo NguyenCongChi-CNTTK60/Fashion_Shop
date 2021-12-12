@@ -17,57 +17,85 @@ namespace WindowsFormsApp
 
         private string manv;
         private string tennv;
-        public UC_NhapHang(string manv, string tennv)
+        public UC_NhapHang()     // string manv, string tennv
         {
             InitializeComponent();
-
-
-
-            lsvNhaphang.View = View.Details;
-            lsvNhaphang.GridLines = true;
-            lsvNhaphang.FullRowSelect = true;
-
-            lsvNhaphang.Columns.Add("Mã mặt hàng", 150);   //0
-            lsvNhaphang.Columns.Add("Tên mặt hàng", 200);  //1
-            lsvNhaphang.Columns.Add("Số lượng,", 100);   //2
-            lsvNhaphang.Columns.Add("Đơn giá", 200);  // 3
-            lsvNhaphang.Columns.Add("Tổng tiền", 220);  // 4
-
-            lblMapn.Text = Matudong();
-
-
-            list = getListSanPham();
+         
+            List<MatHangDTO> list;
+            list =  getListSanPham();
             cmbTensp.DataSource = list;
             cmbTensp.ValueMember = "MaMH";
             cmbTensp.DisplayMember = "TenMH";
+            cmbTensp.SelectedIndex = -1;
+ 
+            
+            /*
+             lsvNhaphang.View = View.Details;
+             lsvNhaphang.GridLines = true;
+             lsvNhaphang.FullRowSelect = true;
+
+             lsvNhaphang.Columns.Add("Mã mặt hàng", 150);   //0
+             lsvNhaphang.Columns.Add("Tên mặt hàng", 200);  //1
+             lsvNhaphang.Columns.Add("Số lượng,", 100);   //2
+             lsvNhaphang.Columns.Add("Đơn giá", 200);  // 3
+             lsvNhaphang.Columns.Add("Tổng tiền", 220);  // 4
+
+             lblMapn.Text = Matudong();
 
 
-            list1 = getListNhaCungCap();
-            cmbTenncc.DataSource = list1;
-            cmbTenncc.ValueMember = "MaNCC";
-            cmbTenncc.DisplayMember = "TenNCC";
-
-            lblMancc.Text = "";
-            lblTenncc.Text = "";
-            lblDiachi.Text = "";
-            lblSĐT.Text = "";
-            cmbTenncc.SelectedIndex = -1;
-
-            Lammoi();
-            DateTime today = DateTime.Now;
-            dtpkNgaynhap.Value = new DateTime(today.Year, today.Month, today.Day);
-
-            this.manv = manv;
-            lblManv.Text = manv;
-            this.tennv = tennv;
-            lblTennv.Text = tennv;
+             list = getListSanPham();
+             cmbTensp.DataSource = list;
+             cmbTensp.ValueMember = "MaMH";
+             cmbTensp.DisplayMember = "TenMH";
 
 
+             list1 = getListNhaCungCap();
+             cmbTenncc.DataSource = list1;
+             cmbTenncc.ValueMember = "MaNCC";
+             cmbTenncc.DisplayMember = "TenNCC";
+
+             lblMancc.Text = "";
+             lblTenncc.Text = "";
+             lblDiachi.Text = "";
+             lblSĐT.Text = "";
+             cmbTenncc.SelectedIndex = -1;
+
+             Lammoi();
+             DateTime today = DateTime.Now;
+             dtpkNgaynhap.Value = new DateTime(today.Year, today.Month, today.Day);
+
+             this.manv = manv;
+             lblManv.Text = manv;
+             this.tennv = tennv;
+             lblTennv.Text = tennv;
+
+             */
+
+        }
+
+        private void dpkNgaykt_ValueChanged(object sender, EventArgs e)
+        {
 
         }
 
 
 
+        public List<MatHangDTO> getListSanPham()
+        {
+            string query = "select * from MatHang";
+            List<MatHangDTO> list = new List<MatHangDTO>();
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                MatHangDTO product = new MatHangDTO(item);
+                list.Add(product);
+            }
+            return list;
+        }
+
+
+
+        /*
         private string Matudong()
         {
             string query = "select MaPN from PhieuNhap";
@@ -394,6 +422,6 @@ namespace WindowsFormsApp
         {
             FormThongTinHangMoi f = new FormThongTinHangMoi();
             f.Show();
-        }
+        } */
     }
 }

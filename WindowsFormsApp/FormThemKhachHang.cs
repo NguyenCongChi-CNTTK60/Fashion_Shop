@@ -46,6 +46,8 @@ namespace WindowsFormsApp
             else return true;
         }
 
+
+        /*
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (kiemTra())
@@ -58,6 +60,6 @@ namespace WindowsFormsApp
                     this.Close();
                 }
             }
-        }
+        } */
     }
 }

@@ -198,5 +198,13 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+
+        public DataTable HienThi()
+        {
+            string query = "select MaMH as [Mã mặt hàng], TenMH as [Tên mặt hàng], DonVi as [Đơn vị],SoLuong as [Số lượng], GiaBan as [Giá bán], TenLH as [Loại hàng] from MatHang inner join LoaiHang on MatHang.MaLH = LoaiHang.MaLH";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
     }
 }

@@ -108,7 +108,7 @@ namespace WindowsFormsApp
                 {
                     //tenHienThi = NhanVienBUS.Intance.getNVByID(tenDangNhap).TenHienThi;
                     //quyen = NhanVienBUS.Intance.getNVByID(tenDangNhap).Quyen;
-                    FormTrangChu f = new FormTrangChu(txtTenDangNhap.Text); // txtTenDangNhap.Text
+                    FormTrangChu f = new FormTrangChu(); // txtTenDangNhap.Text
                     f.Show();
                     this.Hide();
                 }

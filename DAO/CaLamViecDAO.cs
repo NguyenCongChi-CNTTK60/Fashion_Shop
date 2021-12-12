@@ -41,7 +41,7 @@ namespace DAO
 
         public DataTable getListNV()
         {
-            string query = "select ChiTietCLV.MaNV,NhanVien.TenHienThi,Ca,NgayLam from ChiTietCLV inner join NhanVien on ChiTietCLV.MaNV = NhanVien.MaNV inner join CaLamViec on CaLamViec.MaCLV = ChiTietCLV.MaCLV";
+            string query = "select ChiTietCLV.MaNV as[Mã nhân viên],NhanVien.TenHienThi as [Tên nhân viên],Ca as [Ca làm],NgayLam as [Ngày làm],NgayKT as [Ngày kết thúc] from ChiTietCLV inner join NhanVien on ChiTietCLV.MaNV = NhanVien.MaNV inner join CaLamViec on CaLamViec.MaCLV = ChiTietCLV.MaCLV";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 

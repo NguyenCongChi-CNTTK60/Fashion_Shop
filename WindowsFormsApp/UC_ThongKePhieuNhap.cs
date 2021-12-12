@@ -23,40 +23,35 @@ namespace WindowsFormsApp
         private void Hienthi()
         {
             DataTable dt = PhieuNhapBUS.Intance.TKPhieuNhap();
-            dgvThongkepn.DataSource = dt;
+            dgvPN.DataSource = dt;
         }
 
-        private void txtTimkiemphieunhap_TextChanged(object sender, EventArgs e)
-        {
-            string tk = txtTimkiemphieunhap.Text;     
-            if (!string.IsNullOrEmpty(txtTimkiemphieunhap.Text))
-            {
-                DataTable dt = PhieuNhapBUS.Intance.TimKiemPN(tk);
-                dgvThongkepn.DataSource = dt;
-            }
-            else
-                Hienthi();
-        }
-
-
-        private void dgvThongkepn_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int index;
-            index = e.RowIndex;
-            txtmapn.Text = dgvThongkepn.Rows[index].Cells[0].Value.ToString();
-        }
-
-        private void btnXemchitietpn_Click(object sender, EventArgs e)
-        {
-            FormReportThongKe formXemchitietphieunhap = new FormReportThongKe(txtmapn.Text);
-            formXemchitietphieunhap.Show();
-        }
+       
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             UC_ThongKe tk = new UC_ThongKe();
             tk.Show();
             this.Hide();
+        }
+
+        private void dgvPN_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index;
+            index = e.RowIndex;
+            txtmapn1.Text = dgvPN.Rows[index].Cells[0].Value.ToString();
+        }
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        
+        private void btnXemchitietpn_Click(object sender, EventArgs e)
+        {
+            ReportPhieuNhap formXemchitietphieunhap = new ReportPhieuNhap(txtmapn1.Text);
+            formXemchitietphieunhap.Show();
         }
     }
 }

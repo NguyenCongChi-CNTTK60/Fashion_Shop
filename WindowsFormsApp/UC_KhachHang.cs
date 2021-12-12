@@ -16,10 +16,140 @@ namespace WindowsFormsApp
         public UC_KhachHang()
         {
             InitializeComponent();
-            LoadListKH();
+            //LoadListKH();
+            HienThi();
         }
 
-        public void LoadListKH()
+        private void txtKH_Enter(object sender, EventArgs e)
+        {
+            if(txtKH.Text == "Nhập tên khách hàng")
+            {
+                txtKH.Text = "";
+                txtKH.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtKH_Leave(object sender, EventArgs e)
+        {
+            if(txtKH.Text == "")
+            {
+                txtKH.Text = "Nhập tên khách hàng";
+                txtKH.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtSĐT_Leave(object sender, EventArgs e)
+        {
+            if (txtSĐT.Text == "")
+            {
+                txtSĐT.Text = "Nhập số điện thoại";
+                txtSĐT.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtSĐT_Enter(object sender, EventArgs e)
+        {
+            if (txtSĐT.Text == "Nhập số điện thoại")
+            {
+                txtSĐT.Text = "";
+                txtSĐT.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtEmail_Enter(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Nhập địa chỉ email")
+            {
+                txtEmail.Text = "";
+                txtEmail.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "")
+            {
+                txtEmail.Text = "Nhập địa chỉ email";
+                txtEmail.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtDiachi_Enter(object sender, EventArgs e)
+        {
+            if (txtDiachi.Text == "Nhập địa chỉ")
+            {
+                txtDiachi.Text = "";
+                txtDiachi.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtDiachi_Leave(object sender, EventArgs e)
+        {
+            if (txtDiachi.Text == "")
+            {
+                txtDiachi.Text = "Nhập địa chỉ";
+                txtDiachi.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtTimkiem_Leave(object sender, EventArgs e)
+        {
+            if(txtTimkiem.Text == "")
+            {
+                txtTimkiem.Text = "Tìm kiếm theo mã, tên, sđt khách hàng";
+                txtTimkiem.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtTimkiem_Enter(object sender, EventArgs e)
+        {
+            if (txtTimkiem.Text == "Tìm kiếm theo mã, tên, sđt khách hàng")
+            {
+                txtTimkiem.Text = "";
+                txtTimkiem.ForeColor = Color.Black;
+            }
+        }
+
+
+
+        private void HienThi()
+        {
+            DataTable dt = KhachHangBUS.Intance.HienThi();
+            dgvKH.DataSource = dt;
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexx;
+            indexx = e.RowIndex;
+            txtKH.Text = dgvKH.Rows[indexx].Cells[1].Value.ToString();
+            txtMaKH.Text = dgvKH.Rows[indexx].Cells[0].Value.ToString();
+            txtDiachi.Text = dgvKH.Rows[indexx].Cells[2].Value.ToString();
+            txtSĐT.Text = dgvKH.Rows[indexx].Cells[3].Value.ToString();
+            txtEmail.Text = dgvKH.Rows[indexx].Cells[4].Value.ToString();
+            txtKH.ForeColor = Color.Black;
+            txtDiachi.ForeColor = Color.Black;
+            txtMaKH.ForeColor = Color.Black;
+            txtEmail.ForeColor = Color.Black;
+            txtSĐT.ForeColor = Color.Black;
+        }
+    
+
+
+
+
+
+
+
+
+
+
+        /* public void LoadListKH()
         {
             DataTable dt = KhachHangBUS.Intance.getListKH();
             dgvThongTinKhachHang.DataSource = dt;
@@ -140,5 +270,6 @@ namespace WindowsFormsApp
             ClearBinding();
             loadBinding();
         }
+    } */
     }
 }

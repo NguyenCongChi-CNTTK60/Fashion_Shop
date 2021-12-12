@@ -17,34 +17,39 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             Hienthi();
+            
         }
 
 
         private void Hienthi()
         {
             DataTable dt = MatHangBUS.Intance.TKMatHang();
-            dgvThongkehh.DataSource = dt;
+            dgvHh.DataSource = dt;
         }
 
 
-        private void txtTimkiemhanghoa_TextChanged(object sender, EventArgs e)
-        {
-            string tk = txtTimkiemhanghoa.Text;
-            
-            if (!string.IsNullOrEmpty(txtTimkiemhanghoa.Text))
-            {
-                DataTable dt = MatHangBUS.Intance.TimKiemMH(tk);
-                dgvThongkehh.DataSource = dt;
-            }
-            else
-                Hienthi();
-        }
+      
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             UC_ThongKe tk = new UC_ThongKe();
             tk.Show();
             this.Hide();
+        }
+
+      
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string tk = txtTimkiem.Text;
+
+            if (!string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                DataTable dt = MatHangBUS.Intance.TimKiemMH(tk);
+                dgvHh.DataSource = dt;
+            }
+            else
+                Hienthi();
         }
     }
 }

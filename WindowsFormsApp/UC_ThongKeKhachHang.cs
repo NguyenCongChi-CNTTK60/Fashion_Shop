@@ -22,26 +22,27 @@ namespace WindowsFormsApp
         private void Hienthi()
         {
             DataTable dt = KhachHangBUS.Intance.TKKhachHang();
-            dgvThongkekh.DataSource = dt;
+            dgvKh.DataSource = dt;
         }
 
-        private void txtTimkiemkhachhang_TextChanged(object sender, System.EventArgs e)
-        {
-            string tk = txtTimkiemkhachhang.Text;
-            if (!string.IsNullOrEmpty(txtTimkiemkhachhang.Text))
-            {
-                DataTable dt = KhachHangBUS.Intance.TimKiemKhachHang(tk);
-                dgvThongkekh.DataSource = dt;
-            }
-            else
-                Hienthi();
-        }
-
+     
         private void btnQuaylai_Click(object sender, System.EventArgs e)
         {
             UC_ThongKe tk = new UC_ThongKe();
             tk.Show();
             this.Hide();
+        }
+
+        private void txtTimkiem_TextChanged(object sender, System.EventArgs e)
+        {
+            string tk = txtTimkiem.Text;
+            if (!string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                DataTable dt = KhachHangBUS.Intance.TimKiemKhachHang(tk);
+                dgvKh.DataSource = dt;
+            }
+            else
+                Hienthi();
         }
     }
 }

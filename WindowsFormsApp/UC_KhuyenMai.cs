@@ -164,6 +164,13 @@ namespace WindowsFormsApp
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
             LamMoi();
+            list = GiamGiaBUS.Intance.getListGiamGia(); 
+            cmbPhantram.DataSource = list;
+            cmbPhantram.DisplayMember = "PhanTram";
+            cmbPhantram.ValueMember = "PhanTram";
+            cmbMaPhantram.DataSource = list;
+            cmbMaPhantram.DisplayMember = "MaGG";
+            cmbMaPhantram.ValueMember = "MaGG";
         }
     }
 }

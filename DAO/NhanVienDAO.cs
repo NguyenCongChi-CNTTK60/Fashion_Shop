@@ -41,7 +41,7 @@ namespace DAO
 
         public DataTable getListNV()
         {
-            string query = "select MaNV,TenHienThi,GioiTinh,DiaChi,SDT,Quyen from NhanVien";
+            string query = "select MaNV as [Mã nhân viên],TenHienThi as [Tên nhân viên],GioiTinh as [Giới tính],DiaChi as [Địa chỉ],SDT as [Số điện thoại],Quyen as [Chức vụ] from NhanVien";
             return DataProvider.Instance.ExecuteQuery(query);
         }
 
