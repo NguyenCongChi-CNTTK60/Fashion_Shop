@@ -95,6 +95,12 @@ namespace WindowsFormsApp
             btnDangXuat.IconColor = Color.Silver;
 
 
+            // 9. btnKhuyenMai
+
+            btnKhuyenMai.ForeColor = Color.Silver;
+            btnKhuyenMai.IconColor = Color.Silver;
+
+
         }
 
         private void btnTrangchu_Click(object sender, EventArgs e)
@@ -155,6 +161,25 @@ namespace WindowsFormsApp
             ButtonHide();
             btnKhoHang.ForeColor = Color.White;
             btnKhoHang.IconColor = Color.White;
+        }
+
+
+
+        private void btnKhuyenMai_Click(object sender, EventArgs e)
+        {
+            UC_KhuyenMai _KhuyenMai = new UC_KhuyenMai();
+            addUC(_KhuyenMai);
+            MovePanle(btnKhuyenMai);
+            ButtonHide();
+            btnKhuyenMai.ForeColor = Color.White;
+            btnKhuyenMai.IconColor = Color.White;
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            FormLogin f = new FormLogin();
+            f.Show();
+            this.Hide();
         }
     }
 }

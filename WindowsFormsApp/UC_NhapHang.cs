@@ -20,26 +20,23 @@ namespace WindowsFormsApp
         public UC_NhapHang()     // string manv, string tennv
         {
             InitializeComponent();
-         
-            List<MatHangDTO> list;
-            list =  getListSanPham();
-            cmbTensp.DataSource = list;
-            cmbTensp.ValueMember = "MaMH";
-            cmbTensp.DisplayMember = "TenMH";
-            cmbTensp.SelectedIndex = -1;
+            cmbTensp.SelectedIndex = 0;
+            cmbTenncc.SelectedIndex = 0;
  
             
-            /*
+            
              lsvNhaphang.View = View.Details;
              lsvNhaphang.GridLines = true;
              lsvNhaphang.FullRowSelect = true;
 
-             lsvNhaphang.Columns.Add("Mã mặt hàng", 150);   //0
-             lsvNhaphang.Columns.Add("Tên mặt hàng", 200);  //1
+             lsvNhaphang.Columns.Add("Mã mặt hàng", 70);   //0
+             lsvNhaphang.Columns.Add("Tên mặt hàng", 250);  //1
              lsvNhaphang.Columns.Add("Số lượng,", 100);   //2
-             lsvNhaphang.Columns.Add("Đơn giá", 200);  // 3
-             lsvNhaphang.Columns.Add("Tổng tiền", 220);  // 4
+             lsvNhaphang.Columns.Add("Đơn giá", 100);  // 3
+             lsvNhaphang.Columns.Add("Tổng tiền", 150);  // 4
 
+
+            /*
              lblMapn.Text = Matudong();
 
 
@@ -92,6 +89,46 @@ namespace WindowsFormsApp
             }
             return list;
         }
+
+
+
+        public List<NhaCungCapDTO> getListNhaCungCap()
+        {
+            string query = "select * from NhaCungCap";
+            List<NhaCungCapDTO> list = new List<NhaCungCapDTO>();
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow item in dt.Rows)
+            {
+                NhaCungCapDTO TTncc = new NhaCungCapDTO(item);
+                list.Add(TTncc);
+            }
+            return list;
+
+        }
+        List<NhaCungCapDTO> list1;
+
+
+
+
+        private void cmbTensp_Click(object sender, EventArgs e)
+        {
+            List<MatHangDTO> list;
+            list = getListSanPham();
+            cmbTensp.DataSource = list;
+            cmbTensp.ValueMember = "MaMH";
+            cmbTensp.DisplayMember = "TenMH";
+            //cmbTensp.SelectedIndex = -1;
+        }
+
+        private void cmbTenncc_Click(object sender, EventArgs e)
+        {
+            list1 = getListNhaCungCap();
+            cmbTenncc.DataSource = list1;
+            cmbTenncc.ValueMember = "MaNCC";
+            cmbTenncc.DisplayMember = "TenNCC";
+        }
+
+
 
 
 

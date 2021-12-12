@@ -21,7 +21,8 @@ namespace WindowsFormsApp
 
 
         public static string tenHienThi, quyen;
-
+        
+        /*
         private bool check_data()
         {
             if (string.IsNullOrEmpty(txtTenDangNhap.Text))
@@ -126,6 +127,6 @@ namespace WindowsFormsApp
         private void btnX_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
+        } */
     }
 }

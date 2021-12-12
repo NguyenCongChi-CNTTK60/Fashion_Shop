@@ -83,6 +83,16 @@ namespace WindowsFormsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hinh_anh_may_hong_may_cam_cuc_dep_111706037 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-anh-may-hong-may-cam-cuc-dep_111706037", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap home_page {
             get {
                 object obj = ResourceManager.GetObject("home-page", resourceCulture);
@@ -106,6 +116,16 @@ namespace WindowsFormsApp.Properties {
         internal static System.Drawing.Bitmap oto_giaohang {
             get {
                 object obj = ResourceManager.GetObject("oto-giaohang", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Thi_t_K_Shop_Th_i_Trang_Nam_TUNG_TRAN_3_ {
+            get {
+                object obj = ResourceManager.GetObject("Thi-t-K-Shop-Th-i-Trang-Nam-TUNG-TRAN-3-", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -13,30 +13,16 @@ using DTO;
 namespace WindowsFormsApp
 {
     public partial class UC_KhuyenMai : UserControl
-    {   
-        
-        public UC_KhuyenMai()
-        { 
-            InitializeComponent();
-            list = GiamGiaBUS.Intance.getListGiamGia();
-            list1 = MatHangBUS.Intance.getListSanPham();
-            cmbTenmh.DataSource = list1;
-            cmbTenmh.DisplayMember = "TenMH";
-            cmbTenmh.ValueMember = "TenMH";
-            cmbMamh.DataSource = list1;
-            cmbMamh.DisplayMember = "MaMH";
-            cmbMamh.ValueMember = "MaMH";
-            cmbPhantram.DataSource = list;
-            cmbPhantram.DisplayMember = "PhanTram";
-            cmbPhantram.ValueMember = "PhanTram";
-            cmbMaPhantram.DataSource = list;
-            cmbMaPhantram.DisplayMember = "MaGG";
-            cmbMaPhantram.ValueMember = "MaGG";
-          
+    {
 
-            LamMoi();
+        public UC_KhuyenMai()
+        {
+            InitializeComponent();         
             HienThi();
-            
+            cmbTenMH.SelectedIndex = 0;
+            cmbPhanTram.SelectedIndex = 0;
+            cmbLuaChon.SelectedIndex = 0;
+
         }
         List<GiamGiaDTO> list;
         List<MatHangDTO> list1;
@@ -44,10 +30,27 @@ namespace WindowsFormsApp
         private void HienThi()
         {
             DataTable dt = GiamGiaBUS.Intance.Hienthi();
-            dgvGiamGia.DataSource = dt;
+            dgvKM.DataSource = dt;
         }
-           
 
+        private void cmbTenMH_Click(object sender, EventArgs e)
+        {
+            list1 = MatHangBUS.Intance.getListSanPham();
+            cmbTenMH.DataSource = list1;
+            cmbTenMH.DisplayMember = "TenMH";
+            cmbTenMH.ValueMember = "TenMH";
+        }
+
+        private void cmbPhanTram_Click(object sender, EventArgs e)
+        {
+            list = GiamGiaBUS.Intance.getListGiamGia();
+            cmbPhanTram.DataSource = list;
+            cmbPhanTram.DisplayMember = "PhanTram";
+            cmbPhanTram.ValueMember = "PhanTram";
+        }
+
+
+        /*
         private void LamMoi()
         {
             cmbTenmh.SelectedIndex = -1;
@@ -172,6 +175,7 @@ namespace WindowsFormsApp
             cmbMaPhantram.DisplayMember = "MaGG";
             cmbMaPhantram.ValueMember = "MaGG";
         }
+    } */
     }
 }
 

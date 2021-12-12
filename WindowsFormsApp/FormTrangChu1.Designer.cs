@@ -30,6 +30,7 @@ namespace WindowsFormsApp
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.btnKhuyenMai = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@ namespace WindowsFormsApp
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.panelLeft.Controls.Add(this.btnKhuyenMai);
             this.panelLeft.Controls.Add(this.panel2);
             this.panelLeft.Controls.Add(this.pnlDiChuyen);
             this.panelLeft.Controls.Add(this.btnDangXuat);
@@ -68,6 +70,26 @@ namespace WindowsFormsApp
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(256, 1150);
             this.panelLeft.TabIndex = 4;
+            // 
+            // btnKhuyenMai
+            // 
+            this.btnKhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btnKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhuyenMai.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhuyenMai.ForeColor = System.Drawing.Color.Silver;
+            this.btnKhuyenMai.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.btnKhuyenMai.IconColor = System.Drawing.Color.Silver;
+            this.btnKhuyenMai.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKhuyenMai.IconSize = 43;
+            this.btnKhuyenMai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhuyenMai.Location = new System.Drawing.Point(12, 826);
+            this.btnKhuyenMai.Name = "btnKhuyenMai";
+            this.btnKhuyenMai.Size = new System.Drawing.Size(244, 65);
+            this.btnKhuyenMai.TabIndex = 35;
+            this.btnKhuyenMai.Text = "           Khuyến mại";
+            this.btnKhuyenMai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhuyenMai.UseVisualStyleBackColor = true;
+            this.btnKhuyenMai.Click += new System.EventHandler(this.btnKhuyenMai_Click);
             // 
             // panel2
             // 
@@ -143,6 +165,7 @@ namespace WindowsFormsApp
             this.btnDangXuat.Text = "           Đăng xuất";
             this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnThongKe
             // 
@@ -348,5 +371,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnKhuyenMai;
     }
 }

@@ -87,6 +87,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.cmbTensp = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panelLeft.SuspendLayout();
             this.pnlTrangChu.SuspendLayout();
             this.SuspendLayout();
@@ -169,6 +170,7 @@
             // panelLeft
             // 
             this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.panelLeft.Controls.Add(this.iconButton1);
             this.panelLeft.Controls.Add(this.label2);
             this.panelLeft.Controls.Add(this.lblNguoidung);
             this.panelLeft.Controls.Add(this.lblQuyen);
@@ -833,6 +835,25 @@
             this.label19.TabIndex = 131;
             this.label19.Text = "Mã phiếu nhập:";
             // 
+            // iconButton1
+            // 
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 43;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(12, 848);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(244, 65);
+            this.iconButton1.TabIndex = 37;
+            this.iconButton1.Text = "           Thống kê";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // FormTrangChu
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -914,5 +935,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox cmbTensp;
         private System.Windows.Forms.Label label19;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

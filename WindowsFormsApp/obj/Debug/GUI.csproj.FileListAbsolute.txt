@@ -1467,3 +1467,5 @@ C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\RdlComp
 C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
 C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormLogin.resources
+C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormSignUp.resources
