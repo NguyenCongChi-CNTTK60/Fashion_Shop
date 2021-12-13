@@ -339,6 +339,12 @@
     <Compile Include="UC_DoiMatKhau.Designer.cs">
       <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_HienThiQuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_HienThiQuyen.Designer.cs">
+      <DependentUpon>UC_HienThiQuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_KhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -472,6 +478,9 @@
     <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_HienThiQuyen.resx">
+      <DependentUpon>UC_HienThiQuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UC_KhachHang.resx">
       <DependentUpon>UC_KhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -550,6 +559,7 @@
     <None Include="Image\icon-user.png" />
     <None Include="Resources\hinh-anh-may-hong-may-cam-cuc-dep_111706037.jpg" />
     <None Include="Resources\Thi-t-K-Shop-Th-i-Trang-Nam-TUNG-TRAN-3-.jpg" />
+    <None Include="Resources\Capture.PNG" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

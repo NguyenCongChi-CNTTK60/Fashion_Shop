@@ -21,7 +21,17 @@ namespace WindowsFormsApp
 
 
         public static string tenHienThi, quyen;
-        
+
+        private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangNhap_Click(object sender, EventArgs e)
+        {
+
+        }
+
         /*
         private bool check_data()
         {

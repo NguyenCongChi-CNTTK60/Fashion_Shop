@@ -1469,3 +1469,6 @@ C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\Windows
 C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
 C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormLogin.resources
 C:\Users\Nguyen Cong Chi\Downloads\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormSignUp.resources
+C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormLogin.resources
+C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormSignUp.resources
+C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_HienThiQuyen.resources

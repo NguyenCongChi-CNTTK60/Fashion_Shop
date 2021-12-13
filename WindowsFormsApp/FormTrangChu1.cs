@@ -12,12 +12,69 @@ namespace WindowsFormsApp
 {
     public partial class FormTrangChu1 : Form
     {
-        public FormTrangChu1()
+
+        private string tk;
+        private string tempTK;
+        public FormTrangChu1(string tk)
         {
             InitializeComponent();
             UC_TrangChu _TrangChu = new UC_TrangChu();
             addUC(_TrangChu);
+            this.tk = tk;
+            tempTK = tk;
+            TTnguoiban();
         }
+
+
+
+
+        private void TTnguoiban()
+        {
+            string name = tempTK;
+            string query = "select MaNV,TenHienThi from Nhanvien where TenDangNhap = '" + tk + "'";
+
+           
+                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count > 0)
+            {
+                lblMaNV.Text = dt.Rows[0]["MaNV"].ToString();
+                lblTenNV.Text = dt.Rows[0]["TenHienThi"].ToString();
+            }
+
+            
+        }
+
+
+
+        private void Phanquyen(UserControl us1, UserControl us2)
+        {
+            string Name = tempTK;
+            string query = "select Quyen as [Quyen] from NhanVien where TenDangNhap = N'" + Name + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            if (dt.Rows.Count > 0)
+            {
+                lblQuyen.Text = dt.Rows[0]["Quyen"].ToString();
+
+                if (lblQuyen.Text == "Quản lý")
+                {
+                    addUC(us1);
+                }
+                else if (lblQuyen.Text == "Nhân viên")
+                {
+
+                    addUC(us2);
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+
 
         private void addUC(UserControl uc)
         {
@@ -30,14 +87,11 @@ namespace WindowsFormsApp
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             UC_ThongKe _ThongKe = new UC_ThongKe();
-            addUC(_ThongKe);
+            Phanquyen(_ThongKe, _HienThiQuyen);         
             ButtonHide();
             MovePanle(btnThongKe);
-            
-
             btnThongKe.ForeColor = Color.White;
             btnThongKe.IconColor = Color.White;
-
         }
 
 
@@ -133,10 +187,15 @@ namespace WindowsFormsApp
             btnKhachHang.IconColor = Color.White;
         }
 
+
+
+
+        UC_HienThiQuyen _HienThiQuyen = new UC_HienThiQuyen();
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             UC_NhanVien _NhanVien = new UC_NhanVien();
-            addUC(_NhanVien);
+           // UC_HienThiQuyen _HienThiQuyen = new UC_HienThiQuyen();
+            Phanquyen(_NhanVien, _HienThiQuyen);
             MovePanle(btnNhanVien);
             ButtonHide();
             btnNhanVien.ForeColor = Color.White;
@@ -146,7 +205,7 @@ namespace WindowsFormsApp
         private void btnNhaCungCap_Click(object sender, EventArgs e)
         {
             UC_NhaCungCap _NhaCungCap = new UC_NhaCungCap();
-            addUC(_NhaCungCap);
+            Phanquyen(_NhaCungCap, _HienThiQuyen);
             MovePanle(btnNhaCungCap);
             ButtonHide();
             btnNhaCungCap.ForeColor = Color.White;
@@ -156,7 +215,7 @@ namespace WindowsFormsApp
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
             UC_KhoHang _KhoHang = new UC_KhoHang();
-            addUC(_KhoHang);
+            Phanquyen(_KhoHang, _HienThiQuyen);
             MovePanle(btnKhoHang);
             ButtonHide();
             btnKhoHang.ForeColor = Color.White;
@@ -168,7 +227,7 @@ namespace WindowsFormsApp
         private void btnKhuyenMai_Click(object sender, EventArgs e)
         {
             UC_KhuyenMai _KhuyenMai = new UC_KhuyenMai();
-            addUC(_KhuyenMai);
+            Phanquyen(_KhuyenMai, _HienThiQuyen);
             MovePanle(btnKhuyenMai);
             ButtonHide();
             btnKhuyenMai.ForeColor = Color.White;
@@ -181,5 +240,13 @@ namespace WindowsFormsApp
             f.Show();
             this.Hide();
         }
+
+
+
+
+
+
+
+
     }
 }

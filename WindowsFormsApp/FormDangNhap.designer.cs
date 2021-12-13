@@ -59,6 +59,14 @@ namespace WindowsFormsApp
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
+            // errtxtTaikhoan
+            // 
+            this.errtxtTaikhoan.ContainerControl = this;
+            // 
+            // errMatkhau
+            // 
+            this.errMatkhau.ContainerControl = this;
+            // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -121,6 +129,7 @@ namespace WindowsFormsApp
             this.btnDangNhap.Size = new System.Drawing.Size(317, 86);
             this.btnDangNhap.TabIndex = 13;
             this.btnDangNhap.Text = "ĐĂNG NHẬP";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
             // panel8
             // 
@@ -260,6 +269,7 @@ namespace WindowsFormsApp
             this.chkHienThiMK.TabIndex = 15;
             this.chkHienThiMK.Text = "Hiển thị mật khẩu";
             this.chkHienThiMK.UseVisualStyleBackColor = true;
+            this.chkHienThiMK.CheckedChanged += new System.EventHandler(this.chkHienThiMK_CheckedChanged);
             // 
             // label3
             // 

@@ -34,9 +34,10 @@ namespace WindowsFormsApp
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnKhachHang = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkHienThiMK = new System.Windows.Forms.CheckBox();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,7 +45,7 @@ namespace WindowsFormsApp
             this.label5 = new System.Windows.Forms.Label();
             this.lblDangky = new System.Windows.Forms.Label();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnKhachHang = new FontAwesome.Sharp.IconButton();
+            this.lblCanhBao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -78,7 +79,7 @@ namespace WindowsFormsApp
             this.txtTenDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTenDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDangNhap.FocusedState.Parent = this.txtTenDangNhap;
-            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDangNhap.ForeColor = System.Drawing.Color.Silver;
             this.txtTenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenDangNhap.HoverState.Parent = this.txtTenDangNhap;
@@ -95,11 +96,33 @@ namespace WindowsFormsApp
             this.txtTenDangNhap.TabIndex = 14;
             this.txtTenDangNhap.TextOffset = new System.Drawing.Point(15, 0);
             this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
+            this.txtTenDangNhap.Click += new System.EventHandler(this.txtTenDangNhap_Click);
+            this.txtTenDangNhap.Leave += new System.EventHandler(this.txtTenDangNhap_Leave);
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 0;
             this.guna2Elipse1.TargetControl = this.btnKhachHang;
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachHang.Font = new System.Drawing.Font("Sitka Display", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.Google;
+            this.btnKhachHang.IconColor = System.Drawing.Color.Silver;
+            this.btnKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKhachHang.IconSize = 35;
+            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.Location = new System.Drawing.Point(41, 88);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(120, 0, 0, 0);
+            this.btnKhachHang.Size = new System.Drawing.Size(547, 62);
+            this.btnKhachHang.TabIndex = 12;
+            this.btnKhachHang.Text = "       Log in with Google\r\n";
+            this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -121,46 +144,50 @@ namespace WindowsFormsApp
             this.label3.TabIndex = 17;
             this.label3.Text = "Mật khẩu";
             // 
-            // guna2TextBox1
+            // txtMatKhau
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "*****";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Silver;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(41, 407);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 5;
-            this.guna2TextBox1.ShadowDecoration.BorderRadius = 10;
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(547, 60);
-            this.guna2TextBox1.TabIndex = 16;
-            this.guna2TextBox1.TextOffset = new System.Drawing.Point(15, 0);
+            this.txtMatKhau.BorderColor = System.Drawing.Color.Silver;
+            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhau.DefaultText = "*****";
+            this.txtMatKhau.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMatKhau.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMatKhau.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMatKhau.DisabledState.Parent = this.txtMatKhau;
+            this.txtMatKhau.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMatKhau.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.FocusedState.Parent = this.txtMatKhau;
+            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.ForeColor = System.Drawing.Color.Silver;
+            this.txtMatKhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.HoverState.Parent = this.txtMatKhau;
+            this.txtMatKhau.Location = new System.Drawing.Point(41, 407);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(6);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.PlaceholderText = "";
+            this.txtMatKhau.SelectedText = "";
+            this.txtMatKhau.SelectionStart = 5;
+            this.txtMatKhau.ShadowDecoration.BorderRadius = 10;
+            this.txtMatKhau.ShadowDecoration.Parent = this.txtMatKhau;
+            this.txtMatKhau.Size = new System.Drawing.Size(547, 60);
+            this.txtMatKhau.TabIndex = 16;
+            this.txtMatKhau.TextOffset = new System.Drawing.Point(15, 0);
+            this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
+            this.txtMatKhau.Click += new System.EventHandler(this.txtMatKhau_Click);
+            this.txtMatKhau.Leave += new System.EventHandler(this.txtMatKhau_Leave);
             // 
             // chkHienThiMK
             // 
             this.chkHienThiMK.AutoSize = true;
             this.chkHienThiMK.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkHienThiMK.Location = new System.Drawing.Point(41, 498);
+            this.chkHienThiMK.Location = new System.Drawing.Point(41, 504);
             this.chkHienThiMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkHienThiMK.Name = "chkHienThiMK";
             this.chkHienThiMK.Size = new System.Drawing.Size(206, 39);
             this.chkHienThiMK.TabIndex = 18;
             this.chkHienThiMK.Text = "Hiển thị mật khẩu";
             this.chkHienThiMK.UseVisualStyleBackColor = true;
+            this.chkHienThiMK.CheckedChanged += new System.EventHandler(this.chkHienThiMK_CheckedChanged);
             // 
             // btnDangNhap
             // 
@@ -247,25 +274,16 @@ namespace WindowsFormsApp
             this.guna2GradientButton1.TabIndex = 24;
             this.guna2GradientButton1.Text = "x";
             // 
-            // btnKhachHang
+            // lblCanhBao
             // 
-            this.btnKhachHang.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhachHang.Font = new System.Drawing.Font("Sitka Display", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.Google;
-            this.btnKhachHang.IconColor = System.Drawing.Color.Silver;
-            this.btnKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKhachHang.IconSize = 35;
-            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(41, 88);
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(120, 0, 0, 0);
-            this.btnKhachHang.Size = new System.Drawing.Size(547, 62);
-            this.btnKhachHang.TabIndex = 12;
-            this.btnKhachHang.Text = "       Log in with Google\r\n";
-            this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.UseVisualStyleBackColor = true;
+            this.lblCanhBao.AutoSize = true;
+            this.lblCanhBao.Font = new System.Drawing.Font("Sitka Banner", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCanhBao.ForeColor = System.Drawing.Color.White;
+            this.lblCanhBao.Location = new System.Drawing.Point(36, 473);
+            this.lblCanhBao.Name = "lblCanhBao";
+            this.lblCanhBao.Size = new System.Drawing.Size(86, 29);
+            this.lblCanhBao.TabIndex = 25;
+            this.lblCanhBao.Text = "Mật khẩu";
             // 
             // FormLogin
             // 
@@ -273,6 +291,7 @@ namespace WindowsFormsApp
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(627, 952);
+            this.Controls.Add(this.lblCanhBao);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.lblDangky);
             this.Controls.Add(this.label5);
@@ -281,7 +300,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.chkHienThiMK);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtTenDangNhap);
             this.Controls.Add(this.panel1);
@@ -305,7 +324,7 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
         private System.Windows.Forms.CheckBox chkHienThiMK;
         private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
         private System.Windows.Forms.Label label4;
@@ -313,5 +332,6 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblDangky;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private System.Windows.Forms.Label lblCanhBao;
     }
 }
