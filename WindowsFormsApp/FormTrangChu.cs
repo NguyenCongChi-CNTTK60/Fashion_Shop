@@ -72,8 +72,9 @@ namespace WindowsFormsApp
                 //btnNhapHang.Enabled = false;
 
             }
-           
         }
+
+
 
         private void addUC(UserControl userControl)
         {
@@ -115,8 +116,8 @@ namespace WindowsFormsApp
 
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
-            UC_TrangChu _TrangChu = new UC_TrangChu();
-            addUC(_TrangChu);
+            //UC_TrangChu _TrangChu = new UC_TrangChu();
+            //addUC(_TrangChu);
         }
 
         private void panelControl_Paint(object sender, PaintEventArgs e)

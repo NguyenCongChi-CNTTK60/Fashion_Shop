@@ -224,6 +224,9 @@
   <ItemGroup>
     <Compile Include="Chuoiketnoi.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -375,6 +378,12 @@
     <Compile Include="UC_NhapHang.Designer.cs">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ReportHangTon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ReportHangTon.Designer.cs">
+      <DependentUpon>UC_ReportHangTon.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ThemLoaiHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -473,6 +482,7 @@
     <EmbeddedResource Include="ReportPhieuNhap.resx">
       <DependentUpon>ReportPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportHangTon.rdlc" />
     <EmbeddedResource Include="Report\ReportInHoaDon.rdlc" />
     <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
     <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
@@ -495,6 +505,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NhapHang.resx">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ReportHangTon.resx">
+      <DependentUpon>UC_ReportHangTon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThemLoaiHang.resx">
       <DependentUpon>UC_ThemLoaiHang.cs</DependentUpon>

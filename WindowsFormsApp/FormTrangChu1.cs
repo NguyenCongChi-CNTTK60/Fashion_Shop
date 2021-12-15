@@ -18,11 +18,13 @@ namespace WindowsFormsApp
         public FormTrangChu1(string tk)
         {
             InitializeComponent();
-            UC_TrangChu _TrangChu = new UC_TrangChu();
-            addUC(_TrangChu);
             this.tk = tk;
             tempTK = tk;
             TTnguoiban();
+            UC_TrangChu _TrangChu = new UC_TrangChu(lblTenNV.Text);
+            addUC(_TrangChu);
+            
+            
         }
 
 
@@ -159,7 +161,7 @@ namespace WindowsFormsApp
 
         private void btnTrangchu_Click(object sender, EventArgs e)
         {
-            UC_TrangChu _TrangChu = new UC_TrangChu();
+            UC_TrangChu _TrangChu = new UC_TrangChu(lblTenNV.Text);
             addUC(_TrangChu);
             MovePanle(btnTrangchu);
             ButtonHide();
@@ -169,7 +171,7 @@ namespace WindowsFormsApp
 
         private void btnBanHang_Click(object sender, EventArgs e)
         {
-            UC_BanHang _BanHang = new UC_BanHang();
+            UC_BanHang _BanHang = new UC_BanHang(lblMaNV.Text,lblTenNV.Text);
             addUC(_BanHang);
             MovePanle(btnBanHang);
             ButtonHide();
@@ -241,12 +243,10 @@ namespace WindowsFormsApp
             this.Hide();
         }
 
-
-
-
-
-
-
-
+        private void lblTenNV_Click(object sender, EventArgs e)
+        {
+            UC_ReportHangTon f = new UC_ReportHangTon();
+            addUC(f);
+        }
     }
 }

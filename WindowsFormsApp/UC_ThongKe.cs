@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,7 @@ namespace WindowsFormsApp
             InitializeComponent();
             HidesubMenu();
             getDataChart();
+           // DoanhThuTrongNgay();
         }
 
         private void addUC(UserControl userControl)
@@ -108,6 +110,28 @@ namespace WindowsFormsApp
         {
             UC_ThongKePhieuNhap _ThongKePhieuNhap = new UC_ThongKePhieuNhap();
             addUC(_ThongKePhieuNhap);
+        }
+
+
+
+        private void DoanhThuTrongNgay()
+        {
+            DateTime dt = new DateTime(today.Year, today.Month, today.Day);
+            string query = "select sum(TongTien) as [TongTien],count(MaHD) as [LuotMuaSam]  from HoaDon where NgayTao = '" + dt +"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            if(data.Rows.Count > 0) 
+            {
+                int TongTien;
+                string Tien = data.Rows[0]["TongTien"].ToString();
+                TongTien = Int32.Parse(Tien);              
+                lblTongDoanhThu.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", TongTien) + " đ";
+                lblLuotMuaSam.Text = data.Rows[0]["LuotMuaSam"].ToString();
+
+                int LoiNhuan = 0;
+                LoiNhuan = TongTien - (TongTien * 70 / 100);
+                lblTongloinhuan.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", LoiNhuan) + " đ";
+
+            }
         }
     }
 }

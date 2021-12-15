@@ -16,7 +16,7 @@ namespace WindowsFormsApp
     public partial class UC_BanHang : UserControl
     {
         private string manv, tennv;
-        public UC_BanHang()  // string manv, string tennv
+        public UC_BanHang(string manv, string tennv)  // string manv, string tennv
         {
             InitializeComponent();
 
@@ -45,9 +45,11 @@ namespace WindowsFormsApp
             cmbLoaihang.ValueMember = "MaLH";
 
 
-            //this.tennv = tennv;
+            this.tennv = tennv;
             //lblTenNV.Text = "";
-            //lblTenNV.Text = tennv;
+            lblTenNV.Text = tennv;
+            this.manv = manv;
+            lblMaNV.Text = manv;
 
 
             List<KhachHangDTO> listKH = new List<KhachHangDTO>();
@@ -132,6 +134,8 @@ namespace WindowsFormsApp
             if (data.Rows.Count > 0)
             {
                 item = new KhachHangDTO(data.Rows[0]);
+                //lblMaKH.Text = data.Rows[0]["MaKH"].ToString();
+                
             }
             return item;
         }
@@ -148,6 +152,7 @@ namespace WindowsFormsApp
             cmbLoaihang.Text = "";
             txtSoLuong.Value = 0;
             lblGiaban.Text = "0 đ";
+            lblMaKH.Text = "";
             //lblMahh.Text = "";
 
         }
@@ -188,6 +193,8 @@ namespace WindowsFormsApp
             lblTienhoantra.Text = string.Format(new CultureInfo("vi-VN"), "{0:#.##00}", tienhoantra) + " đ";
 
         }
+
+
 
         private int i;
         private int tiengiam = 0;
@@ -243,10 +250,10 @@ namespace WindowsFormsApp
              if (lvSanPhamBan.Items.Count > 0)
             {
                 HoaDonDTO hd = new HoaDonDTO();
-                hd.MaHD = lblMahh.Text;
-                hd.MaKH = lblMahh.Text;
+                hd.MaHD = lblMahd.Text;
+                hd.MaKH = lblMaKH.Text;
                 hd.NgayTao = dtpNgayban.Value;
-                hd.MaNV = lblTenNV.Text;
+                hd.MaNV = lblMaNV.Text;
                 hd.TongTien = tongTien;
 
 
@@ -283,6 +290,7 @@ namespace WindowsFormsApp
 
             }
         }
+
 
         private void cmbTenhh_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -414,6 +422,7 @@ namespace WindowsFormsApp
                     Tinhtienhoantra();
                     i--;
                     resetInfoProduct();
+                    lblPhantram.Text = "0";
                 }else if(lvSanPhamBan.Items.Count == 0)
                 {
                     lblTiengiam.Text = "0 đ";
@@ -432,6 +441,8 @@ namespace WindowsFormsApp
                 cmbTenhh.Text = lvSanPhamBan.Items[i].SubItems[1].Text.ToString();
                 Decimal b = Convert.ToDecimal(lvSanPhamBan.Items[i].SubItems[2].Text.ToString());
                 txtSoLuong.Value = b;
+                lblPhantram.Text = lvSanPhamBan.Items[i].SubItems[5].Text.ToString();
+                lblGiaban.Text = lvSanPhamBan.Items[i].SubItems[3].Text.ToString();
 
             }
         }
@@ -446,6 +457,8 @@ namespace WindowsFormsApp
             {
                 List<KhachHangDTO> listKH = new List<KhachHangDTO>();
                 khachHang = GetTenBySDT(txtTimkiem.Text);
+                lblMaKH.Text = khachHang.MaKH;
+                lblMaKH.ForeColor = Color.Black;
                 lblTenkh.Text = khachHang.TenKH;
                 lblTenkh.ForeColor = Color.Black;
                 AutoCompleteStringCollection arrName2 = new AutoCompleteStringCollection();
@@ -457,7 +470,7 @@ namespace WindowsFormsApp
             }
             else
                 lblTenkh.Text = "Khách hàng mới";
-            lblTenkh.ForeColor = Color.Black;
+                lblTenkh.ForeColor = Color.Black;
 
         }
 

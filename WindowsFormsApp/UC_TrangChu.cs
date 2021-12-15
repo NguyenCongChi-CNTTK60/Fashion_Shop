@@ -14,11 +14,15 @@ namespace WindowsFormsApp
 {
     public partial class UC_TrangChu : UserControl
     {
-        public UC_TrangChu()
+
+        private string tennv;
+        public UC_TrangChu(string tennv)
         {
             InitializeComponent();
             getDataChart();
             getdataLable();
+            this.tennv = tennv;
+            lblTenNhanVien.Text = tennv;
         }
 
         private void getdataLable()

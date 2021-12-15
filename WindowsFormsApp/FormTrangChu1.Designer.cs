@@ -30,6 +30,9 @@ namespace WindowsFormsApp
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.lblQuyen = new System.Windows.Forms.Label();
+            this.lblMaNV = new System.Windows.Forms.Label();
+            this.lblTenNV = new System.Windows.Forms.Label();
             this.btnKhuyenMai = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,9 +49,6 @@ namespace WindowsFormsApp
             this.btnKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnTrangchu = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTenNV = new System.Windows.Forms.Label();
-            this.lblMaNV = new System.Windows.Forms.Label();
-            this.lblQuyen = new System.Windows.Forms.Label();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,37 @@ namespace WindowsFormsApp
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(256, 1150);
             this.panelLeft.TabIndex = 4;
+            // 
+            // lblQuyen
+            // 
+            this.lblQuyen.AutoSize = true;
+            this.lblQuyen.Font = new System.Drawing.Font("Cambria", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuyen.Location = new System.Drawing.Point(21, 1003);
+            this.lblQuyen.Name = "lblQuyen";
+            this.lblQuyen.Size = new System.Drawing.Size(51, 19);
+            this.lblQuyen.TabIndex = 39;
+            this.lblQuyen.Text = "label4";
+            // 
+            // lblMaNV
+            // 
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Font = new System.Drawing.Font("Cambria", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.Location = new System.Drawing.Point(21, 960);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(51, 19);
+            this.lblMaNV.TabIndex = 37;
+            this.lblMaNV.Text = "label4";
+            // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Font = new System.Drawing.Font("Cambria", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNV.Location = new System.Drawing.Point(21, 911);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(51, 19);
+            this.lblTenNV.TabIndex = 36;
+            this.lblTenNV.Text = "label4";
+            this.lblTenNV.Click += new System.EventHandler(this.lblTenNV_Click);
             // 
             // btnKhuyenMai
             // 
@@ -340,36 +371,6 @@ namespace WindowsFormsApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1411, 1150);
             this.panel1.TabIndex = 5;
-            // 
-            // lblTenNV
-            // 
-            this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Font = new System.Drawing.Font("Cambria", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNV.Location = new System.Drawing.Point(21, 911);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(51, 19);
-            this.lblTenNV.TabIndex = 36;
-            this.lblTenNV.Text = "label4";
-            // 
-            // lblMaNV
-            // 
-            this.lblMaNV.AutoSize = true;
-            this.lblMaNV.Font = new System.Drawing.Font("Cambria", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaNV.Location = new System.Drawing.Point(21, 960);
-            this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(51, 19);
-            this.lblMaNV.TabIndex = 37;
-            this.lblMaNV.Text = "label4";
-            // 
-            // lblQuyen
-            // 
-            this.lblQuyen.AutoSize = true;
-            this.lblQuyen.Font = new System.Drawing.Font("Cambria", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuyen.Location = new System.Drawing.Point(21, 1003);
-            this.lblQuyen.Name = "lblQuyen";
-            this.lblQuyen.Size = new System.Drawing.Size(51, 19);
-            this.lblQuyen.TabIndex = 39;
-            this.lblQuyen.Text = "label4";
             // 
             // FormTrangChu1
             // 

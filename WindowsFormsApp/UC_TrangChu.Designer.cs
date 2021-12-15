@@ -29,9 +29,9 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKhachhang = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@ namespace WindowsFormsApp
             this.btnX = new System.Windows.Forms.Button();
             this.pcbAlign = new FontAwesome.Sharp.IconPictureBox();
             this.pcbBell = new FontAwesome.Sharp.IconPictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblTenNhanVien = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -126,7 +126,7 @@ namespace WindowsFormsApp
             this.panel2.Controls.Add(this.btnX);
             this.panel2.Controls.Add(this.pcbAlign);
             this.panel2.Controls.Add(this.pcbBell);
-            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.lblTenNhanVien);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.iconPictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -175,15 +175,15 @@ namespace WindowsFormsApp
             this.pcbBell.TabIndex = 19;
             this.pcbBell.TabStop = false;
             // 
-            // label4
+            // lblTenNhanVien
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1004, 17);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(147, 29);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Nguyễn Công Chí";
+            this.lblTenNhanVien.AutoSize = true;
+            this.lblTenNhanVien.Font = new System.Drawing.Font("Sitka Banner", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNhanVien.Location = new System.Drawing.Point(1032, 17);
+            this.lblTenNhanVien.Name = "lblTenNhanVien";
+            this.lblTenNhanVien.Size = new System.Drawing.Size(147, 29);
+            this.lblTenNhanVien.TabIndex = 16;
+            this.lblTenNhanVien.Text = "Nguyễn Công Chí";
             // 
             // label3
             // 
@@ -203,7 +203,7 @@ namespace WindowsFormsApp
             this.iconPictureBox2.IconColor = System.Drawing.Color.Gray;
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 39;
-            this.iconPictureBox2.Location = new System.Drawing.Point(959, 14);
+            this.iconPictureBox2.Location = new System.Drawing.Point(987, 14);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(39, 50);
             this.iconPictureBox2.TabIndex = 16;
@@ -334,20 +334,20 @@ namespace WindowsFormsApp
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(21, 404);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.LabelBorderWidth = 3;
-            series1.Legend = "Legend1";
-            series1.Name = "Doanh Thu";
-            this.chart1.Series.Add(series1);
+            series2.BorderWidth = 3;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.LabelBorderWidth = 3;
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh Thu";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(1374, 696);
             this.chart1.TabIndex = 20;
             this.chart1.Text = "chart1";
@@ -407,7 +407,7 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblTenNhanVien;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblDoanhthu;
         private System.Windows.Forms.Label label5;
