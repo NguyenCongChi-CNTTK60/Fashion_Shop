@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp
 {
-    partial class UC_ReportHangTon
+    partial class UC_ReportPhieuNhap
     {
         /// <summary> 
         /// Required designer variable.
@@ -31,23 +31,23 @@ namespace WindowsFormsApp
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.DataTable3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.DataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.DataSet1 = new WindowsFormsApp.DataSet1();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnQuaylai = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblTk = new System.Windows.Forms.Label();
+            this.btnQuaylai = new FontAwesome.Sharp.IconButton();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // DataTable3BindingSource
+            // DataTable1BindingSource
             // 
-            this.DataTable3BindingSource.DataMember = "DataTable3";
-            this.DataTable3BindingSource.DataSource = this.DataSet1;
+            this.DataTable1BindingSource.DataMember = "DataTable1";
+            this.DataTable1BindingSource.DataSource = this.DataSet1;
             // 
             // DataSet1
             // 
@@ -56,14 +56,34 @@ namespace WindowsFormsApp
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnQuaylai);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnQuaylai);
             this.panel1.Controls.Add(this.reportViewer1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1411, 1150);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lblTk);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1411, 65);
+            this.panel2.TabIndex = 227;
+            // 
+            // lblTk
+            // 
+            this.lblTk.AutoSize = true;
+            this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTk.Location = new System.Drawing.Point(14, 12);
+            this.lblTk.Name = "lblTk";
+            this.lblTk.Size = new System.Drawing.Size(248, 35);
+            this.lblTk.TabIndex = 14;
+            this.lblTk.Text = "Xem chi tiết phiếu nhập\r\n";
             // 
             // btnQuaylai
             // 
@@ -77,57 +97,38 @@ namespace WindowsFormsApp
             this.btnQuaylai.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnQuaylai.IconSize = 35;
             this.btnQuaylai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnQuaylai.Location = new System.Drawing.Point(3, 71);
+            this.btnQuaylai.Location = new System.Drawing.Point(3, 74);
             this.btnQuaylai.Name = "btnQuaylai";
             this.btnQuaylai.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnQuaylai.Size = new System.Drawing.Size(85, 48);
-            this.btnQuaylai.TabIndex = 224;
+            this.btnQuaylai.TabIndex = 226;
             this.btnQuaylai.Text = "        ";
             this.btnQuaylai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuaylai.UseVisualStyleBackColor = false;
             this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblTk);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1411, 65);
-            this.panel2.TabIndex = 223;
-            // 
-            // lblTk
-            // 
-            this.lblTk.AutoSize = true;
-            this.lblTk.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTk.Location = new System.Drawing.Point(14, 12);
-            this.lblTk.Name = "lblTk";
-            this.lblTk.Size = new System.Drawing.Size(231, 35);
-            this.lblTk.TabIndex = 14;
-            this.lblTk.Text = "Xuất báo giá hàng hóa\r\n";
-            // 
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.DataTable3BindingSource;
+            reportDataSource1.Value = this.DataTable1BindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp.Report.ReportHangTon.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "WindowsFormsApp.Report.ReportPhieuNhap.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(245, 74);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(932, 1076);
-            this.reportViewer1.TabIndex = 222;
+            this.reportViewer1.TabIndex = 224;
+            this.reportViewer1.Load += new System.EventHandler(this.reporPhieuNhap_Load);
             // 
-            // UC_ReportHangTon
+            // UC_ReportPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.Controls.Add(this.panel1);
-            this.Name = "UC_ReportHangTon";
+            this.Name = "UC_ReportPhieuNhap";
             this.Size = new System.Drawing.Size(1411, 1150);
-            ((System.ComponentModel.ISupportInitialize)(this.DataTable3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTable1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -137,12 +138,13 @@ namespace WindowsFormsApp
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource DataTable3BindingSource;
-        private DataSet1 DataSet1;
+
         private System.Windows.Forms.Panel panel1;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private FontAwesome.Sharp.IconButton btnQuaylai;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblTk;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource DataTable1BindingSource;
+        private DataSet1 DataSet1;
     }
 }

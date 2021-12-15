@@ -384,6 +384,12 @@
     <Compile Include="UC_ReportHangTon.Designer.cs">
       <DependentUpon>UC_ReportHangTon.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_ReportPhieuNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ReportPhieuNhap.Designer.cs">
+      <DependentUpon>UC_ReportPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ThemLoaiHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -508,6 +514,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ReportHangTon.resx">
       <DependentUpon>UC_ReportHangTon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ReportPhieuNhap.resx">
+      <DependentUpon>UC_ReportPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ThemLoaiHang.resx">
       <DependentUpon>UC_ThemLoaiHang.cs</DependentUpon>

@@ -51,5 +51,25 @@ namespace WindowsFormsApp
             else
                 Hienthi();
         }
+
+
+
+
+        private void addUC(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            pnlHangHoa.Controls.Clear();
+            pnlHangHoa.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+
+        private void btnXuatBaoGia_Click(object sender, EventArgs e)
+        {
+ 
+            UC_ReportHangTon f = new UC_ReportHangTon();
+            addUC(f);
+            
+        }
     }
 }

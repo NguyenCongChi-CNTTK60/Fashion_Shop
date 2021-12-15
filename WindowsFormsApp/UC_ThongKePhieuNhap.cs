@@ -35,11 +35,15 @@ namespace WindowsFormsApp
             this.Hide();
         }
 
+
+
+        private string temp;
         private void dgvPN_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index;
             index = e.RowIndex;
-            txtmapn1.Text = dgvPN.Rows[index].Cells[0].Value.ToString();
+            
+            temp = dgvPN.Rows[index].Cells[0].Value.ToString();
         }
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
@@ -47,11 +51,19 @@ namespace WindowsFormsApp
 
         }
 
-        
-        private void btnXemchitietpn_Click(object sender, EventArgs e)
+
+        private void addUC(UserControl userControl)
         {
-            ReportPhieuNhap formXemchitietphieunhap = new ReportPhieuNhap(txtmapn1.Text);
-            formXemchitietphieunhap.Show();
+            userControl.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+        private void btnXemchitiet_Click(object sender, EventArgs e)
+        {
+            UC_ReportPhieuNhap f = new UC_ReportPhieuNhap(temp);
+            addUC(f);
         }
     }
 }

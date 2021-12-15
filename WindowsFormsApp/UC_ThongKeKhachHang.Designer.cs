@@ -78,8 +78,8 @@ namespace WindowsFormsApp
             this.txtTimkiem.FillColor = System.Drawing.SystemColors.ControlLight;
             this.txtTimkiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTimkiem.FocusedState.Parent = this.txtTimkiem;
-            this.txtTimkiem.Font = new System.Drawing.Font("Times New Roman", 17F);
-            this.txtTimkiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.txtTimkiem.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.ForeColor = System.Drawing.Color.Black;
             this.txtTimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimkiem.HoverState.Parent = this.txtTimkiem;
             this.txtTimkiem.Location = new System.Drawing.Point(138, 90);

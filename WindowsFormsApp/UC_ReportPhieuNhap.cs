@@ -12,40 +12,32 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp
 {
-    public partial class UC_ReportHangTon : UserControl
+    public partial class UC_ReportPhieuNhap : UserControl
     {
-
-        
-        public UC_ReportHangTon()
+        private string mapn;
+        public UC_ReportPhieuNhap(string mapn)
         {
             InitializeComponent();
-            Load();
-            
-            
+            this.mapn = mapn;
         }
 
-        private void Load()
+        private void reporPhieuNhap_Load(object sender, EventArgs e)
         {
             Chuoiketnoi chuoiketnoi = new Chuoiketnoi();
 
             SqlConnection con = chuoiketnoi.sqlConnection();
             con.Open();
-            string query = "select * from MatHang";
-            string query1 = "select MatHang.MaMH,TenMH,DonVi,GiaBan,MatHang.SoLuong, sum(ChitietPN.Soluong) as [SLNhap], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [SLBan] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,MatHang.DonVi,DonVi,MatHang.GiaBan";
-            SqlDataAdapter dta = new SqlDataAdapter(query1, con);
+            string query = "USP_XemChiTietPN '" + mapn + "'";
+            SqlDataAdapter dta = new SqlDataAdapter(query, con);
             DataSet1 dataSet1 = new DataSet1();
-            dta.Fill(dataSet1, "DataTable3");
-            ReportDataSource dataSource = new ReportDataSource("DataSet1", dataSet1.Tables[2]);
+            dta.Fill(dataSet1, "DataTable1");
+            ReportDataSource dataSource = new ReportDataSource("DataSet1", dataSet1.Tables[0]);
             con.Close();
-           
             this.reportViewer1.LocalReport.DataSources.Clear();
             this.reportViewer1.LocalReport.DataSources.Add(dataSource);
             this.reportViewer1.RefreshReport();
             this.reportViewer1.RefreshReport();
-            this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
-            this.reportViewer1.SetDisplayMode(DisplayMode.Normal);
         }
-
 
 
         private void addUC(UserControl userControl)
@@ -58,7 +50,7 @@ namespace WindowsFormsApp
 
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            UC_ThongKeHangHoa f = new UC_ThongKeHangHoa();
+            UC_ThongKePhieuNhap f = new UC_ThongKePhieuNhap();
             addUC(f);
         }
     }

@@ -245,8 +245,8 @@ namespace WindowsFormsApp
 
         private void lblTenNV_Click(object sender, EventArgs e)
         {
-            UC_ReportHangTon f = new UC_ReportHangTon();
-            addUC(f);
+            //UC_ReportHangTon f = new UC_ReportHangTon();
+            //addUC(f);
         }
     }
 }

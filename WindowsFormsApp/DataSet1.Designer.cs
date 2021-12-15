@@ -1127,11 +1127,11 @@ namespace WindowsFormsApp {
             
             private global::System.Data.DataColumn columnTenMH;
             
-            private global::System.Data.DataColumn columnĐVT;
+            private global::System.Data.DataColumn columnDonVi;
+            
+            private global::System.Data.DataColumn columnSoLuong;
             
             private global::System.Data.DataColumn columnSLNhap;
-            
-            private global::System.Data.DataColumn columnSLTon;
             
             private global::System.Data.DataColumn columnSLBan;
             
@@ -1188,9 +1188,17 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ĐVTColumn {
+            public global::System.Data.DataColumn DonViColumn {
                 get {
-                    return this.columnĐVT;
+                    return this.columnDonVi;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn SoLuongColumn {
+                get {
+                    return this.columnSoLuong;
                 }
             }
             
@@ -1199,14 +1207,6 @@ namespace WindowsFormsApp {
             public global::System.Data.DataColumn SLNhapColumn {
                 get {
                     return this.columnSLNhap;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn SLTonColumn {
-                get {
-                    return this.columnSLTon;
                 }
             }
             
@@ -1263,14 +1263,14 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable3Row AddDataTable3Row(string MaMH, string TenMH, string ĐVT, string SLNhap, string SLTon, string SLBan, string GiaBan) {
+            public DataTable3Row AddDataTable3Row(string MaMH, string TenMH, string DonVi, string SoLuong, string SLNhap, string SLBan, string GiaBan) {
                 DataTable3Row rowDataTable3Row = ((DataTable3Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaMH,
                         TenMH,
-                        ĐVT,
+                        DonVi,
+                        SoLuong,
                         SLNhap,
-                        SLTon,
                         SLBan,
                         GiaBan};
                 rowDataTable3Row.ItemArray = columnValuesArray;
@@ -1297,9 +1297,9 @@ namespace WindowsFormsApp {
             internal void InitVars() {
                 this.columnMaMH = base.Columns["MaMH"];
                 this.columnTenMH = base.Columns["TenMH"];
-                this.columnĐVT = base.Columns["ĐVT"];
+                this.columnDonVi = base.Columns["DonVi"];
+                this.columnSoLuong = base.Columns["SoLuong"];
                 this.columnSLNhap = base.Columns["SLNhap"];
-                this.columnSLTon = base.Columns["SLTon"];
                 this.columnSLBan = base.Columns["SLBan"];
                 this.columnGiaBan = base.Columns["GiaBan"];
             }
@@ -1311,12 +1311,12 @@ namespace WindowsFormsApp {
                 base.Columns.Add(this.columnMaMH);
                 this.columnTenMH = new global::System.Data.DataColumn("TenMH", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTenMH);
-                this.columnĐVT = new global::System.Data.DataColumn("ĐVT", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnĐVT);
+                this.columnDonVi = new global::System.Data.DataColumn("DonVi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDonVi);
+                this.columnSoLuong = new global::System.Data.DataColumn("SoLuong", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSoLuong);
                 this.columnSLNhap = new global::System.Data.DataColumn("SLNhap", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSLNhap);
-                this.columnSLTon = new global::System.Data.DataColumn("SLTon", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSLTon);
                 this.columnSLBan = new global::System.Data.DataColumn("SLBan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSLBan);
                 this.columnGiaBan = new global::System.Data.DataColumn("GiaBan", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2141,17 +2141,33 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ĐVT {
+            public string DonVi {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable3.ĐVTColumn]));
+                        return ((string)(this[this.tableDataTable3.DonViColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ĐVT\' in table \'DataTable3\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DonVi\' in table \'DataTable3\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable3.ĐVTColumn] = value;
+                    this[this.tableDataTable3.DonViColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string SoLuong {
+                get {
+                    try {
+                        return ((string)(this[this.tableDataTable3.SoLuongColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SoLuong\' in table \'DataTable3\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableDataTable3.SoLuongColumn] = value;
                 }
             }
             
@@ -2168,22 +2184,6 @@ namespace WindowsFormsApp {
                 }
                 set {
                     this[this.tableDataTable3.SLNhapColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string SLTon {
-                get {
-                    try {
-                        return ((string)(this[this.tableDataTable3.SLTonColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'SLTon\' in table \'DataTable3\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDataTable3.SLTonColumn] = value;
                 }
             }
             
@@ -2245,14 +2245,26 @@ namespace WindowsFormsApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsĐVTNull() {
-                return this.IsNull(this.tableDataTable3.ĐVTColumn);
+            public bool IsDonViNull() {
+                return this.IsNull(this.tableDataTable3.DonViColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetĐVTNull() {
-                this[this.tableDataTable3.ĐVTColumn] = global::System.Convert.DBNull;
+            public void SetDonViNull() {
+                this[this.tableDataTable3.DonViColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsSoLuongNull() {
+                return this.IsNull(this.tableDataTable3.SoLuongColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetSoLuongNull() {
+                this[this.tableDataTable3.SoLuongColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2265,18 +2277,6 @@ namespace WindowsFormsApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSLNhapNull() {
                 this[this.tableDataTable3.SLNhapColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsSLTonNull() {
-                return this.IsNull(this.tableDataTable3.SLTonColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetSLTonNull() {
-                this[this.tableDataTable3.SLTonColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

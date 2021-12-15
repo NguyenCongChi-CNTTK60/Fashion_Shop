@@ -475,6 +475,7 @@
             this.guna2TextBox4.PasswordChar = '\0';
             this.guna2TextBox4.PlaceholderText = "";
             this.guna2TextBox4.SelectedText = "";
+            this.guna2TextBox4.SelectionStart = 29;
             this.guna2TextBox4.ShadowDecoration.Parent = this.guna2TextBox4;
             this.guna2TextBox4.Size = new System.Drawing.Size(304, 43);
             this.guna2TextBox4.TabIndex = 242;
@@ -573,6 +574,7 @@
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.SelectionStart = 25;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Size = new System.Drawing.Size(304, 43);
             this.guna2TextBox1.TabIndex = 240;
@@ -723,11 +725,11 @@
             this.txtTimkiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtTimkiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTimkiem.FocusedState.Parent = this.txtTimkiem;
-            this.txtTimkiem.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimkiem.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.txtTimkiem.ForeColor = System.Drawing.Color.Black;
             this.txtTimkiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTimkiem.HoverState.Parent = this.txtTimkiem;
-            this.txtTimkiem.Location = new System.Drawing.Point(141, 8);
+            this.txtTimkiem.Location = new System.Drawing.Point(136, 24);
             this.txtTimkiem.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtTimkiem.Name = "txtTimkiem";
             this.txtTimkiem.PasswordChar = '\0';
@@ -747,7 +749,7 @@
             this.pcbSearch.IconColor = System.Drawing.SystemColors.ControlText;
             this.pcbSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.pcbSearch.IconSize = 34;
-            this.pcbSearch.Location = new System.Drawing.Point(413, 25);
+            this.pcbSearch.Location = new System.Drawing.Point(421, 38);
             this.pcbSearch.Name = "pcbSearch";
             this.pcbSearch.Size = new System.Drawing.Size(36, 34);
             this.pcbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -757,10 +759,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Banner", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 25);
+            this.label1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 38);
+            this.label1.Size = new System.Drawing.Size(106, 35);
             this.label1.TabIndex = 50;
             this.label1.Text = "Nhập Sđt:";
             // 
@@ -787,11 +789,12 @@
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Location = new System.Drawing.Point(688, 82);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.SelectionStart = 30;
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Size = new System.Drawing.Size(304, 43);
             this.guna2TextBox2.TabIndex = 241;
@@ -834,7 +837,7 @@
             this.txtTienkhachdua.FillColor = System.Drawing.SystemColors.Control;
             this.txtTienkhachdua.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienkhachdua.FocusedState.Parent = this.txtTienkhachdua;
-            this.txtTienkhachdua.Font = new System.Drawing.Font("Cambria", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienkhachdua.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienkhachdua.ForeColor = System.Drawing.Color.Black;
             this.txtTienkhachdua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienkhachdua.HoverState.Parent = this.txtTienkhachdua;
@@ -1010,6 +1013,7 @@
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.SelectionStart = 29;
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
             this.guna2TextBox3.Size = new System.Drawing.Size(304, 43);
             this.guna2TextBox3.TabIndex = 241;
