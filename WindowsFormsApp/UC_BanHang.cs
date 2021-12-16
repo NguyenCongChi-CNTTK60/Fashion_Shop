@@ -234,7 +234,7 @@ namespace WindowsFormsApp
         }
 
 
-
+        /*
 
         private void btnThanhToan_Click_1(object sender, EventArgs e)
         {
@@ -289,7 +289,7 @@ namespace WindowsFormsApp
                 }
 
             }
-        }
+        } */
 
 
         private void cmbTenhh_SelectedIndexChanged(object sender, EventArgs e)
@@ -521,32 +521,94 @@ namespace WindowsFormsApp
                         DataProvider.Instance.ExecuteQuery(query);
 
                     }
-                    FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, Tienkhachduafomart, lblTienhoantra.Text, lblTiengiam.Text);
-                    formInHoaDon.Show();
-                    lvSanPhamBan.Items.Clear();
-                    lblTongtien.Text = "0 đ";
-                    lblTenbangchu.Text = "Không đồng";                                            // làm mới tất cả 
-                    lblTenkh.Text = ".";
-                    lblTenkh.Text = "UNKNOW NAME";
-                    tongTien = 0;
-                    lblMahd.Text = Matudong();
-                    resetInfoProduct();
-                    txtTimkiem.Text = "";
-                    txtTienkhachdua.Text = "";
-                    lblTiengiam.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
+
+
+                    DataTable dt = KhachHangBUS.Intance.TimKiemDiemTichLuy(lblMaKH.Text);
+                    if (dt.Rows.Count > 0)
+                    {
+                        string Diem = dt.Rows[0]["DiemTichLuy"].ToString();
+                        int diem = Int32.Parse(Diem);
+                        if (diem >= 50 && diem < 100)
+                        {
+                            if (MessageBox.Show("Khách hàng có Voucher giảm giá 5% (mua hàng trên 5 lần), Khách hàng có muốn sử dụng", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                tiengiam = tiengiam + (tongTien * 5 / 100);
+                                tongTien = tongTien - (tongTien * 5 / 100);
+                                lblTiengiam.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tiengiam) + " VNĐ";
+                                lblTongtien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
+                                string query = "update KhachHang set DiemTichLuy = DiemTichLuy - " + 50 + " where MaKH = '" + lblMaKH.Text + "'";  // cập nhật lại số lượng 
+                                DataProvider.Instance.ExecuteQuery(query);
+                                Tinhtienhoantra();
+                                LamMoi();
+                            }
+                            else
+                            {
+                                string query = "update KhachHang set DiemTichLuy = DiemTichLuy + " + 10 + " where MaKH = '" + lblMaKH.Text + "'";  // cập nhật lại số lượng 
+                                DataProvider.Instance.ExecuteQuery(query);
+                                LamMoi();
+
+                            }
+                        }
+                        else if (diem >= 100)
+                        {
+                            if (MessageBox.Show("Khách hàng có Voucher giảm giá 15% (mua hàng trên 10 lần), Khách hàng có muốn sử dụng", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                            {
+                                tiengiam = tiengiam + (tongTien * 15 / 100);
+                                tongTien = tongTien - (tongTien * 15 / 100);
+                                lblTiengiam.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tiengiam) + " VNĐ";
+                                lblTongtien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0.00}", tongTien) + " VNĐ";
+                                string query = "update KhachHang set DiemTichLuy = DiemTichLuy - " + 100 + " where MaKH = '" + lblMaKH.Text + "'";  // cập nhật lại số lượng 
+                                DataProvider.Instance.ExecuteQuery(query);
+                                Tinhtienhoantra();
+                                LamMoi();
+                            }
+                            else
+                            {
+                                string query = "update KhachHang set DiemTichLuy = DiemTichLuy + " + 10 + " where MaKH = '" + lblMaKH.Text + "'";  // cập nhật lại số lượng 
+                                DataProvider.Instance.ExecuteQuery(query);
+                                LamMoi();
+
+                            }
+                        }
+                        else
+                        {
+
+                            string query = "update KhachHang set DiemTichLuy = DiemTichLuy + " + 10 + " where MaKH = '" + lblMaKH.Text + "'";  // cập nhật lại số lượng 
+                            DataProvider.Instance.ExecuteQuery(query);
+                            LamMoi();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
+                    }
                 }
             }
         }
+
+
 
         private void UC_BanHang_Load(object sender, EventArgs e)
         {
         }
 
 
+        private void LamMoi()
+        {
+            FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, Tienkhachduafomart, lblTienhoantra.Text, lblTiengiam.Text, lblTongtien.Text);
+            formInHoaDon.Show();
+            lvSanPhamBan.Items.Clear();
+            lblTongtien.Text = "0 đ";
+            lblTenbangchu.Text = "Không đồng";                                            // làm mới tất cả 
+            lblTenkh.Text = ".";
+            lblTenkh.Text = "UNKNOW NAME";
+            tongTien = 0;
+            lblMahd.Text = Matudong();
+            resetInfoProduct();
+            txtTimkiem.Text = "";
+            txtTienkhachdua.Text = "";
+            lblTiengiam.Text = "";
+        }
     }
 }
 

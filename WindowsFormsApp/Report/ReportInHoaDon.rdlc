@@ -106,7 +106,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Left>0.9675in</Left>
+            <Left>0.94543in</Left>
             <Height>0.31944in</Height>
             <Width>2.01166in</Width>
             <ZIndex>1</ZIndex>
@@ -185,7 +185,7 @@
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>,                                      TP.HCM</Value>
+                    <Value>,                                        TP.HCM</Value>
                     <Style>
                       <FontFamily>Sitka Banner</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -231,8 +231,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>1.11584in</Top>
-            <Left>0.89707in</Left>
+            <Top>1.10195in</Top>
+            <Left>0.875in</Left>
             <Height>0.32638in</Height>
             <Width>2.08209in</Width>
             <ZIndex>4</ZIndex>
@@ -347,7 +347,7 @@
                   <TextRun>
                     <Value>=Fields!SDT.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
+                      <FontFamily>Cambria</FontFamily>
                       <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
@@ -431,8 +431,8 @@
                   <TextRun>
                     <Value>=Fields!NgayTao.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>
@@ -473,8 +473,8 @@
                   <TextRun>
                     <Value>=Fields!MaNV.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>
@@ -531,8 +531,8 @@
                   <TextRun>
                     <Value>=Fields!MaHD.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>
@@ -587,7 +587,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Tiền khách đưa: </Value>
+                    <Value>Tiền khách đưa:  </Value>
                     <Style>
                       <FontFamily>Sitka Banner</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -598,7 +598,7 @@
                     <Value>=Parameters!Tienkhachdua.Value</Value>
                     <Style>
                       <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                       <Format>#,0.00'VND';(#,0.00'VND')</Format>
                     </Style>
@@ -630,7 +630,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Tổng tiền: </Value>
+                    <Value>Tổng tiền:  </Value>
                     <Style>
                       <FontFamily>Sitka Banner</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -638,12 +638,11 @@
                     </Style>
                   </TextRun>
                   <TextRun>
-                    <Value>=Sum(Fields!SoLuong.Value*Fields!DonGia.Value,"DataSet1")</Value>
+                    <Value>=Parameters!TongTien.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
-                      <Format>#,0.00'VND';(#,0.00'VND')</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -673,7 +672,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Tiền hoàn trả: </Value>
+                    <Value>Tiền hoàn trả:  </Value>
                     <Style>
                       <FontFamily>Sitka Banner</FontFamily>
                       <FontSize>12pt</FontSize>
@@ -683,8 +682,8 @@
                   <TextRun>
                     <Value>=Parameters!Tienhoantra.Value</Value>
                     <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>
@@ -784,6 +783,8 @@
                                 <TextRun>
                                   <Value>Tên mặt hàng</Value>
                                   <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -816,6 +817,8 @@
                                 <TextRun>
                                   <Value>SL</Value>
                                   <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -848,6 +851,8 @@
                                 <TextRun>
                                   <Value>Đơn giá</Value>
                                   <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -880,6 +885,8 @@
                                 <TextRun>
                                   <Value>Thành tiền</Value>
                                   <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <FontSize>11pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
                                 </TextRun>
@@ -916,7 +923,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!TenMH.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -946,7 +955,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!SoLuong.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -976,7 +987,9 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>=Fields!DonGia.Value</Value>
-                                  <Style />
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                  </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style />
@@ -1007,6 +1020,7 @@
                                 <TextRun>
                                   <Value>=Fields!SoLuong.Value*Fields!DonGia.Value</Value>
                                   <Style>
+                                    <FontFamily>Cambria</FontFamily>
                                     <Format>#,0.00;(#,0.00)</Format>
                                   </Style>
                                 </TextRun>
@@ -1080,7 +1094,7 @@
                     <Value>=Parameters!Tiendagiam.Value</Value>
                     <Style>
                       <FontFamily>Cambria</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Normal</FontWeight>
                     </Style>
                   </TextRun>
@@ -1131,6 +1145,10 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="TongTien">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -1151,6 +1169,11 @@
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>Tiendagiam</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>TongTien</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

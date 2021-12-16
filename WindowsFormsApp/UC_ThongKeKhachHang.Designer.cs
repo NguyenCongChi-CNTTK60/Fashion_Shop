@@ -147,7 +147,7 @@ namespace WindowsFormsApp
             this.dgvKh.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvKh.EnableHeadersVisualStyles = false;
             this.dgvKh.GridColor = System.Drawing.Color.Black;
-            this.dgvKh.Location = new System.Drawing.Point(26, 182);
+            this.dgvKh.Location = new System.Drawing.Point(26, 159);
             this.dgvKh.Name = "dgvKh";
             this.dgvKh.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -162,7 +162,7 @@ namespace WindowsFormsApp
             this.dgvKh.RowHeadersWidth = 62;
             this.dgvKh.RowTemplate.Height = 45;
             this.dgvKh.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKh.Size = new System.Drawing.Size(1359, 925);
+            this.dgvKh.Size = new System.Drawing.Size(1364, 972);
             this.dgvKh.TabIndex = 197;
             this.dgvKh.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvKh.ThemeStyle.AlternatingRowsStyle.Font = null;

@@ -70,5 +70,11 @@ namespace BUS
         {
             return KhachHangDAO.Intance.HienThi();
         }
+
+
+        public DataTable TimKiemDiemTichLuy(string tk)
+        {
+            return KhachHangDAO.Intance.TimKiemDiemTichLuy(tk);
+        }
         }
 }

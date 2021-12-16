@@ -775,7 +775,7 @@
             // 
             this.guna2TextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "  2. Sản phẩm trong giỏ hàng\r\n";
+            this.guna2TextBox2.DefaultText = "          2. Sản phẩm trong giỏ hàng\r\n";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -784,17 +784,17 @@
             this.guna2TextBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox2.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Location = new System.Drawing.Point(688, 82);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(5);
             this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.SelectionStart = 30;
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Size = new System.Drawing.Size(304, 43);
             this.guna2TextBox2.TabIndex = 241;
@@ -842,7 +842,7 @@
             this.txtTienkhachdua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienkhachdua.HoverState.Parent = this.txtTienkhachdua;
             this.txtTienkhachdua.Location = new System.Drawing.Point(422, 116);
-            this.txtTienkhachdua.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTienkhachdua.Margin = new System.Windows.Forms.Padding(4);
             this.txtTienkhachdua.Name = "txtTienkhachdua";
             this.txtTienkhachdua.PasswordChar = '\0';
             this.txtTienkhachdua.PlaceholderText = "";
@@ -1131,7 +1131,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UC_BanHang";
             this.Size = new System.Drawing.Size(1411, 1150);
-            this.Load += new System.EventHandler(this.UC_BanHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hangHoaBindingSource)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -88,5 +88,13 @@ namespace DAO
             string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng], DiaChi as [Địa chỉ], SDT as [Số điện thoại], Email as [Email] from KhachHang";
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+
+        public DataTable TimKiemDiemTichLuy(string tk)
+        {
+            string query = "select DiemTichLuy from KhachHang where MaKH = '" + tk + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
     }
 }
