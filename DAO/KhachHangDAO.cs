@@ -35,9 +35,9 @@ namespace DAO
             return result > 0;
         }
 
-        public bool suaKH(string maKH, string tenKH, string DiaChi, int SDT, string email)
+        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
         {
-            string query = String.Format("update KhachHang set TenKH = N'{0}', DiaChi = N'{1}', SDT = {2}, Email = '{3}' where MaKH = '{4}'", tenKH, DiaChi, SDT, email, maKH);
+            string query = String.Format("update KhachHang set TenKH = N'"+ tenKH +"', DiaChi = N'"+DiaChi+"', SDT = '"+SDT+"', Email = N'"+email+"' where MaKH = '"+maKH+"'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -96,5 +96,14 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+
+        public DataTable TimKiem(string tk)
+        {
+            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng], DiaChi as [Địa chỉ], SDT as [Số điện thoại], Email as [Email] from KhachHang  where TenKH like N'%" + tk + "%' or KhachHang.MaKH like N'%" + tk + "%'  or SDT like N'%" + tk + "%'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
     }
 }

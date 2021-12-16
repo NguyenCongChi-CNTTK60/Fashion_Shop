@@ -32,7 +32,7 @@ namespace BUS
             return KhachHangDAO.Intance.themKH(maKH, tenKH, DiaChi, SDT, email);
         }
 
-        public bool suaKH(string maKH, string tenKH, string DiaChi, int SDT, string email)
+        public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
         {
             return KhachHangDAO.Intance.suaKH(maKH, tenKH, DiaChi, SDT, email);
         }
@@ -75,6 +75,12 @@ namespace BUS
         public DataTable TimKiemDiemTichLuy(string tk)
         {
             return KhachHangDAO.Intance.TimKiemDiemTichLuy(tk);
+        }
+
+
+        public DataTable TimKiem(string tk)
+        {
+            return KhachHangDAO.Intance.TimKiem(tk);
         }
         }
 }

@@ -470,7 +470,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvNCC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvNCC.ColumnHeadersHeight = 45;
-            this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -481,7 +480,7 @@
             this.dgvNCC.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvNCC.EnableHeadersVisualStyles = false;
             this.dgvNCC.GridColor = System.Drawing.Color.Gray;
-            this.dgvNCC.Location = new System.Drawing.Point(21, 506);
+            this.dgvNCC.Location = new System.Drawing.Point(21, 504);
             this.dgvNCC.Name = "dgvNCC";
             this.dgvNCC.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -507,9 +506,9 @@
             this.dgvNCC.ThemeStyle.GridColor = System.Drawing.Color.Gray;
             this.dgvNCC.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
             this.dgvNCC.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvNCC.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvNCC.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.dgvNCC.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvNCC.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvNCC.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvNCC.ThemeStyle.HeaderStyle.Height = 45;
             this.dgvNCC.ThemeStyle.ReadOnly = true;
             this.dgvNCC.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;

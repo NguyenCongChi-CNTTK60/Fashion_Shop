@@ -18,6 +18,8 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             HienThi();
+            txtMaKH.Text = Matudong();
+            txtMaKH.ForeColor = Color.Black;
         }
 
        
@@ -122,11 +124,47 @@ namespace WindowsFormsApp
 
 
 
+        //
+        // Tạo mã hóa đơn tự động
+        // 
+        private string Matudong()
+        {
+            string query = "select MaNCC from NhaCungCap";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string ma = "";
+            if (dt.Rows.Count <= 0)
+            {
+                ma = "NCC001";
+            }
+            else
+            {
+                int k;
+                ma = "NCC";
+                //k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
+                k = dt.Rows.Count;
+                k++;
+                if (k < 10)
+                {
+                    ma = ma + "00";
+                }
+                else if (k >= 10 && k < 100)
+                {
+                    ma = ma + "0";
+                }
+                else if (k >= 100 && k < 1000)
+                {
+                    ma = ma + "";
+                }
+                ma = ma + k.ToString();
+
+            }
+            return ma;
+        }
 
 
 
 
 
- 
+
     }
 }

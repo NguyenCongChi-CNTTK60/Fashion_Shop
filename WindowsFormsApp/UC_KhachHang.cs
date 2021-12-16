@@ -18,11 +18,13 @@ namespace WindowsFormsApp
             InitializeComponent();
             //LoadListKH();
             HienThi();
+            txtMaKH.Text = Matudong();
+            txtMaKH.ForeColor = Color.Black;
         }
 
         private void txtKH_Enter(object sender, EventArgs e)
         {
-            if(txtKH.Text == "Nhập tên khách hàng")
+            if (txtKH.Text == "Nhập tên khách hàng")
             {
                 txtKH.Text = "";
                 txtKH.ForeColor = Color.Black;
@@ -31,7 +33,7 @@ namespace WindowsFormsApp
 
         private void txtKH_Leave(object sender, EventArgs e)
         {
-            if(txtKH.Text == "")
+            if (txtKH.Text == "")
             {
                 txtKH.Text = "Nhập tên khách hàng";
                 txtKH.ForeColor = Color.Gray;
@@ -94,7 +96,7 @@ namespace WindowsFormsApp
 
         private void txtTimkiem_Leave(object sender, EventArgs e)
         {
-            if(txtTimkiem.Text == "")
+            if (txtTimkiem.Text == "")
             {
                 txtTimkiem.Text = "Tìm kiếm theo mã, tên, sđt khách hàng";
                 txtTimkiem.ForeColor = Color.Gray;
@@ -138,138 +140,168 @@ namespace WindowsFormsApp
             txtEmail.ForeColor = Color.Black;
             txtSĐT.ForeColor = Color.Black;
         }
-    
 
 
 
 
-
-
-
-
-
-
-        /* public void LoadListKH()
+        //
+        // Tạo mã hóa đơn tự động
+        // 
+        private string Matudong()
         {
-            DataTable dt = KhachHangBUS.Intance.getListKH();
-            dgvThongTinKhachHang.DataSource = dt;
-            loadBinding();
-        }
-
-        void loadBinding()
-        {
-            txtMaKH.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "MaKH", true, DataSourceUpdateMode.Never));
-            txtTenKH.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "TenKH", true, DataSourceUpdateMode.Never));
-            txtSDT.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-            txtEmail.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "Email", true, DataSourceUpdateMode.Never));
-            txtDiaChi.DataBindings.Add(new Binding("Text", dgvThongTinKhachHang.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
-        }
-
-        void ClearBinding()
-        {
-            txtMaKH.DataBindings.Clear();
-            txtTenKH.DataBindings.Clear();
-            txtSDT.DataBindings.Clear();
-            txtEmail.DataBindings.Clear();
-            txtDiaChi.DataBindings.Clear();
-        }
-
-        public bool check = false;
-
-        private void btnLamMoi_Click(object sender, EventArgs e)
-        {
-            ClearBinding();
-            LoadListKH();
-        }
-
-        private void btnThem_Click_1(object sender, EventArgs e)
-        {
-            check = !check;
-            if (check == true)
+            string query = "select MaKH from KhachHang";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            string ma = "";
+            if (dt.Rows.Count <= 0)
             {
-                txtMaKH.Text = "";
-                txtTenKH.Text = "";
-                txtSDT.Text = "";
-                txtEmail.Text = "";
-                txtDiaChi.Text = "";
-                txtMaKH.Enabled = true;
-                txtTenKH.Enabled = true;
-                txtSDT.Enabled = true;
-                txtEmail.Enabled = true;
-                txtDiaChi.Enabled = true;
-                dgvThongTinKhachHang.Enabled = false;
-                btnThem.Text = "Xác nhận";
+                ma = "KH001";
             }
             else
             {
-                btnThem.Text = "Thêm Mới";
-                txtMaKH.Enabled = false;
-                txtTenKH.Enabled = false;
-                txtSDT.Enabled = false;
-                txtEmail.Enabled = false;
-                txtDiaChi.Enabled = false;
-                dgvThongTinKhachHang.Enabled = true;
-                if (txtMaKH.Text == "")
+                int k;
+                ma = "KH";
+                //k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
+                k = dt.Rows.Count;
+                k++;
+                if (k < 10)
                 {
-                    MessageBox.Show("Nhập thiếu thông tin! Vui lòng thử lại");
+                    ma = ma + "00";
+                }
+                else if (k >= 10 && k < 100)
+                {
+                    ma = ma + "0";
+                }
+                else if (k >= 100 && k < 1000)
+                {
+                    ma = ma + "";
+                }
+                ma = ma + k.ToString();
+
+            }
+            return ma;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+
+            if (Check_data() == true)
+            {
+                string query = "select MaKH as [MaKhachHang] from KhachHang where MaKH = '" + txtMaKH.Text + "'";
+                DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                if (dt.Rows.Count > 0)
+                {
+                    MessageBox.Show("Khách hàng đã tồn tại bạn không thể thêm", "Thông báo");
+                    LamMoi();
+                    txtMaKH.Text = Matudong();
                 }
                 else
+                if (KhachHangBUS.Intance.themKH(txtMaKH.Text, txtKH.Text, txtDiachi.Text, txtSĐT.Text, txtEmail.Text))
                 {
-                    if (KhachHangBUS.Intance.themKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, txtSDT.Text, txtEmail.Text))
-                    {
-                        MessageBox.Show("Thêm khách hàng thành công!", "Thông báo");
-                        ClearBinding();
-                        LoadListKH();
-                    }
-                    else MessageBox.Show("Thất bại!", "Thông báo");
+                    MessageBox.Show("Thêm khách hàng thành công", "Thông báo");
+                    LamMoi();
+                    HienThi();
+                    txtMaKH.Text = Matudong();
                 }
             }
+        }
+
+
+        private void LamMoi()
+        {
+            txtKH.Text = "Nhập tên khách hàng";
+            txtKH.ForeColor = Color.Gray;
+            txtSĐT.Text = "Nhập số điện thoại";
+            txtSĐT.ForeColor = Color.Gray;
+            txtDiachi.Text = "Nhập địa chỉ";
+            txtDiachi.ForeColor = Color.Gray;
+            txtEmail.Text = "Nhập địa chỉ email";
+            txtEmail.ForeColor = Color.Gray;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            check = !check;
-            if (check == true)
+
+            if (Check_data() == true)
             {
-                txtTenKH.Enabled = true;
-                txtSDT.Enabled = true;
-                txtEmail.Enabled = true;
-                txtDiaChi.Enabled = true;
-                btnThem.Enabled = false;
-            }
-            else
-            {
-                txtMaKH.Enabled = false;
-                txtTenKH.Enabled = false;
-                txtSDT.Enabled = false;
-                txtEmail.Enabled = false;
-                txtDiaChi.Enabled = false;
-                if (KhachHangBUS.Intance.suaKH(txtMaKH.Text, txtTenKH.Text, txtDiaChi.Text, Convert.ToInt32(txtSDT.Text), txtEmail.Text))
+                if (KhachHangBUS.Intance.suaKH(txtMaKH.Text, txtKH.Text, txtDiachi.Text, txtSĐT.Text, txtEmail.Text))
                 {
-                    MessageBox.Show("Sửa thành công!", "Thông báo");
-                    btnThem.Enabled = true;
-                    ClearBinding();
-                    LoadListKH();
+                    MessageBox.Show("Sửa khách hàng thành công", "Thông báo");
+                    LamMoi();
+                    HienThi();
+                    txtMaKH.Text = Matudong();
                 }
             }
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void btnXoa_Click_1(object sender, EventArgs e)
         {
-            if (KhachHangBUS.Intance.xoaKH(txtMaKH.Text))
+
+            if (Check_data() == true)
             {
-                MessageBox.Show("Xóa thành công!", "Thông báo");
-                ClearBinding();
-                LoadListKH();
+                if (MessageBox.Show("Cảnh báo bạn có chắc chắn muốn xóa khách hàng này", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    string query = "select MaKH as [MaKhachHang] from HoaDon where MaKH = '" + txtMaKH.Text + "'";
+                    DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                    if (dt.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Không thể xóa khách hàng này. Vì khách hàng đã mua hàng ở cửa hàng", "Thông báo");
+                        LamMoi();
+                        txtMaKH.Text = Matudong();
+                    }
+                    else
+
+
+                      if (KhachHangBUS.Intance.xoaKH(txtMaKH.Text))
+                    {
+
+                        MessageBox.Show("Xóa khách hàng thành công", "Thông báo");
+                        LamMoi();
+                        HienThi();
+                        txtMaKH.Text = Matudong();
+                    }
+                }
+                else
+                    LamMoi();
+
             }
         }
+    
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+
+
+        private bool Check_data()
         {
-            dgvThongTinKhachHang.DataSource = KhachHangBUS.Intance.TimKiemKH(txtTimKiem.Text);
-            ClearBinding();
-            loadBinding();
+            if (txtKH.Text == "Nhập tên khách hàng")
+            {
+                MessageBox.Show("Tên khách hàng là bắt buộc", "Thông báo");
+                return false;
+            }else
+            if (txtSĐT.Text == "Nhập số điện thoại") {
+
+
+                MessageBox.Show("Số điện thoại khách hàng là bắt buộc", "Thông báo");
+                return false;
+
+            }
+            return true;
         }
-    } */
+
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                DataTable dt = KhachHangBUS.Intance.TimKiem(txtTimkiem.Text);
+                dgvKH.DataSource = dt;
+            }
+            else
+                HienThi();
+
+
+
+            if (txtTimkiem.Text == "Tìm kiếm theo mã, tên, sđt khách hàng")
+            {
+                HienThi();
+            }
+        }
     }
 }

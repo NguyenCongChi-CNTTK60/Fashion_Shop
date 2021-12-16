@@ -170,153 +170,102 @@ namespace WindowsFormsApp
             addUC(f);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-        /*
-        void loadBinding()
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            txtMaNV.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "MaNV", true, DataSourceUpdateMode.Never));
-            txtHoTen.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "TenHienThi", true, DataSourceUpdateMode.Never));
-            txtSDT.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "SDT", true, DataSourceUpdateMode.Never));
-            txtDiaChi.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "DiaChi", true, DataSourceUpdateMode.Never));
-            cmbChucVu.DataBindings.Add(new Binding("Text", dgvThongTinNhanVien.DataSource, "Quyen", true, DataSourceUpdateMode.Never));
-        }
-
-        void LoadData()
-        {
-            ClearBinding();
-            dgvThongTinNhanVien.DataSource = NhanVienBUS.Intance.getListNV();
-            loadBinding();
-        }
-
-        bool KiemTraNhap()
-        {
-            if (txtMaNV.Text == "")
+            if (Check_data() == true)
             {
-                MessageBox.Show("Tên đăng nhập không được bỏ trống", "Thông báo");
-                txtMaNV.Focus();
-                return false;
-            }
-            else if (txtSDT.Text == "")
-            {
-                MessageBox.Show("Mật khẩu không được bỏ trống", "Thông báo");
-                txtSDT.Focus();
-                return false;
-            }
-            else if (txtHoTen.Text == "")
-            {
-                MessageBox.Show("Tên người dùng không được bỏ trống", "Thông báo");
-                txtHoTen.Focus();
-                return false;
-            }
-            return true;
-        }
-
-        void ClearBinding()
-        {
-            txtMaNV.DataBindings.Clear();
-            txtHoTen.DataBindings.Clear();
-            txtSDT.DataBindings.Clear();
-            txtDiaChi.DataBindings.Clear();
-            cmbChucVu.DataBindings.Clear();
-        }
-
-        public void lamMoi()
-        {
-            txtMaNV.Text = "";
-            txtHoTen.Text = "";
-            txtSDT.Text = "";
-            txtDiaChi.Text = "";
-        }
-        public bool check = true;
-
-
-        private void guna2dgvThongTinNhanVien_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvThongTinNhanVien.SelectedCells.Count > 0)
-            {
-                cmbChucVu.SelectedItem = dgvThongTinNhanVien.SelectedCells[3].Value;
-                ClearBinding();
-                loadBinding();
-            }
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            dgvThongTinNhanVien.DataSource = NhanVienBUS.Intance.TimKiemNV(txtTimKiem.Text);
-        }
-
-
-        private void btnCapNhap_Click(object sender, EventArgs e)
-        {
-            check = !check;
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-            LoadData();
-        }
-
-      
-
-
-     
-
-        private void dgvThongTinNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnLamMoi_Click_1(object sender, EventArgs e)
-        {
-            txtMaNV.Text = "";
-            txtSDT.Text = "";
-            txtHoTen.Text = "";
-        }
-
-        private void btnSua_Click_1(object sender, EventArgs e)
-        {
-            if (dgvThongTinNhanVien.SelectedCells.Count > 0)
-            {
-                if (NhanVienBUS.Intance.suaNV(txtMaNV.Text, txtHoTen.Text, txtDiaChi.Text, txtSDT.Text))
+                if (NhanVienBUS.Intance.suaNV(txtMaNV.Text, txtKH.Text, txtDiachi.Text, cmbGioiTinh.Text, txtSĐT.Text, cmbChucVu.Text))
                 {
-                    MessageBox.Show("Sửa thành công!", "Thông báo");
-                    LoadData();
+                    MessageBox.Show("Sửa nhân viên thành công", "Thông báo");
+                    LamMoi();
+                    HienThi();
                 }
             }
         }
 
-        private void btnXoa_Click_1(object sender, EventArgs e)
+
+
+
+        private void LamMoi()
+        {
+            txtDiachi.Text = "Nhập địa chỉ";
+            txtDiachi.ForeColor = Color.Gray;
+            txtKH.Text = "Nhập tên nv";
+            txtKH.ForeColor = Color.Gray;
+            txtSĐT.Text = "Nhập số điện thoại";
+            txtSĐT.ForeColor = Color.Gray;
+            cmbGioiTinh.SelectedIndex = 0;
+            cmbChucVu.SelectedIndex = 0;
+            txtMaNV.Text = "Nhập địa chỉ";
+            txtMaNV.ForeColor = Color.Gray;
+        }
+
+
+        private bool Check_data()
+        {
+            if (txtKH.Text == "Nhập tên nv")
+            {
+                MessageBox.Show("Bạn cần nhập tên nhân viên", "Thông báo");
+                return false;
+            }else if(txtMaNV.Text == "Nhập mã nhân viên")
+            {
+                MessageBox.Show("Bạn cần nhập mã nhân viên", "Thông báo");
+                return false;
+            }
+
+            return true;
+        }
+
+
+
+        private void btnXoa_Click(object sender, EventArgs e)
         {
 
-            if (NhanVienBUS.Intance.xoaNV(txtMaNV.Text))
+            if (Check_data() == true)
             {
-                MessageBox.Show("Xóa thành công!", "Thông báo");
-                ClearBinding();
-                LoadData();
+                if (MessageBox.Show("Cảnh báo bạn có chắc chắn muốn xóa nhân viên này", "Thông báo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    string query = "select MaNV as [MaNhanVien] from HoaDon where MaNV = '" + txtMaNV.Text + "'";
+                    DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+                    if (dt.Rows.Count > 0)
+                    {
+                        MessageBox.Show("Không thể xóa nhân viên này. Vì nhân viên đã tham gia vào cửa hàng", "Thông báo");
+                        LamMoi();
+                        //txtMaKH.Text = Matudong();
+                    }
+                    else
+
+
+                      if (NhanVienBUS.Intance.xoaNV(txtMaNV.Text))
+                    {
+
+                        MessageBox.Show("Xóa nhân viên thành công", "Thông báo");
+                        LamMoi();
+                        HienThi();
+                        //txtMaKH.Text = Matudong();
+                    }
+                }
+                else
+                    LamMoi();
             }
         }
 
+        private void txtTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                DataTable dt = NhanVienBUS.Intance.TimKiemNV(txtTimkiem.Text);
+                dgvNV.DataSource = dt;
+            }
+            else
+                HienThi();
 
-        private void themUC(Control uc)
-        {
-            uc.Dock = DockStyle.Fill;
-            pnlNhanVien.Controls.Clear();
-            pnlNhanVien.Controls.Add(uc);
-            uc.BringToFront();
+
+
+            if (txtTimkiem.Text == "Tìm kiếm theo mã, tên nhân viên")
+            {
+                HienThi();
+            }
         }
-        private void btnGiaoCa_Click(object sender, EventArgs e)
-        {
-            UC_CaLamViecNhanVien f = new UC_CaLamViecNhanVien();
-            themUC(f);
-        }
-    } */
     }
 }

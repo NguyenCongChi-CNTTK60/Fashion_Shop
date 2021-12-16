@@ -57,7 +57,7 @@ namespace WindowsFormsApp
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { bd, kt });
             chart1.DataSource = data;
             chart1.Series["Doanh Thu"].XValueMember =  "NGAY";
-            chart1.Series["Doanh Thu"].YValueMembers = "TONGTIEN";
+            chart1.Series["Doanh Thu"].YValueMembers = "TongTien";
             chart1.Titles.Add("THỐNG KÊ DOANH THU");
             chart1.Series["Doanh Thu"].Color = System.Drawing.Color.FromArgb(59, 82, 132);
             //chart1.ChartAreas["ChartArea1"].AxisX.MajorGrid.Enabled = false;

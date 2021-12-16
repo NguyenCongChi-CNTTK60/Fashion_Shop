@@ -43,6 +43,8 @@ namespace WindowsFormsApp
             this.dpkNgaykt = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dpkNgaybd = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dgvHd = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.cmbLuaChon = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHd)).BeginInit();
             this.SuspendLayout();
@@ -50,21 +52,21 @@ namespace WindowsFormsApp
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(23, 1095);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(201, 35);
+            this.label7.Size = new System.Drawing.Size(186, 32);
             this.label7.TabIndex = 24;
             this.label7.Text = "Tổng tiền hóa đơn:";
             // 
             // lblTongTien
             // 
             this.lblTongTien.AutoSize = true;
-            this.lblTongTien.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTongTien.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.Maroon;
-            this.lblTongTien.Location = new System.Drawing.Point(241, 1100);
+            this.lblTongTien.Location = new System.Drawing.Point(215, 1099);
             this.lblTongTien.Name = "lblTongTien";
-            this.lblTongTien.Size = new System.Drawing.Size(201, 28);
+            this.lblTongTien.Size = new System.Drawing.Size(187, 26);
             this.lblTongTien.TabIndex = 186;
             this.lblTongTien.Text = "Tổng tiền hóa đơn:";
             // 
@@ -233,10 +235,50 @@ namespace WindowsFormsApp
             this.dgvHd.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHd.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // cmbLuaChon
+            // 
+            this.cmbLuaChon.BackColor = System.Drawing.Color.Transparent;
+            this.cmbLuaChon.BorderColor = System.Drawing.Color.Black;
+            this.cmbLuaChon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLuaChon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLuaChon.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbLuaChon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbLuaChon.FocusedState.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLuaChon.ForeColor = System.Drawing.Color.Black;
+            this.cmbLuaChon.HoverState.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.ItemHeight = 30;
+            this.cmbLuaChon.Items.AddRange(new object[] {
+            "--- Lựa chọn xem ---",
+            "Hôm qua",
+            "Hôm nay",
+            "Tuần này",
+            "Tháng này",
+            "Năm nay"});
+            this.cmbLuaChon.ItemsAppearance.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.Location = new System.Drawing.Point(1155, 97);
+            this.cmbLuaChon.Name = "cmbLuaChon";
+            this.cmbLuaChon.ShadowDecoration.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.Size = new System.Drawing.Size(233, 36);
+            this.cmbLuaChon.TabIndex = 238;
+            this.cmbLuaChon.SelectedIndexChanged += new System.EventHandler(this.cmbLuaChon_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(1009, 101);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(140, 32);
+            this.label6.TabIndex = 237;
+            this.label6.Text = "Lựa chọn xem:";
+            // 
             // UC_ThongKeHoaDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.cmbLuaChon);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvHd);
             this.Controls.Add(this.dpkNgaybd);
             this.Controls.Add(this.dpkNgaykt);
@@ -268,5 +310,7 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2DateTimePicker dpkNgaykt;
         private Guna.UI2.WinForms.Guna2DateTimePicker dpkNgaybd;
         private Guna.UI2.WinForms.Guna2DataGridView dgvHd;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbLuaChon;
+        private System.Windows.Forms.Label label6;
     }
 }

@@ -21,15 +21,15 @@ namespace WindowsFormsApp
             DateTime today = DateTime.Now;
             dpkNgaybd.Value = new DateTime(today.Year - 1, today.Month - 10, 1);
             dpkNgaykt.Value = dpkNgaybd.Value.AddYears(1).AddMonths(11).AddDays(-1);
-            DateTime ngaybd = dpkNgaybd.Value;
-            DateTime ngaykt = dpkNgaykt.Value;
-            DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd,ngaykt);
-            dgvHd.DataSource = dt;
+            ThucThi();
             TongtienHoadon();
+            cmbLuaChon.SelectedIndex = 0;
         }
 
-       
 
+
+
+        DateTime today = DateTime.Now;
         private void TongtienHoadon()
         {
             int Tongtien = 0;  
@@ -37,6 +37,7 @@ namespace WindowsFormsApp
             string tien = dt.Rows[0]["Tổng tiền hóa đơn"].ToString();
             Tongtien = Int32.Parse(tien);
             lblTongTien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Tongtien) + " đ";
+            //lblTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(Tongtien);
         }
 
 
@@ -46,12 +47,16 @@ namespace WindowsFormsApp
             DateTime ngaybd = dpkNgaybd.Value;
             DateTime ngaykt = dpkNgaykt.Value;
             DataTable dt = HoaDonBUS.Intance.TongTienTheoNgay(ngaybd, ngaykt);
-
+            //string tien = dt.Rows[0]["Tổng tiền hóa đơn"].ToString();
             if (dt.Rows.Count > 0)
             {
                 string tien = dt.Rows[0]["Tổng tiền hóa đơn"].ToString();
-                Tongtien = Int32.Parse(tien);
-                lblTongTien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Tongtien) + " đ";
+                if (!string.IsNullOrEmpty(tien)){
+                    Tongtien = Int32.Parse(tien);
+                    lblTongTien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", Tongtien) + " đ";
+                    //lblTienBangChu.Text = ChuyenDoiTienBUS.Instance.So_chu(Tongtien);
+                } else
+                    lblTongTien.Text = "0 đ";
             }
             else
                 lblTongTien.Text = "0";
@@ -73,11 +78,54 @@ namespace WindowsFormsApp
 
         private void btnXem_Click_1(object sender, EventArgs e)
         {
+            ThucThi();
+            TongtienHoadontheongay();
+        }
+
+        private void cmbLuaChon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbLuaChon.Text == "Hôm qua")
+            {
+                
+                dpkNgaybd.Value = new DateTime(today.Year, today.Month, today.Day -1);
+                dpkNgaykt.Value = dpkNgaybd.Value;
+                ThucThi();
+                TongtienHoadontheongay();
+             
+            }else if (cmbLuaChon.Text == "Hôm nay")
+            {
+                dpkNgaybd.Value = new DateTime(today.Year, today.Month, today.Day);
+                dpkNgaykt.Value = dpkNgaybd.Value;
+                ThucThi();
+                TongtienHoadontheongay();
+            }else if (cmbLuaChon.Text == "Tuần này")
+            {
+                dpkNgaybd.Value = new DateTime(today.Year, today.Month, today.Day - 7);
+                dpkNgaykt.Value = dpkNgaybd.Value.AddDays(7);
+                ThucThi();
+                TongtienHoadontheongay();
+            }else if (cmbLuaChon.Text == "Tháng này")
+            {
+                dpkNgaybd.Value = new DateTime(today.Year, today.Month, 1);
+                dpkNgaykt.Value = dpkNgaybd.Value.AddDays(29);
+                ThucThi();
+                TongtienHoadontheongay();
+            }else if (cmbLuaChon.Text == "Năm nay")
+            {
+                dpkNgaybd.Value = new DateTime(today.Year,1, 1);
+                dpkNgaykt.Value = dpkNgaybd.Value.AddMonths(11).AddDays(29);
+                ThucThi();
+                TongtienHoadontheongay();
+            }
+        }
+
+
+        private void ThucThi()
+        {
             DateTime ngaybd = dpkNgaybd.Value;
             DateTime ngaykt = dpkNgaykt.Value;
             DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd, ngaykt);
             dgvHd.DataSource = dt;
-            TongtienHoadontheongay();
         }
     }
 

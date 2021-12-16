@@ -37,9 +37,9 @@ namespace BUS
             return NhanVienDAO.Intance.getListNV();
         }
 
-        public bool suaNV(string maNV, string tenNV, string DiaChi, string SDT)
+        public bool suaNV(string maNV, string tenNV, string DiaChi, string SDT, string GioiTinh, string quyen)
         {
-            return NhanVienDAO.Intance.suaNV(maNV, tenNV, DiaChi, SDT);
+            return NhanVienDAO.Intance.suaNV(maNV, tenNV, DiaChi, SDT,GioiTinh,quyen);
         }
 
         public bool xoaNV(string maNV)
