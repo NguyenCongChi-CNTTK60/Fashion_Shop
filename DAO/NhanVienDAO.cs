@@ -116,6 +116,12 @@ namespace DAO
         }
 
 
+        public DataTable getTTNV(string id)
+        {
+            string query = "SELECT * FROM NhanVien WHERE TenHienThi = N'" + id + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
 
 
     }

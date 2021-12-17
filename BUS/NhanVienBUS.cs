@@ -39,7 +39,7 @@ namespace BUS
 
         public bool suaNV(string maNV, string tenNV, string DiaChi, string SDT, string GioiTinh, string quyen)
         {
-            return NhanVienDAO.Intance.suaNV(maNV, tenNV, DiaChi, SDT,GioiTinh,quyen);
+            return NhanVienDAO.Intance.suaNV(maNV, tenNV, DiaChi, SDT, GioiTinh, quyen);
         }
 
         public bool xoaNV(string maNV)
@@ -56,7 +56,7 @@ namespace BUS
         {
             return NhanVienDAO.Intance.loadMaNV();
         }
- 
+
         public bool themNV(string maNV, string tenNV, string Gioitinh, string DiaChi, string SDT, string Tendangnhap, string Matkhau)
         {
             return NhanVienDAO.Intance.themNV(maNV, tenNV, Gioitinh, DiaChi, SDT, Tendangnhap, Matkhau);
@@ -76,6 +76,11 @@ namespace BUS
         public List<NhanVienDTO> getListNhanVien()
         {
             return NhanVienDAO.Intance.getListNhanVien();
+        }
+
+        public DataTable getTTNV(string id)
+        {
+            return NhanVienDAO.Intance.getTTNV(id);
         }
     }
 }

@@ -39,6 +39,8 @@ namespace WindowsFormsApp
             
              lblMapn.Text = Matudong();
              this.dpkNgaykt.Enabled = false;
+            DateTime today = DateTime.Now;
+            dpkNgaykt.Value = new DateTime(today.Year, today.Month, today.Day);
 
             /*
              list = getListSanPham();

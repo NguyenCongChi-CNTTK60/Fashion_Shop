@@ -1474,3 +1474,4 @@ C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFo
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_HienThiQuyen.resources
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ReportHangTon.resources
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ReportPhieuNhap.resources
+C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_ThongTinhTaiKhoan.resources

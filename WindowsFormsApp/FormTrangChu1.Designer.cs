@@ -33,12 +33,13 @@ namespace WindowsFormsApp
             this.lblQuyen = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
             this.lblTenNV = new System.Windows.Forms.Label();
-            this.btnKhuyenMai = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlDiChuyen = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnKhuyenMai = new FontAwesome.Sharp.IconButton();
             this.btnDangXuat = new FontAwesome.Sharp.IconButton();
             this.btnThongKe = new FontAwesome.Sharp.IconButton();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
@@ -48,7 +49,6 @@ namespace WindowsFormsApp
             this.btnBanHang = new FontAwesome.Sharp.IconButton();
             this.btnKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnTrangchu = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -108,26 +108,6 @@ namespace WindowsFormsApp
             this.lblTenNV.Text = "label4";
             this.lblTenNV.Click += new System.EventHandler(this.lblTenNV_Click);
             // 
-            // btnKhuyenMai
-            // 
-            this.btnKhuyenMai.FlatAppearance.BorderSize = 0;
-            this.btnKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhuyenMai.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhuyenMai.ForeColor = System.Drawing.Color.Silver;
-            this.btnKhuyenMai.IconChar = FontAwesome.Sharp.IconChar.Sun;
-            this.btnKhuyenMai.IconColor = System.Drawing.Color.Silver;
-            this.btnKhuyenMai.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKhuyenMai.IconSize = 43;
-            this.btnKhuyenMai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhuyenMai.Location = new System.Drawing.Point(12, 826);
-            this.btnKhuyenMai.Name = "btnKhuyenMai";
-            this.btnKhuyenMai.Size = new System.Drawing.Size(244, 65);
-            this.btnKhuyenMai.TabIndex = 35;
-            this.btnKhuyenMai.Text = "           Khuyến mại";
-            this.btnKhuyenMai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhuyenMai.UseVisualStyleBackColor = true;
-            this.btnKhuyenMai.Click += new System.EventHandler(this.btnKhuyenMai_Click);
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label3);
@@ -159,9 +139,9 @@ namespace WindowsFormsApp
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(69, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 46);
+            this.label2.Size = new System.Drawing.Size(113, 46);
             this.label2.TabIndex = 1;
-            this.label2.Text = "a p o";
+            this.label2.Text = "a p e";
             // 
             // label1
             // 
@@ -182,6 +162,34 @@ namespace WindowsFormsApp
             this.pnlDiChuyen.Name = "pnlDiChuyen";
             this.pnlDiChuyen.Size = new System.Drawing.Size(8, 65);
             this.pnlDiChuyen.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(256, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1411, 1150);
+            this.panel1.TabIndex = 5;
+            // 
+            // btnKhuyenMai
+            // 
+            this.btnKhuyenMai.FlatAppearance.BorderSize = 0;
+            this.btnKhuyenMai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhuyenMai.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhuyenMai.ForeColor = System.Drawing.Color.Silver;
+            this.btnKhuyenMai.IconChar = FontAwesome.Sharp.IconChar.Sun;
+            this.btnKhuyenMai.IconColor = System.Drawing.Color.Silver;
+            this.btnKhuyenMai.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKhuyenMai.IconSize = 43;
+            this.btnKhuyenMai.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhuyenMai.Location = new System.Drawing.Point(12, 826);
+            this.btnKhuyenMai.Name = "btnKhuyenMai";
+            this.btnKhuyenMai.Size = new System.Drawing.Size(244, 65);
+            this.btnKhuyenMai.TabIndex = 35;
+            this.btnKhuyenMai.Text = "           Khuyến mại";
+            this.btnKhuyenMai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhuyenMai.UseVisualStyleBackColor = true;
+            this.btnKhuyenMai.Click += new System.EventHandler(this.btnKhuyenMai_Click);
             // 
             // btnDangXuat
             // 
@@ -363,14 +371,6 @@ namespace WindowsFormsApp
             this.btnTrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTrangchu.UseVisualStyleBackColor = true;
             this.btnTrangchu.Click += new System.EventHandler(this.btnTrangchu_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(256, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1411, 1150);
-            this.panel1.TabIndex = 5;
             // 
             // FormTrangChu1
             // 

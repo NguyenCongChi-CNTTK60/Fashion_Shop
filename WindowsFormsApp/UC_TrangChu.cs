@@ -23,6 +23,7 @@ namespace WindowsFormsApp
             getdataLable();
             this.tennv = tennv;
             lblTenNhanVien.Text = tennv;
+            HidesubMenu();
         }
 
         private void getdataLable()
@@ -65,6 +66,45 @@ namespace WindowsFormsApp
             //chart1.Series[0].ChartType = SeriesChartType.Column;
         }
 
-        
+        private void lblTenNhanVien_Click(object sender, EventArgs e)
+        {
+            showsubMenu(pnlTTTaiKhoan);
+        }
+
+
+        private void addUC(UserControl uc)
+        {
+            uc.Dock = DockStyle.Fill;
+            panel1.Controls.Clear();
+            panel1.Controls.Add(uc);
+            uc.BringToFront();
+        }
+
+        private void btnTK_Click(object sender, EventArgs e)
+        {
+            UC_ThongTinhTaiKhoan f = new UC_ThongTinhTaiKhoan(lblTenNhanVien.Text);
+            addUC(f);
+        }
+
+
+        private void HidesubMenu()
+        {
+            if (pnlTTTaiKhoan.Visible == true)
+            {
+                pnlTTTaiKhoan.Visible = false;
+            }
+        }
+
+
+        private void showsubMenu(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                HidesubMenu();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
     }
 }

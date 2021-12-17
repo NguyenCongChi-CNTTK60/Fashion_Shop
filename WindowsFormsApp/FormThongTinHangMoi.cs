@@ -54,10 +54,10 @@ namespace WindowsFormsApp
 
         private void Lammoi()
         {
-            //  txtTenmh.Text = "";
-            //  cmbDonvitinh.SelectedIndex = -1;
-            //  cmbDonvitinh.SelectedIndex = -1;
-            //  cmbLoaiHang.SelectedIndex = -1;
+            txtTenMH.Text = "Nhập tên mặt hàng";
+            txtTenMH.ForeColor = Color.Silver;
+            cmbLoaiHang.SelectedIndex = 0;
+            cmbĐVT.SelectedIndex = -1;
 
         }
 
