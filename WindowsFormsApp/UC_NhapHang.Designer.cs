@@ -77,7 +77,7 @@ namespace WindowsFormsApp
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnXacNhan = new FontAwesome.Sharp.IconButton();
             this.btnThemTTMathang = new FontAwesome.Sharp.IconButton();
-            this.btnThongtinNCC = new FontAwesome.Sharp.IconButton();
+            this.btnLamMoi = new FontAwesome.Sharp.IconButton();
             this.btnXoa = new FontAwesome.Sharp.IconButton();
             this.btnThem = new FontAwesome.Sharp.IconButton();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -246,7 +246,7 @@ namespace WindowsFormsApp
             this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.FocusedState.Parent = this.txtEmail;
-            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Gray;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.HoverState.Parent = this.txtEmail;
@@ -255,6 +255,7 @@ namespace WindowsFormsApp
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.SelectedText = "";
             this.txtEmail.SelectionStart = 5;
             this.txtEmail.ShadowDecoration.Parent = this.txtEmail;
@@ -273,7 +274,7 @@ namespace WindowsFormsApp
             this.txtDiaChi.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtDiaChi.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.FocusedState.Parent = this.txtDiaChi;
-            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiaChi.ForeColor = System.Drawing.Color.Gray;
             this.txtDiaChi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDiaChi.HoverState.Parent = this.txtDiaChi;
@@ -282,6 +283,7 @@ namespace WindowsFormsApp
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.PasswordChar = '\0';
             this.txtDiaChi.PlaceholderText = "";
+            this.txtDiaChi.ReadOnly = true;
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.SelectionStart = 7;
             this.txtDiaChi.ShadowDecoration.Parent = this.txtDiaChi;
@@ -300,7 +302,7 @@ namespace WindowsFormsApp
             this.txtSĐT.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSĐT.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSĐT.FocusedState.Parent = this.txtSĐT;
-            this.txtSĐT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSĐT.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSĐT.ForeColor = System.Drawing.Color.Gray;
             this.txtSĐT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSĐT.HoverState.Parent = this.txtSĐT;
@@ -309,6 +311,7 @@ namespace WindowsFormsApp
             this.txtSĐT.Name = "txtSĐT";
             this.txtSĐT.PasswordChar = '\0';
             this.txtSĐT.PlaceholderText = "";
+            this.txtSĐT.ReadOnly = true;
             this.txtSĐT.SelectedText = "";
             this.txtSĐT.SelectionStart = 13;
             this.txtSĐT.ShadowDecoration.Parent = this.txtSĐT;
@@ -751,7 +754,7 @@ namespace WindowsFormsApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 11);
+            this.label1.Location = new System.Drawing.Point(31, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(379, 26);
             this.label1.TabIndex = 15;
@@ -809,7 +812,7 @@ namespace WindowsFormsApp
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.btnXacNhan);
             this.panel7.Controls.Add(this.btnThemTTMathang);
-            this.panel7.Controls.Add(this.btnThongtinNCC);
+            this.panel7.Controls.Add(this.btnLamMoi);
             this.panel7.Controls.Add(this.btnXoa);
             this.panel7.Controls.Add(this.btnThem);
             this.panel7.Controls.Add(this.panel10);
@@ -855,7 +858,7 @@ namespace WindowsFormsApp
             this.btnThemTTMathang.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnThemTTMathang.IconSize = 30;
             this.btnThemTTMathang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThemTTMathang.Location = new System.Drawing.Point(713, 452);
+            this.btnThemTTMathang.Location = new System.Drawing.Point(711, 366);
             this.btnThemTTMathang.Name = "btnThemTTMathang";
             this.btnThemTTMathang.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnThemTTMathang.Size = new System.Drawing.Size(664, 45);
@@ -863,27 +866,29 @@ namespace WindowsFormsApp
             this.btnThemTTMathang.Text = "        Thêm mới thông tin mặt hàng\r\n";
             this.btnThemTTMathang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemTTMathang.UseVisualStyleBackColor = false;
+            this.btnThemTTMathang.Click += new System.EventHandler(this.btnThemTTMathang_Click);
             // 
-            // btnThongtinNCC
+            // btnLamMoi
             // 
-            this.btnThongtinNCC.BackColor = System.Drawing.Color.White;
-            this.btnThongtinNCC.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnThongtinNCC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongtinNCC.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongtinNCC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnThongtinNCC.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnThongtinNCC.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.btnThongtinNCC.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnThongtinNCC.IconSize = 30;
-            this.btnThongtinNCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongtinNCC.Location = new System.Drawing.Point(713, 366);
-            this.btnThongtinNCC.Name = "btnThongtinNCC";
-            this.btnThongtinNCC.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnThongtinNCC.Size = new System.Drawing.Size(664, 45);
-            this.btnThongtinNCC.TabIndex = 241;
-            this.btnThongtinNCC.Text = "        Thêm mới thông tin nhà cung cấp\r\n";
-            this.btnThongtinNCC.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongtinNCC.UseVisualStyleBackColor = false;
+            this.btnLamMoi.BackColor = System.Drawing.Color.White;
+            this.btnLamMoi.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLamMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.btnLamMoi.IconChar = FontAwesome.Sharp.IconChar.Sync;
+            this.btnLamMoi.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.btnLamMoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLamMoi.IconSize = 28;
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(711, 449);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnLamMoi.Size = new System.Drawing.Size(664, 45);
+            this.btnLamMoi.TabIndex = 241;
+            this.btnLamMoi.Text = "        Làm mới thông tin nhập hàng";
+            this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // 
             // btnXoa
             // 
@@ -983,7 +988,7 @@ namespace WindowsFormsApp
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(14, 11);
+            this.label11.Location = new System.Drawing.Point(6, 11);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(396, 26);
             this.label11.TabIndex = 15;
@@ -1080,7 +1085,7 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Panel panel9;
         private FontAwesome.Sharp.IconButton btnThem;
         private FontAwesome.Sharp.IconButton btnThemTTMathang;
-        private FontAwesome.Sharp.IconButton btnThongtinNCC;
+        private FontAwesome.Sharp.IconButton btnLamMoi;
         private FontAwesome.Sharp.IconButton btnXoa;
         private FontAwesome.Sharp.IconButton btnXacNhan;
         private Guna.UI2.WinForms.Guna2TextBox txtformatGiaban;

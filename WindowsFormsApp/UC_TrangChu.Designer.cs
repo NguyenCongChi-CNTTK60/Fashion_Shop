@@ -29,9 +29,9 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblKhachhang = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@ namespace WindowsFormsApp
             // 
             this.lblKhachhang.AutoSize = true;
             this.lblKhachhang.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblKhachhang.Location = new System.Drawing.Point(36, 57);
+            this.lblKhachhang.Location = new System.Drawing.Point(25, 57);
             this.lblKhachhang.Name = "lblKhachhang";
             this.lblKhachhang.Size = new System.Drawing.Size(24, 25);
             this.lblKhachhang.TabIndex = 2;
@@ -334,20 +334,20 @@ namespace WindowsFormsApp
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(21, 404);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.LabelBorderWidth = 3;
-            series2.Legend = "Legend1";
-            series2.Name = "Doanh Thu";
-            this.chart1.Series.Add(series2);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.LabelBorderWidth = 3;
+            series1.Legend = "Legend1";
+            series1.Name = "Doanh Thu";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1374, 696);
             this.chart1.TabIndex = 20;
             this.chart1.Text = "chart1";

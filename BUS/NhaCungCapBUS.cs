@@ -27,14 +27,14 @@ namespace BUS
             return NhaCungCapDAO.Intance.getListNCC();
         }
 
-        public bool themNCC(NhaCungCapDTO data)
+        public bool themNCC(string mancc, string tenncc, string diachi, string sdt, string email)
         {
-            return NhaCungCapDAO.Intance.themNCC(data);
+            return NhaCungCapDAO.Intance.themNCC(mancc,tenncc,diachi,sdt,email);
         }
 
-        public bool suaNCC(NhaCungCapDTO data)
+        public bool suaNCC(string mancc, string tenncc, string diachi, string sdt, string email)
         {
-            return NhaCungCapDAO.Intance.suaNCC(data);
+            return NhaCungCapDAO.Intance.suaNCC(mancc,tenncc,diachi,sdt,email);
         }
 
         public bool xoaNCC(string maKH)

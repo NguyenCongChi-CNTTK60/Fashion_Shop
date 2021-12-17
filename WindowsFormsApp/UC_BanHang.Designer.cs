@@ -222,6 +222,7 @@
             this.cmbLoaihang.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cmbLoaihang.TabIndex = 239;
             this.cmbLoaihang.SelectedIndexChanged += new System.EventHandler(this.cmbLoaihang_SelectedIndexChanged);
+            this.cmbLoaihang.Click += new System.EventHandler(this.cmbLoaihang_Click);
             // 
             // label17
             // 
@@ -696,9 +697,9 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(20, 142);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(173, 35);
+            this.label13.Size = new System.Drawing.Size(143, 35);
             this.label13.TabIndex = 224;
-            this.label13.Text = "Số lần mua hàng:";
+            this.label13.Text = "Điểm tích lũy:";
             // 
             // label12
             // 
@@ -795,6 +796,7 @@
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.SelectionStart = 38;
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Size = new System.Drawing.Size(304, 43);
             this.guna2TextBox2.TabIndex = 241;
@@ -837,7 +839,7 @@
             this.txtTienkhachdua.FillColor = System.Drawing.SystemColors.Control;
             this.txtTienkhachdua.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienkhachdua.FocusedState.Parent = this.txtTienkhachdua;
-            this.txtTienkhachdua.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTienkhachdua.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTienkhachdua.ForeColor = System.Drawing.Color.Black;
             this.txtTienkhachdua.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTienkhachdua.HoverState.Parent = this.txtTienkhachdua;

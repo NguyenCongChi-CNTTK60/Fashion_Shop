@@ -28,21 +28,12 @@ namespace WindowsFormsApp
 
 
             list = MatHangBUS.Intance.getListSanPham();
-            AutoCompleteStringCollection arrName = new AutoCompleteStringCollection();
-            foreach (MatHangDTO item in list)
-            {
-                arrName.Add(item.MaMH);
-            }
-            cmbTenhh.AutoCompleteCustomSource = arrName;
             cmbTenhh.DataSource = list;
             cmbTenhh.DisplayMember = "TenMH";
             cmbTenhh.ValueMember = "TenMH";
 
 
-            list1 = LoaiHangBUS.Intance.getListLoaiHang();
-            cmbLoaihang.DataSource = list1;
-            cmbLoaihang.DisplayMember = "TenLH";
-            cmbLoaihang.ValueMember = "MaLH";
+          
 
 
             this.tennv = tennv;
@@ -135,7 +126,7 @@ namespace WindowsFormsApp
             {
                 item = new KhachHangDTO(data.Rows[0]);
                 //lblMaKH.Text = data.Rows[0]["MaKH"].ToString();
-                
+
             }
             return item;
         }
@@ -153,6 +144,7 @@ namespace WindowsFormsApp
             txtSoLuong.Value = 0;
             lblGiaban.Text = "0 đ";
             lblMaKH.Text = "";
+            lblMahh.Text = "";
             //lblMahh.Text = "";
 
         }
@@ -233,63 +225,6 @@ namespace WindowsFormsApp
             }
         }
 
-
-        /*
-
-        private void btnThanhToan_Click_1(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txtTimkiem.Text))
-            {
-                MessageBox.Show("Chưa có thông tin của khách hàng");
-            }
-            else if (string.IsNullOrEmpty(txtTienkhachdua.Text))
-            {
-                MessageBox.Show("Bạn chưa nhập tiền khách đưa");
-            }
-            else
-             if (lvSanPhamBan.Items.Count > 0)
-            {
-                HoaDonDTO hd = new HoaDonDTO();
-                hd.MaHD = lblMahd.Text;
-                hd.MaKH = lblMaKH.Text;
-                hd.NgayTao = dtpNgayban.Value;
-                hd.MaNV = lblMaNV.Text;
-                hd.TongTien = tongTien;
-
-
-
-
-                if (LuuHD(hd))   // lưu hóa đơn
-                {
-                    //FormInHD formInHD = new FormInHD(lblMakh.Text);
-                    foreach (ListViewItem item in lvSanPhamBan.Items)
-                    {
-                        LuuDH(hd.MaHD, item.SubItems[0].Text, Int32.Parse(item.SubItems[2].Text), Int32.Parse(item.SubItems[3].Text));  //lưu chi tiết hóa đơn
-                        string query = "update MatHang set SoLuong = SoLuong - " + Int32.Parse(item.SubItems[2].Text) + "where MaMH = '" + item.SubItems[0].Text + "'";  // cập nhật lại số lượng 
-                        DataProvider.Instance.ExecuteQuery(query);
-
-                    }
-                    FormInHoaDon formInHoaDon = new FormInHoaDon(lblMahd.Text, Tienkhachduafomart, lblTienhoantra.Text, lblTiengiam.Text);
-                    formInHoaDon.Show();
-                    lvSanPhamBan.Items.Clear();
-                    lblTongtien.Text = "0 VNĐ";
-                    lblTenbangchu.Text = "Không đồng";                                            // làm mới tất cả 
-                    lblTenkh.Text = ".";
-                    lblTenkh.Text = "UNKNOW NAME";
-                    tongTien = 0;
-                    lblMahd.Text = Matudong();
-                    resetInfoProduct();
-                    txtTimkiem.Text = "";
-                    txtTienkhachdua.Text = "";
-                    lblTiengiam.Text = "";
-                }
-                else
-                {
-                    MessageBox.Show("Bạn chưa có sản phẩm để thanh toán");
-                }
-
-            }
-        } */
 
 
         private void cmbTenhh_SelectedIndexChanged(object sender, EventArgs e)
@@ -423,7 +358,8 @@ namespace WindowsFormsApp
                     i--;
                     resetInfoProduct();
                     lblPhantram.Text = "0";
-                }else if(lvSanPhamBan.Items.Count == 0)
+                }
+                else if (lvSanPhamBan.Items.Count == 0)
                 {
                     lblTiengiam.Text = "0 đ";
                 }
@@ -470,7 +406,7 @@ namespace WindowsFormsApp
             }
             else
                 lblTenkh.Text = "Khách hàng mới";
-                lblTenkh.ForeColor = Color.Black;
+            lblTenkh.ForeColor = Color.Black;
 
         }
 
@@ -592,6 +528,13 @@ namespace WindowsFormsApp
         {
         }
 
+        private void cmbLoaihang_Click(object sender, EventArgs e)
+        {
+            list1 = LoaiHangBUS.Intance.getListLoaiHang();
+            cmbLoaihang.DataSource = list1;
+            cmbLoaihang.DisplayMember = "TenLH";
+            cmbLoaihang.ValueMember = "MaLH";
+        }
 
         private void LamMoi()
         {

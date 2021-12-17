@@ -37,9 +37,9 @@ namespace DAO
             return list;
         }
 
-        public bool suaHH(string MaHang, string TenHH, int SoLuong, int GiaBan)
+        public bool suaHH(string MaHang, string TenHH, string loai, string GiaBan, string DonVi)
         {
-            string query = String.Format("update MatHang set SoLuong = {0},  GiaBan = {1}, TenMH = N'{2}'  where MaMH = '{3}'", SoLuong, GiaBan, TenHH, MaHang);
+            string query = String.Format("update MatHang set  GiaBan = '" + GiaBan + "', TenMH = N'" + TenHH + "',MaLH = N'" + loai + "', DonVi = N'" + DonVi + "'  where MaMH = '" + MaHang + "'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -109,10 +109,10 @@ namespace DAO
             return data;
         }
 
-
+        /*
         public MatHangDTO getSP(string maSP)
         {
-            MatHangDTO a = new MatHangDTO();
+            LoaiHangDTO a = new MatHangDTO();
             string query = String.Format("select * from MatHang where MaMH = N'{0}'", maSP);
             if (DataProvider.Instance.ExecuteQuery(query).Rows.Count > 0)
             {
@@ -122,7 +122,7 @@ namespace DAO
                 a.GiaBan = int.Parse(data["GiaBan"].ToString());
             }
             return a;
-        }
+        } */
 
         public bool temHH(MatHangDTO data, string imgLocation)
         {
@@ -184,7 +184,7 @@ namespace DAO
         }
 
 
-        public DataTable TimKiemMH (string tk)
+        public DataTable TimKiemMH(string tk)
         {
             string query = "select MatHang.MaMH as [Mã hàng hóa],MatHang.TenMH as [Tên hàng hóa],DonVi as [Đơn vị tính],sum(ChitietPN.Soluong) as [Số lượng nhập],MatHang.SoLuong as [Số lượng tồn], (sum(ChitietPN.Soluong) - MatHang.SoLuong) as [Số lượng bán],MatHang.GiaBan as [Giá bán] from MatHang inner join ChiTietPN on MatHang.MaMH = ChiTietPN.MaMH where MatHang.TenMH like N'%" + tk + "%' or MatHang.MaMH like '%" + tk + "%'  group by MatHang.MaMH,MatHang.SoLuong,MatHang.TenMH,MatHang.DonVi,DonVi,MatHang.GiaBan";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
@@ -206,5 +206,30 @@ namespace DAO
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
+
+
+        public DataTable TimKiemLH(string tk)
+        {
+            string query = "select MaLH from LoaiHang where TenLH = N'" + tk + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+
+        public DataTable TimKiemMHTrongKH(string tk)
+        {
+            string query = "select MaMH as [Mã mặt hàng], TenMH as [Tên mặt hàng], DonVi as [Đơn vị],SoLuong as [Số lượng], GiaBan as [Giá bán], TenLH as [Loại hàng] from MatHang inner join LoaiHang on MatHang.MaLH = LoaiHang.MaLH where MaMH like N'%"+tk+ "%' or TenMH like N'%" + tk + "%'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
+
+        public DataTable TimKiemSL(string tk)
+        {
+            string query = "select SoLuong from MatHang where MaMH = N'" + tk + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
+
     }
 }

@@ -85,7 +85,7 @@ namespace WindowsFormsApp
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in dt.Rows)
             {
-                MatHangDTO product = new MatHangDTO(item);
+               MatHangDTO  product = new MatHangDTO(item);
                 list.Add(product);
             }
             return list;
@@ -383,6 +383,20 @@ namespace WindowsFormsApp
                     MessageBox.Show("Bạn chưa có sản phẩm để Lưu");
                 }
             }
+        }
+
+        private void btnThemTTMathang_Click(object sender, EventArgs e)
+        {
+            FormThongTinHangMoi f = new FormThongTinHangMoi();
+            f.Show();
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            list = getListSanPham();
+            cmbTensp.DataSource = list;
+            cmbTensp.ValueMember = "MaMH";
+            cmbTensp.DisplayMember = "TenMH";
         }
 
 

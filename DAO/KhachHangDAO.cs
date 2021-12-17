@@ -30,7 +30,7 @@ namespace DAO
 
         public bool themKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
         {
-            string query = String.Format("insert into KhachHang(MaKH, TenKH, DiaChi, SDT, Email, GioiTinh) values ('{0}', N'{1}', N'{2}', N'{3}', '{4}', 0)", maKH, tenKH, DiaChi, SDT, email);
+            string query = String.Format("insert into KhachHang(MaKH, TenKH, DiaChi, SDT, Email,DiemTichLuy) values ('{0}', N'{1}', N'{2}', N'{3}', '{4}', 0)", maKH, tenKH, DiaChi, SDT, email);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
