@@ -450,6 +450,12 @@
     <Compile Include="UC_TrangChu.Designer.cs">
       <DependentUpon>UC_TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_XacNhanMa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_XacNhanMa.Designer.cs">
+      <DependentUpon>UC_XacNhanMa.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_XacNhanSDT.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -464,6 +470,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormNhapHang.resx">
       <DependentUpon>FormNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSDT.resx">
+      <DependentUpon>FormSDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSignUp.resx">
       <DependentUpon>FormSignUp.cs</DependentUpon>
@@ -499,6 +508,9 @@
     <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />
     <EmbeddedResource Include="UC_CaLamViecNhanVien.resx">
       <DependentUpon>UC_CaLamViecNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_DoiMatKhau.resx">
+      <DependentUpon>UC_DoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_HienThiQuyen.resx">
       <DependentUpon>UC_HienThiQuyen.cs</DependentUpon>
@@ -554,6 +566,9 @@
     <EmbeddedResource Include="UC_TrangChu.resx">
       <DependentUpon>UC_TrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UC_XacNhanMa.resx">
+      <DependentUpon>UC_XacNhanMa.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
@@ -591,6 +606,8 @@
     <None Include="Resources\hinh-anh-may-hong-may-cam-cuc-dep_111706037.jpg" />
     <None Include="Resources\Thi-t-K-Shop-Th-i-Trang-Nam-TUNG-TRAN-3-.jpg" />
     <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\8b814fa66a3676d9f1090a4e8df515ba.jpg" />
+    <None Include="Resources\Capture1.PNG" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

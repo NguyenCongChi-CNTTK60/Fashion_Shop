@@ -40,7 +40,7 @@ namespace WindowsFormsApp
             this.txtMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkHienThiMK = new System.Windows.Forms.CheckBox();
             this.btnDangNhap = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblBanQuenMK = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.lblDangky = new System.Windows.Forms.Label();
@@ -71,7 +71,7 @@ namespace WindowsFormsApp
             // 
             this.txtTenDangNhap.BorderColor = System.Drawing.Color.Silver;
             this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDangNhap.DefaultText = "VD:  CongChi";
+            this.txtTenDangNhap.DefaultText = "VD:  VanA";
             this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -89,7 +89,6 @@ namespace WindowsFormsApp
             this.txtTenDangNhap.PasswordChar = '\0';
             this.txtTenDangNhap.PlaceholderText = "";
             this.txtTenDangNhap.SelectedText = "";
-            this.txtTenDangNhap.SelectionStart = 12;
             this.txtTenDangNhap.ShadowDecoration.BorderRadius = 10;
             this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
             this.txtTenDangNhap.Size = new System.Drawing.Size(547, 62);
@@ -210,16 +209,17 @@ namespace WindowsFormsApp
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             // 
-            // label4
+            // lblBanQuenMK
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
-            this.label4.Location = new System.Drawing.Point(188, 690);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(250, 40);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Bạn quên mật khẩu?";
+            this.lblBanQuenMK.AutoSize = true;
+            this.lblBanQuenMK.Font = new System.Drawing.Font("Sitka Banner", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBanQuenMK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(254)))));
+            this.lblBanQuenMK.Location = new System.Drawing.Point(188, 690);
+            this.lblBanQuenMK.Name = "lblBanQuenMK";
+            this.lblBanQuenMK.Size = new System.Drawing.Size(250, 40);
+            this.lblBanQuenMK.TabIndex = 20;
+            this.lblBanQuenMK.Text = "Bạn quên mật khẩu?";
+            this.lblBanQuenMK.Click += new System.EventHandler(this.lblBanQuenMK_Click);
             // 
             // panel2
             // 
@@ -296,7 +296,7 @@ namespace WindowsFormsApp
             this.Controls.Add(this.lblDangky);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblBanQuenMK);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.chkHienThiMK);
             this.Controls.Add(this.label3);
@@ -327,7 +327,7 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2TextBox txtMatKhau;
         private System.Windows.Forms.CheckBox chkHienThiMK;
         private Guna.UI2.WinForms.Guna2GradientButton btnDangNhap;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblBanQuenMK;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblDangky;

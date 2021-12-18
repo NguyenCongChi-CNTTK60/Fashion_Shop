@@ -66,7 +66,7 @@ namespace WindowsFormsApp
         {
             if(txtTenDangNhap.Text == "")
             {
-                txtTenDangNhap.Text = "VD: congchi";
+                txtTenDangNhap.Text = "VD: VanA";
                 txtTenDangNhap.ForeColor = Color.Silver;
             }
         }
@@ -107,6 +107,13 @@ namespace WindowsFormsApp
             }
             else
                 txtMatKhau.PasswordChar = '*';
+        }
+
+        private void lblBanQuenMK_Click(object sender, EventArgs e)
+        {
+            FormSDT f = new FormSDT();
+            f.Show();
+            this.Hide();
         }
     }
 }

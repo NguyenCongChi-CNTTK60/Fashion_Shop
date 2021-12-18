@@ -37,5 +37,11 @@ namespace WindowsFormsApp
                 //txtChucvu.Text = dt.Rows[0]["ChucVu"].ToString();
             }
         }
+
+        private void lblDoiMatKhau_Click(object sender, EventArgs e)
+        {
+            FormDoiMatKhauMoi f = new FormDoiMatKhauMoi(txtSĐT.Text);
+            f.Show();
+        }
     }
 }

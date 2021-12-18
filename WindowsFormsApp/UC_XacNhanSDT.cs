@@ -61,8 +61,8 @@ namespace WindowsFormsApp
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
             if (sqlDataReader.Read() == true)
             {
-                UC_DoiMatKhau uC_Dangkymk_Moi = new UC_DoiMatKhau(txtSđtnv.Text);
-                addUC(uC_Dangkymk_Moi);
+               // UC_DoiMatKhau uC_Dangkymk_Moi = new UC_DoiMatKhau(txtSđtnv.Text);
+               // addUC(uC_Dangkymk_Moi);
             }
             else
                 lblCanhbao.Text = "Mã không đúng - Vui lòng thử lại";

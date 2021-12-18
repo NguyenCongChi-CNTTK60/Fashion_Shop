@@ -97,7 +97,7 @@ namespace DAO
 
         public bool capnhatmk1(string mk, string tk)
         {
-            string query = String.Format("update NhanVien set MatKhau = '{0}' where TenDangNhap = '{1}'", mk, tk);
+            string query = String.Format("update NhanVien set MatKhau = '{0}' where SDT = '{1}'", mk, tk);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -124,5 +124,21 @@ namespace DAO
         }
 
 
+        public bool Loginn(string userName, string passWord)
+        {
+            string query = "SELECT * FROM NhanVien WHERE SDT = '" + userName + "' AND MatKhau = '" + passWord + "'";
+
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+
+            return result.Rows.Count > 0;
+        }
+
+
+        public DataTable CapLaiMK(string id)
+        {
+            string query = "SELECT SDT FROM NhanVien WHERE SDT = N'" + id + "'";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
     }
 }

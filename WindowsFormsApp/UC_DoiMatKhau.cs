@@ -15,13 +15,14 @@ namespace WindowsFormsApp
     public partial class UC_DoiMatKhau : UserControl
     {
         private string sdt;
-        public UC_DoiMatKhau(string sdt)
+        public UC_DoiMatKhau()
         {
             InitializeComponent();
             this.sdt = sdt;
-            txtSđtnv.Text = sdt;
+          //  txtSđtnv.Text = sdt;
         }
 
+        /*
         private void btnQuaylai_Click(object sender, EventArgs e)
         {
             FormDangNhap formDangNhap = new FormDangNhap();
@@ -50,7 +51,7 @@ namespace WindowsFormsApp
         private void txtxacnhan_TextChanged(object sender, EventArgs e)
         {
             lblCanhbao.Text = "";
-        }
+        } */
     }
 }
 

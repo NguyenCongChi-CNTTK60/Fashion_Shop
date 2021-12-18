@@ -38,7 +38,6 @@ namespace WindowsFormsApp
             this.label1 = new System.Windows.Forms.Label();
             this.txtTenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnKhachHang = new FontAwesome.Sharp.IconButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTennv = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,6 +55,7 @@ namespace WindowsFormsApp
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblThongbao = new System.Windows.Forms.Label();
+            this.btnKhachHang = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // button1
@@ -177,7 +177,7 @@ namespace WindowsFormsApp
             // 
             this.txtTenDangNhap.BorderColor = System.Drawing.Color.Silver;
             this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDangNhap.DefaultText = "VD:  CongChi";
+            this.txtTenDangNhap.DefaultText = "VD:  VanA";
             this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -195,7 +195,6 @@ namespace WindowsFormsApp
             this.txtTenDangNhap.PasswordChar = '\0';
             this.txtTenDangNhap.PlaceholderText = "";
             this.txtTenDangNhap.SelectedText = "";
-            this.txtTenDangNhap.SelectionStart = 12;
             this.txtTenDangNhap.ShadowDecoration.BorderRadius = 10;
             this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
             this.txtTenDangNhap.Size = new System.Drawing.Size(547, 47);
@@ -212,26 +211,6 @@ namespace WindowsFormsApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(610, 1);
             this.panel1.TabIndex = 27;
-            // 
-            // btnKhachHang
-            // 
-            this.btnKhachHang.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhachHang.Font = new System.Drawing.Font("Sitka Display", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
-            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.Google;
-            this.btnKhachHang.IconColor = System.Drawing.Color.Silver;
-            this.btnKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnKhachHang.IconSize = 35;
-            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.Location = new System.Drawing.Point(28, 65);
-            this.btnKhachHang.Name = "btnKhachHang";
-            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(120, 0, 0, 0);
-            this.btnKhachHang.Size = new System.Drawing.Size(547, 62);
-            this.btnKhachHang.TabIndex = 26;
-            this.btnKhachHang.Text = "       Sign up with Google\r\n";
-            this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhachHang.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -258,7 +237,7 @@ namespace WindowsFormsApp
             // 
             this.txtTennv.BorderColor = System.Drawing.Color.Silver;
             this.txtTennv.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTennv.DefaultText = "VD:  Nguyễn Công Chí";
+            this.txtTennv.DefaultText = "VD:  Nguyễn Văn A\r\n";
             this.txtTennv.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtTennv.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtTennv.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -276,7 +255,6 @@ namespace WindowsFormsApp
             this.txtTennv.PasswordChar = '\0';
             this.txtTennv.PlaceholderText = "";
             this.txtTennv.SelectedText = "";
-            this.txtTennv.SelectionStart = 20;
             this.txtTennv.ShadowDecoration.BorderRadius = 10;
             this.txtTennv.ShadowDecoration.Parent = this.txtTennv;
             this.txtTennv.Size = new System.Drawing.Size(547, 47);
@@ -489,6 +467,26 @@ namespace WindowsFormsApp
             this.lblThongbao.Size = new System.Drawing.Size(77, 26);
             this.lblThongbao.TabIndex = 271;
             this.lblThongbao.Text = "Mật khẩu";
+            // 
+            // btnKhachHang
+            // 
+            this.btnKhachHang.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.btnKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKhachHang.Font = new System.Drawing.Font("Sitka Display", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhachHang.ForeColor = System.Drawing.Color.Black;
+            this.btnKhachHang.IconChar = FontAwesome.Sharp.IconChar.Google;
+            this.btnKhachHang.IconColor = System.Drawing.Color.Silver;
+            this.btnKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnKhachHang.IconSize = 35;
+            this.btnKhachHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.Location = new System.Drawing.Point(28, 65);
+            this.btnKhachHang.Name = "btnKhachHang";
+            this.btnKhachHang.Padding = new System.Windows.Forms.Padding(120, 0, 0, 0);
+            this.btnKhachHang.Size = new System.Drawing.Size(547, 62);
+            this.btnKhachHang.TabIndex = 26;
+            this.btnKhachHang.Text = "       Sign up with Google\r\n";
+            this.btnKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKhachHang.UseVisualStyleBackColor = true;
             // 
             // FormSignUp
             // 

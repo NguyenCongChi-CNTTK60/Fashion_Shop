@@ -18,68 +18,106 @@ namespace WindowsFormsApp
         {
             InitializeComponent();
             this.tk = tk;
-            txTentaikhoan.Text = tk;
+            //txTentaikhoan.Text = tk;
+            txtSĐT.Text = tk;
         }
 
-        private bool check_data()
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtmkMoi.Text))
-            {
-                return false;
-            }
-            return true;
+            this.Close();
         }
 
-
-
-        bool Login(string userName, string passWord)
+        private void btnEyeSlash_Click(object sender, EventArgs e)
         {
-            return NhanVienBUS.Intance.Login(userName, passWord);
+            //btnEyeSlash.Enabled = false;
+            txtHoVaTen.PasswordChar = '\0';
+            btnEye.BringToFront();
         }
+
+        private void btnEye_Click(object sender, EventArgs e)
+        {
+            txtHoVaTen.PasswordChar = '*';
+            btnEyeSlash.BringToFront();
+        }
+
+        private void btnEyeMKM_Click(object sender, EventArgs e)
+        {
+            btneyemkmeye.BringToFront();
+        }
+
+        private void btnEyeMKM_Click_1(object sender, EventArgs e)
+        {
+            txtMKMOI.PasswordChar = '\0';
+            btneyemkmeye.BringToFront();
+        }
+
+        private void btneyemkmeye_Click(object sender, EventArgs e)
+        {
+            txtMKMOI.PasswordChar = '*';
+            btnEyeMKM.BringToFront();
+        }
+
+        private void btnXNMKeyeslach_Click(object sender, EventArgs e)
+        {
+            txtXNMKmOI.PasswordChar = '\0';
+            btnXNMKMeye.BringToFront();
+        }
+
+        private void btnXNMKMeye_Click(object sender, EventArgs e)
+        {
+            txtXNMKmOI.PasswordChar = '*';
+            btnXNMKeyeslach.BringToFront();
+        }
+
+        private void txtHoVaTen_Click(object sender, EventArgs e)
+        {
+            //guna2TextBox3.PasswordChar = '*';
+            txtHoVaTen.Text = "";
+            txtHoVaTen.ForeColor = Color.Black;
+            txtHoVaTen.PasswordChar = '*';
+        }
+
+        private void txtMKMOI_Click(object sender, EventArgs e)
+        {
+            txtMKMOI.Text = "";
+            txtMKMOI.ForeColor = Color.Black;
+            txtMKMOI.PasswordChar = '*';
+        }
+
+        private void guna2TextBox3_Click(object sender, EventArgs e)
+        {
+            txtXNMKmOI.Text = "";
+            txtXNMKmOI.ForeColor = Color.Black;
+            txtXNMKmOI.PasswordChar = '*';
+        }
+
+
+        bool Loginn(string userName, string passWord)
+        {
+            return NhanVienBUS.Intance.Loginn(userName, passWord);
+        }
+
 
         bool Doimkmoi(string userName, string passWord)
         {
             return NhanVienBUS.Intance.capnhatmk1(userName, passWord);
         }
 
-
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void chkHienThiMK_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkHienThiMK.Checked == true)
+            if (Check_data() == true)
             {
-                txtMKcu.PasswordChar = '\0';
-                txtmkMoi.PasswordChar = '\0';
-                txtXacnhan.PasswordChar = '\0';
-            }
-            else
-            {
-                txtMKcu.PasswordChar = '*';
-                txtmkMoi.PasswordChar = '*';
-                txtXacnhan.PasswordChar = '*';
-            }
-
-        }
-
-        private void btnLuu_Click_1(object sender, EventArgs e)
-        {
-            if (check_data() == true)
-            {
-                string tenDangNhap = txTentaikhoan.Text;
-                string passWord = txtMKcu.Text;
-                if (Login(tenDangNhap, passWord))
+                if (Loginn(txtSĐT.Text, txtHoVaTen.Text))
                 {
-                    string mkmoi = txtmkMoi.Text;
-                    string tentk = txTentaikhoan.Text;
-                    if (txtmkMoi.Text == txtXacnhan.Text)
+
+                    if (txtMKMOI.Text == txtXNMKmOI.Text)
                     {
-                        Doimkmoi(mkmoi, tentk);
+                        Doimkmoi(txtXNMKmOI.Text, txtSĐT.Text);
                         MessageBox.Show("Đổi mật khẩu thành công", "Thông báo");
+                        LamMoi();
+                        //FormDoiMatKhauMoi f = new FormDoiMatKhauMoi();
+                        this.Hide();
+
                     }
                     else
                         MessageBox.Show("Mật khẩu xác nhận không đúng", "Thông báo");
@@ -88,12 +126,68 @@ namespace WindowsFormsApp
                 {
                     MessageBox.Show("Mật khẩu cũ không đúng", "Thông báo");
                 }
-
             }
-            else
+        }
+
+
+        private void LamMoi()
+        {
+            txtHoVaTen.Text = "Nhập mật khẩu hiện tại";
+            txtHoVaTen.ForeColor = Color.Silver;
+            txtMKMOI.Text = "Mật khẩu mới";
+            txtMKMOI.ForeColor = Color.Silver;
+            txtXNMKmOI.Text = "Xác nhận mật khẩu";
+            txtXNMKmOI.ForeColor = Color.Silver;
+        }
+
+        private void txtHoVaTen_Leave(object sender, EventArgs e)
+        {
+            if (txtHoVaTen.Text == "")
+            {
+                txtHoVaTen.Text = "Nhập mật khẩu hiện tại";
+                txtHoVaTen.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtMKMOI_Leave(object sender, EventArgs e)
+        {
+            if (txtMKMOI.Text == "")
+            {
+                txtMKMOI.Text = "Mật khẩu mới";
+                txtMKMOI.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtXNMKmOI_Leave(object sender, EventArgs e)
+        {
+            if(txtXNMKmOI.Text == "")
+            {
+                txtXNMKmOI.Text = "Xác nhận mật khẩu";
+                txtXNMKmOI.ForeColor = Color.Silver;
+            }
+        }
+
+
+        private bool Check_data()
+        {
+            if(txtHoVaTen.Text == "Nhập mật khẩu hiện tại")
+            {
+                MessageBox.Show("Mật khẩu cũ không được trống", "Thông báo");
+                return false;
+            }else if(txtMKMOI.Text == "Mật khẩu mới")
             {
                 MessageBox.Show("Mật khẩu mới không được trống", "Thông báo");
+                return false;
+            }else if (txtXNMKmOI.Text == "Xác nhận mật khẩu")
+            {
+                MessageBox.Show("Xác nhận mật khẩu không được trống", "Thông báo");
+                return false;
             }
+
+            return true;
         }
     }
 }
+    
+
+     

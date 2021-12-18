@@ -140,7 +140,7 @@ namespace WindowsFormsApp
         {
             if(txtTennv.Text == "")
             {
-                txtTennv.Text = "VD: Nguyễn Công Chí";
+                txtTennv.Text = "VD: Nguyễn Văn A";
                 txtTennv.ForeColor = Color.Silver;
             }
         }
@@ -185,7 +185,7 @@ namespace WindowsFormsApp
         {
             if (txtTenDangNhap.Text == "")
             {
-                txtTenDangNhap.Text = "VD: chi";
+                txtTenDangNhap.Text = "VD: VanA";
                 txtTenDangNhap.ForeColor = Color.Silver;
             }
         }

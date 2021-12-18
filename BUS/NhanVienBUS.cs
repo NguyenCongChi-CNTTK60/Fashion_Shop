@@ -82,6 +82,17 @@ namespace BUS
         {
             return NhanVienDAO.Intance.getTTNV(id);
         }
+
+
+        public bool Loginn(string userName, string passWord)
+        {
+            return NhanVienDAO.Intance.Loginn(userName, passWord);
+        }
+
+        public DataTable CapLaiMK(string id)
+        {
+            return NhanVienDAO.Intance.CapLaiMK(id);
+        }
     }
 }
 
