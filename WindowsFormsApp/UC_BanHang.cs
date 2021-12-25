@@ -277,6 +277,8 @@ namespace WindowsFormsApp
             }
         }
 
+
+        private int TienGiam;
         private void btnThem_Click(object sender, EventArgs e)
         {
 
@@ -320,7 +322,7 @@ namespace WindowsFormsApp
                     ListViewItem listViewItem = new ListViewItem(arr);
                     lvSanPhamBan.Items.Add(listViewItem);
                 }
-                int TienGiam = ((Int32.Parse(lblGiaban.Text) * Int32.Parse(lblPhantram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString());
+                 TienGiam = ((Int32.Parse(lblGiaban.Text) * Int32.Parse(lblPhantram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString());
                 tiengiam += TienGiam;
                 lblTiengiam.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", tiengiam) + " đ";
                 tongTien += gia;
@@ -348,7 +350,7 @@ namespace WindowsFormsApp
                     txtSoLuong.Value = b;
                     string tien = lvSanPhamBan.Items[i].SubItems[4].Text.ToString();
                     tongTien -= Int32.Parse(tien);
-                    int TienGiam = ((Int32.Parse(lblGiaban.Text) * Int32.Parse(lblPhantram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString());
+                    //int TienGiam = ((Int32.Parse(lblGiaban.Text) * Int32.Parse(lblPhantram.Text)) / 100) * Int32.Parse(txtSoLuong.Value.ToString());
                     tiengiam -= TienGiam;
                     lblTiengiam.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", tiengiam) + " đ";
                     lblTongtien.Text = string.Format(new CultureInfo("vi-VN"), "{0:#,##0}", tongTien) + " đ";

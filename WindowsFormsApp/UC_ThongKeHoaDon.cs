@@ -127,6 +127,21 @@ namespace WindowsFormsApp
             DataTable dt = HoaDonBUS.Intance.TKHoaDon(ngaybd, ngaykt);
             dgvHd.DataSource = dt;
         }
+
+        private void btnXemChiTiet_Click(object sender, EventArgs e)
+        {
+            FormChiTietHD f = new FormChiTietHD(mahd);
+            f.Show();
+        }
+
+
+        private string mahd;
+        private void dgvHd_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexx;
+            indexx = e.RowIndex;
+            mahd = dgvHd.Rows[indexx].Cells[0].Value.ToString();
+        }
     }
 
 }

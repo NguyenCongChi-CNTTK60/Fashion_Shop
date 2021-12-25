@@ -45,6 +45,7 @@ namespace WindowsFormsApp
             this.dgvHd = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmbLuaChon = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnXemChiTiet = new FontAwesome.Sharp.IconButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHd)).BeginInit();
             this.SuspendLayout();
@@ -234,6 +235,7 @@ namespace WindowsFormsApp
             this.dgvHd.ThemeStyle.RowsStyle.Height = 45;
             this.dgvHd.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvHd.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvHd.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHd_CellContentClick);
             // 
             // cmbLuaChon
             // 
@@ -273,10 +275,33 @@ namespace WindowsFormsApp
             this.label6.TabIndex = 237;
             this.label6.Text = "Lựa chọn xem:";
             // 
+            // btnXemChiTiet
+            // 
+            this.btnXemChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.btnXemChiTiet.FlatAppearance.BorderSize = 0;
+            this.btnXemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemChiTiet.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemChiTiet.ForeColor = System.Drawing.Color.White;
+            this.btnXemChiTiet.IconChar = FontAwesome.Sharp.IconChar.CompressArrowsAlt;
+            this.btnXemChiTiet.IconColor = System.Drawing.Color.White;
+            this.btnXemChiTiet.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnXemChiTiet.IconSize = 30;
+            this.btnXemChiTiet.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXemChiTiet.Location = new System.Drawing.Point(1171, 1088);
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnXemChiTiet.Size = new System.Drawing.Size(217, 48);
+            this.btnXemChiTiet.TabIndex = 239;
+            this.btnXemChiTiet.Text = "            Xuất chi tiết";
+            this.btnXemChiTiet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
+            // 
             // UC_ThongKeHoaDon
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Controls.Add(this.btnXemChiTiet);
             this.Controls.Add(this.cmbLuaChon);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgvHd);
@@ -312,5 +337,6 @@ namespace WindowsFormsApp
         private Guna.UI2.WinForms.Guna2DataGridView dgvHd;
         private Guna.UI2.WinForms.Guna2ComboBox cmbLuaChon;
         private System.Windows.Forms.Label label6;
+        private FontAwesome.Sharp.IconButton btnXemChiTiet;
     }
 }

@@ -93,10 +93,28 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>CỬA HÀNG THỜI TRANG</Value>
+                    <Value>O</Value>
                     <Style>
-                      <FontFamily>Sitka Banner</FontFamily>
-                      <FontSize>12pt</FontSize>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>LimeGreen</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>wen </Value>
+                    <Style>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Blue</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>FashionShop</Value>
+                    <Style>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>9pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>Blue</Color>
                     </Style>
@@ -106,9 +124,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Left>0.94543in</Left>
+            <Top>0.01388in</Top>
+            <Left>1.17929in</Left>
             <Height>0.31944in</Height>
-            <Width>2.01166in</Width>
+            <Width>1.65054in</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -139,8 +158,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.23959in</Top>
-            <Left>0.875in</Left>
+            <Top>0.25347in</Top>
+            <Left>0.9675in</Left>
             <Height>0.31944in</Height>
             <Width>2.10416in</Width>
             <ZIndex>2</ZIndex>
@@ -608,8 +627,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.38667in</Top>
-            <Left>0.25917in</Left>
+            <Top>4.39361in</Top>
+            <Left>0.405in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>14</ZIndex>
@@ -650,8 +669,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.60889in</Top>
-            <Left>0.25917in</Left>
+            <Top>4.61583in</Top>
+            <Left>0.405in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>15</ZIndex>
@@ -692,8 +711,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.87972in</Top>
-            <Left>0.25917in</Left>
+            <Top>4.88666in</Top>
+            <Left>0.405in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>16</ZIndex>
@@ -815,7 +834,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>SL</Value>
+                                  <Value>   SL</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontSize>11pt</FontSize>
@@ -849,7 +868,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Đơn giá</Value>
+                                  <Value>   Đơn giá</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontSize>11pt</FontSize>
@@ -883,7 +902,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Thành tiền</Value>
+                                  <Value>    Thành tiền</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
                                     <FontSize>11pt</FontSize>
@@ -986,6 +1005,12 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
                                   <Value>=Fields!DonGia.Value</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
@@ -1017,6 +1042,13 @@
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
+                                <TextRun>
+                                  <Value xml:space="preserve">  </Value>
+                                  <Style>
+                                    <FontFamily>Cambria</FontFamily>
+                                    <Format>#,0.00;(#,0.00)</Format>
+                                  </Style>
+                                </TextRun>
                                 <TextRun>
                                   <Value>=Fields!SoLuong.Value*Fields!DonGia.Value</Value>
                                   <Style>
@@ -1103,8 +1135,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.06723in</Top>
-            <Left>0.28473in</Left>
+            <Top>4.07417in</Top>
+            <Left>0.43056in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>20</ZIndex>

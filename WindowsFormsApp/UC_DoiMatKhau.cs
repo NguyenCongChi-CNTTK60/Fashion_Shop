@@ -15,43 +15,99 @@ namespace WindowsFormsApp
     public partial class UC_DoiMatKhau : UserControl
     {
         private string sdt;
-        public UC_DoiMatKhau()
+        private string temp;
+        public UC_DoiMatKhau(string sdt)
         {
             InitializeComponent();
             this.sdt = sdt;
-          //  txtSđtnv.Text = sdt;
+            temp = sdt;
         }
 
-        /*
-        private void btnQuaylai_Click(object sender, EventArgs e)
+        private void btnEyeSlashMoi_Click(object sender, EventArgs e)
         {
-            FormDangNhap formDangNhap = new FormDangNhap();
-            formDangNhap.ShowDialog();
+            txtHoVaTen.PasswordChar = '\0';
+            btnEyeMoi.BringToFront();
         }
 
-
-        private void btnLuu_Click(object sender, EventArgs e)
+        private void btnEyeMoi_Click(object sender, EventArgs e)
         {
-            if (txtmatkhaumoi.Text == txtxacnhan.Text)
+            txtHoVaTen.PasswordChar = '*';
+            btnEyeSlashMoi.BringToFront();
+        }
+
+        private void btnEyeMKM_Click(object sender, EventArgs e)
+        {
+            txtMKMOI.PasswordChar = '\0';
+            btneyemkmeye.BringToFront();
+        }
+
+        private void btneyemkmeye_Click(object sender, EventArgs e)
+        {
+            txtMKMOI.PasswordChar = '*';
+            btnEyeMKM.BringToFront();
+        }
+
+        private void txtHoVaTen_Click(object sender, EventArgs e)
+        {
+            txtHoVaTen.Text = "";
+            txtHoVaTen.ForeColor = Color.Black;
+            txtHoVaTen.PasswordChar = '*';
+        }
+
+        private void txtHoVaTen_Leave(object sender, EventArgs e)
+        {
+            if (txtHoVaTen.Text == "")
             {
-                if (NhanVienBUS.Intance.capnhatmk(txtmatkhaumoi.Text, txtSđtnv.Text))
+                txtHoVaTen.Text = "Nhập mật khẩu mới";
+                txtHoVaTen.ForeColor = Color.Silver;
+            }
+        }
+
+        private void txtMKMOI_Click(object sender, EventArgs e)
+        {
+            txtMKMOI.Text = "";
+            txtMKMOI.ForeColor = Color.Black;
+            txtMKMOI.PasswordChar = '*';
+        }
+
+        private void txtMKMOI_Leave(object sender, EventArgs e)
+        {
+            if (txtMKMOI.Text == "")
+            {
+                txtMKMOI.Text = "Mật khẩu mới";
+                txtMKMOI.ForeColor = Color.Silver;
+            }
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            if (txtHoVaTen.Text == txtMKMOI.Text)
+            {
+                if (NhanVienBUS.Intance.capnhatmk(txtMKMOI.Text, temp))
                 {
-                    lblCanhbao.Text = "Đổi mật khẩu thành công";
-                    lblCanhbao.ForeColor = Color.Brown;
+                    MessageBox.Show("Cập nhật mật khẩu thành công", "Thông báo");
+
                 }
                 else
-                    lblCanhbao.Text = "Đổi mật khẩu thất bại";
-                lblCanhbao.ForeColor = Color.Brown;
+                {
+                    MessageBox.Show("Đổi mật khẩu không thành công", "Thông báo");
+                    FormLogin f = new FormLogin();
+                    f.Show();
+                    this.Hide();
+
+                }
             }
             else
-                lblCanhbao.Text = "Mật khẩu xác nhận ko đúng";
-            lblCanhbao.ForeColor = Color.Brown;
+                MessageBox.Show("Mật khẩu xác nhận khôn đúng", "Thông báo");
         }
 
-        private void txtxacnhan_TextChanged(object sender, EventArgs e)
+        private void btnQuaylai_Click(object sender, EventArgs e)
         {
-            lblCanhbao.Text = "";
-        } */
+            FormLogin f = new FormLogin();
+            f.Show();
+            this.Hide();
+        }
+
     }
 }
 

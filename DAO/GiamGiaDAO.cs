@@ -77,6 +77,23 @@ namespace DAO
         }
 
 
+        public DataTable TimKiemMaMH(string maPN)
+        {
+            string query = "select * from MatHang where TenMH = N'"+maPN+"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });
+            return data;
+        }
+
+
+
+        public DataTable TimKiemMaPhanTram(string maPN)
+        {
+            string query = "select * from GiamGia where PhanTram = '" + maPN + "'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });
+            return data;
+        }
+
+
         public bool xoaGiamGia(string mamh, string magg)
         {
             string query = String.Format("delete from ChiTietGiamGia  where MaMH = '{0}' and MaGG = '{1}'", mamh, magg);

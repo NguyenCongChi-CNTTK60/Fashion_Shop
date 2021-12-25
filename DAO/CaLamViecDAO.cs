@@ -47,18 +47,18 @@ namespace DAO
 
 
 
-        public bool themCLV(string maNV, string maCLV, DateTime ngaylam )
+        public bool themCLV(string maNV, string maCLV, DateTime ngaybt,DateTime ngaykt )
         {
 
-            string query = String.Format("insert into ChiTietCLV (MaCLV,MaNV,NgayLam) values  ('{0}','{1}','{2}')", maNV,maCLV, ngaylam);
+            string query = String.Format("insert into ChiTietCLV (MaCLV,MaNV,NgayLam,NgayKT) values  ('{0}','{1}','{2}','{3}')", maNV,maCLV, ngaybt,ngaykt);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
 
-        public bool xoaCLV(string maNV, DateTime nl)
+        public bool xoaCLV(string maNV, DateTime bd  , DateTime kt)
         {
-            string query = String.Format("delete from ChiTietCLV where MaNV = '{0}' and NgayLam = '{1}'", maNV, nl);
+            string query = String.Format("delete from ChiTietCLV where MaNV = '{0}' and NgayLam = '{1}' and NgayKT= '{2}'", maNV, bd, kt);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -73,15 +73,12 @@ namespace DAO
         }
 
 
-
         public DataTable TimkiemMNV (string mk)
         {
             string query = String.Format("select NhanVien.MaNV from NhanVien where TenHienThi = N'"+  mk  +"'");
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
-
-
 
 
         public DataTable TimkiemMCLV(string mk)
@@ -92,10 +89,26 @@ namespace DAO
         }
 
 
+        public DataTable TimkiemCLV(string mk)
+        {
+            string query = String.Format("select * from  ChiTietCLV  where MaNV = N'" + mk + "'");
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+
+
 
         public DataTable TimkiemMaNgaylam(string mk, DateTime nl)
         {
             string query = String.Format("select ChitietCLV.MaNV, ChitietCLV.NgayLam from ChiTietCLV inner join NhanVien on ChiTietCLV.MaNV = NhanVien.MaNV where TenHienThi = N'" + mk + "' and NgayLam = '"+ nl +"' ");
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+
+
+        public DataTable Timkiem(string mk)
+        {
+            string query = "select ChiTietCLV.MaNV as[Mã nhân viên],NhanVien.TenHienThi as [Tên nhân viên],Ca as [Ca làm],NgayLam as [Ngày làm],NgayKT as [Ngày kết thúc] from ChiTietCLV inner join NhanVien on ChiTietCLV.MaNV = NhanVien.MaNV inner join CaLamViec on CaLamViec.MaCLV = ChiTietCLV.MaCLV where ChiTietCLV.MaNV like '%" + mk + "%' or TenHienThi like N'%" + mk + "%' ";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }

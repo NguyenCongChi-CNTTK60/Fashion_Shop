@@ -160,11 +160,11 @@ namespace WindowsFormsApp
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(69, 28);
+            this.label2.Location = new System.Drawing.Point(76, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 46);
+            this.label2.Size = new System.Drawing.Size(120, 46);
             this.label2.TabIndex = 1;
-            this.label2.Text = "a p e";
+            this.label2.Text = "w e n";
             // 
             // label1
             // 
@@ -174,9 +174,9 @@ namespace WindowsFormsApp
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(24, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 46);
+            this.label1.Size = new System.Drawing.Size(52, 46);
             this.label1.TabIndex = 0;
-            this.label1.Text = "S";
+            this.label1.Text = "O";
             // 
             // pnlDiChuyen
             // 

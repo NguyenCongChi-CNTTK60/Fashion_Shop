@@ -74,6 +74,7 @@ namespace WindowsFormsApp
             }
         }
 
+
         private void txtDiachi_Enter(object sender, EventArgs e)
         {
             if (txtDiachi.Text == "Nhập địa chỉ")
@@ -82,6 +83,7 @@ namespace WindowsFormsApp
                 txtDiachi.ForeColor = Color.Black;
             }
         }
+
 
         private void txtDiachi_Leave(object sender, EventArgs e)
         {
@@ -266,6 +268,11 @@ namespace WindowsFormsApp
             {
                 HienThi();
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -62,4 +62,3 @@ C:\Users\Nguyen Cong Chi\Desktop\FashionShop\DAO\obj\Debug\DAO.csproj.GenerateRe
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\DAO\obj\Debug\DAO.dll
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\DAO\obj\Debug\DAO.pdb
-C:\Users\Nguyen Cong Chi\Desktop\FashionShop\DAO\obj\Debug\DAO.csproj.CopyComplete

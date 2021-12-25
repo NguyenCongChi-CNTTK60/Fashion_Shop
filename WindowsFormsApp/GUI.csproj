@@ -232,6 +232,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FormChiTietHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietHD.Designer.cs">
+      <DependentUpon>FormChiTietHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangKy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -462,6 +468,9 @@
     <Compile Include="UC_XacNhanSDT.Designer.cs">
       <DependentUpon>UC_XacNhanSDT.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormChiTietHD.resx">
+      <DependentUpon>FormChiTietHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -503,6 +512,7 @@
     <EmbeddedResource Include="ReportPhieuNhap.resx">
       <DependentUpon>ReportPhieuNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportChiTietHD.rdlc" />
     <EmbeddedResource Include="Report\ReportHangTon.rdlc" />
     <EmbeddedResource Include="Report\ReportInHoaDon.rdlc" />
     <EmbeddedResource Include="Report\ReportPhieuNhap.rdlc" />

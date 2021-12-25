@@ -67,7 +67,34 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Cửa Hàng Thời Trang </Value>
+                    <Value>O</Value>
+                    <Style>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>LimeGreen</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>wen </Value>
+                    <Style>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Blue</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value>FashionShop</Value>
+                    <Style>
+                      <FontFamily>Cambria</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>Blue</Color>
+                    </Style>
+                  </TextRun>
+                  <TextRun>
+                    <Value xml:space="preserve"> </Value>
                     <Style>
                       <FontFamily>Sitka Banner</FontFamily>
                       <FontSize>13pt</FontSize>
@@ -80,10 +107,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.12847in</Top>
-            <Left>0.12722in</Left>
+            <Top>0.19098in</Top>
+            <Left>2.37953in</Left>
             <Height>0.33333in</Height>
-            <Width>1.91666in</Width>
+            <Width>1.6111in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -113,7 +140,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.84375in</Top>
+            <Top>0.81597in</Top>
             <Left>1.66194in</Left>
             <Height>0.36111in</Height>
             <Width>3.0625in</Width>
@@ -145,10 +172,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.42014in</Top>
-            <Left>0.12722in</Left>
+            <Top>0.52431in</Top>
+            <Left>1.52305in</Left>
             <Height>0.25in</Height>
-            <Width>3.67834in</Width>
+            <Width>3.47001in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -726,7 +753,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
-            <Top>1.43277in</Top>
+            <Top>1.30083in</Top>
             <Left>0.12722in</Left>
             <Height>1.15278in</Height>
             <Width>6.05787in</Width>

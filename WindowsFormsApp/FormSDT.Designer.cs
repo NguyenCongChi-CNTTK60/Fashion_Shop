@@ -31,21 +31,21 @@ namespace WindowsFormsApp
         {
             this.components = new System.ComponentModel.Container();
             this.pnlSDT = new System.Windows.Forms.Panel();
+            this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnQuaylai = new FontAwesome.Sharp.IconButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnTiepTuc = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtTenDangNhap = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnQuaylai = new FontAwesome.Sharp.IconButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnTiepTuc = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSDT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,131 +75,6 @@ namespace WindowsFormsApp
             this.pnlSDT.Size = new System.Drawing.Size(627, 952);
             this.pnlSDT.TabIndex = 0;
             this.pnlSDT.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlma_Paint);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(77, 262);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 25);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "+84\r\n";
-            // 
-            // txtTenDangNhap
-            // 
-            this.txtTenDangNhap.BorderColor = System.Drawing.Color.Silver;
-            this.txtTenDangNhap.BorderRadius = 5;
-            this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTenDangNhap.DefaultText = "                  \r\n";
-            this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenDangNhap.DisabledState.Parent = this.txtTenDangNhap;
-            this.txtTenDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTenDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDangNhap.FocusedState.Parent = this.txtTenDangNhap;
-            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenDangNhap.ForeColor = System.Drawing.Color.Black;
-            this.txtTenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenDangNhap.HoverState.Parent = this.txtTenDangNhap;
-            this.txtTenDangNhap.Location = new System.Drawing.Point(19, 243);
-            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTenDangNhap.Name = "txtTenDangNhap";
-            this.txtTenDangNhap.PasswordChar = '\0';
-            this.txtTenDangNhap.PlaceholderText = "";
-            this.txtTenDangNhap.SelectedText = "";
-            this.txtTenDangNhap.ShadowDecoration.BorderRadius = 10;
-            this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
-            this.txtTenDangNhap.Size = new System.Drawing.Size(114, 58);
-            this.txtTenDangNhap.TabIndex = 22;
-            this.txtTenDangNhap.TextOffset = new System.Drawing.Point(15, 0);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(157, 155);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(270, 43);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Bạn quên mật khẩu?";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label3.Location = new System.Drawing.Point(275, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 35);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Fashion System";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Sitka Banner", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label2.Location = new System.Drawing.Point(223, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 81);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "a p e";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(170, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 55);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "S";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(108, 470);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(229, 22);
-            this.label6.TabIndex = 262;
-            this.label6.Text = "Tổng đài hỗ trợ khách hàng:\r\n";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(371, 470);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 23);
-            this.label7.TabIndex = 263;
-            this.label7.Text = "1900 8086";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(41, 517);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(507, 22);
-            this.label8.TabIndex = 264;
-            this.label8.Text = "Hỗ trợ khách hàng từ 8h00 đến 21h00 tất cả các ngày trong tuần\r\n";
-            // 
-            // bunifuElipse1
-            // 
-            this.bunifuElipse1.ElipseRadius = 10;
-            this.bunifuElipse1.TargetControl = this.btnTiepTuc;
             // 
             // txtSDT
             // 
@@ -262,6 +137,39 @@ namespace WindowsFormsApp
             this.pictureBox2.TabIndex = 265;
             this.pictureBox2.TabStop = false;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(41, 517);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(507, 22);
+            this.label8.TabIndex = 264;
+            this.label8.Text = "Hỗ trợ khách hàng từ 8h00 đến 21h00 tất cả các ngày trong tuần\r\n";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(371, 470);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 23);
+            this.label7.TabIndex = 263;
+            this.label7.Text = "1900 8086";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(108, 470);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(229, 22);
+            this.label6.TabIndex = 262;
+            this.label6.Text = "Tổng đài hỗ trợ khách hàng:\r\n";
+            // 
             // btnTiepTuc
             // 
             this.btnTiepTuc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
@@ -285,6 +193,17 @@ namespace WindowsFormsApp
             this.btnTiepTuc.UseVisualStyleBackColor = false;
             this.btnTiepTuc.Click += new System.EventHandler(this.btnTiepTuc_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(77, 262);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 25);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "+84\r\n";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp.Properties.Resources._8b814fa66a3676d9f1090a4e8df515ba;
@@ -294,6 +213,88 @@ namespace WindowsFormsApp
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
+            // 
+            // txtTenDangNhap
+            // 
+            this.txtTenDangNhap.BorderColor = System.Drawing.Color.Silver;
+            this.txtTenDangNhap.BorderRadius = 5;
+            this.txtTenDangNhap.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenDangNhap.DefaultText = "                  \r\n";
+            this.txtTenDangNhap.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenDangNhap.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenDangNhap.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDangNhap.DisabledState.Parent = this.txtTenDangNhap;
+            this.txtTenDangNhap.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenDangNhap.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDangNhap.FocusedState.Parent = this.txtTenDangNhap;
+            this.txtTenDangNhap.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDangNhap.ForeColor = System.Drawing.Color.Black;
+            this.txtTenDangNhap.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenDangNhap.HoverState.Parent = this.txtTenDangNhap;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(19, 243);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.PasswordChar = '\0';
+            this.txtTenDangNhap.PlaceholderText = "";
+            this.txtTenDangNhap.SelectedText = "";
+            this.txtTenDangNhap.SelectionStart = 20;
+            this.txtTenDangNhap.ShadowDecoration.BorderRadius = 10;
+            this.txtTenDangNhap.ShadowDecoration.Parent = this.txtTenDangNhap;
+            this.txtTenDangNhap.Size = new System.Drawing.Size(114, 58);
+            this.txtTenDangNhap.TabIndex = 22;
+            this.txtTenDangNhap.TextOffset = new System.Drawing.Point(15, 0);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sitka Banner", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(157, 155);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(270, 43);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Bạn quên mật khẩu?";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.label3.Location = new System.Drawing.Point(275, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 35);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Fashion System";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Sitka Banner", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
+            this.label2.Location = new System.Drawing.Point(237, -8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 81);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "w e n";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(182, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 55);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "O";
+            // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 10;
+            this.bunifuElipse1.TargetControl = this.btnTiepTuc;
             // 
             // FormSDT
             // 

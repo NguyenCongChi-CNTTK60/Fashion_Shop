@@ -70,5 +70,15 @@ namespace BUS
         {
             return GiamGiaDAO.Intance.KiemTraGiamGia(mamh);
         }
+
+        public DataTable TimKiemMaMH(string maPN)
+        {
+            return GiamGiaDAO.Intance.TimKiemMaMH(maPN);
+        }
+
+        public DataTable TimKiemMaPhanTram(string maPN)
+        {
+            return GiamGiaDAO.Intance.TimKiemMaPhanTram(maPN);
+        }
     }
 }

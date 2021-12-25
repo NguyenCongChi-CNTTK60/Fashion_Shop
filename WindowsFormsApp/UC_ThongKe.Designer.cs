@@ -29,10 +29,12 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlTK = new System.Windows.Forms.Panel();
+            this.cmbLuaChon = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnXem = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnTKHangHoa = new System.Windows.Forms.RadioButton();
@@ -61,8 +63,6 @@ namespace WindowsFormsApp
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
             this.lblTk = new System.Windows.Forms.Label();
-            this.cmbLuaChon = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.pnlTK.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -100,6 +100,44 @@ namespace WindowsFormsApp
             this.pnlTK.Size = new System.Drawing.Size(1411, 1150);
             this.pnlTK.TabIndex = 25;
             // 
+            // cmbLuaChon
+            // 
+            this.cmbLuaChon.BackColor = System.Drawing.Color.Transparent;
+            this.cmbLuaChon.BorderColor = System.Drawing.Color.Black;
+            this.cmbLuaChon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbLuaChon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLuaChon.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbLuaChon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbLuaChon.FocusedState.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbLuaChon.ForeColor = System.Drawing.Color.Black;
+            this.cmbLuaChon.HoverState.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.ItemHeight = 30;
+            this.cmbLuaChon.Items.AddRange(new object[] {
+            "--- Lựa chọn xem ---",
+            "Hôm qua",
+            "Hôm nay",
+            "Tuần này",
+            "Tháng này",
+            "Năm nay"});
+            this.cmbLuaChon.ItemsAppearance.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.Location = new System.Drawing.Point(1156, 160);
+            this.cmbLuaChon.Name = "cmbLuaChon";
+            this.cmbLuaChon.ShadowDecoration.Parent = this.cmbLuaChon;
+            this.cmbLuaChon.Size = new System.Drawing.Size(233, 36);
+            this.cmbLuaChon.TabIndex = 240;
+            this.cmbLuaChon.SelectedIndexChanged += new System.EventHandler(this.cmbLuaChon_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(1010, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 32);
+            this.label3.TabIndex = 239;
+            this.label3.Text = "Lựa chọn xem:";
+            // 
             // btnXem
             // 
             this.btnXem.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
@@ -134,7 +172,7 @@ namespace WindowsFormsApp
             this.pnlMenu.Controls.Add(this.rdoHoadon);
             this.pnlMenu.Location = new System.Drawing.Point(21, 74);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(256, 271);
+            this.pnlMenu.Size = new System.Drawing.Size(234, 251);
             this.pnlMenu.TabIndex = 28;
             // 
             // btnTKHangHoa
@@ -157,7 +195,7 @@ namespace WindowsFormsApp
             this.rdoTkpn.AutoSize = true;
             this.rdoTkpn.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoTkpn.ForeColor = System.Drawing.Color.Black;
-            this.rdoTkpn.Location = new System.Drawing.Point(20, 209);
+            this.rdoTkpn.Location = new System.Drawing.Point(19, 192);
             this.rdoTkpn.Name = "rdoTkpn";
             this.rdoTkpn.Size = new System.Drawing.Size(148, 39);
             this.rdoTkpn.TabIndex = 27;
@@ -185,7 +223,7 @@ namespace WindowsFormsApp
             this.rdoHoadon.AutoSize = true;
             this.rdoHoadon.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoHoadon.ForeColor = System.Drawing.Color.Black;
-            this.rdoHoadon.Location = new System.Drawing.Point(20, 138);
+            this.rdoHoadon.Location = new System.Drawing.Point(19, 126);
             this.rdoHoadon.Name = "rdoHoadon";
             this.rdoHoadon.Size = new System.Drawing.Size(125, 39);
             this.rdoHoadon.TabIndex = 17;
@@ -347,19 +385,19 @@ namespace WindowsFormsApp
             // 
             // chart1
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chart1.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(21, 225);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series5.BorderWidth = 3;
-            series5.ChartArea = "ChartArea1";
-            series5.LabelBorderWidth = 3;
-            series5.Legend = "Legend1";
-            series5.Name = "Doanh Thu";
-            this.chart1.Series.Add(series5);
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.LabelBorderWidth = 3;
+            series1.Legend = "Legend1";
+            series1.Name = "Doanh Thu";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1368, 642);
             this.chart1.TabIndex = 22;
             this.chart1.Text = "chart1";
@@ -461,44 +499,6 @@ namespace WindowsFormsApp
             this.lblTk.TabIndex = 14;
             this.lblTk.Text = "Thống kê";
             this.lblTk.Click += new System.EventHandler(this.lblTk_Click);
-            // 
-            // cmbLuaChon
-            // 
-            this.cmbLuaChon.BackColor = System.Drawing.Color.Transparent;
-            this.cmbLuaChon.BorderColor = System.Drawing.Color.Black;
-            this.cmbLuaChon.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbLuaChon.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbLuaChon.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbLuaChon.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbLuaChon.FocusedState.Parent = this.cmbLuaChon;
-            this.cmbLuaChon.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbLuaChon.ForeColor = System.Drawing.Color.Black;
-            this.cmbLuaChon.HoverState.Parent = this.cmbLuaChon;
-            this.cmbLuaChon.ItemHeight = 30;
-            this.cmbLuaChon.Items.AddRange(new object[] {
-            "--- Lựa chọn xem ---",
-            "Hôm qua",
-            "Hôm nay",
-            "Tuần này",
-            "Tháng này",
-            "Năm nay"});
-            this.cmbLuaChon.ItemsAppearance.Parent = this.cmbLuaChon;
-            this.cmbLuaChon.Location = new System.Drawing.Point(1156, 160);
-            this.cmbLuaChon.Name = "cmbLuaChon";
-            this.cmbLuaChon.ShadowDecoration.Parent = this.cmbLuaChon;
-            this.cmbLuaChon.Size = new System.Drawing.Size(233, 36);
-            this.cmbLuaChon.TabIndex = 240;
-            this.cmbLuaChon.SelectedIndexChanged += new System.EventHandler(this.cmbLuaChon_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sitka Banner", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(1010, 164);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 32);
-            this.label3.TabIndex = 239;
-            this.label3.Text = "Lựa chọn xem:";
             // 
             // UC_ThongKe
             // 

@@ -112,6 +112,7 @@ namespace WindowsFormsApp
             this.guna2TextBox2.PasswordChar = '\0';
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.SelectionStart = 48;
             this.guna2TextBox2.ShadowDecoration.BorderRadius = 10;
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Size = new System.Drawing.Size(583, 46);
@@ -284,7 +285,7 @@ namespace WindowsFormsApp
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label3.Location = new System.Drawing.Point(265, 75);
+            this.label3.Location = new System.Drawing.Point(265, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 35);
             this.label3.TabIndex = 270;
@@ -296,11 +297,11 @@ namespace WindowsFormsApp
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label2.Location = new System.Drawing.Point(213, -6);
+            this.label2.Location = new System.Drawing.Point(225, -5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 81);
+            this.label2.Size = new System.Drawing.Size(156, 81);
             this.label2.TabIndex = 269;
-            this.label2.Text = "a p e";
+            this.label2.Text = "w e n";
             // 
             // label1
             // 
@@ -308,11 +309,11 @@ namespace WindowsFormsApp
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(160, 14);
+            this.label1.Location = new System.Drawing.Point(168, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 55);
+            this.label1.Size = new System.Drawing.Size(62, 55);
             this.label1.TabIndex = 268;
-            this.label1.Text = "S";
+            this.label1.Text = "O";
             // 
             // bunifuElipse1
             // 

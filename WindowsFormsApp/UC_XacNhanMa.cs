@@ -50,12 +50,12 @@ namespace WindowsFormsApp
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
             if (sqlDataReader.Read() == true)
             {
-                UC_DoiMatKhau f = new UC_DoiMatKhau();
+                UC_DoiMatKhau f = new UC_DoiMatKhau(txtSDT.Text);
                 addUC(f);
             }
             else
                 MessageBox.Show("Mã xác nhận không đúng", "Thông báo");
-              con.Close();
+               con.Close();
 
            
         }

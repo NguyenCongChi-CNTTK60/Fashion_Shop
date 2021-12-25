@@ -47,13 +47,21 @@ namespace WindowsFormsApp
             this.btnEyeMKM = new FontAwesome.Sharp.IconButton();
             this.btneyemkmeye = new FontAwesome.Sharp.IconButton();
             this.txtMKMOI = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnEyeSlash = new FontAwesome.Sharp.IconButton();
-            this.btnEye = new FontAwesome.Sharp.IconButton();
+            this.btnEyeSlashMoi = new FontAwesome.Sharp.IconButton();
+            this.btnEyeMoi = new FontAwesome.Sharp.IconButton();
             this.txtHoVaTen = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
             // 
             // guna2Elipse2
             // 
@@ -79,6 +87,7 @@ namespace WindowsFormsApp
             this.btnQuaylai.Text = "        ";
             this.btnQuaylai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuaylai.UseVisualStyleBackColor = false;
+            this.btnQuaylai.Click += new System.EventHandler(this.btnQuaylai_Click);
             // 
             // pictureBox2
             // 
@@ -144,6 +153,7 @@ namespace WindowsFormsApp
             this.btnCapNhat.Text = "         Cập nhật";
             this.btnCapNhat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // label4
             // 
@@ -162,7 +172,7 @@ namespace WindowsFormsApp
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label3.Location = new System.Drawing.Point(262, 79);
+            this.label3.Location = new System.Drawing.Point(272, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 35);
             this.label3.TabIndex = 287;
@@ -174,11 +184,11 @@ namespace WindowsFormsApp
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Sitka Banner", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(82)))), ((int)(((byte)(132)))));
-            this.label2.Location = new System.Drawing.Point(210, -2);
+            this.label2.Location = new System.Drawing.Point(220, 1);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 81);
+            this.label2.Size = new System.Drawing.Size(156, 81);
             this.label2.TabIndex = 286;
-            this.label2.Text = "a p e";
+            this.label2.Text = "w e n";
             // 
             // label1
             // 
@@ -186,11 +196,11 @@ namespace WindowsFormsApp
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(197)))), ((int)(((byte)(150)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(157, 18);
+            this.label1.Location = new System.Drawing.Point(167, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 55);
+            this.label1.Size = new System.Drawing.Size(62, 55);
             this.label1.TabIndex = 285;
-            this.label1.Text = "S";
+            this.label1.Text = "O";
             // 
             // btnEyeMKM
             // 
@@ -213,6 +223,7 @@ namespace WindowsFormsApp
             this.btnEyeMKM.Text = "  ";
             this.btnEyeMKM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEyeMKM.UseVisualStyleBackColor = false;
+            this.btnEyeMKM.Click += new System.EventHandler(this.btnEyeMKM_Click);
             // 
             // btneyemkmeye
             // 
@@ -235,6 +246,7 @@ namespace WindowsFormsApp
             this.btneyemkmeye.Text = "  ";
             this.btneyemkmeye.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btneyemkmeye.UseVisualStyleBackColor = false;
+            this.btneyemkmeye.Click += new System.EventHandler(this.btneyemkmeye_Click);
             // 
             // txtMKMOI
             // 
@@ -260,53 +272,58 @@ namespace WindowsFormsApp
             this.txtMKMOI.PasswordChar = '\0';
             this.txtMKMOI.PlaceholderText = "";
             this.txtMKMOI.SelectedText = "";
+            this.txtMKMOI.SelectionStart = 17;
             this.txtMKMOI.ShadowDecoration.Parent = this.txtMKMOI;
             this.txtMKMOI.Size = new System.Drawing.Size(591, 54);
             this.txtMKMOI.TabIndex = 298;
+            this.txtMKMOI.Click += new System.EventHandler(this.txtMKMOI_Click);
+            this.txtMKMOI.Leave += new System.EventHandler(this.txtMKMOI_Leave);
             // 
-            // btnEyeSlash
+            // btnEyeSlashMoi
             // 
-            this.btnEyeSlash.BackColor = System.Drawing.Color.White;
-            this.btnEyeSlash.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnEyeSlash.FlatAppearance.BorderSize = 0;
-            this.btnEyeSlash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEyeSlash.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEyeSlash.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnEyeSlash.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
-            this.btnEyeSlash.IconColor = System.Drawing.Color.DimGray;
-            this.btnEyeSlash.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEyeSlash.IconSize = 30;
-            this.btnEyeSlash.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEyeSlash.Location = new System.Drawing.Point(540, 228);
-            this.btnEyeSlash.Name = "btnEyeSlash";
-            this.btnEyeSlash.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEyeSlash.Size = new System.Drawing.Size(56, 33);
-            this.btnEyeSlash.TabIndex = 297;
-            this.btnEyeSlash.Text = "  ";
-            this.btnEyeSlash.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEyeSlash.UseVisualStyleBackColor = false;
+            this.btnEyeSlashMoi.BackColor = System.Drawing.Color.White;
+            this.btnEyeSlashMoi.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnEyeSlashMoi.FlatAppearance.BorderSize = 0;
+            this.btnEyeSlashMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEyeSlashMoi.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEyeSlashMoi.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnEyeSlashMoi.IconChar = FontAwesome.Sharp.IconChar.EyeSlash;
+            this.btnEyeSlashMoi.IconColor = System.Drawing.Color.DimGray;
+            this.btnEyeSlashMoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEyeSlashMoi.IconSize = 30;
+            this.btnEyeSlashMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEyeSlashMoi.Location = new System.Drawing.Point(543, 228);
+            this.btnEyeSlashMoi.Name = "btnEyeSlashMoi";
+            this.btnEyeSlashMoi.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEyeSlashMoi.Size = new System.Drawing.Size(56, 33);
+            this.btnEyeSlashMoi.TabIndex = 297;
+            this.btnEyeSlashMoi.Text = "  ";
+            this.btnEyeSlashMoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEyeSlashMoi.UseVisualStyleBackColor = false;
+            this.btnEyeSlashMoi.Click += new System.EventHandler(this.btnEyeSlashMoi_Click);
             // 
-            // btnEye
+            // btnEyeMoi
             // 
-            this.btnEye.BackColor = System.Drawing.Color.White;
-            this.btnEye.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
-            this.btnEye.FlatAppearance.BorderSize = 0;
-            this.btnEye.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEye.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEye.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btnEye.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.btnEye.IconColor = System.Drawing.Color.Gray;
-            this.btnEye.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEye.IconSize = 30;
-            this.btnEye.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEye.Location = new System.Drawing.Point(540, 228);
-            this.btnEye.Name = "btnEye";
-            this.btnEye.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnEye.Size = new System.Drawing.Size(59, 33);
-            this.btnEye.TabIndex = 296;
-            this.btnEye.Text = "  ";
-            this.btnEye.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEye.UseVisualStyleBackColor = false;
+            this.btnEyeMoi.BackColor = System.Drawing.Color.White;
+            this.btnEyeMoi.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnEyeMoi.FlatAppearance.BorderSize = 0;
+            this.btnEyeMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEyeMoi.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEyeMoi.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.btnEyeMoi.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnEyeMoi.IconColor = System.Drawing.Color.Gray;
+            this.btnEyeMoi.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEyeMoi.IconSize = 30;
+            this.btnEyeMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEyeMoi.Location = new System.Drawing.Point(540, 228);
+            this.btnEyeMoi.Name = "btnEyeMoi";
+            this.btnEyeMoi.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnEyeMoi.Size = new System.Drawing.Size(59, 33);
+            this.btnEyeMoi.TabIndex = 296;
+            this.btnEyeMoi.Text = "  ";
+            this.btnEyeMoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEyeMoi.UseVisualStyleBackColor = false;
+            this.btnEyeMoi.Click += new System.EventHandler(this.btnEyeMoi_Click);
             // 
             // txtHoVaTen
             // 
@@ -332,9 +349,12 @@ namespace WindowsFormsApp
             this.txtHoVaTen.PasswordChar = '\0';
             this.txtHoVaTen.PlaceholderText = "";
             this.txtHoVaTen.SelectedText = "";
+            this.txtHoVaTen.SelectionStart = 19;
             this.txtHoVaTen.ShadowDecoration.Parent = this.txtHoVaTen;
             this.txtHoVaTen.Size = new System.Drawing.Size(591, 54);
             this.txtHoVaTen.TabIndex = 295;
+            this.txtHoVaTen.Click += new System.EventHandler(this.txtHoVaTen_Click);
+            this.txtHoVaTen.Leave += new System.EventHandler(this.txtHoVaTen_Leave);
             // 
             // UC_DoiMatKhau
             // 
@@ -344,8 +364,8 @@ namespace WindowsFormsApp
             this.Controls.Add(this.btnEyeMKM);
             this.Controls.Add(this.btneyemkmeye);
             this.Controls.Add(this.txtMKMOI);
-            this.Controls.Add(this.btnEyeSlash);
-            this.Controls.Add(this.btnEye);
+            this.Controls.Add(this.btnEyeSlashMoi);
+            this.Controls.Add(this.btnEyeMoi);
             this.Controls.Add(this.txtHoVaTen);
             this.Controls.Add(this.btnQuaylai);
             this.Controls.Add(this.pictureBox2);
@@ -386,8 +406,8 @@ namespace WindowsFormsApp
         private FontAwesome.Sharp.IconButton btnEyeMKM;
         private FontAwesome.Sharp.IconButton btneyemkmeye;
         private Guna.UI2.WinForms.Guna2TextBox txtMKMOI;
-        private FontAwesome.Sharp.IconButton btnEyeSlash;
-        private FontAwesome.Sharp.IconButton btnEye;
+        private FontAwesome.Sharp.IconButton btnEyeSlashMoi;
+        private FontAwesome.Sharp.IconButton btnEyeMoi;
         private Guna.UI2.WinForms.Guna2TextBox txtHoVaTen;
     }
 }

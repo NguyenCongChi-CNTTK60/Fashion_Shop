@@ -29,9 +29,9 @@ namespace WindowsFormsApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTTTaiKhoan = new System.Windows.Forms.Panel();
             this.btnTK = new FontAwesome.Sharp.IconButton();
@@ -61,6 +61,33 @@ namespace WindowsFormsApp
             this.label2 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.lblSPTOP1 = new System.Windows.Forms.Label();
+            this.lbltop2 = new System.Windows.Forms.Label();
+            this.lbltop3 = new System.Windows.Forms.Label();
+            this.labeltop1 = new System.Windows.Forms.Label();
+            this.labeltop3 = new System.Windows.Forms.Label();
+            this.labeltop2 = new System.Windows.Forms.Label();
+            this.lblsanpham = new System.Windows.Forms.Label();
+            this.lblsltop2 = new System.Windows.Forms.Label();
+            this.lblsltop3 = new System.Windows.Forms.Label();
+            this.cmbTonKho = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbldinhmuc = new System.Windows.Forms.Label();
+            this.lblslton = new System.Windows.Forms.Label();
+            this.lblGiatri = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlTTTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -72,10 +99,14 @@ namespace WindowsFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.pcbBell)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.guna2Panel2);
+            this.panel1.Controls.Add(this.guna2Panel1);
             this.panel1.Controls.Add(this.pnlTTTaiKhoan);
             this.panel1.Controls.Add(this.chart1);
             this.panel1.Controls.Add(this.label10);
@@ -123,21 +154,21 @@ namespace WindowsFormsApp
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(21, 429);
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
+            this.chart1.Location = new System.Drawing.Point(20, 319);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
-            series2.BorderWidth = 3;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.LabelBorderWidth = 3;
-            series2.Legend = "Legend1";
-            series2.Name = "Doanh Thu";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(1374, 696);
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.LabelBorderWidth = 3;
+            series5.Legend = "Legend1";
+            series5.Name = "Doanh Thu";
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(1374, 486);
             this.chart1.TabIndex = 28;
             this.chart1.Text = "chart1";
             // 
@@ -145,7 +176,7 @@ namespace WindowsFormsApp
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Sitka Banner", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 374);
+            this.label10.Location = new System.Drawing.Point(15, 268);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(222, 29);
             this.label10.TabIndex = 27;
@@ -157,7 +188,7 @@ namespace WindowsFormsApp
             this.panel4.Controls.Add(this.lblDoanhthu);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.panel8);
-            this.panel4.Location = new System.Drawing.Point(1079, 195);
+            this.panel4.Location = new System.Drawing.Point(1101, 137);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(295, 100);
             this.panel4.TabIndex = 26;
@@ -198,7 +229,7 @@ namespace WindowsFormsApp
             this.panel3.Controls.Add(this.lblNhanvien);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.panel7);
-            this.panel3.Location = new System.Drawing.Point(725, 195);
+            this.panel3.Location = new System.Drawing.Point(745, 137);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(295, 100);
             this.panel3.TabIndex = 25;
@@ -239,7 +270,7 @@ namespace WindowsFormsApp
             this.panel6.Controls.Add(this.lblHoadon);
             this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.panel9);
-            this.panel6.Location = new System.Drawing.Point(367, 196);
+            this.panel6.Location = new System.Drawing.Point(381, 137);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(295, 100);
             this.panel6.TabIndex = 24;
@@ -370,7 +401,7 @@ namespace WindowsFormsApp
             this.panel5.Controls.Add(this.lblKhachhang);
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.panel10);
-            this.panel5.Location = new System.Drawing.Point(21, 196);
+            this.panel5.Location = new System.Drawing.Point(21, 137);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(295, 100);
             this.panel5.TabIndex = 22;
@@ -409,11 +440,326 @@ namespace WindowsFormsApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sitka Banner", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 129);
+            this.label1.Location = new System.Drawing.Point(15, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 29);
             this.label1.TabIndex = 21;
             this.label1.Text = "TỔNG QUAN KINH DOANH";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.White;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.panel11);
+            this.guna2Panel1.Controls.Add(this.cmbTonKho);
+            this.guna2Panel1.Controls.Add(this.lblsltop3);
+            this.guna2Panel1.Controls.Add(this.lblsltop2);
+            this.guna2Panel1.Controls.Add(this.lblsanpham);
+            this.guna2Panel1.Controls.Add(this.labeltop2);
+            this.guna2Panel1.Controls.Add(this.labeltop3);
+            this.guna2Panel1.Controls.Add(this.labeltop1);
+            this.guna2Panel1.Controls.Add(this.lbltop3);
+            this.guna2Panel1.Controls.Add(this.lbltop2);
+            this.guna2Panel1.Controls.Add(this.lblSPTOP1);
+            this.guna2Panel1.Controls.Add(this.label21);
+            this.guna2Panel1.Controls.Add(this.label20);
+            this.guna2Panel1.Controls.Add(this.label19);
+            this.guna2Panel1.Controls.Add(this.label8);
+            this.guna2Panel1.Location = new System.Drawing.Point(20, 842);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(675, 296);
+            this.guna2Panel1.TabIndex = 30;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(12, 8);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(150, 35);
+            this.label8.TabIndex = 332;
+            this.label8.Text = "Top sản phẩm";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(26, 86);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(70, 26);
+            this.label19.TabIndex = 347;
+            this.label19.Text = "Top 1:\r\n";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(26, 165);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(70, 26);
+            this.label20.TabIndex = 348;
+            this.label20.Text = "Top 2:\r\n";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(26, 235);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(70, 26);
+            this.label21.TabIndex = 349;
+            this.label21.Text = "Top 3:\r\n";
+            // 
+            // lblSPTOP1
+            // 
+            this.lblSPTOP1.AutoSize = true;
+            this.lblSPTOP1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSPTOP1.Location = new System.Drawing.Point(126, 79);
+            this.lblSPTOP1.Name = "lblSPTOP1";
+            this.lblSPTOP1.Size = new System.Drawing.Size(117, 35);
+            this.lblSPTOP1.TabIndex = 351;
+            this.lblSPTOP1.Text = " Sản phẩm ";
+            // 
+            // lbltop2
+            // 
+            this.lbltop2.AutoSize = true;
+            this.lbltop2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltop2.Location = new System.Drawing.Point(126, 156);
+            this.lbltop2.Name = "lbltop2";
+            this.lbltop2.Size = new System.Drawing.Size(117, 35);
+            this.lbltop2.TabIndex = 354;
+            this.lbltop2.Text = " Sản phẩm ";
+            // 
+            // lbltop3
+            // 
+            this.lbltop3.AutoSize = true;
+            this.lbltop3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltop3.Location = new System.Drawing.Point(126, 226);
+            this.lbltop3.Name = "lbltop3";
+            this.lbltop3.Size = new System.Drawing.Size(112, 35);
+            this.lbltop3.TabIndex = 357;
+            this.lbltop3.Text = "Sản phẩm ";
+            // 
+            // labeltop1
+            // 
+            this.labeltop1.AutoSize = true;
+            this.labeltop1.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltop1.Location = new System.Drawing.Point(310, 79);
+            this.labeltop1.Name = "labeltop1";
+            this.labeltop1.Size = new System.Drawing.Size(232, 35);
+            this.labeltop1.TabIndex = 358;
+            this.labeltop1.Text = "(          sản phẩm bán ra)";
+            // 
+            // labeltop3
+            // 
+            this.labeltop3.AutoSize = true;
+            this.labeltop3.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltop3.Location = new System.Drawing.Point(310, 226);
+            this.labeltop3.Name = "labeltop3";
+            this.labeltop3.Size = new System.Drawing.Size(232, 35);
+            this.labeltop3.TabIndex = 359;
+            this.labeltop3.Text = "(          sản phẩm bán ra)";
+            // 
+            // labeltop2
+            // 
+            this.labeltop2.AutoSize = true;
+            this.labeltop2.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltop2.Location = new System.Drawing.Point(310, 156);
+            this.labeltop2.Name = "labeltop2";
+            this.labeltop2.Size = new System.Drawing.Size(232, 35);
+            this.labeltop2.TabIndex = 360;
+            this.labeltop2.Text = "(          sản phẩm bán ra)";
+            // 
+            // lblsanpham
+            // 
+            this.lblsanpham.AutoSize = true;
+            this.lblsanpham.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsanpham.Location = new System.Drawing.Point(331, 88);
+            this.lblsanpham.Name = "lblsanpham";
+            this.lblsanpham.Size = new System.Drawing.Size(25, 26);
+            this.lblsanpham.TabIndex = 361;
+            this.lblsanpham.Text = "0";
+            // 
+            // lblsltop2
+            // 
+            this.lblsltop2.AutoSize = true;
+            this.lblsltop2.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsltop2.Location = new System.Drawing.Point(331, 163);
+            this.lblsltop2.Name = "lblsltop2";
+            this.lblsltop2.Size = new System.Drawing.Size(25, 26);
+            this.lblsltop2.TabIndex = 362;
+            this.lblsltop2.Text = "0";
+            // 
+            // lblsltop3
+            // 
+            this.lblsltop3.AutoSize = true;
+            this.lblsltop3.Font = new System.Drawing.Font("Cambria", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsltop3.Location = new System.Drawing.Point(331, 235);
+            this.lblsltop3.Name = "lblsltop3";
+            this.lblsltop3.Size = new System.Drawing.Size(25, 26);
+            this.lblsltop3.TabIndex = 363;
+            this.lblsltop3.Text = "0";
+            // 
+            // cmbTonKho
+            // 
+            this.cmbTonKho.BackColor = System.Drawing.Color.Transparent;
+            this.cmbTonKho.BorderColor = System.Drawing.Color.Silver;
+            this.cmbTonKho.BorderRadius = 3;
+            this.cmbTonKho.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbTonKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTonKho.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTonKho.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbTonKho.FocusedState.Parent = this.cmbTonKho;
+            this.cmbTonKho.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTonKho.ForeColor = System.Drawing.Color.Black;
+            this.cmbTonKho.HoverState.Parent = this.cmbTonKho;
+            this.cmbTonKho.ItemHeight = 30;
+            this.cmbTonKho.Items.AddRange(new object[] {
+            "---- Xem trong ----",
+            "Hôm nay",
+            "Hôm qua",
+            "Tuần này",
+            "Tháng này",
+            "Năm nay"});
+            this.cmbTonKho.ItemsAppearance.Parent = this.cmbTonKho;
+            this.cmbTonKho.Location = new System.Drawing.Point(448, 8);
+            this.cmbTonKho.Name = "cmbTonKho";
+            this.cmbTonKho.ShadowDecoration.Parent = this.cmbTonKho;
+            this.cmbTonKho.Size = new System.Drawing.Size(208, 36);
+            this.cmbTonKho.TabIndex = 364;
+            this.cmbTonKho.SelectedIndexChanged += new System.EventHandler(this.cmbTonKho_SelectedIndexChanged);
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.DimGray;
+            this.panel11.Location = new System.Drawing.Point(4, 50);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(657, 1);
+            this.panel11.TabIndex = 365;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.Black;
+            this.guna2Panel2.BorderThickness = 1;
+            this.guna2Panel2.Controls.Add(this.lblGiatri);
+            this.guna2Panel2.Controls.Add(this.lblslton);
+            this.guna2Panel2.Controls.Add(this.lbldinhmuc);
+            this.guna2Panel2.Controls.Add(this.label9);
+            this.guna2Panel2.Controls.Add(this.label13);
+            this.guna2Panel2.Controls.Add(this.label12);
+            this.guna2Panel2.Controls.Add(this.label11);
+            this.guna2Panel2.Controls.Add(this.label4);
+            this.guna2Panel2.Controls.Add(this.label24);
+            this.guna2Panel2.Controls.Add(this.panel12);
+            this.guna2Panel2.Location = new System.Drawing.Point(722, 842);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(672, 296);
+            this.guna2Panel2.TabIndex = 31;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.DimGray;
+            this.panel12.Location = new System.Drawing.Point(4, 50);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(657, 1);
+            this.panel12.TabIndex = 365;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(29, 8);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(154, 35);
+            this.label24.TabIndex = 366;
+            this.label24.Text = "Thông tin kho";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(32, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(286, 35);
+            this.label4.TabIndex = 367;
+            this.label4.Text = "-    Sản phẩm dưới định mức:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(29, 156);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(332, 35);
+            this.label11.TabIndex = 368;
+            this.label11.Text = "-    Số lượng tồn kho của cửa hàng:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(32, 228);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(305, 35);
+            this.label12.TabIndex = 369;
+            this.label12.Text = "-    Giá trị tồn kho của cửa hàng:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(497, 77);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(104, 35);
+            this.label13.TabIndex = 370;
+            this.label13.Text = "sản phẩm\r\n";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(497, 158);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(104, 35);
+            this.label9.TabIndex = 371;
+            this.label9.Text = "sản phẩm\r\n";
+            // 
+            // lbldinhmuc
+            // 
+            this.lbldinhmuc.AutoSize = true;
+            this.lbldinhmuc.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldinhmuc.ForeColor = System.Drawing.Color.Black;
+            this.lbldinhmuc.Location = new System.Drawing.Point(434, 85);
+            this.lbldinhmuc.Name = "lbldinhmuc";
+            this.lbldinhmuc.Size = new System.Drawing.Size(23, 25);
+            this.lbldinhmuc.TabIndex = 372;
+            this.lbldinhmuc.Text = "0";
+            // 
+            // lblslton
+            // 
+            this.lblslton.AutoSize = true;
+            this.lblslton.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblslton.ForeColor = System.Drawing.Color.Black;
+            this.lblslton.Location = new System.Drawing.Point(434, 166);
+            this.lblslton.Name = "lblslton";
+            this.lblslton.Size = new System.Drawing.Size(23, 25);
+            this.lblslton.TabIndex = 373;
+            this.lblslton.Text = "0";
+            // 
+            // lblGiatri
+            // 
+            this.lblGiatri.AutoSize = true;
+            this.lblGiatri.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiatri.ForeColor = System.Drawing.Color.Black;
+            this.lblGiatri.Location = new System.Drawing.Point(434, 234);
+            this.lblGiatri.Name = "lblGiatri";
+            this.lblGiatri.Size = new System.Drawing.Size(23, 25);
+            this.lblGiatri.TabIndex = 374;
+            this.lblGiatri.Text = "0";
             // 
             // UC_TrangChu
             // 
@@ -441,6 +787,10 @@ namespace WindowsFormsApp
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -476,5 +826,32 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlTTTaiKhoan;
         private FontAwesome.Sharp.IconButton btnTK;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbTonKho;
+        private System.Windows.Forms.Label lblsltop3;
+        private System.Windows.Forms.Label lblsltop2;
+        private System.Windows.Forms.Label lblsanpham;
+        private System.Windows.Forms.Label labeltop2;
+        private System.Windows.Forms.Label labeltop3;
+        private System.Windows.Forms.Label labeltop1;
+        private System.Windows.Forms.Label lbltop3;
+        private System.Windows.Forms.Label lbltop2;
+        private System.Windows.Forms.Label lblSPTOP1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel11;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label lblGiatri;
+        private System.Windows.Forms.Label lblslton;
+        private System.Windows.Forms.Label lbldinhmuc;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Panel panel12;
     }
 }
