@@ -384,6 +384,12 @@
     <Compile Include="UC_NhapHang.Designer.cs">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UC_QuanLyGiamGia.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_QuanLyGiamGia.Designer.cs">
+      <DependentUpon>UC_QuanLyGiamGia.cs</DependentUpon>
+    </Compile>
     <Compile Include="UC_ReportHangTon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -539,6 +545,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UC_NhapHang.resx">
       <DependentUpon>UC_NhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_QuanLyGiamGia.resx">
+      <DependentUpon>UC_QuanLyGiamGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UC_ReportHangTon.resx">
       <DependentUpon>UC_ReportHangTon.cs</DependentUpon>

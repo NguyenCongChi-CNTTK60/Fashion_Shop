@@ -152,6 +152,7 @@ namespace WindowsFormsApp
             string query = "select MaKH from KhachHang";
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             string ma = "";
+            //k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
             if (dt.Rows.Count <= 0)
             {
                 ma = "KH001";
@@ -160,8 +161,8 @@ namespace WindowsFormsApp
             {
                 int k;
                 ma = "KH";
-                //k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
-                k = dt.Rows.Count;
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
+               // k = dt.Rows.Count;
                 k++;
                 if (k < 10)
                 {

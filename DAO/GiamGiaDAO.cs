@@ -55,23 +55,23 @@ namespace DAO
 
         public bool suaGiamGia(int phantram, string magg)
         {
-            string query = String.Format("update GiamGia set PhanTram = '{0}' where MaGG = '{1}'", phantram,magg);
+            string query = String.Format("update GiamGia set PhanTram = '{0}' where MaGG = '{1}'", phantram, magg);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
 
-        public bool SuaChitietGG (string mamh, string magg, DateTime ngbd, DateTime ngkt)
+        public bool SuaChitietGG(string mamh, string magg, DateTime ngbd, DateTime ngkt)
         {
-            string query = String.Format("update ChiTietGiamGia set MaMH = '{0}',MaGG = '{1}', NgayBD = '{2}', NgayKT = '{3}' ",mamh, magg, ngbd,ngkt);
+            string query = String.Format("update ChiTietGiamGia set MaMH = '{0}',MaGG = '{1}', NgayBD = '{2}', NgayKT = '{3}' ", mamh, magg, ngbd, ngkt);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
 
 
         public bool themChitietGG(string mamh, string magg, DateTime ngbd, DateTime ngkt)
-        {   
-            string query = String.Format("insert into ChiTietGiamGia (MaMH,MaGG,NgayBD,NgayKT) values  ('{0}','{1}','{2}','{3}')", mamh,magg,ngbd,ngkt);
+        {
+            string query = String.Format("insert into ChiTietGiamGia (MaMH,MaGG,NgayBD,NgayKT) values  ('{0}','{1}','{2}','{3}')", mamh, magg, ngbd, ngkt);
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return true;
         }
@@ -79,7 +79,7 @@ namespace DAO
 
         public DataTable TimKiemMaMH(string maPN)
         {
-            string query = "select * from MatHang where TenMH = N'"+maPN+"'";
+            string query = "select * from MatHang where TenMH = N'" + maPN + "'";
             DataTable data = DataProvider.Instance.ExecuteQuery(query, new object[] { maPN });
             return data;
         }
@@ -108,8 +108,38 @@ namespace DAO
             DataTable dt = DataProvider.Instance.ExecuteQuery(query);
             return dt;
         }
+
+
+        public DataTable HienThi ()
+        {
+            string query = "select MaGG as [Mã giảm giá], PhanTram as [Phần trăm khuyến mại] from GiamGia";
+            DataTable dt = DataProvider.Instance.ExecuteQuery(query);
+            return dt;
+        }
+
+
+        public bool themGG(string magg, string phantram)
+        {
+            string query = String.Format("insert into GiamGia (MaGG,PhanTram) values  ('{0}','{1}')", magg,phantram);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return true;
+        }
+
+
+        public bool suaGG(string magg,string phantram)
+        {
+            string query = String.Format("update GiamGia set PhanTram = '"+phantram+"' where MaGG = '"+magg+"'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return true;
+        }
+
+        public bool xoaGG(string magg)
+        {
+            string query = String.Format("delete GiamGia Where MaGG = '"+magg+"'");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return true;
+        }
+
     }
-
-
 }
 

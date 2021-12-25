@@ -35,7 +35,10 @@ namespace BUS
             return GiamGiaDAO.Intance.Hienthi();
         }
 
-
+        public DataTable HienThi()
+        {
+            return GiamGiaDAO.Intance.HienThi();
+        }
         public DataTable TimKiemGG(string maPN)
         {
             return GiamGiaDAO.Intance.TimKiemGG(maPN);
@@ -79,6 +82,23 @@ namespace BUS
         public DataTable TimKiemMaPhanTram(string maPN)
         {
             return GiamGiaDAO.Intance.TimKiemMaPhanTram(maPN);
+        }
+
+
+        public bool themGG(string magg, string phantram)
+        {
+            return GiamGiaDAO.Intance.themGG(magg, phantram);
+        }
+
+        public bool suaGG(string magg, string phantram)
+        {
+            return GiamGiaDAO.Intance.suaGG(magg, phantram);
+        }
+
+
+        public bool xoaGG(string magg)
+        {
+            return GiamGiaDAO.Intance.xoaGG(magg);
         }
     }
 }

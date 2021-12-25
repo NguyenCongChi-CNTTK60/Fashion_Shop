@@ -48,7 +48,7 @@ namespace WindowsFormsApp
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMaNV = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.dpkNgaykt = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label23 = new System.Windows.Forms.Label();
@@ -134,7 +134,7 @@ namespace WindowsFormsApp
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtMaNV);
-            this.panel1.Controls.Add(this.guna2TextBox3);
+            this.panel1.Controls.Add(this.txtTenNV);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.dpkNgaykt);
             this.panel1.Controls.Add(this.label23);
@@ -451,33 +451,34 @@ namespace WindowsFormsApp
             this.txtMaNV.Size = new System.Drawing.Size(93, 45);
             this.txtMaNV.TabIndex = 254;
             // 
-            // guna2TextBox3
+            // txtTenNV
             // 
-            this.guna2TextBox3.BorderColor = System.Drawing.Color.Silver;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "Nguyễn Công Chí";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.FocusedState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(160, 459);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.ReadOnly = true;
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.SelectionStart = 15;
-            this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(214, 45);
-            this.guna2TextBox3.TabIndex = 253;
+            this.txtTenNV.BorderColor = System.Drawing.Color.Silver;
+            this.txtTenNV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTenNV.DefaultText = "Nguyễn Công Chí";
+            this.txtTenNV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTenNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTenNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNV.DisabledState.Parent = this.txtTenNV;
+            this.txtTenNV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTenNV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNV.FocusedState.Parent = this.txtTenNV;
+            this.txtTenNV.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.ForeColor = System.Drawing.Color.Black;
+            this.txtTenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTenNV.HoverState.Parent = this.txtTenNV;
+            this.txtTenNV.Location = new System.Drawing.Point(160, 459);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.PasswordChar = '\0';
+            this.txtTenNV.PlaceholderText = "";
+            this.txtTenNV.ReadOnly = true;
+            this.txtTenNV.SelectedText = "";
+            this.txtTenNV.SelectionStart = 15;
+            this.txtTenNV.ShadowDecoration.Parent = this.txtTenNV;
+            this.txtTenNV.Size = new System.Drawing.Size(214, 45);
+            this.txtTenNV.TabIndex = 253;
+            this.txtTenNV.TextChanged += new System.EventHandler(this.guna2TextBox3_TextChanged);
             // 
             // label24
             // 
@@ -1060,7 +1061,7 @@ namespace WindowsFormsApp
         private System.Windows.Forms.Label label23;
         private Guna.UI2.WinForms.Guna2DateTimePicker dpkNgaykt;
         private Guna.UI2.WinForms.Guna2TextBox txtMaNV;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenNV;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;

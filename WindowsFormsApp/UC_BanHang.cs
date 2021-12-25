@@ -389,7 +389,21 @@ namespace WindowsFormsApp
 
         private void txtTimkiem_TextChanged(object sender, EventArgs e)
         {
-
+            DataTable dt = KhachHangBUS.Intance.TimKiemDiemTL(txtTimkiem.Text);
+            if(dt.Rows.Count > 0)
+            {
+                lblDiemTichLuy.Text = dt.Rows[0]["DiemTichLuy"].ToString();
+                if(Int32.Parse(lblDiemTichLuy.Text) >= 50 && Int32.Parse(lblDiemTichLuy.Text) < 100)
+                {
+                    lblVoucher.Text = "5";
+                }else if (Int32.Parse(lblDiemTichLuy.Text) > 100)
+                {
+                    lblVoucher.Text = "15";
+                }else if(Int32.Parse(lblDiemTichLuy.Text) < 50)
+                {
+                    lblVoucher.Text = "0";
+                }
+            }
 
             if (!string.IsNullOrEmpty(txtTimkiem.Text))
             {
@@ -407,8 +421,12 @@ namespace WindowsFormsApp
                 txtTimkiem.AutoCompleteCustomSource = arrName2;
             }
             else
+            {
                 lblTenkh.Text = "Khách hàng mới";
-            lblTenkh.ForeColor = Color.Black;
+                lblTenkh.ForeColor = Color.Black;
+                lblVoucher.Text = "0";
+                lblDiemTichLuy.Text = "0";
+            }
 
         }
 

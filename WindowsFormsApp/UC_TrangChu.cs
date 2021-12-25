@@ -197,10 +197,8 @@ namespace WindowsFormsApp
                     lbltop3.Text = dt.Rows[2]["TenMH"].ToString();
                     lblsltop3.Text = dt.Rows[2]["Top 1"].ToString();
                    
-
                 }
                 else
-
                     LamMoi();
 
 
@@ -208,7 +206,7 @@ namespace WindowsFormsApp
             else if (cmbTonKho.Text == "Tuần này")
             {
                 DateTime ngbd = new DateTime(today.Year, today.Month, today.Day);
-                DateTime ngkt = new DateTime(today.Year, today.Month, today.Day + 7);
+                DateTime ngkt = new DateTime(today.Year, 1, 3);
                 string query = "select top 3 sum(ChiTietHD.SoLuong) as [Top 1], ChiTietHD.MaMH,TenMH from ChiTietHD inner join HoaDon on HoaDon.MaHD = ChiTietHD.MaHD inner join MatHang on MatHang.MaMH = ChiTietHD.MaMH where NgayTao between '" + ngbd + "' and '" + ngkt + "' group by ChiTietHD.MaMH,TenMH order by[Top 1] desc";
                 DataTable dt = DataProvider.Instance.ExecuteQuery(query);
                 if (dt.Rows.Count >= 3)

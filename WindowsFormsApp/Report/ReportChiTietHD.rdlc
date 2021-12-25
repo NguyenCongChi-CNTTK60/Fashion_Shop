@@ -544,9 +544,8 @@
                 <Value>=Sum(Fields!SoLuong.Value*Fields!DonGia.Value, "DataSet1")</Value>
                 <Style>
                   <FontFamily>Cambria</FontFamily>
-                  <FontSize>11pt</FontSize>
                   <FontWeight>Normal</FontWeight>
-                  <Format>'VND'#,0;('VND'#,0)</Format>
+                  <Format>#,0 'VND';(#,0 'VND')</Format>
                 </Style>
               </TextRun>
             </TextRuns>

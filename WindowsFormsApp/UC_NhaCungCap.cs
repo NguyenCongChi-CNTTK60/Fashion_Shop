@@ -139,9 +139,9 @@ namespace WindowsFormsApp
             else
             {
                 int k;
-                ma = "NCC";
-                //k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 3));
-                k = dt.Rows.Count;
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(3, 3));
+                ma = "NCC";             
+               // k = dt.Rows.Count;
                 k++;
                 if (k < 10)
                 {

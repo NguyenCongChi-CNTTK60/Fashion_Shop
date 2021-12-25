@@ -216,7 +216,7 @@ namespace WindowsFormsApp
 
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
-            UC_KhoHang _KhoHang = new UC_KhoHang();
+            UC_KhoHang _KhoHang = new UC_KhoHang(lblMaNV.Text,lblTenNV.Text);
             Phanquyen(_KhoHang, _HienThiQuyen);
             MovePanle(btnKhoHang);
             ButtonHide();

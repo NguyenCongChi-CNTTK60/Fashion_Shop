@@ -627,8 +627,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.39361in</Top>
-            <Left>0.405in</Left>
+            <Top>4.4075in</Top>
+            <Left>0.62028in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>14</ZIndex>
@@ -669,8 +669,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.61583in</Top>
-            <Left>0.405in</Left>
+            <Top>4.62972in</Top>
+            <Left>0.62028in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>15</ZIndex>
@@ -711,8 +711,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.88666in</Top>
-            <Left>0.405in</Left>
+            <Top>4.90055in</Top>
+            <Left>0.62028in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>16</ZIndex>
@@ -756,10 +756,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.2686in</Top>
-            <Left>0.9675in</Left>
+            <Top>5.26166in</Top>
+            <Left>1.07512in</Left>
             <Height>0.3125in</Height>
-            <Width>1.56249in</Width>
+            <Width>1.53597in</Width>
             <ZIndex>18</ZIndex>
             <Style>
               <Border>
@@ -1053,7 +1053,7 @@
                                   <Value>=Fields!SoLuong.Value*Fields!DonGia.Value</Value>
                                   <Style>
                                     <FontFamily>Cambria</FontFamily>
-                                    <Format>#,0.00;(#,0.00)</Format>
+                                    <Format>#,0;(#,0)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -1135,8 +1135,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.07417in</Top>
-            <Left>0.43056in</Left>
+            <Top>4.08806in</Top>
+            <Left>0.64584in</Left>
             <Height>0.31944in</Height>
             <Width>3.15277in</Width>
             <ZIndex>20</ZIndex>

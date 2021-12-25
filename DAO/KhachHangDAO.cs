@@ -37,7 +37,7 @@ namespace DAO
 
         public bool suaKH(string maKH, string tenKH, string DiaChi, string SDT, string email)
         {
-            string query = String.Format("update KhachHang set TenKH = N'"+ tenKH +"', DiaChi = N'"+DiaChi+"', SDT = '"+SDT+"', Email = N'"+email+"' where MaKH = '"+maKH+"'");
+            string query = String.Format("update KhachHang set TenKH = N'" + tenKH + "', DiaChi = N'" + DiaChi + "', SDT = '" + SDT + "', Email = N'" + email + "' where MaKH = '" + maKH + "'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
@@ -77,7 +77,7 @@ namespace DAO
 
         public DataTable TimKiemKhachHang(string tk)
         {
-            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],SDT as [Số điện thoại], SUM(HoaDon.TongTien) AS[Tổng Tiền], Count(HoaDon.MaKH) as [Số lần mua hàng] from KhachHang inner join HoaDon on KhachHang.MaKH = HoaDon.MaKH where TenKH like N'%" + tk + "%' or KhachHang.MaKH like N'"+ tk +"' group by HoaDon.MaKH, KhachHang.MaKH,TenKH,SDT";
+            string query = "select KhachHang.MaKH as [Mã khách hàng],TenKH as [Tên khách hàng],SDT as [Số điện thoại], SUM(HoaDon.TongTien) AS[Tổng Tiền], Count(HoaDon.MaKH) as [Số lần mua hàng] from KhachHang inner join HoaDon on KhachHang.MaKH = HoaDon.MaKH where TenKH like N'%" + tk + "%' or KhachHang.MaKH like N'" + tk + "' group by HoaDon.MaKH, KhachHang.MaKH,TenKH,SDT";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             return data;
         }
@@ -105,5 +105,12 @@ namespace DAO
             return data;
         }
 
+
+        public DataTable TimKiemDiemTL(string tk)
+        {
+            string query = "select * from KhachHang where SDT = '"+tk+"'";
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return data;
+        }
     }
 }

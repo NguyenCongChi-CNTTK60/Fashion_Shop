@@ -65,5 +65,17 @@ namespace WindowsFormsApp
             UC_ReportPhieuNhap f = new UC_ReportPhieuNhap(temp);
             addUC(f);
         }
+
+        private void txtTimkiem_TextChanged_1(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTimkiem.Text))
+            {
+                DataTable dt = PhieuNhapBUS.Intance.TimKiemPN(txtTimkiem.Text);
+                dgvPN.DataSource = dt;
+            }
+            else
+                Hienthi();
+
+        }
     }
 }

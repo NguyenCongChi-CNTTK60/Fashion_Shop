@@ -144,6 +144,12 @@ namespace WindowsFormsApp
             }
             else
                 Hienthi();
+
+
+            if(txtTimkiem.Text == "Tìm kiếm theo mã, tên nhân viên")
+            {
+                Hienthi();
+            }
         }
 
         private void txtTimkiem_Leave(object sender, EventArgs e)

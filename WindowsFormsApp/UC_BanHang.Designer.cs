@@ -72,9 +72,9 @@
             this.label27 = new System.Windows.Forms.Label();
             this.lblMaKH = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblVoucher = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.lblSolanmua = new System.Windows.Forms.Label();
+            this.lblDiemTichLuy = new System.Windows.Forms.Label();
             this.lblTenkh = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -591,9 +591,9 @@
             this.pnlKh.Controls.Add(this.label27);
             this.pnlKh.Controls.Add(this.lblMaKH);
             this.pnlKh.Controls.Add(this.label18);
-            this.pnlKh.Controls.Add(this.label22);
+            this.pnlKh.Controls.Add(this.lblVoucher);
             this.pnlKh.Controls.Add(this.label14);
-            this.pnlKh.Controls.Add(this.lblSolanmua);
+            this.pnlKh.Controls.Add(this.lblDiemTichLuy);
             this.pnlKh.Controls.Add(this.lblTenkh);
             this.pnlKh.Controls.Add(this.label13);
             this.pnlKh.Controls.Add(this.label12);
@@ -641,17 +641,17 @@
             this.label18.TabIndex = 236;
             this.label18.Text = "%";
             // 
-            // label22
+            // lblVoucher
             // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(213, 201);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(21, 23);
-            this.label22.TabIndex = 235;
-            this.label22.Text = "0";
+            this.lblVoucher.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblVoucher.AutoSize = true;
+            this.lblVoucher.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoucher.ForeColor = System.Drawing.Color.Black;
+            this.lblVoucher.Location = new System.Drawing.Point(213, 201);
+            this.lblVoucher.Name = "lblVoucher";
+            this.lblVoucher.Size = new System.Drawing.Size(21, 23);
+            this.lblVoucher.TabIndex = 235;
+            this.lblVoucher.Text = "0";
             // 
             // label14
             // 
@@ -665,17 +665,17 @@
             this.label14.TabIndex = 225;
             this.label14.Text = "Voucher giảm giá:";
             // 
-            // lblSolanmua
+            // lblDiemTichLuy
             // 
-            this.lblSolanmua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSolanmua.AutoSize = true;
-            this.lblSolanmua.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSolanmua.ForeColor = System.Drawing.Color.Black;
-            this.lblSolanmua.Location = new System.Drawing.Point(213, 151);
-            this.lblSolanmua.Name = "lblSolanmua";
-            this.lblSolanmua.Size = new System.Drawing.Size(21, 23);
-            this.lblSolanmua.TabIndex = 234;
-            this.lblSolanmua.Text = "0";
+            this.lblDiemTichLuy.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDiemTichLuy.AutoSize = true;
+            this.lblDiemTichLuy.Font = new System.Drawing.Font("Cambria", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiemTichLuy.ForeColor = System.Drawing.Color.Black;
+            this.lblDiemTichLuy.Location = new System.Drawing.Point(213, 151);
+            this.lblDiemTichLuy.Name = "lblDiemTichLuy";
+            this.lblDiemTichLuy.Size = new System.Drawing.Size(21, 23);
+            this.lblDiemTichLuy.TabIndex = 234;
+            this.lblDiemTichLuy.Text = "0";
             // 
             // lblTenkh
             // 
@@ -1187,7 +1187,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbLoaihang;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label lblMahh;
-        private System.Windows.Forms.Label lblSolanmua;
+        private System.Windows.Forms.Label lblDiemTichLuy;
         private System.Windows.Forms.Label lblTenkh;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -1212,7 +1212,7 @@
         private System.Windows.Forms.Label lblTiengiam;
         private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblVoucher;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.ColumnHeader lalala;

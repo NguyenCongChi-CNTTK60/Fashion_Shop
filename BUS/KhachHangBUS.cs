@@ -82,5 +82,11 @@ namespace BUS
         {
             return KhachHangDAO.Intance.TimKiem(tk);
         }
+
+
+        public DataTable TimKiemDiemTL(string tk)
+        {
+            return KhachHangDAO.Intance.TimKiemDiemTL(tk);
+        }
         }
 }

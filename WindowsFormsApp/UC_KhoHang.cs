@@ -14,14 +14,14 @@ namespace WindowsFormsApp
     {
         private string manv, tennv;
         private string luumanv, luutennv;
-        public UC_KhoHang()    //string manv, string tennv)
+        public UC_KhoHang(string manv, string tennv)    //string manv, string tennv)
         {
             InitializeComponent();
             //loadData();
-            // this.manv = manv;
-            //luumanv = manv;
-            //this.tennv = tennv;
-            //luutennv = tennv;
+             this.manv = manv;
+            luumanv = manv;
+            this.tennv = tennv;
+            luutennv = tennv;
             cmbĐVT.SelectedIndex = 0;
             cmbLoaiHang.SelectedIndex = 0;
             HienThi();
@@ -84,7 +84,7 @@ namespace WindowsFormsApp
         }
         private void btnNhaphang_Click(object sender, EventArgs e)
         {
-            UC_NhapHang _NhapHang = new UC_NhapHang();
+            UC_NhapHang _NhapHang = new UC_NhapHang(luumanv,luutennv);
             addUC(_NhapHang);
         }
 

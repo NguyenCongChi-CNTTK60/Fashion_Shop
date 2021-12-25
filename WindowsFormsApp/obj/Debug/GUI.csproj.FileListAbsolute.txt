@@ -1478,5 +1478,5 @@ C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFo
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormSDT.resources
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_DoiMatKhau.resources
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_XacNhanMa.resources
-C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\GUI.csproj.CopyComplete
 C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.FormChiTietHD.resources
+C:\Users\Nguyen Cong Chi\Desktop\FashionShop\WindowsFormsApp\obj\Debug\WindowsFormsApp.UC_QuanLyGiamGia.resources
